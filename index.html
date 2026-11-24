@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hyprland Wiki 首页的简体中文译本。选择与你安装的 Hyprland 版本对应的文档，查找入门指南、配置和 Wayland 资源。">
+  <title>Hyprland Wiki · 简体中文</title>
+  <link rel="icon" href="assets/hyprland.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/wiki.css">
+  <script src="assets/wiki.js" defer></script>
+  <noscript><style>.search, #menu, #version, .theme { display: none; } @media (max-width: 760px) { #sidebar { display: block; } }</style></noscript>
+</head>
+<body id="top">
+<a class="skip" href="#content">跳到正文</a>
+<header>
+  <div class="bar">
+    <a class="brand" href="./"><img src="assets/hyprland.svg" alt="" width="34" height="34">Hyprland Wiki</a>
+    <nav class="top-links" aria-label="Hyprland 网站">
+      <a href="https://hypr.land/">官网</a><a href="https://hypr.land/hall_of_fame">桌面展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/hyprwm/Hyprland">GitHub ↗</a>
+    </nav>
+    <a class="original" href="https://wiki.hypr.land/" lang="en" hreflang="en">English ↗</a>
+    <button id="menu" aria-expanded="false" aria-controls="sidebar" type="button">目录</button>
+  </div>
+</header>
+<div class="layout">
+  <aside id="sidebar">
+    <div class="side-heading"><h2>文档导航</h2><span>简体中文</span></div>
+    <p class="destination">章节链接通往官方英文文档。</p>
+    <label class="search">查找文档<input id="query" type="search" placeholder="搜索目录…" autocomplete="off"></label>
+    <div id="results" hidden><span id="result-status" role="status"></span><ul></ul></div>
+    <div id="tree"><nav aria-label="文档导航">
+  <ul>
+    <li><a href="https://wiki.hypr.land/version-selector/">版本选择</a></li>
+    <li>
+      <details>
+        <summary>入门指南</summary>
+        <ul>
+          <li><a href="https://wiki.hypr.land/getting-started/">入门指南概览</a></li>
+          <li><a href="https://wiki.hypr.land/getting-started/installation/">安装</a></li>
+          <li><a href="https://wiki.hypr.land/getting-started/master-tutorial/">入门教程</a></li>
+          <li><a href="https://wiki.hypr.land/getting-started/preconfigured-setups/">预配置方案</a></li>
+        </ul>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary>配置指南</summary>
+        <ul>
+          <li><a href="https://wiki.hypr.land/configuring/">配置指南概览</a></li>
+          <li><a href="https://wiki.hypr.land/configuring/naming-conventions/">命名约定</a></li>
+          <li><a href="https://wiki.hypr.land/configuring/selectors/">选择器</a></li>
+          <li>
+            <details>
+              <summary>核心配置</summary>
+              <ul>
+                <li><a href="https://wiki.hypr.land/configuring/core/">核心配置概览</a></li>
+                <li>
+                  <details>
+                    <summary>显示器</summary>
+                    <ul>
+                      <li><a href="https://wiki.hypr.land/configuring/core/monitors/">显示器概览</a></li>
+                      <li><a href="https://wiki.hypr.land/configuring/core/monitors/output-selection/">选择输出设备</a></li>
+                      <li><a href="https://wiki.hypr.land/configuring/core/monitors/positioning/">显示器位置</a></li>
+                      <li><a href="https://wiki.hypr.land/configuring/core/monitors/modes/">显示模式</a></li>
+                      <li><a href="https://wiki.hypr.land/configuring/core/monitors/colors/">色彩与色彩空间</a></li>
+                    </ul>
+                  </details>
+                </li>
+                <li><a href="https://wiki.hypr.land/configuring/core/config-options/">配置选项</a></li>
+                <li><a href="https://wiki.hypr.land/configuring/core/devices/">输入设备</a></li>
+                <li><a href="https://wiki.hypr.land/configuring/core/dispatchers/">调度器</a></li>
+                <li>
+                  <details>
+                    <summary>按键绑定</summary>
+                    <ul>
+                      <li><a href="https://wiki.hypr.land/configuring/core/binds/">按键绑定概览</a></li>
+                      <li><a href="https://wiki.hypr.land/configuring/core/binds/flags/">绑定标志</a></li>
+                      <li><a href="https://wiki.hypr.land/configuring/core/binds/keyboard-layouts/">键盘布局</a></li>
+                      <li><a href="https://wiki.hypr.land/configuring/core/binds/devices/">设备绑定</a></li>
+                      <li><a href="https://wiki.hypr.land/configuring/core/binds/submaps/">子键位映射</a></li>
+                      <li><a href="https://wiki.hypr.land/configuring/core/binds/globals/">全局热键与绑定</a></li>
+                      <li><a href="https://wiki.hypr.land/configuring/core/binds/switches/">硬件开关</a></li>
+                      <li><a href="https://wiki.hypr.land/configuring/core/binds/gestures/">手势</a></li>
+                    </ul>
+                  </details>
+                </li>
+                <li>
+                  <details>
+                    <summary>规则</summary>
+                    <ul>
+                      <li><a href="https://wiki.hypr.land/configuring/core/rules/">规则概览</a></li>
+                      <li><a href="https://wiki.hypr.land/configuring/core/rules/window-rules/">窗口规则</a></li>
+                      <li><a href="https://wiki.hypr.land/configuring/core/rules/workspace-rules/">工作区规则</a></li>
+                      <li><a href="https://wiki.hypr.land/configuring/core/rules/layer-rules/">图层规则</a></li>
+                    </ul>
+                  </details>
+                </li>
+                <li><a href="https://wiki.hypr.land/configuring/core/environment-variables/">环境变量</a></li>
+                <li><a href="https://wiki.hypr.land/configuring/core/animations/">动画</a></li>
+                <li><a href="https://wiki.hypr.land/configuring/core/autostart/">自动启动</a></li>
+                <li>
+                  <details>
+                    <summary>高级配置</summary>
+                    <ul>
+                      <li><a href="https://wiki.hypr.land/configuring/core/advanced-configuration/">高级配置概览</a></li>
+                      <li><a href="https://wiki.hypr.land/configuring/core/advanced-configuration/events/">Lua 事件</a></li>
+                      <li><a href="https://wiki.hypr.land/configuring/core/advanced-configuration/lua-utilities/">Lua 工具函数</a></li>
+                      <li><a href="https://wiki.hypr.land/configuring/core/advanced-configuration/using-hyprctl/">使用 hyprctl</a></li>
+                      <li><a href="https://wiki.hypr.land/configuring/core/advanced-configuration/notifications/">通知</a></li>
+                      <li><a href="https://wiki.hypr.land/configuring/core/advanced-configuration/permissions/">权限</a></li>
+                    </ul>
+                  </details>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>布局</summary>
+              <ul>
+                <li><a href="https://wiki.hypr.land/configuring/layouts/">布局概览</a></li>
+                <li><a href="https://wiki.hypr.land/configuring/layouts/dwindle-layout/">Dwindle 布局</a></li>
+                <li><a href="https://wiki.hypr.land/configuring/layouts/scrolling-layout/">滚动布局</a></li>
+                <li><a href="https://wiki.hypr.land/configuring/layouts/master-layout/">主从布局</a></li>
+                <li><a href="https://wiki.hypr.land/configuring/layouts/monocle-layout/">Monocle 布局</a></li>
+                <li><a href="https://wiki.hypr.land/configuring/layouts/custom-layouts/">自定义布局</a></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>更多配置</summary>
+              <ul>
+                <li><a href="https://wiki.hypr.land/configuring/extra/">更多配置概览</a></li>
+                <li><a href="https://wiki.hypr.land/configuring/extra/multi-gpu/">多 GPU</a></li>
+                <li><a href="https://wiki.hypr.land/configuring/extra/virtual-gpu/">虚拟 GPU</a></li>
+                <li><a href="https://wiki.hypr.land/configuring/extra/performance/">性能</a></li>
+                <li><a href="https://wiki.hypr.land/configuring/extra/tearing/">画面撕裂</a></li>
+                <li><a href="https://wiki.hypr.land/configuring/extra/xwayland/">Xwayland</a></li>
+                <li><a href="https://wiki.hypr.land/configuring/extra/systemd/">systemd</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a href="https://wiki.hypr.land/configuring/code-snippets/">Lua 代码片段</a></li>
+        </ul>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary>Hypr 生态系统</summary>
+        <ul>
+          <li><a href="https://wiki.hypr.land/hypr-ecosystem/">Hypr 生态系统概览</a></li>
+          <li>
+            <details>
+              <summary>应用与实用工具</summary>
+              <ul>
+                <li><a href="https://wiki.hypr.land/hypr-ecosystem/user/">应用与实用工具概览</a></li>
+                <li><a href="https://wiki.hypr.land/hypr-ecosystem/user/hyprpaper/">hyprpaper</a></li>
+                <li><a href="https://wiki.hypr.land/hypr-ecosystem/user/hyprpicker/">hyprpicker</a></li>
+                <li><a href="https://wiki.hypr.land/hypr-ecosystem/user/hyprlauncher/">hyprlauncher</a></li>
+                <li><a href="https://wiki.hypr.land/hypr-ecosystem/user/hypridle/">hypridle</a></li>
+                <li><a href="https://wiki.hypr.land/hypr-ecosystem/user/hyprlock/">hyprlock</a></li>
+                <li><a href="https://wiki.hypr.land/hypr-ecosystem/user/xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li>
+                <li><a href="https://wiki.hypr.land/hypr-ecosystem/user/hyprsysteminfo/">hyprsysteminfo</a></li>
+                <li><a href="https://wiki.hypr.land/hypr-ecosystem/user/hyprsunset/">hyprsunset</a></li>
+                <li><a href="https://wiki.hypr.land/hypr-ecosystem/user/hyprpolkitagent/">hyprpolkitagent</a></li>
+                <li><a href="https://wiki.hypr.land/hypr-ecosystem/user/hyprland-qt-support/">hyprland-qt-support</a></li>
+                <li><a href="https://wiki.hypr.land/hypr-ecosystem/user/hyprqt6engine/">hyprqt6engine</a></li>
+                <li><a href="https://wiki.hypr.land/hypr-ecosystem/user/hyprpwcenter/">hyprpwcenter</a></li>
+                <li><a href="https://wiki.hypr.land/hypr-ecosystem/user/hyprshutdown/">hyprshutdown</a></li>
+                <li><a href="https://wiki.hypr.land/hypr-ecosystem/user/hyprtoolkit/">hyprtoolkit 用户文档</a></li>
+                <li><a href="https://wiki.hypr.land/hypr-ecosystem/user/hyprcursor/">hyprcursor</a></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>开发库与工具包</summary>
+              <ul>
+                <li><a href="https://wiki.hypr.land/hypr-ecosystem/dev/">开发库与工具包概览</a></li>
+                <li><a href="https://wiki.hypr.land/hypr-ecosystem/dev/aquamarine/">aquamarine</a></li>
+                <li><a href="https://wiki.hypr.land/hypr-ecosystem/dev/hyprgraphics/">hyprgraphics</a></li>
+                <li><a href="https://wiki.hypr.land/hypr-ecosystem/dev/hyprland-guiutils/">hyprland-guiutils</a></li>
+                <li><a href="https://wiki.hypr.land/hypr-ecosystem/dev/hyprlang/">hyprlang</a></li>
+                <li><a href="https://wiki.hypr.land/hypr-ecosystem/dev/hyprtoolkit/">hyprtoolkit 开发者文档</a></li>
+                <li><a href="https://wiki.hypr.land/hypr-ecosystem/dev/hyprutils/">hyprutils</a></li>
+                <li><a href="https://wiki.hypr.land/hypr-ecosystem/dev/hyprwayland-scanner/">hyprwayland-scanner</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary>Hyprland 插件</summary>
+        <ul>
+          <li><a href="https://wiki.hypr.land/hyprland-plugins/">Hyprland 插件概览</a></li>
+          <li><a href="https://wiki.hypr.land/hyprland-plugins/using-plugins/">使用插件</a></li>
+          <li>
+            <details>
+              <summary>插件开发</summary>
+              <ul>
+                <li><a href="https://wiki.hypr.land/hyprland-plugins/development/">插件开发概览</a></li>
+                <li><a href="https://wiki.hypr.land/hyprland-plugins/development/getting-started/">开发入门</a></li>
+                <li><a href="https://wiki.hypr.land/hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li>
+                <li><a href="https://wiki.hypr.land/hyprland-plugins/development/advanced/">进阶</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary>实用工具</summary>
+        <ul>
+          <li><a href="https://wiki.hypr.land/useful-utilities/">实用工具概览</a></li>
+          <li><a href="https://wiki.hypr.land/useful-utilities/must-have/">必备工具</a></li>
+          <li><a href="https://wiki.hypr.land/useful-utilities/status-bars/">状态栏</a></li>
+          <li><a href="https://wiki.hypr.land/useful-utilities/wallpapers/">壁纸</a></li>
+          <li><a href="https://wiki.hypr.land/useful-utilities/screen-sharing/">屏幕共享</a></li>
+          <li><a href="https://wiki.hypr.land/useful-utilities/screenshots-and-recording/">截图与录屏</a></li>
+          <li><a href="https://wiki.hypr.land/useful-utilities/app-launchers/">应用启动器</a></li>
+          <li><a href="https://wiki.hypr.land/useful-utilities/app-clients/">应用客户端</a></li>
+          <li><a href="https://wiki.hypr.land/useful-utilities/phone-connect/">连接手机</a></li>
+          <li><a href="https://wiki.hypr.land/useful-utilities/color-pickers/">取色器</a></li>
+          <li><a href="https://wiki.hypr.land/useful-utilities/clipboard-managers/">剪贴板管理器</a></li>
+          <li><a href="https://wiki.hypr.land/useful-utilities/file-managers/">文件管理器</a></li>
+          <li><a href="https://wiki.hypr.land/useful-utilities/other/">其他工具</a></li>
+          <li><a href="https://wiki.hypr.land/useful-utilities/hypr-ecosystem/">Hypr 生态系统</a></li>
+          <li><a href="https://wiki.hypr.land/useful-utilities/uwsm/">UWSM</a></li>
+        </ul>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary>Nix</summary>
+        <ul>
+          <li><a href="https://wiki.hypr.land/nix/">Nix概览</a></li>
+          <li><a href="https://wiki.hypr.land/nix/hyprland-on-any-distro-using-nix/">在各发行版上使用 Nix 安装 Hyprland</a></li>
+          <li><a href="https://wiki.hypr.land/nix/installing-hyprland-on-nixos/">在 NixOS 上安装 Hyprland</a></li>
+          <li><a href="https://wiki.hypr.land/nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li>
+          <li><a href="https://wiki.hypr.land/nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li>
+          <li><a href="https://wiki.hypr.land/nix/cachix/">Cachix</a></li>
+          <li><a href="https://wiki.hypr.land/nix/advanced/">进阶</a></li>
+          <li><a href="https://wiki.hypr.land/nix/contributing-and-debugging/">参与贡献与调试</a></li>
+        </ul>
+      </details>
+    </li>
+    <li><a href="https://wiki.hypr.land/nvidia/">NVIDIA</a></li>
+    <li><a href="https://wiki.hypr.land/ipc/">进程间通信（IPC）</a></li>
+    <li><a href="https://wiki.hypr.land/crashes-and-bugs/">崩溃与故障</a></li>
+    <li><a href="https://wiki.hypr.land/faq/">常见问题</a></li>
+    <li><a href="https://wiki.hypr.land/community/">社区</a></li>
+    <li>
+      <details>
+        <summary>参与贡献与调试</summary>
+        <ul>
+          <li><a href="https://wiki.hypr.land/contributing-and-debugging/">参与贡献与调试概览</a></li>
+          <li><a href="https://wiki.hypr.land/contributing-and-debugging/wiki-guidelines/">Wiki 编写指南</a></li>
+          <li><a href="https://wiki.hypr.land/contributing-and-debugging/issue-guidelines/">问题反馈指南</a></li>
+          <li><a href="https://wiki.hypr.land/contributing-and-debugging/pr-guidelines/">拉取请求指南</a></li>
+          <li><a href="https://wiki.hypr.land/contributing-and-debugging/tests/">测试</a></li>
+          <li><a href="https://wiki.hypr.land/contributing-and-debugging/translations/">翻译</a></li>
+        </ul>
+      </details>
+    </li>
+  </ul>
+</nav></div>
+  </aside>
+  <main id="content">
+    <div class="crumb"><a href="./">文档</a> <span aria-hidden="true">/</span> 首页</div>
+    <h1>Hyprland Wiki</h1>
+    <div class="notice">
+      <strong>请先确认文档版本</strong>
+      <p>这份 Wiki 按版本提供文档。默认显示的内容对应 Hyprland 最新的 Git 提交。你很可能安装的是带版本标签的发行版。可以运行 <code>hyprctl version</code> 查看版本号，再从<a href="https://wiki.hypr.land/version-selector/">版本选择器</a>中选择对应的文档。</p>
+      <select id="version" aria-label="选择 Wiki 版本">
+  <option disabled selected value="">选择官方文档版本…</option>
+  <option value="https://wiki.hypr.land/">最新 Git 版本</option>
+  <option value="https://wiki.hypr.land/0.57.0/">v0.57.0</option>
+  <option value="https://wiki.hypr.land/0.56.0/">v0.56.0</option>
+  <option value="https://wiki.hypr.land/0.55.0/">v0.55.0</option>
+  <option value="https://wiki.hypr.land/0.54.0/">v0.54.0</option>
+  <option value="https://wiki.hypr.land/0.53.0/">v0.53.0</option>
+  <option value="https://wiki.hypr.land/0.52.0/">v0.52.0</option>
+  <option value="https://wiki.hypr.land/0.51.0/">v0.51.0</option>
+  <option value="https://wiki.hypr.land/0.50.0/">v0.50.0</option>
+  <option value="https://wiki.hypr.land/0.49.0/">v0.49.0</option>
+  <option value="https://wiki.hypr.land/0.48.0/">v0.48.0</option>
+  <option value="https://wiki.hypr.land/0.47.0/">v0.47.0</option>
+  <option value="https://wiki.hypr.land/0.46.2/">v0.46.2</option>
+  <option value="https://wiki.hypr.land/0.46.1/">v0.46.1</option>
+  <option value="https://wiki.hypr.land/0.46.0/">v0.46.0</option>
+  <option value="https://wiki.hypr.land/0.45.2/">v0.45.2</option>
+  <option value="https://wiki.hypr.land/0.45.1/">v0.45.1</option>
+  <option value="https://wiki.hypr.land/0.45.0/">v0.45.0</option>
+  <option value="https://wiki.hypr.land/0.44.1/">v0.44.1</option>
+  <option value="https://wiki.hypr.land/0.44.0/">v0.44.0</option>
+  <option value="https://wiki.hypr.land/0.43.0/">v0.43.0</option>
+  <option value="https://wiki.hypr.land/0.42.0/">v0.42.0</option>
+  <option value="https://wiki.hypr.land/0.41.2/">v0.41.2</option>
+  <option value="https://wiki.hypr.land/0.41.1/">v0.41.1</option>
+  <option value="https://wiki.hypr.land/0.41.0/">v0.41.0</option>
+  <option value="https://wiki.hypr.land/0.40.0/">v0.40.0</option>
+  <option value="https://wiki.hypr.land/0.39.0/">v0.39.0</option>
+  <option value="https://wiki.hypr.land/0.38.0/">v0.38.0</option>
+  <option value="https://wiki.hypr.land/0.37.0/">v0.37.0</option>
+  <option value="https://wiki.hypr.land/0.36.0/">v0.36.0</option>
+  <option value="https://wiki.hypr.land/0.35.0/">v0.35.0</option>
+  <option value="https://wiki.hypr.land/0.34.0/">v0.34.0</option>
+  <option value="https://wiki.hypr.land/0.33.1/">v0.33.1</option>
+  <option value="https://wiki.hypr.land/0.33.0/">v0.33.0</option>
+  <option value="https://wiki.hypr.land/0.32.2/">v0.32.2</option>
+  <option value="https://wiki.hypr.land/0.32.1/">v0.32.1</option>
+  <option value="https://wiki.hypr.land/0.32.0/">v0.32.0</option>
+  <option value="https://wiki.hypr.land/0.31.0/">v0.31.0</option>
+  <option value="https://wiki.hypr.land/0.30.0/">v0.30.0</option>
+  <option value="https://wiki.hypr.land/0.29.1/">v0.29.1</option>
+  <option value="https://wiki.hypr.land/0.29.0/">v0.29.0</option>
+  <option value="https://wiki.hypr.land/0.28.0/">v0.28.0</option>
+  <option value="https://wiki.hypr.land/0.27.2/">v0.27.2</option>
+  <option value="https://wiki.hypr.land/0.27.1/">v0.27.1</option>
+  <option value="https://wiki.hypr.land/0.27.0/">v0.27.0</option>
+  <option value="https://wiki.hypr.land/0.26.0/">v0.26.0</option>
+  <option value="https://wiki.hypr.land/0.25.0/">v0.25.0</option>
+  <option value="https://wiki.hypr.land/0.24.1/">v0.24.1</option>
+  <option value="https://wiki.hypr.land/0.24.0/">v0.24.0</option>
+  <option value="https://wiki.hypr.land/0.23.0beta/">v0.23.0beta</option>
+  <option value="https://wiki.hypr.land/0.22.0beta/">v0.22.0beta</option>
+  <option value="https://wiki.hypr.land/0.21.0beta/">v0.21.0beta</option>
+  <option value="https://wiki.hypr.land/0.20.1beta/">v0.20.1beta</option>
+  <option value="https://wiki.hypr.land/0.20.0beta/">v0.20.0beta</option>
+  <option value="https://wiki.hypr.land/0.19.2beta/">v0.19.2beta</option>
+  <option value="https://wiki.hypr.land/0.19.1beta/">v0.19.1beta</option>
+  <option value="https://wiki.hypr.land/0.19.0beta/">v0.19.0beta</option>
+  <option value="https://wiki.hypr.land/0.18.0beta/">v0.18.0beta</option>
+  <option value="https://wiki.hypr.land/0.17.0beta/">v0.17.0beta</option>
+  <option value="https://wiki.hypr.land/0.16.0beta/">v0.16.0beta</option>
+</select>
+    </div>
+    <p>你好，旅行者！欢迎来到 Hyprland Wiki！</p>
+    <p>浏览文档目录，选择你需要的章节开始阅读。</p>
+    <h2 id="having-issues">遇到问题了？</h2>
+    <p>先看看<a href="https://wiki.hypr.land/faq/">常见问题</a>和<a href="https://wiki.hypr.land/configuring/">配置指南</a>，里面很可能已经介绍了你遇到的问题。要是还没找到答案，可以搜索 <a href="https://github.com/hyprwm/Hyprland/discussions">GitHub 讨论区</a>，也可以到 <a href="https://wiki.hypr.land/community/#spaces">Hyprland 社区</a>求助。</p>
+    <h2 id="wayland-info">关于 Wayland</h2>
+    <p>Wayland 合成器本身就是一个独立运行的显示服务器，和 Xorg 一样。在 Xorg 上，你可以自由搭配窗口管理器和合成器。在 Wayland 上，合成器之间无法这样混搭。</p>
+    <p>并非所有 Xorg 应用都能在 Wayland 上运行，也不建议尝试把它们全部搬过来。你可以在<a href="https://wiki.hypr.land/useful-utilities/">实用工具</a>中找到推荐的 Wayland 原生应用和兼容程序。</p>
+    <footer><span>原文更新于 <time datetime="2026-11-22">2026 年 11 月 22 日</time></span><span>非官方译本 · <a href="https://github.com/banana815/hyprland-wiki-zh-cn">译文仓库</a> · <a href="https://github.com/banana815/hyprland-wiki-zh-cn/blob/main/LICENSE">许可</a></span></footer>
+  </main>
+  <aside class="rail" aria-label="本页辅助导航">
+    <h2>本页目录</h2>
+    <a href="#having-issues">遇到问题了？</a>
+    <a href="#wayland-info">关于 Wayland</a>
+    <hr>
+    <h2>上游赞助方</h2><a href="https://omarchy.org">Omacom Foundation ↗</a>
+    <hr>
+    <a href="https://github.com/hyprwm/hyprland-wiki/edit/main/content/_index.md">在 GitHub 编辑原文 ↗</a>
+    <a href="#top">回到顶部 ↑</a>
+    <label class="theme">主题 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label>
+  </aside>
+</div>
+</body>
+</html>
