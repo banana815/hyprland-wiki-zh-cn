@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>按键子映射 · Hyprland Wiki 中文版</title><link rel="icon" href="../../../../assets/hyprland.svg">
+<link rel="stylesheet" href="../../../../assets/wiki.css"><script defer src="../../../../assets/site.js"></script></head>
+<body data-root="../../../../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../../../../"><img src="../../../../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/configuring/core/binds/submaps/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../../../../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../../../../">Hyprland 中文文档</a><ul><li><a href="../../../../version-selector/">版本选择器 ⚙️</a></li><li><details><summary><a href="../../../../getting-started/">入门指南</a></summary><ul><li><a href="../../../../getting-started/installation/">安装</a></li><li><a href="../../../../getting-started/master-tutorial/">入门教程</a></li><li><a href="../../../../getting-started/preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details open><summary><a href="../../../">配置</a></summary><ul><li><a href="../../../naming-conventions/">命名约定</a></li><li><a href="../../../selectors/">选择器</a></li><li><details open><summary><a href="../../">基础配置</a></summary><ul><li><details><summary><a href="../../monitors/">显示器</a></summary><ul><li><a href="../../monitors/output-selection/">选择显示输出</a></li><li><a href="../../monitors/positioning/">显示器排列</a></li><li><a href="../../monitors/modes/">显示模式</a></li><li><a href="../../monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="../../config-options/">配置选项</a></li><li><a href="../../devices/">设备</a></li><li><a href="../../dispatchers/">调度器</a></li><li><details open><summary><a href="../">按键绑定</a></summary><ul><li><a href="../flags/">标志位</a></li><li><a href="../keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="../devices/">设备绑定</a></summary><ul><li><a href="../devices/mouse/">鼠标</a></li><li><a href="../devices/touchpad/">触摸板</a></li><li><a href="../devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="./" aria-current="page">按键子映射</a></li><li><a href="../globals/">全局快捷键与绑定</a></li><li><a href="../switches/">硬件开关</a></li><li><a href="../gestures/">手势</a></li></ul></details></li><li><details><summary><a href="../../rules/">规则</a></summary><ul><li><a href="../../rules/window-rules/">窗口规则</a></li><li><a href="../../rules/workspace-rules/">工作区规则</a></li><li><a href="../../rules/layer-rules/">图层规则</a></li></ul></details></li><li><a href="../../environment-variables/">环境变量</a></li><li><a href="../../animations/">动画</a></li><li><a href="../../autostart/">自动启动</a></li><li><details><summary><a href="../../advanced-configuration/">高级配置</a></summary><ul><li><a href="../../advanced-configuration/events/">Lua 事件</a></li><li><a href="../../advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="../../advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="../../advanced-configuration/notifications/">通知</a></li><li><a href="../../advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../layouts/">布局</a></summary><ul><li><a href="../../../layouts/dwindle-layout/">Dwindle 布局</a></li><li><a href="../../../layouts/scrolling-layout/">滚动布局</a></li><li><a href="../../../layouts/master-layout/">主从布局</a></li><li><a href="../../../layouts/monocle-layout/">单窗口布局</a></li><li><a href="../../../layouts/custom-layouts/">自定义布局</a></li></ul></details></li><li><details><summary><a href="../../../extra/">其他配置</a></summary><ul><li><a href="../../../extra/multi-gpu/">多显卡</a></li><li><a href="../../../extra/virtual-gpu/">虚拟 GPU</a></li><li><a href="../../../extra/performance/">性能</a></li><li><a href="../../../extra/tearing/">画面撕裂</a></li><li><a href="../../../extra/xwayland/">Xwayland</a></li><li><a href="../../../extra/systemd/">systemd</a></li></ul></details></li><li><a href="../../../code-snippets/">Lua 代码片段</a></li></ul></details></li><li><details><summary><a href="../../../../hypr-ecosystem/">Hypr 生态系统</a></summary><ul><li><details><summary><a href="../../../../hypr-ecosystem/user/">用户应用与实用工具</a></summary><ul><li><a href="../../../../hypr-ecosystem/user/hyprpaper/">hyprpaper</a></li><li><a href="../../../../hypr-ecosystem/user/hyprpicker/">hyprpicker</a></li><li><a href="../../../../hypr-ecosystem/user/hyprlauncher/">hyprlauncher</a></li><li><a href="../../../../hypr-ecosystem/user/hypridle/">hypridle</a></li><li><a href="../../../../hypr-ecosystem/user/hyprlock/">hyprlock</a></li><li><a href="../../../../hypr-ecosystem/user/xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li><li><a href="../../../../hypr-ecosystem/user/hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../../../../hypr-ecosystem/user/hyprsunset/">hyprsunset</a></li><li><a href="../../../../hypr-ecosystem/user/hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../../../../hypr-ecosystem/user/hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../../../../hypr-ecosystem/user/hyprqt6engine/">hyprqt6engine</a></li><li><a href="../../../../hypr-ecosystem/user/hyprpwcenter/">hyprpwcenter</a></li><li><a href="../../../../hypr-ecosystem/user/hyprshutdown/">hyprshutdown</a></li><li><a href="../../../../hypr-ecosystem/user/hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../../../../hypr-ecosystem/user/hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../../../../hypr-ecosystem/dev/">开发库和工具包</a></summary><ul><li><a href="../../../../hypr-ecosystem/dev/aquamarine/">aquamarine</a></li><li><a href="../../../../hypr-ecosystem/dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../../../../hypr-ecosystem/dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../../../../hypr-ecosystem/dev/hyprlang/">hyprlang</a></li><li><a href="../../../../hypr-ecosystem/dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../../../../hypr-ecosystem/dev/hyprutils/">hyprutils</a></li><li><a href="../../../../hypr-ecosystem/dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../../hyprland-plugins/">Hyprland 插件</a></summary><ul><li><a href="../../../../hyprland-plugins/using-plugins/">使用插件</a></li><li><details><summary><a href="../../../../hyprland-plugins/development/">开发</a></summary><ul><li><a href="../../../../hyprland-plugins/development/getting-started/">插件开发入门</a></li><li><a href="../../../../hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li><li><a href="../../../../hyprland-plugins/development/advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../../useful-utilities/">实用工具</a></summary><ul><li><a href="../../../../useful-utilities/must-have/">必备软件</a></li><li><a href="../../../../useful-utilities/status-bars/">状态栏</a></li><li><a href="../../../../useful-utilities/wallpapers/">壁纸</a></li><li><a href="../../../../useful-utilities/screen-sharing/">屏幕共享</a></li><li><a href="../../../../useful-utilities/screenshots-and-recording/">截图与录屏</a></li><li><a href="../../../../useful-utilities/app-launchers/">应用启动器</a></li><li><a href="../../../../useful-utilities/app-clients/">应用客户端</a></li><li><a href="../../../../useful-utilities/phone-connect/">连接手机</a></li><li><a href="../../../../useful-utilities/color-pickers/">取色器</a></li><li><a href="../../../../useful-utilities/clipboard-managers/">剪贴板管理器</a></li><li><a href="../../../../useful-utilities/file-managers/">文件管理器</a></li><li><a href="../../../../useful-utilities/other/">其他</a></li><li><a href="../../../../useful-utilities/hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="../../../../useful-utilities/uwsm/">UWSM</a></li></ul></details></li><li><details><summary><a href="../../../../nix/">Nix</a></summary><ul><li><a href="../../../../nix/hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../../../../nix/installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../../../../nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="../../../../nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li><li><a href="../../../../nix/cachix/">Cachix</a></li><li><a href="../../../../nix/advanced/">高级用法</a></li><li><a href="../../../../nix/contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../../../../nvidia/">NVIDIA</a></li><li><a href="../../../../ipc/">IPC</a></li><li><a href="../../../../crashes-and-bugs/">崩溃与缺陷</a></li><li><a href="../../../../faq/">常见问题</a></li><li><a href="../../../../community/">社区</a></li><li><details><summary><a href="../../../../contributing-and-debugging/">贡献与调试</a></summary><ul><li><a href="../../../../contributing-and-debugging/wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../../../../contributing-and-debugging/issue-guidelines/">议题指南</a></li><li><a href="../../../../contributing-and-debugging/pr-guidelines/">PR 指南</a></li><li><a href="../../../../contributing-and-debugging/tests/">测试</a></li><li><a href="../../../../contributing-and-debugging/translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../../../../">Hyprland 中文文档</a><span>›</span><a href="../../../">配置</a><span>›</span><a href="../../">基础配置</a><span>›</span><a href="../">按键绑定</a></nav><article><h1>按键子映射</h1><h2 id="submaps">子映射 <a class="permalink" href="#submaps" aria-label="本节链接">#</a></h2>
+<p>按键绑定子映射可以让你启用一组独立的按键绑定。</p>
+<p>例如，如果你想进入一种可以用方向键调整窗口大小的“缩放模式”，可以这样设置：</p>
+<pre class="lua"><code>-- 切换到名为 `resize` 的子映射。
+hl.bind(&quot;ALT + R&quot;, hl.dsp.submap(&quot;resize&quot;))
+
+-- 开始定义名为 &quot;resize&quot; 的子映射。
+hl.define_submap(&quot;resize&quot;, function()
+
+    -- 设置可重复触发的按键绑定，用于调整活动窗口的大小。
+    hl.bind(&quot;right&quot;, hl.dsp.window.resize({ x = 10, y = 0, relative = true}), { repeating = true })
+    hl.bind(&quot;left&quot;, hl.dsp.window.resize({ x = -10, y = 0, relative = true}), { repeating = true })
+    hl.bind(&quot;up&quot;, hl.dsp.window.resize({ x = 0, y = 10, relative = true}), { repeating = true })
+    hl.bind(&quot;down&quot;, hl.dsp.window.resize({ x = 0, y = -10, relative = true}), { repeating = true })
+
+    -- 使用 `reset` 返回全局子映射
+    hl.bind(&quot;Escape&quot;, hl.dsp.submap(&quot;reset&quot;))
+
+end)
+
+-- 后面定义的按键绑定将重新成为全局绑定……</code></pre>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>别忘了在子映射中设置一个用于重置按键映射的按键绑定（本例中为 <code>Escape</code>）！</p>
+<p>如果你被困在某个按键映射中，可以使用 <code>hyprctl dispatch 'hl.dsp.submap("reset")'</code> 返回。如果没有打开终端，请打开一个新的 TTY，并使用 <code>--instance</code> 标志选择要操作的 Hyprland 实例（如果只有一个实例在运行，其编号为 0）。例如：<code>hyprctl dispatch --instance 0 'hl.dsp.submap("reset")'</code>。</p>
+</div>
+<p>你也可以让同一个按键绑定执行多个操作，例如调整窗口大小后关闭子映射，配置如下：</p>
+<pre class="lua"><code>hl.bind(&quot;ALT + R&quot;, hl.dsp.submap(&quot;resize&quot;))
+
+hl.define_submap(&quot;resize&quot;, function()
+    hl.bind(&quot;right&quot;, function()
+        hl.dispatch(hl.dsp.window.resize({ x = 10, y = 0, relative = true }))
+        hl.dispatch(hl.dsp.submap(&quot;reset&quot;))
+    end)
+end)</code></pre>
+<p>这是因为同一个按键绑定可以关联多个操作，而这些绑定会按它们在配置中出现的顺序执行。</p>
+<p>使用子映射的通用绑定标志，可以让某个按键绑定在任何子映射中都生效。</p>
+<pre class="lua"><code>hl.bind(mainMod .. &quot; + K&quot;, hl.dsp.exec_cmd(&quot;kitty&quot;), { submap_universal = true })</code></pre>
+<h3 id="nesting">嵌套 <a class="permalink" href="#nesting" aria-label="本节链接">#</a></h3>
+<p>子映射可以嵌套，示例如下：</p>
+<pre class="lua"><code>hl.bind(mainMod .. &quot; + M&quot;, hl.dsp.submap(&quot;main&quot;))
+hl.define_submap(&quot;main&quot;, function()
+
+    hl.bind(&quot;1&quot;, hl.dsp.submap(&quot;nested_one&quot;))
+    hl.define_submap(&quot;nested_one&quot;, function()
+
+        hl.bind(&quot;SHIFT + Escape&quot;, hl.dsp.submap(&quot;reset&quot;))
+        hl.bind(&quot;Escape&quot;, hl.dsp.submap(&quot;main_submap&quot;))
+
+        hl.bind(&quot;2&quot;, hl.dsp.submap(&quot;nested_two&quot;))
+        hl.define_submap(&quot;nested_two&quot;, function()
+
+            hl.bind(&quot;SHIFT + Escape&quot;, hl.dsp.submap(&quot;reset&quot;))
+            hl.bind(&quot;Escape&quot;, hl.dsp.submap(&quot;main_submap&quot;))
+
+        -- nested_two 子映射结束
+        end)
+    -- nested_one 子映射结束
+    end)
+
+    hl.bind(&quot;Escape&quot;, hl.dsp.submap(&quot;reset&quot;))
+-- main 子映射结束
+end)</code></pre>
+<h3 id="automatically-close-a-submap-on-dispatch">执行调度操作时自动关闭子映射 <a class="permalink" href="#automatically-close-a-submap-on-dispatch" aria-label="本节链接">#</a></h3>
+<p>将子映射名称或 <code>"reset"</code> 作为第二个参数传给 <code>hl.define_submap()</code>，即可在执行调度操作时自动切换到指定子映射或关闭当前子映射。</p>
+<pre class="lua"><code>hl.bind(&quot;SUPER + a&quot;, hl.dsp.submap(&quot;submapA&quot;))
+
+-- 按下 a 后切换到子映射 submapB。
+hl.define_submap(&quot;submapA&quot;, &quot;submapB&quot;, function()
+    hl.bind(&quot;a&quot;, hl.dsp.exec_cmd(&quot;someCoolThing.sh&quot;))
+end)
+
+-- 按下 a 后将子映射重置为默认值。
+hl.dsp.submap(&quot;submapB&quot;, &quot;reset&quot;, function()
+    hl.bind(&quot;a&quot;, hl.dsp.exec_cmd(&quot;someOtherCoolThing.sh&quot;))
+end)</code></pre>
+<h3 id="catch-all">匹配任意按键 <a class="permalink" href="#catch-all" aria-label="本节链接">#</a></h3>
+<p>你也可以使用特殊关键字 <code>catchall</code> 定义一个按键绑定，按下任意键都能触发它。这样可以在子映射中阻止任何按键传递给当前活动的应用，也可以在按下任何未定义的键时立即退出子映射：</p>
+<pre class="lua"><code>hl.bind(&quot;catchall&quot;, hl.dsp.submap(&quot;reset&quot;))</code></pre>
+<h3 id="disabling-keybinds-with-one-master-keybind">使用一个总控按键绑定禁用所有按键绑定 <a class="permalink" href="#disabling-keybinds-with-one-master-keybind" aria-label="本节链接">#</a></h3>
+<p>如果你想用另一个按键绑定来禁用所有按键绑定，相当于为按键绑定设置一个总开关，只需创建一个子映射，其中仅保留用于退出该子映射的按键绑定即可。</p>
+<pre class="lua"><code>hl.bind(KEYS, hl.dsp.submap(&quot;clean&quot;))
+hl.define_submap(&quot;clean&quot;, function()
+    hl.bind(KEYS, hl.dsp.submap(&quot;reset&quot;))
+end)</code></pre>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../../../../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/configuring/core/binds/submaps/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-2" href="#submaps">子映射</a><a class="level-3" href="#nesting">嵌套</a><a class="level-3" href="#automatically-close-a-submap-on-dispatch">执行调度操作时自动关闭子映射</a><a class="level-3" href="#catch-all">匹配任意按键</a><a class="level-3" href="#disabling-keybinds-with-one-master-keybind">使用一个总控按键绑定禁用所有按键绑定</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>

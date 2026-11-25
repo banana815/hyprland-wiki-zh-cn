@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>hypridle · Hyprland Wiki 中文版</title><link rel="icon" href="../../../assets/hyprland.svg">
+<link rel="stylesheet" href="../../../assets/wiki.css"><script defer src="../../../assets/site.js"></script></head>
+<body data-root="../../../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../../../"><img src="../../../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/hypr-ecosystem/user/hypridle/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../../../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../../../">Hyprland 中文文档</a><ul><li><a href="../../../version-selector/">版本选择器 ⚙️</a></li><li><details><summary><a href="../../../getting-started/">入门指南</a></summary><ul><li><a href="../../../getting-started/installation/">安装</a></li><li><a href="../../../getting-started/master-tutorial/">入门教程</a></li><li><a href="../../../getting-started/preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details><summary><a href="../../../configuring/">配置</a></summary><ul><li><a href="../../../configuring/naming-conventions/">命名约定</a></li><li><a href="../../../configuring/selectors/">选择器</a></li><li><details><summary><a href="../../../configuring/core/">基础配置</a></summary><ul><li><details><summary><a href="../../../configuring/core/monitors/">显示器</a></summary><ul><li><a href="../../../configuring/core/monitors/output-selection/">选择显示输出</a></li><li><a href="../../../configuring/core/monitors/positioning/">显示器排列</a></li><li><a href="../../../configuring/core/monitors/modes/">显示模式</a></li><li><a href="../../../configuring/core/monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="../../../configuring/core/config-options/">配置选项</a></li><li><a href="../../../configuring/core/devices/">设备</a></li><li><a href="../../../configuring/core/dispatchers/">调度器</a></li><li><details><summary><a href="../../../configuring/core/binds/">按键绑定</a></summary><ul><li><a href="../../../configuring/core/binds/flags/">标志位</a></li><li><a href="../../../configuring/core/binds/keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="../../../configuring/core/binds/devices/">设备绑定</a></summary><ul><li><a href="../../../configuring/core/binds/devices/mouse/">鼠标</a></li><li><a href="../../../configuring/core/binds/devices/touchpad/">触摸板</a></li><li><a href="../../../configuring/core/binds/devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="../../../configuring/core/binds/submaps/">按键子映射</a></li><li><a href="../../../configuring/core/binds/globals/">全局快捷键与绑定</a></li><li><a href="../../../configuring/core/binds/switches/">硬件开关</a></li><li><a href="../../../configuring/core/binds/gestures/">手势</a></li></ul></details></li><li><details><summary><a href="../../../configuring/core/rules/">规则</a></summary><ul><li><a href="../../../configuring/core/rules/window-rules/">窗口规则</a></li><li><a href="../../../configuring/core/rules/workspace-rules/">工作区规则</a></li><li><a href="../../../configuring/core/rules/layer-rules/">图层规则</a></li></ul></details></li><li><a href="../../../configuring/core/environment-variables/">环境变量</a></li><li><a href="../../../configuring/core/animations/">动画</a></li><li><a href="../../../configuring/core/autostart/">自动启动</a></li><li><details><summary><a href="../../../configuring/core/advanced-configuration/">高级配置</a></summary><ul><li><a href="../../../configuring/core/advanced-configuration/events/">Lua 事件</a></li><li><a href="../../../configuring/core/advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="../../../configuring/core/advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="../../../configuring/core/advanced-configuration/notifications/">通知</a></li><li><a href="../../../configuring/core/advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../configuring/layouts/">布局</a></summary><ul><li><a href="../../../configuring/layouts/dwindle-layout/">Dwindle 布局</a></li><li><a href="../../../configuring/layouts/scrolling-layout/">滚动布局</a></li><li><a href="../../../configuring/layouts/master-layout/">主从布局</a></li><li><a href="../../../configuring/layouts/monocle-layout/">单窗口布局</a></li><li><a href="../../../configuring/layouts/custom-layouts/">自定义布局</a></li></ul></details></li><li><details><summary><a href="../../../configuring/extra/">其他配置</a></summary><ul><li><a href="../../../configuring/extra/multi-gpu/">多显卡</a></li><li><a href="../../../configuring/extra/virtual-gpu/">虚拟 GPU</a></li><li><a href="../../../configuring/extra/performance/">性能</a></li><li><a href="../../../configuring/extra/tearing/">画面撕裂</a></li><li><a href="../../../configuring/extra/xwayland/">Xwayland</a></li><li><a href="../../../configuring/extra/systemd/">systemd</a></li></ul></details></li><li><a href="../../../configuring/code-snippets/">Lua 代码片段</a></li></ul></details></li><li><details open><summary><a href="../../">Hypr 生态系统</a></summary><ul><li><details open><summary><a href="../">用户应用与实用工具</a></summary><ul><li><a href="../hyprpaper/">hyprpaper</a></li><li><a href="../hyprpicker/">hyprpicker</a></li><li><a href="../hyprlauncher/">hyprlauncher</a></li><li><a href="./" aria-current="page">hypridle</a></li><li><a href="../hyprlock/">hyprlock</a></li><li><a href="../xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li><li><a href="../hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../hyprsunset/">hyprsunset</a></li><li><a href="../hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../hyprqt6engine/">hyprqt6engine</a></li><li><a href="../hyprpwcenter/">hyprpwcenter</a></li><li><a href="../hyprshutdown/">hyprshutdown</a></li><li><a href="../hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../../dev/">开发库和工具包</a></summary><ul><li><a href="../../dev/aquamarine/">aquamarine</a></li><li><a href="../../dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../../dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../../dev/hyprlang/">hyprlang</a></li><li><a href="../../dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../../dev/hyprutils/">hyprutils</a></li><li><a href="../../dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../hyprland-plugins/">Hyprland 插件</a></summary><ul><li><a href="../../../hyprland-plugins/using-plugins/">使用插件</a></li><li><details><summary><a href="../../../hyprland-plugins/development/">开发</a></summary><ul><li><a href="../../../hyprland-plugins/development/getting-started/">插件开发入门</a></li><li><a href="../../../hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li><li><a href="../../../hyprland-plugins/development/advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../useful-utilities/">实用工具</a></summary><ul><li><a href="../../../useful-utilities/must-have/">必备软件</a></li><li><a href="../../../useful-utilities/status-bars/">状态栏</a></li><li><a href="../../../useful-utilities/wallpapers/">壁纸</a></li><li><a href="../../../useful-utilities/screen-sharing/">屏幕共享</a></li><li><a href="../../../useful-utilities/screenshots-and-recording/">截图与录屏</a></li><li><a href="../../../useful-utilities/app-launchers/">应用启动器</a></li><li><a href="../../../useful-utilities/app-clients/">应用客户端</a></li><li><a href="../../../useful-utilities/phone-connect/">连接手机</a></li><li><a href="../../../useful-utilities/color-pickers/">取色器</a></li><li><a href="../../../useful-utilities/clipboard-managers/">剪贴板管理器</a></li><li><a href="../../../useful-utilities/file-managers/">文件管理器</a></li><li><a href="../../../useful-utilities/other/">其他</a></li><li><a href="../../../useful-utilities/hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="../../../useful-utilities/uwsm/">UWSM</a></li></ul></details></li><li><details><summary><a href="../../../nix/">Nix</a></summary><ul><li><a href="../../../nix/hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../../../nix/installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../../../nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="../../../nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li><li><a href="../../../nix/cachix/">Cachix</a></li><li><a href="../../../nix/advanced/">高级用法</a></li><li><a href="../../../nix/contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../../../nvidia/">NVIDIA</a></li><li><a href="../../../ipc/">IPC</a></li><li><a href="../../../crashes-and-bugs/">崩溃与缺陷</a></li><li><a href="../../../faq/">常见问题</a></li><li><a href="../../../community/">社区</a></li><li><details><summary><a href="../../../contributing-and-debugging/">贡献与调试</a></summary><ul><li><a href="../../../contributing-and-debugging/wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../../../contributing-and-debugging/issue-guidelines/">议题指南</a></li><li><a href="../../../contributing-and-debugging/pr-guidelines/">PR 指南</a></li><li><a href="../../../contributing-and-debugging/tests/">测试</a></li><li><a href="../../../contributing-and-debugging/translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../../../">Hyprland 中文文档</a><span>›</span><a href="../../">Hypr 生态系统</a><span>›</span><a href="../">用户应用与实用工具</a></nav><article><h1>hypridle</h1><p><a href="https://github.com/hyprwm/hypridle">hypridle</a> 是 Hyprland 的空闲管理守护进程。</p>
+<h2 id="configuration">配置 <a class="permalink" href="#configuration" aria-label="本节链接">#</a></h2>
+<p>配置文件位于 <code>~/.config/hypr/hypridle.conf</code>。 此文件必不可少，没有它 hypridle 就无法运行。</p>
+<p>要让 hypridle 随 Hyprland 启动，请将 <code>hypridle</code> 加入 Hyprland 配置的自启动命令中。</p>
+<h3 id="general">常规设置 <a class="permalink" href="#general" aria-label="本节链接">#</a></h3>
+<p><code>general</code> 类别中的变量：</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lock_cmd</code></td>
+<td>收到 D-Bus 锁定事件（例如由 <code>loginctl lock-session</code> 触发）时运行的命令</td>
+<td>string</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td><code>unlock_cmd</code></td>
+<td>收到 D-Bus 解锁事件（例如由 <code>loginctl unlock-session</code> 触发）时运行的命令</td>
+<td>string</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td><code>on_lock_cmd</code></td>
+<td>锁屏程序锁定会话时运行的命令</td>
+<td>string</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td><code>on_unlock_cmd</code></td>
+<td>锁屏程序解锁会话时运行的命令</td>
+<td>string</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td><code>before_sleep_cmd</code></td>
+<td>收到 D-Bus 的 prepare_sleep 事件时运行的命令</td>
+<td>string</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td><code>after_sleep_cmd</code></td>
+<td>系统唤醒后收到 D-Bus 的 post prepare_sleep 事件时运行的命令</td>
+<td>string</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td><code>ignore_dbus_inhibit</code></td>
+<td>是否忽略 D-Bus 空闲抑制事件（例如来自 Firefox 的事件）</td>
+<td>bool</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>ignore_systemd_inhibit</code></td>
+<td>是否忽略 <code>systemd-inhibit --what=idle</code> 设置的空闲抑制锁</td>
+<td>bool</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>ignore_wayland_inhibit</code></td>
+<td>是否忽略通过 Wayland 协议设置的空闲抑制锁</td>
+<td>bool</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>inhibit_sleep</code></td>
+<td>睡眠抑制模式：<br> <code>0</code>：禁用 <br> <code>1</code>：常规 <br> <code>2</code>：自动 <br> <code>3</code>：等待锁定通知</td>
+<td>int</td>
+<td><code>2</code></td>
+</tr>
+</tbody>
+</table>
+<div class="note">
+<div class="title">
+<p>说明</p>
+</div>
+<p><code>general:inhibit_sleep</code> 选项可确保 hypridle 在系统进入睡眠前执行指定任务。</p>
+<p>可选值：</p>
+<ul>
+<li><code>0</code> 禁用睡眠抑制。</li>
+<li><code>1</code> 让系统等到 hypridle 启动 <code>general:before_sleep_cmd</code> 后再进入睡眠。</li>
+<li><code>2</code>（自动）会根据配置判断你是否希望在睡眠前启动 hyprlock，据此选择 <code>3</code> 或 <code>1</code>。</li>
+<li><code>3</code> 让系统等到锁屏程序锁定会话后再进入睡眠。 此模式适用于所有使用 Wayland 会话锁定协议的程序。</li>
+</ul>
+</div>
+<h3 id="listeners">监听器 <a class="permalink" href="#listeners" aria-label="本节链接">#</a></h3>
+<p>hypridle 通过监听器定义用户空闲时要执行的操作。</p>
+<p>每个监听器都有一个 <code>timeout</code>，单位为秒。 用户持续空闲 <code>timeout</code> 秒后，就会触发 <code>on-timeout</code>。 用户在空闲后恢复活动时，就会触发 <code>on-resume</code>。</p>
+<p>你可以按需定义任意数量的监听器。</p>
+<details><summary>监听器示例</summary>
+
+<pre class="ini"><code>listener {
+    timeout = 500                            # 单位为秒。
+    on-timeout = notify-send &quot;You are idle!&quot; # 超时后运行的命令。
+    on-resume = notify-send &quot;Welcome back!&quot;  # 超时触发后，再次检测到活动时运行的命令。
+}</code></pre>
+</details>
+
+<p><code>listener</code> 类别中的变量：</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>timeout</code></td>
+<td>空闲时长，单位为秒</td>
+<td>int</td>
+<td>无，必须指定</td>
+</tr>
+<tr>
+<td><code>on-timeout</code></td>
+<td>达到超时时长时运行的命令</td>
+<td>string</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td><code>on-resume</code></td>
+<td>超时触发后，再次检测到用户活动时运行的命令</td>
+<td>string</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td><code>ignore_inhibit</code></td>
+<td>让此规则忽略所有类型的空闲抑制锁</td>
+<td>bool</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>condition_cmd</code></td>
+<td>达到超时时长时，在 <code>on-timeout</code> _之前_运行的命令。通过 <code>/bin/sh -c</code> 执行；退出码为 <code>0</code> 时触发 <code>on-timeout</code>，非零时推迟触发</td>
+<td>string</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td><code>condition_retry</code></td>
+<td>若 <code>condition_cmd</code> 推迟了触发，只要用户仍处于空闲状态，就每隔 N 秒重新运行该命令，一旦成功便触发 <code>on-timeout</code>。设为 <code>0</code> 可禁用重试（本次空闲期间将跳过被推迟的 <code>on-timeout</code>）</td>
+<td>int</td>
+<td><code>0</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="conditional-timeouts">条件超时 <a class="permalink" href="#conditional-timeouts" aria-label="本节链接">#</a></h4>
+<p>监听器可以通过 <code>condition_cmd</code> 根据外部状态决定是否触发 <code>on-timeout</code>。 达到超时时长时，hypridle 会先运行 <code>condition_cmd</code>。只有该命令以 <code>0</code> 退出时，才会触发 <code>on-timeout</code>。 退出码非零时，<code>on-timeout</code> 将推迟触发。</p>
+<p>设置 <code>condition_retry</code> 可让 hypridle 在用户持续空闲时反复检查：每隔 <code>condition_retry</code> 秒重新运行一次 <code>condition_cmd</code>，一旦成功便立即触发 <code>on-timeout</code>。 使用默认设置 <code>condition_retry = 0</code> 时，如果 <code>on-timeout</code> 被推迟，本次空闲期间就会跳过它，直到下次空闲时才重新计时。 任何用户活动都会重置监听器，并取消尚未执行的重试。</p>
+<div class="note">
+<div class="title">
+<p>说明</p>
+</div>
+<p><code>condition_cmd</code> 在 hypridle 的事件循环中同步运行，应确保它能快速执行完毕。脚本一旦阻塞，空闲事件的处理也会停下来。 hypridle 大约每 5 秒在事件循环中检查一次是否该重试，因此即使 <code>condition_retry</code> 设得很小，实际重试间隔也会向上取整到这一时间粒度。</p>
+</div>
+<details><summary>示例</summary>
+
+<p>SSH 会话保持连接时不挂起系统：</p>
+<pre class="ini"><code>listener {
+    timeout = 900                                          # 15min.
+    on-timeout = systemctl suspend                         # 挂起计算机。
+    condition_cmd = ~/.config/hypr/scripts/can-suspend.sh  # 退出状态码为 0 时挂起，非零时保持唤醒。
+    condition_retry = 30                                   # 如果仍处于空闲状态，每 30 秒重新检查一次。
+}</code></pre>
+<pre class="sh"><code>#!/bin/sh
+ss -tn state established &#39;( sport = :ssh )&#39; | grep -q . &amp;&amp; exit 1
+exit 0</code></pre>
+<p>hypridle 配合 hyprlock 使用的完整示例：</p>
+<pre class="ini"><code>general {
+    lock_cmd = pidof hyprlock || hyprlock                                    # 避免启动多个 hyprlock 实例。
+    before_sleep_cmd = loginctl lock-session                                 # 在挂起前锁屏。
+    after_sleep_cmd = hyprctl dispatch &#39;hl.dsp.dpms({ action = &quot;enable&quot; })&#39;  # 以免需要按两次键才能点亮显示器。
+}
+
+listener {
+    timeout = 150                         # 2.5min.
+    on-timeout = brightnessctl -s set 10  # 将显示器背光调至最低；OLED 显示器应避免设为 0。
+    on-resume = brightnessctl -r          # 恢复显示器背光亮度。
+}
+
+# 关闭键盘背光。如果键盘没有背光，请注释掉此配置段。
+listener {
+    timeout = 150                                           # 2.5min.
+    on-timeout = brightnessctl -sd rgb:kbd_backlight set 0  # 关闭键盘背光。
+    on-resume = brightnessctl -rd rgb:kbd_backlight         # 开启键盘背光。
+}
+
+listener {
+    timeout = 300                       # 5min
+    on-timeout = loginctl lock-session  # 超时后锁屏
+}
+
+listener {
+    timeout = 330                                                                          # 5.5min
+    on-timeout = hyprctl dispatch &#39;hl.dsp.dpms({ action = &quot;disable&quot; })&#39;                    # 超时后关闭屏幕
+    on-resume = hyprctl dispatch &#39;hl.dsp.dpms({ action = &quot;enable&quot; })&#39; &amp;&amp; brightnessctl -r  # 超时触发后，再次检测到活动时点亮屏幕。
+}
+
+listener {
+    timeout = 1800                  # 30min
+    on-timeout = systemctl suspend  # 挂起计算机
+}</code></pre>
+<h4 id="fading-the-keyboard-backlight">让键盘背光渐亮渐暗 <a class="permalink" href="#fading-the-keyboard-backlight" aria-label="本节链接">#</a></h4>
+<p><code>brightnessctl</code> 会立即设置亮度，因此仅用一对 <code>on-timeout</code>/<code>on-resume</code> 命令会让键盘背光骤然熄灭或亮起。 <a href="https://github.com/queueingqt/hypr-kbd-backlight-fade">hypr-kbd-backlight-fade</a> 是一个小脚本，它通过逐级调整亮度，让背光快速渐亮、缓慢渐暗。 它还使用锁文件，避免渐亮和渐暗操作重叠时发生竞争（例如用户短暂触碰后很快又进入空闲状态时）。</p>
+<p>请注意，视频播放器和浏览器通常会在播放视频时持有 Wayland 空闲抑制锁，即使没有全屏播放也是如此。这会暂停<strong>所有</strong>监听器，包括锁屏和挂起以外的监听器。 如果希望键盘背光在播放视频时仍能响应实际输入，请只在键盘背光监听器中设置 <code>ignore_inhibit = true</code>。启用 <code>general:ignore_wayland_inhibit</code> 会让所有监听器都忽略 Wayland 空闲抑制锁。</p>
+</details>
+
+<h2 id="locking-on-suspend-and-hibernate">在挂起和休眠时锁定会话 <a class="permalink" href="#locking-on-suspend-and-hibernate" aria-label="本节链接">#</a></h2>
+<p>会话在进入睡眠<em>之前</em>就会锁定，而非等到唤醒之后。 无论以何种方式进入睡眠，logind 都会发出 <code>PrepareForSleep</code> 信号：运行 <code>systemctl suspend</code>、<code>systemctl hibernate</code> 或 <code>systemctl suspend-then-hibernate</code>，由监听器执行 <code>on-timeout = systemctl suspend</code>，或合上笔记本电脑盖并由 logind 的 <code>HandleLidSwitch</code> 处理。 因此，上述情况都会触发 <code>general:before_sleep_cmd</code>，即使睡眠并非由 hypridle 自身发起。</p>
+<pre class="ini"><code>general {
+    lock_cmd = pidof hyprlock || hyprlock     # 会话收到锁定请求时运行。
+    before_sleep_cmd = loginctl lock-session  # 进入睡眠前请求锁屏。
+}</code></pre>
+<p><code>before_sleep_cmd</code> 本身不会启动锁屏程序。 <code>loginctl lock-session</code> 只会让 logind 为当前会话发出 <code>Lock</code> 信号。hypridle 收到信号后会运行 <code>general:lock_cmd</code>。 将这两步分开，只需在一处指定锁屏程序。手动执行 <code>loginctl lock-session</code>（例如通过键位绑定）时，也会走与进入睡眠时相同的锁屏流程。</p>
+<p>合盖事件由 logind 处理，不归 Hyprland 管理。请参阅<a href="../../../configuring/core/binds/switches/">关于 <code>HandleLidSwitch</code> 的警告</a>。 合盖时锁屏无需额外配置键位绑定，因为合盖进入睡眠时 logind 同样会发出 <code>PrepareForSleep</code> 信号。</p>
+<p>hypridle 只执行你指定的命令，挂起或休眠由该命令决定。 <code>systemctl hibernate</code> 需要可用的休眠恢复设备。<code>systemctl suspend-then-hibernate</code> 会先挂起系统，等到 <code>HibernateDelaySec</code> 指定的时间后再进入休眠。该选项在 <code>/etc/systemd/sleep.conf.d/</code> 中设置。</p>
+<h3 id="waiting-for-the-lock-to-be-drawn">等待锁屏界面绘制完成 <a class="permalink" href="#waiting-for-the-lock-to-be-drawn" aria-label="本节链接">#</a></h3>
+<p><code>loginctl lock-session</code> 在信号发出后便立即返回，此时距离锁屏程序绘制出画面还有一段时间。 如果没有睡眠抑制锁，系统可能在这段间隙冻结。这样一来，唤醒时首先显示的是未锁定的桌面，直到锁屏界面绘制出来并将其覆盖。</p>
+<p><a href="#general"><code>general:inhibit_sleep</code></a> 用于解决这个问题：hypridle 向 logind 获取一把 <code>delay</code> 类型的睡眠抑制锁，并在睡眠前的处理完成后释放它。 不同模式对“完成”的判定不同：</p>
+<ul>
+<li><code>1</code> 在 <code>before_sleep_cmd</code> 进程<em>刚启动</em>时就释放抑制锁。对于 <code>loginctl lock-session</code>，这不足以确保锁屏完成。</li>
+<li><code>3</code> 只有在通过 <code>hyprland-lock-notify-v1</code> 协议收到会话已锁定的通知后，才释放抑制锁。</li>
+<li><code>2</code>（默认值）仅在识别出 hyprlock 时选择 <code>3</code>。识别条件是 <code>before_sleep_cmd</code> 包含 <code>hyprlock</code>，或者 <code>lock_cmd</code> 包含 <code>hyprlock</code> 且 <code>before_sleep_cmd</code> 包含 <code>lock-session</code>。 其他情况均回退到 <code>1</code>。</li>
+</ul>
+<p>如果使用其他锁屏程序，请显式设置 <code>inhibit_sleep = 3</code>。 建议优先采用这种方式，而不是在 <code>before_sleep_cmd</code> 中用 <code>sleep</code> 延时：休眠抑制器会等待实际的锁屏事件，无需猜测要等多久。 启动时会输出所选模式，消息为 <code>Sleep inhibition enabled - inhibiting until the wayland session gets locked</code>。</p>
+<div class="note">
+<div class="title">
+<p>说明</p>
+</div>
+<p>锁屏界面一旦显示，会话就视为已锁定，此时锁屏程序的淡入动画可能还未结束。 如果从休眠中恢复时仍能透过半透明的锁屏界面看到背后的内容，请同时禁用淡入动画（<a href="https://github.com/hyprwm/hypridle/issues/146">hypridle#146</a>）。 如果使用 hyprlock，可以用 <code>hyprlock --no-fade-in</code> 启动，也可以完全关闭它的<a href="../hyprlock/#animations">动画</a>。</p>
+</div>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../../../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/hypr-ecosystem/user/hypridle/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-2" href="#configuration">配置</a><a class="level-3" href="#general">常规设置</a><a class="level-3" href="#listeners">监听器</a><a class="level-4" href="#conditional-timeouts">条件超时</a><a class="level-4" href="#fading-the-keyboard-backlight">让键盘背光渐亮渐暗</a><a class="level-2" href="#locking-on-suspend-and-hibernate">在挂起和休眠时锁定会话</a><a class="level-3" href="#waiting-for-the-lock-to-be-drawn">等待锁屏界面绘制完成</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>

@@ -1,0 +1,1090 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>hyprlock · Hyprland Wiki 中文版</title><link rel="icon" href="../../../assets/hyprland.svg">
+<link rel="stylesheet" href="../../../assets/wiki.css"><script defer src="../../../assets/site.js"></script></head>
+<body data-root="../../../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../../../"><img src="../../../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/hypr-ecosystem/user/hyprlock/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../../../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../../../">Hyprland 中文文档</a><ul><li><a href="../../../version-selector/">版本选择器 ⚙️</a></li><li><details><summary><a href="../../../getting-started/">入门指南</a></summary><ul><li><a href="../../../getting-started/installation/">安装</a></li><li><a href="../../../getting-started/master-tutorial/">入门教程</a></li><li><a href="../../../getting-started/preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details><summary><a href="../../../configuring/">配置</a></summary><ul><li><a href="../../../configuring/naming-conventions/">命名约定</a></li><li><a href="../../../configuring/selectors/">选择器</a></li><li><details><summary><a href="../../../configuring/core/">基础配置</a></summary><ul><li><details><summary><a href="../../../configuring/core/monitors/">显示器</a></summary><ul><li><a href="../../../configuring/core/monitors/output-selection/">选择显示输出</a></li><li><a href="../../../configuring/core/monitors/positioning/">显示器排列</a></li><li><a href="../../../configuring/core/monitors/modes/">显示模式</a></li><li><a href="../../../configuring/core/monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="../../../configuring/core/config-options/">配置选项</a></li><li><a href="../../../configuring/core/devices/">设备</a></li><li><a href="../../../configuring/core/dispatchers/">调度器</a></li><li><details><summary><a href="../../../configuring/core/binds/">按键绑定</a></summary><ul><li><a href="../../../configuring/core/binds/flags/">标志位</a></li><li><a href="../../../configuring/core/binds/keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="../../../configuring/core/binds/devices/">设备绑定</a></summary><ul><li><a href="../../../configuring/core/binds/devices/mouse/">鼠标</a></li><li><a href="../../../configuring/core/binds/devices/touchpad/">触摸板</a></li><li><a href="../../../configuring/core/binds/devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="../../../configuring/core/binds/submaps/">按键子映射</a></li><li><a href="../../../configuring/core/binds/globals/">全局快捷键与绑定</a></li><li><a href="../../../configuring/core/binds/switches/">硬件开关</a></li><li><a href="../../../configuring/core/binds/gestures/">手势</a></li></ul></details></li><li><details><summary><a href="../../../configuring/core/rules/">规则</a></summary><ul><li><a href="../../../configuring/core/rules/window-rules/">窗口规则</a></li><li><a href="../../../configuring/core/rules/workspace-rules/">工作区规则</a></li><li><a href="../../../configuring/core/rules/layer-rules/">图层规则</a></li></ul></details></li><li><a href="../../../configuring/core/environment-variables/">环境变量</a></li><li><a href="../../../configuring/core/animations/">动画</a></li><li><a href="../../../configuring/core/autostart/">自动启动</a></li><li><details><summary><a href="../../../configuring/core/advanced-configuration/">高级配置</a></summary><ul><li><a href="../../../configuring/core/advanced-configuration/events/">Lua 事件</a></li><li><a href="../../../configuring/core/advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="../../../configuring/core/advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="../../../configuring/core/advanced-configuration/notifications/">通知</a></li><li><a href="../../../configuring/core/advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../configuring/layouts/">布局</a></summary><ul><li><a href="../../../configuring/layouts/dwindle-layout/">Dwindle 布局</a></li><li><a href="../../../configuring/layouts/scrolling-layout/">滚动布局</a></li><li><a href="../../../configuring/layouts/master-layout/">主从布局</a></li><li><a href="../../../configuring/layouts/monocle-layout/">单窗口布局</a></li><li><a href="../../../configuring/layouts/custom-layouts/">自定义布局</a></li></ul></details></li><li><details><summary><a href="../../../configuring/extra/">其他配置</a></summary><ul><li><a href="../../../configuring/extra/multi-gpu/">多显卡</a></li><li><a href="../../../configuring/extra/virtual-gpu/">虚拟 GPU</a></li><li><a href="../../../configuring/extra/performance/">性能</a></li><li><a href="../../../configuring/extra/tearing/">画面撕裂</a></li><li><a href="../../../configuring/extra/xwayland/">Xwayland</a></li><li><a href="../../../configuring/extra/systemd/">systemd</a></li></ul></details></li><li><a href="../../../configuring/code-snippets/">Lua 代码片段</a></li></ul></details></li><li><details open><summary><a href="../../">Hypr 生态系统</a></summary><ul><li><details open><summary><a href="../">用户应用与实用工具</a></summary><ul><li><a href="../hyprpaper/">hyprpaper</a></li><li><a href="../hyprpicker/">hyprpicker</a></li><li><a href="../hyprlauncher/">hyprlauncher</a></li><li><a href="../hypridle/">hypridle</a></li><li><a href="./" aria-current="page">hyprlock</a></li><li><a href="../xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li><li><a href="../hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../hyprsunset/">hyprsunset</a></li><li><a href="../hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../hyprqt6engine/">hyprqt6engine</a></li><li><a href="../hyprpwcenter/">hyprpwcenter</a></li><li><a href="../hyprshutdown/">hyprshutdown</a></li><li><a href="../hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../../dev/">开发库和工具包</a></summary><ul><li><a href="../../dev/aquamarine/">aquamarine</a></li><li><a href="../../dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../../dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../../dev/hyprlang/">hyprlang</a></li><li><a href="../../dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../../dev/hyprutils/">hyprutils</a></li><li><a href="../../dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../hyprland-plugins/">Hyprland 插件</a></summary><ul><li><a href="../../../hyprland-plugins/using-plugins/">使用插件</a></li><li><details><summary><a href="../../../hyprland-plugins/development/">开发</a></summary><ul><li><a href="../../../hyprland-plugins/development/getting-started/">插件开发入门</a></li><li><a href="../../../hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li><li><a href="../../../hyprland-plugins/development/advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../useful-utilities/">实用工具</a></summary><ul><li><a href="../../../useful-utilities/must-have/">必备软件</a></li><li><a href="../../../useful-utilities/status-bars/">状态栏</a></li><li><a href="../../../useful-utilities/wallpapers/">壁纸</a></li><li><a href="../../../useful-utilities/screen-sharing/">屏幕共享</a></li><li><a href="../../../useful-utilities/screenshots-and-recording/">截图与录屏</a></li><li><a href="../../../useful-utilities/app-launchers/">应用启动器</a></li><li><a href="../../../useful-utilities/app-clients/">应用客户端</a></li><li><a href="../../../useful-utilities/phone-connect/">连接手机</a></li><li><a href="../../../useful-utilities/color-pickers/">取色器</a></li><li><a href="../../../useful-utilities/clipboard-managers/">剪贴板管理器</a></li><li><a href="../../../useful-utilities/file-managers/">文件管理器</a></li><li><a href="../../../useful-utilities/other/">其他</a></li><li><a href="../../../useful-utilities/hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="../../../useful-utilities/uwsm/">UWSM</a></li></ul></details></li><li><details><summary><a href="../../../nix/">Nix</a></summary><ul><li><a href="../../../nix/hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../../../nix/installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../../../nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="../../../nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li><li><a href="../../../nix/cachix/">Cachix</a></li><li><a href="../../../nix/advanced/">高级用法</a></li><li><a href="../../../nix/contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../../../nvidia/">NVIDIA</a></li><li><a href="../../../ipc/">IPC</a></li><li><a href="../../../crashes-and-bugs/">崩溃与缺陷</a></li><li><a href="../../../faq/">常见问题</a></li><li><a href="../../../community/">社区</a></li><li><details><summary><a href="../../../contributing-and-debugging/">贡献与调试</a></summary><ul><li><a href="../../../contributing-and-debugging/wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../../../contributing-and-debugging/issue-guidelines/">议题指南</a></li><li><a href="../../../contributing-and-debugging/pr-guidelines/">PR 指南</a></li><li><a href="../../../contributing-and-debugging/tests/">测试</a></li><li><a href="../../../contributing-and-debugging/translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../../../">Hyprland 中文文档</a><span>›</span><a href="../../">Hypr 生态系统</a><span>›</span><a href="../">用户应用与实用工具</a></nav><article><h1>hyprlock</h1><p><a href="https://github.com/hyprwm/hyprlock">hyprlock</a> 是一款适用于 Hyprland 的锁屏程序，简洁快速，支持多线程和 GPU 加速。</p>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>如果在所有搜索路径中都找不到配置文件，hyprlock <strong>会报错退出</strong>，会话也不会锁定。</p>
+<p>可以使用<a href="https://github.com/hyprwm/hyprlock/blob/main/assets/example.conf">示例配置</a>快速上手。</p>
+</div>
+<h2 id="command-line-arguments">命令行参数 <a class="permalink" href="#command-line-arguments" aria-label="本节链接">#</a></h2>
+<p>另见 <code>hyprlock --help</code>。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-v</code>/<code>--verbose</code></td>
+<td>启用详细日志</td>
+</tr>
+<tr>
+<td><code>-q</code>/<code>--quiet</code></td>
+<td>禁用日志</td>
+</tr>
+<tr>
+<td><code>-c</code>/<code>--config</code> FILE</td>
+<td>指定要使用的配置文件</td>
+</tr>
+<tr>
+<td><code>--display</code> NAME</td>
+<td>指定要连接的 Wayland 显示器</td>
+</tr>
+<tr>
+<td><code>--grace</code> SECONDS</td>
+<td>设置要求身份验证前的宽限期，单位为秒</td>
+</tr>
+<tr>
+<td><code>--immediate-render</code></td>
+<td>立即绘制背景，无需等待资源就绪（与 <code>general:immediate_render</code> 相同）</td>
+</tr>
+<tr>
+<td><code>--no-fade-in</code></td>
+<td>禁用锁屏界面出现时的淡入动画</td>
+</tr>
+<tr>
+<td><code>-V</code>/<code>--version</code></td>
+<td>显示版本信息并退出</td>
+</tr>
+<tr>
+<td><code>-h</code>/<code>--help</code></td>
+<td>显示帮助并退出</td>
+</tr>
+</tbody>
+</table>
+<h2 id="configuration">配置 <a class="permalink" href="#configuration" aria-label="本节链接">#</a></h2>
+<p>hyprlock 通过名为 <code>hyprlock.conf</code> 的配置文件进行配置。 hyprlock 会依次在以下位置查找该文件：</p>
+<ol type="1">
+<li><code>$XDG_CONFIG_HOME/hypr/hyprlock.conf</code></li>
+<li><code>$HOME/.config/hypr/hyprlock.conf</code></li>
+<li><code>$XDG_CONFIG_DIRS</code> 中的每个目录（例如 <code>&lt;dir&gt;/hypr/hyprlock.conf</code>）</li>
+<li><code>/etc/xdg/hypr/hyprlock.conf</code></li>
+</ol>
+<p>hyprlock 使用找到的第一个配置文件。 也可以用 <code>hyprlock --config &lt;path&gt;</code> 直接指定路径。</p>
+<h3 id="variable-types">变量类型 <a class="permalink" href="#variable-types" aria-label="本节链接">#</a></h3>
+<p>除了 Hyprland 的<a href="../../../configuring/naming-conventions/#data-types">数据类型</a>，hyprlock 还支持以下类型。</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>layoutxy</td>
+<td>带有可选 <code>%</code> 后缀的 vec2，可按输出尺寸的百分比指定大小。支持浮点数（例如 10.5），但只有使用 <code>%</code> 时才会保留小数部分。直接指定的像素值会四舍五入为整数</td>
+</tr>
+</tbody>
+</table>
+<h3 id="general">常规设置 <a class="permalink" href="#general" aria-label="本节链接">#</a></h3>
+<p><code>general</code> 类别中的变量如下：</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>compositor_fade</code></td>
+<td>由合成器控制不透明度，使锁屏表面的内容与合成器的模糊效果一起平滑淡入淡出</td>
+<td>bool</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>disable_screencopy</code></td>
+<td>禁止为应用背景效果而复制屏幕内容。使用半透明背景并启用 Hyprland 的 <code>misc:session_lock_xray</code> 时，此选项很有用</td>
+<td>bool</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>fail_timeout</code></td>
+<td>身份验证失败后，界面恢复初始状态前的等待时间，单位为毫秒</td>
+<td>int</td>
+<td><code>2000</code></td>
+</tr>
+<tr>
+<td><code>fractional_scaling</code></td>
+<td>是否使用分数缩放。<code>0</code> 表示禁用，<code>1</code> 表示启用，<code>2</code> 表示自动</td>
+<td>int</td>
+<td><code>2</code></td>
+</tr>
+<tr>
+<td><code>hide_cursor</code></td>
+<td>隐藏光标</td>
+<td>bool</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>ignore_empty_input</code></td>
+<td>未输入密码时跳过验证</td>
+<td>bool</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>immediate_render</code></td>
+<td>让 hyprlock 立即开始绘制组件。在 <code>background:path</code> 指定的资源就绪前，背景显示为 <code>background:color</code> 指定的颜色</td>
+<td>bool</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>screencopy_mode</code></td>
+<td>选择屏幕复制模式。<code>0</code> 表示使用 GPU 加速，<code>1</code> 表示使用 CPU（较慢）</td>
+<td>int</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>text_trim</code></td>
+<td>是否去除文本首尾的空白字符，可用于去除命令输出末尾的换行符</td>
+<td>bool</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="compositor-fade-and-live-background">合成器淡入淡出与实时背景 <a class="permalink" href="#compositor-fade-and-live-background" aria-label="本节链接">#</a></h4>
+<p>启用 <code>general:compositor_fade</code> 后，锁屏表面的内容与合成器的模糊效果会使用现有的 <a href="#animations"><code>fadeIn</code> 和 <code>fadeOut</code> 动画</a>一起淡入淡出。 动画改变的是合成器模糊效果在画面中所占的比重，<strong>而非模糊半径本身</strong>。 如果合成器未声明支持 <code>hyprland_surface_manager_v1</code> Wayland 协议，hyprlock 会自动回退到标准的客户端淡入淡出效果。</p>
+<p>要将实时模糊的桌面用作背景，请在 Hyprland 的 <code>hyprland.lua</code> 中启用 <code>misc:session_lock_xray</code> 和 <code>misc:session_lock_blur</code>：</p>
+<pre class="lua"><code>hl.config({
+    misc = {
+        session_lock_xray = true,
+        session_lock_blur = true,
+    },
+})</code></pre>
+<p>在 <code>hyprlock.conf</code> 中使用透明<a href="#background">背景</a>，并将 <code>path</code> 留空：</p>
+<pre class="ini"><code>general {
+    compositor_fade = true
+}
+
+background {
+    monitor =
+    path =
+    color = rgba(0, 0, 0, 0.0)
+}
+
+animations {
+    enabled = true
+    bezier = linear, 1, 1, 0, 0
+    animation = fadeIn, 1, 5, linear
+    animation = fadeOut, 1, 5, linear
+}</code></pre>
+<p>这样配置后，锁屏界面后方的桌面会持续实时更新。 如果显式设置 <code>background:path = screenshot</code>，即使启用了 <code>compositor_fade</code>，hyprlock 仍会在启动时截取静态图像作为背景，而不会显示实时桌面。</p>
+<h3 id="authentication">身份验证 <a class="permalink" href="#authentication" aria-label="本节链接">#</a></h3>
+<p><code>auth</code> 类别中的变量如下：</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pam:enabled</code></td>
+<td>是否启用 PAM 身份验证</td>
+<td>bool</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>pam:module</code></td>
+<td>设置用于身份验证的 PAM 模块。如果在 <code>/etc/pam.d</code> 中找不到该模块，则使用 "su" 作为后备模块</td>
+<td>string</td>
+<td><code>hyprlock</code></td>
+</tr>
+<tr>
+<td><code>fingerprint:enabled</code></td>
+<td>启用 fprintd 指纹验证，使其可与其他验证方式并行运行</td>
+<td>bool</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>fingerprint:ready_message</code></td>
+<td>设置 fprintd 准备好扫描指纹时显示的消息</td>
+<td>string</td>
+<td><code>(Scan fingerprint to unlock)</code></td>
+</tr>
+<tr>
+<td><code>fingerprint:present_message</code></td>
+<td>设置手指放到扫描器上时显示的消息</td>
+<td>string</td>
+<td><code>Scanning fingerprint</code></td>
+</tr>
+<tr>
+<td><code>fingerprint:retry_delay</code></td>
+<td>设置扫描到无法识别的指纹后，到可以再次扫描指纹前的等待时间，单位为毫秒</td>
+<td>int</td>
+<td><code>250</code></td>
+</tr>
+</tbody>
+</table>
+<div class="note">
+<div class="title">
+<p>说明</p>
+</div>
+<p>必须至少启用一种身份验证方式。</p>
+</div>
+<h3 id="animations">动画 <a class="permalink" href="#animations" aria-label="本节链接">#</a></h3>
+<p><code>animations</code> 类别中的变量如下：</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enabled</td>
+<td>是否启用动画</td>
+<td>bool</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="keywords">关键字 <a class="permalink" href="#keywords" aria-label="本节链接">#</a></h4>
+<p>可以使用 <code>animation</code> 和 <code>bezier</code> 两个关键字。</p>
+<p>例如：</p>
+<pre class="ini"><code>bezier = linear, 1, 1, 0, 0
+animation = fade, 1, 1.8, linear</code></pre>
+<p>可用动画见<a href="#animation-tree">动画树</a>。 hyprlock 目前未使用 <code>animation</code> 关键字的可选参数 <code>STYLE</code>。</p>
+<p>更多信息见 Hyprland 的<a href="../../../configuring/core/animations/">动画文档</a>。</p>
+<h4 id="animation-tree">动画树 <a class="permalink" href="#animation-tree" aria-label="本节链接">#</a></h4>
+<pre class="plain"><code>global
+  ↳ fade
+    ↳ fadeIn - fade to lock screen
+    ↳ fadeOut - fade back to the Wayland session
+  ↳ inputField
+    ↳ inputFieldColors - fade between colors and gradients
+    ↳ inputFieldFade - fade_on_empty animation
+    ↳ inputFieldWidth - adaptive width animation
+    ↳ inputFieldDots - fade in/out for individual dots in the input field</code></pre>
+<h3 id="system-configuration">系统配置 <a class="permalink" href="#system-configuration" aria-label="本节链接">#</a></h3>
+<p>在 Arch Linux 上，hyprlock 默认通过 <code>pam_faillock.so</code> 与 <a href="https://archlinux.org/packages/?name=pambase">pambase</a> 集成，解锁失败 3 次后必须等待 10 分钟才能重试。 如需更改此行为，请参阅 <a href="https://wiki.archlinux.org/title/Security#Lock_out_user_after_three_failed_login_attempts">Arch Linux Wiki</a>，按需修改 <code>/etc/security/faillock.conf</code> 文件中的 <code>unlock_time</code>、<code>fail_interval</code> 和 <code>deny</code> 参数。</p>
+<h2 id="keyboard-shortcuts-and-actions">键盘快捷键与操作 <a class="permalink" href="#keyboard-shortcuts-and-actions" aria-label="本节链接">#</a></h2>
+<p>下表列出了 hyprlock 中各按键及组合键的默认操作：</p>
+<table>
+<thead>
+<tr>
+<th>输入</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ESC</code></td>
+<td>清空密码缓冲区</td>
+</tr>
+<tr>
+<td><code>Ctrl + u</code></td>
+<td>清空密码缓冲区</td>
+</tr>
+<tr>
+<td><code>Ctrl + Backspace</code></td>
+<td>清空密码缓冲区</td>
+</tr>
+</tbody>
+</table>
+<p>使用 <a href="../../../configuring/core/binds/flags/#bind-flags"><code>locked</code> 标志</a>可以让指定的 Hyprland 键位绑定在 hyprlock 锁屏期间仍然生效，例如用于调节亮度、音量或控制媒体播放的键位绑定。</p>
+<h2 id="widgets">组件 <a class="permalink" href="#widgets" aria-label="本节链接">#</a></h2>
+<p>hyprlock 的外观完全通过组件配置。</p>
+<pre class="ini"><code>widget_name {
+    monitor =
+    # 更多选项
+}</code></pre>
+<h3 id="monitor-selection">选择显示器 <a class="permalink" href="#monitor-selection" aria-label="本节链接">#</a></h3>
+<p>所有组件都支持 <code>monitor</code> 选项，留空表示“所有显示器”。</p>
+<p>该选项使用与 Hyprland 配置中相同的字符串来指定显示器。 可以使用端口名称（例如 <code>eDP-1</code>），也可以使用显示器描述（例如 <code>desc:Chimei Innolux Corporation 0x150C</code>）。</p>
+<p>参见<a href="../../../configuring/core/monitors/">显示器</a>。</p>
+<h3 id="variable-substitution">变量替换 <a class="permalink" href="#variable-substitution" aria-label="本节链接">#</a></h3>
+<p>组件的文本选项中可以使用以下变量，显示时会替换为对应的值。</p>
+<ul>
+<li><code>$USER</code> - 用户名（例如 <code>linux-user</code>）</li>
+<li><code>$DESC</code> - 用户描述（例如 <code>Linux User</code>）</li>
+<li><code>$TIME</code> - 24 小时制的当前时间（例如 <code>13:37</code>）</li>
+<li><code>$TIME12</code> - 12 小时制的当前时间（例如 <code>1:37 PM</code>）</li>
+<li><code>$LAYOUT</code> - 当前键盘布局</li>
+<li><code>$ATTEMPTS</code> - 身份验证失败次数</li>
+<li><code>$FAIL</code> - 上一次身份验证失败的原因</li>
+<li><code>$PAMPROMPT</code> - PAM 身份验证的最近一条提示</li>
+<li><code>$PAMFAIL</code> - 上一次 PAM 身份验证失败的原因</li>
+<li><code>$FPRINTPROMPT</code> - 指纹验证的最近一条提示</li>
+<li><code>$FPRINTFAIL</code> - 上一次指纹验证失败的原因</li>
+</ul>
+<h2 id="widget-list">组件列表 <a class="permalink" href="#widget-list" aria-label="本节链接">#</a></h2>
+<h3 id="general-remarks">通用说明 <a class="permalink" href="#general-remarks" aria-label="本节链接">#</a></h3>
+<ul>
+<li>所有渲染的文本都支持 <a href="https://docs.gtk.org/Pango/pango_markup.html">Pango 标记语言</a>。
+<ul>
+<li>为方便使用，hyprlock 还会解析 <code>&lt;br&gt;</code>（换行符）。 记得在 span 标签中设置 <code>allow_breaks="true"</code> 以允许换行。</li>
+</ul></li>
+<li>使用 halign、valign、position 和 zindex 控制组件的位置和层叠顺序。 position 指定相对于对齐后位置的偏移量。
+<ul>
+<li>halign：<code>left</code>、<code>center</code>、<code>right</code>、<code>none</code>。</li>
+<li>valign：<code>top</code>、<code>center</code>、<code>bottom</code>、<code>none</code>。</li>
+<li>zindex：数值较大的组件会显示在数值较小的组件上方。 除 background 默认为 -1 外，所有组件的默认值均为 0。</li>
+</ul></li>
+<li>所有 <code>position</code> 和 <code>size</code> 选项都可以使用像素值，也可以使用相对于输出尺寸的百分比。
+<ul>
+<li>像素：<code>10, 10</code> 或 <code>10px, 10px</code></li>
+<li>百分比：<code>10%, 10.5%</code></li>
+<li>混合使用：<code>10%, 5px</code></li>
+</ul></li>
+<li>支持 png、jpg 和 webp 图像格式（不支持动画）。</li>
+</ul>
+<h3 id="shadowable">阴影 <a class="permalink" href="#shadowable" aria-label="本节链接">#</a></h3>
+<p>部分组件可以显示阴影。 这些组件支持以下选项：</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>shadow_passes</code></td>
+<td>阴影渲染次数，设为 0 可禁用阴影</td>
+<td>int</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>shadow_size</code></td>
+<td>阴影大小</td>
+<td>int</td>
+<td><code>3</code></td>
+</tr>
+<tr>
+<td><code>shadow_color</code></td>
+<td>阴影颜色</td>
+<td>color</td>
+<td><code>rgb(0,0,0)</code></td>
+</tr>
+<tr>
+<td><code>shadow_boost</code></td>
+<td>阴影不透明度的增强系数</td>
+<td>float</td>
+<td><code>1.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="clickable">点击操作 <a class="permalink" href="#clickable" aria-label="本节链接">#</a></h3>
+<p>部分组件支持点击，包括 <code>label</code>、<code>image</code> 和 <code>shape</code>。</p>
+<p>在组件内配置以下选项，即可在点击该组件时运行任意命令：</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onclick</code></td>
+<td>点击时运行的命令</td>
+<td>string</td>
+<td>[[Empty]]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="background">背景 <a class="permalink" href="#background" aria-label="本节链接">#</a></h3>
+<p>绘制背景图像或用颜色填充背景。</p>
+<p>如果 <code>path</code> 为空或未设置，则使用 <code>color</code> 填充背景，否则使用图像。 如果 <code>path</code> 为 <code>screenshot</code>，则使用 hyprlock 启动时截取的桌面画面。</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>monitor</code></td>
+<td>绘制背景的目标显示器</td>
+<td>string</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td><code>path</code></td>
+<td>图像路径，也可设为 <code>screenshot</code>，留空则使用 <code>color</code> 填充</td>
+<td>string</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>备用背景色</td>
+<td>color</td>
+<td><code>rgba(17, 17, 17, 1.0)</code></td>
+</tr>
+<tr>
+<td><code>blur_passes</code></td>
+<td>模糊处理次数，设为 <code>0</code> 可禁用模糊</td>
+<td>int</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>blur_size</code></td>
+<td>模糊范围（距离）</td>
+<td>int</td>
+<td><code>7</code></td>
+</tr>
+<tr>
+<td><code>noise</code></td>
+<td>添加的噪点强度</td>
+<td>float</td>
+<td><code>0.0117</code></td>
+</tr>
+<tr>
+<td><code>contrast</code></td>
+<td>模糊处理的对比度调节系数</td>
+<td>float</td>
+<td><code>0.8916</code></td>
+</tr>
+<tr>
+<td><code>brightness</code></td>
+<td>模糊处理的亮度调节系数</td>
+<td>float</td>
+<td><code>0.8172</code></td>
+</tr>
+<tr>
+<td><code>vibrancy</code></td>
+<td>模糊后颜色的饱和度提升幅度</td>
+<td>float</td>
+<td><code>0.1696</code></td>
+</tr>
+<tr>
+<td><code>vibrancy_darkness</code></td>
+<td>vibrancy 对暗部的影响强度</td>
+<td>float</td>
+<td><code>0.05</code></td>
+</tr>
+<tr>
+<td><code>reload_time</code></td>
+<td>重新加载的间隔（秒）。设为 <code>0</code> 时，收到 <code>SIGUSR2</code> 后重新加载。<code>path</code> 为 <code>screenshot</code> 时忽略此项</td>
+<td>int</td>
+<td><code>-1</code></td>
+</tr>
+<tr>
+<td><code>reload_cmd</code></td>
+<td>用于获取新路径的命令。留空则沿用原路径</td>
+<td>string</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td><code>crossfade_time</code></td>
+<td>重新加载时新旧背景交叉淡化的时长（秒）。负值表示禁用交叉淡化</td>
+<td>float</td>
+<td><code>-1.0</code></td>
+</tr>
+<tr>
+<td><code>zindex</code></td>
+<td>组件的层叠顺序</td>
+<td>int</td>
+<td><code>-1</code></td>
+</tr>
+</tbody>
+</table>
+<div class="note">
+<div class="title">
+<p>说明</p>
+</div>
+<p>模糊选项沿用 Hyprland 的设置项。 参见<a href="../../../configuring/core/config-options/#blur">模糊</a>。</p>
+</div>
+<details><summary>背景示例</summary>
+
+<pre class="ini"><code>background {
+    monitor =
+    path = screenshot
+    color = rgba(25, 20, 20, 1.0)
+    blur_passes = 2
+}</code></pre>
+</details>
+
+<h3 id="image">图像 <a class="permalink" href="#image" aria-label="本节链接">#</a></h3>
+<p>✓ 支持阴影<br />
+✓ 支持点击</p>
+<p>绘制图像。</p>
+<p>如果 <code>path</code> 为空或未设置，则不显示任何内容。</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>monitor</code></td>
+<td>绘制图像的目标显示器</td>
+<td>string</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td><code>path</code></td>
+<td>图像路径</td>
+<td>string</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>缩放后图像短边的长度</td>
+<td>int</td>
+<td><code>150</code></td>
+</tr>
+<tr>
+<td><code>rounding</code></td>
+<td>圆角半径，设为负值时呈圆形</td>
+<td>int</td>
+<td><code>-1</code></td>
+</tr>
+<tr>
+<td><code>border_size</code></td>
+<td>边框宽度</td>
+<td>int</td>
+<td><code>4</code></td>
+</tr>
+<tr>
+<td><code>border_color</code></td>
+<td>边框颜色</td>
+<td>gradient</td>
+<td><code>rgba(221, 221, 221, 1.0)</code></td>
+</tr>
+<tr>
+<td><code>rotate</code></td>
+<td>逆时针旋转角度（度）</td>
+<td>int</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>reload_time</code></td>
+<td>重新加载的间隔（秒）。设为 <code>0</code> 时，收到 <code>SIGUSR2</code> 后重新加载</td>
+<td>int</td>
+<td><code>-1</code></td>
+</tr>
+<tr>
+<td><code>reload_cmd</code></td>
+<td>用于获取新路径的命令。留空则沿用原路径。不要运行 <code>tail -F</code> 这类持续跟踪变化的命令</td>
+<td>string</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td>图像位置</td>
+<td>layoutxy</td>
+<td><code>0, 0</code></td>
+</tr>
+<tr>
+<td><code>halign</code></td>
+<td>水平对齐方式</td>
+<td>string</td>
+<td><code>center</code></td>
+</tr>
+<tr>
+<td><code>valign</code></td>
+<td>垂直对齐方式</td>
+<td>string</td>
+<td><code>center</code></td>
+</tr>
+<tr>
+<td><code>zindex</code></td>
+<td>组件的层叠顺序</td>
+<td>int</td>
+<td><code>0</code></td>
+</tr>
+</tbody>
+</table>
+<details><summary>图像示例</summary>
+
+<pre class="ini"><code>image {
+    monitor =
+    path = /home/me/cutie.png
+    size = 150
+    rounding = 0 # 无圆角
+
+    position = 0, 200
+    halign = center
+    valign = center
+}</code></pre>
+</details>
+
+<h3 id="shape">形状 <a class="permalink" href="#shape" aria-label="本节链接">#</a></h3>
+<p>✓ 支持阴影<br />
+✓ 支持点击</p>
+<p>绘制形状。</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>monitor</code></td>
+<td>绘制形状的目标显示器</td>
+<td>string</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>形状尺寸</td>
+<td>layoutxy</td>
+<td>100, 100</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>形状颜色</td>
+<td>color</td>
+<td><code>rgba(17, 17, 17, 1.0)</code></td>
+</tr>
+<tr>
+<td><code>rounding</code></td>
+<td>圆角半径，设为负值时呈圆形</td>
+<td>int</td>
+<td><code>-1</code></td>
+</tr>
+<tr>
+<td><code>rotate</code></td>
+<td>逆时针旋转角度（度）</td>
+<td>int</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>border_size</code></td>
+<td>边框宽度</td>
+<td>int</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>border_color</code></td>
+<td>边框颜色</td>
+<td>gradient</td>
+<td><code>rgba(0, 207, 230, 1.0)</code></td>
+</tr>
+<tr>
+<td><code>xray</code></td>
+<td>设为 <code>true</code> 时，在背景上挖出一个指定尺寸的矩形孔洞，孔洞不会旋转</td>
+<td>bool</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td>形状位置</td>
+<td>layoutxy</td>
+<td><code>0, 0</code></td>
+</tr>
+<tr>
+<td><code>halign</code></td>
+<td>水平对齐方式</td>
+<td>string</td>
+<td><code>center</code></td>
+</tr>
+<tr>
+<td><code>valign</code></td>
+<td>垂直对齐方式</td>
+<td>string</td>
+<td><code>center</code></td>
+</tr>
+<tr>
+<td><code>zindex</code></td>
+<td>组件的层叠顺序</td>
+<td>int</td>
+<td><code>0</code></td>
+</tr>
+</tbody>
+</table>
+<details><summary>形状示例</summary>
+
+<pre class="ini"><code>shape {
+    monitor =
+    size = 360, 60
+    color = rgba(0, 0, 0, 0.0) # 无填充
+    rounding = -1 # 圆形
+    border_size = 4
+    border_color = rgba(0, 207, 230, 1.0)
+
+    position = 0, 80
+    halign = center
+    valign = center
+}</code></pre>
+</details>
+
+<h3 id="input-field">输入框 <a class="permalink" href="#input-field" aria-label="本节链接">#</a></h3>
+<p>✓ 支持阴影</p>
+<p>绘制密码输入框。</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>monitor</code></td>
+<td>绘制输入框的目标显示器</td>
+<td>string</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>输入框大小</td>
+<td>layoutxy</td>
+<td><code>400, 90</code></td>
+</tr>
+<tr>
+<td><code>outline_thickness</code></td>
+<td>边框粗细</td>
+<td>int</td>
+<td><code>4</code></td>
+</tr>
+<tr>
+<td><code>dots_size</code></td>
+<td>圆点大小，范围为 [0.001 - 0.8]</td>
+<td>float</td>
+<td><code>0.25</code></td>
+</tr>
+<tr>
+<td><code>dots_spacing</code></td>
+<td>圆点间距，范围为 [-1.0 - 1.0]</td>
+<td>float</td>
+<td><code>0.15</code></td>
+</tr>
+<tr>
+<td><code>dots_center</code></td>
+<td>是否将圆点居中。关闭时左对齐</td>
+<td>bool</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>dots_rounding</code></td>
+<td>圆点的圆角半径</td>
+<td>int</td>
+<td><code>-1</code></td>
+</tr>
+<tr>
+<td><code>dots_text_format</code></td>
+<td>用作输入指示符的一个或多个字符。默认使用圆角矩形</td>
+<td>string</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td><code>outer_color</code></td>
+<td>边框颜色</td>
+<td>gradient</td>
+<td><code>rgba(17, 17, 17, 1.0)</code></td>
+</tr>
+<tr>
+<td><code>inner_color</code></td>
+<td>输入框的填充色</td>
+<td>color</td>
+<td><code>rgba(200, 200, 200, 1.0)</code></td>
+</tr>
+<tr>
+<td><code>font_color</code></td>
+<td>字体颜色</td>
+<td>color</td>
+<td><code>rgba(10, 10, 10, 1.0)</code></td>
+</tr>
+<tr>
+<td><code>font_family</code></td>
+<td>字体族</td>
+<td>string</td>
+<td><code>Noto Sans</code></td>
+</tr>
+<tr>
+<td><code>fade_on_empty</code></td>
+<td>输入框为空时将其淡出</td>
+<td>bool</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>fade_timeout</code></td>
+<td>触发 <code>fade_on_empty</code> 前的等待时间，单位为毫秒</td>
+<td>int</td>
+<td><code>2000</code></td>
+</tr>
+<tr>
+<td><code>placeholder_text</code></td>
+<td>输入框为空时显示的文本</td>
+<td>string</td>
+<td><code>&lt;i&gt;Input Password...&lt;/i&gt;</code></td>
+</tr>
+<tr>
+<td><code>hide_input</code></td>
+<td>设为 <code>true</code> 时，以类似 swaylock 的输入指示符代替圆点</td>
+<td>bool</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>hide_input_base_color</code></td>
+<td>在 Oklab 色彩空间中随机旋转此颜色的色相，生成 <code>hide_input</code> 使用的颜色</td>
+<td>color</td>
+<td><code>rgba(153, 170, 187)</code></td>
+</tr>
+<tr>
+<td><code>rounding</code></td>
+<td><code>-1</code> 表示使用最大圆角，呈圆形或椭圆形</td>
+<td>int</td>
+<td><code>-1</code></td>
+</tr>
+<tr>
+<td><code>check_color</code></td>
+<td>等待认证结果时的强调色</td>
+<td>gradient</td>
+<td><code>rgba(204, 136, 34, 1.0)</code></td>
+</tr>
+<tr>
+<td><code>check_text</code></td>
+<td>等待认证结果时显示的文本</td>
+<td>string</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td><code>fail_color</code></td>
+<td>认证失败时的强调色</td>
+<td>gradient</td>
+<td><code>rgba(204, 34, 34, 1.0)</code></td>
+</tr>
+<tr>
+<td><code>fail_text</code></td>
+<td>认证失败时显示的文本</td>
+<td>string</td>
+<td><code>&lt;i&gt;$FAIL &lt;b&gt;($ATTEMPTS)&lt;/b&gt;&lt;/i&gt;</code></td>
+</tr>
+<tr>
+<td><code>capslock_color</code></td>
+<td>Caps Lock 开启时的强调色</td>
+<td>gradient</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td><code>numlock_color</code></td>
+<td>Num Lock 开启时的强调色</td>
+<td>gradient</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td><code>bothlock_color</code></td>
+<td>Caps Lock 和 Num Lock 同时开启时的强调色</td>
+<td>gradient</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td><code>invert_numlock</code></td>
+<td>在 Num Lock 关闭时改变颜色</td>
+<td>bool</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>swap_font_color</code></td>
+<td>颜色变化时交换字体颜色和输入框填充色</td>
+<td>bool</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td>输入框位置</td>
+<td>layoutxy</td>
+<td><code>0, 0</code></td>
+</tr>
+<tr>
+<td><code>halign</code></td>
+<td>水平对齐方式</td>
+<td>string</td>
+<td><code>center</code></td>
+</tr>
+<tr>
+<td><code>valign</code></td>
+<td>垂直对齐方式</td>
+<td>string</td>
+<td><code>center</code></td>
+</tr>
+<tr>
+<td><code>zindex</code></td>
+<td>控件的堆叠层级（z-index）</td>
+<td>int</td>
+<td><code>0</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!NOTE] <strong>颜色说明</strong> 当 <code>outline_thickness</code> 设为 <code>0</code> 时，颜色变化会作用于输入框的填充色，而非边框颜色。</p>
+<p><code>swap_font_color</code> 的行为如下：</p>
+<ul>
+<li><code>outline_thickness</code> 为 <code>0</code> 时：若启用此选项，颜色变化时（如开启 Caps Lock 或校验密码时）会交换字体颜色和输入框填充色。</li>
+<li><code>outline_thickness</code> 不为 <code>0</code> 时：若启用此选项，校验密码和认证失败时会交换字体颜色和输入框填充色。</li>
+<li>启用 <code>swap_font_color</code> 后，强调色仅使用渐变中指定的第一种颜色。</li>
+</ul>
+</blockquote>
+<p><code>placeholder_text</code> 和 <code>fail_text</code> 均支持<a href="#variable-substitution">变量替换</a>。</p>
+<details><summary>输入框示例</summary>
+
+<pre class="ini"><code>input-field {
+    monitor =
+    size = 20%, 5%
+    outline_thickness = 3
+    inner_color = rgba(0, 0, 0, 0.0) # 无填充
+
+    outer_color = rgba(33ccffee) rgba(00ff99ee) 45deg
+    check_color = rgba(00ff99ee) rgba(ff6633ee) 120deg
+    fail_color = rgba(ff6633ee) rgba(ff0066ee) 40deg
+
+    font_color = rgb(143, 143, 143)
+    fade_on_empty = false
+    rounding = 15
+
+    position = 0, -20
+    halign = center
+    valign = center
+}</code></pre>
+</details>
+
+<h3 id="label">标签 <a class="permalink" href="#label" aria-label="本节链接">#</a></h3>
+<p>✓ 支持阴影<br />
+✓ 可点击</p>
+<p>绘制一个标签。</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>monitor</code></td>
+<td>绘制标签的目标显示器</td>
+<td>string</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td><code>text</code></td>
+<td>要显示的文本</td>
+<td>string</td>
+<td><code>Sample Text</code></td>
+</tr>
+<tr>
+<td><code>text_align</code></td>
+<td>标签容器内多行文本的对齐方式。center 表示居中，right 表示右对齐，其他值均使用默认的左对齐</td>
+<td>string</td>
+<td><code>center</code></td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>文本颜色</td>
+<td>color</td>
+<td><code>rgba(254, 254, 254, 1.0)</code></td>
+</tr>
+<tr>
+<td><code>font_size</code></td>
+<td>字体大小</td>
+<td>int</td>
+<td><code>16</code></td>
+</tr>
+<tr>
+<td><code>font_family</code></td>
+<td>字体族</td>
+<td>string</td>
+<td><code>Sans</code></td>
+</tr>
+<tr>
+<td><code>rotate</code></td>
+<td>逆时针旋转角度，单位为度</td>
+<td>int</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td>标签位置</td>
+<td>layoutxy</td>
+<td><code>0, 0</code></td>
+</tr>
+<tr>
+<td><code>halign</code></td>
+<td>水平对齐方式</td>
+<td>string</td>
+<td><code>center</code></td>
+</tr>
+<tr>
+<td><code>valign</code></td>
+<td>垂直对齐方式</td>
+<td>string</td>
+<td><code>center</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="dynamic-labels">动态标签 <a class="permalink" href="#dynamic-labels" aria-label="本节链接">#</a></h4>
+<p><code>text</code> 选项支持<a href="#variable-substitution">变量替换</a>，也可以运行 shell 命令。 例如：</p>
+<pre class="ini"><code>text = cmd[update:1000] echo &quot;&lt;span foreground=&#39;##ff2222&#39;&gt;$(date)&lt;/span&gt;&quot;</code></pre>
+<div class="note">
+<div class="title">
+<p>说明</p>
+</div>
+<ul>
+<li><code>update:</code> 的时间单位为毫秒。</li>
+<li>指定 <code>update:&lt;time&gt;:1</code> 或 <code>update:&lt;time&gt;:true</code> 后，可向 hyprlock 发送 <code>SIGUSR2</code> 强制更新标签。此时 <code>&lt;time&gt;</code> 可以为 <code>0</code>。</li>
+<li>使用 <code>$ATTEMPTS[&lt;string&gt;]</code> 格式可在尚无认证失败记录时显示 <code>&lt;string&gt;</code>。 这里支持 Pango 标记。将 <code>&lt;string&gt;</code> 留空即可隐藏这段文本。</li>
+<li>使用 <code>$LAYOUT[&lt;string0&gt;,&lt;string1&gt;,...]</code> 格式可按索引替换各键盘布局的显示文本。 可以使用 <code>hyprland.lua</code> 中的设置（例如 <code>$LAYOUT[en,ru,de]</code>）。 单个 <code>!</code> 字符可隐藏对应的布局（例如，<code>$LAYOUT[!]</code> 会隐藏索引为 0 的默认布局，并显示其他布局）。</li>
+<li><code>$TIME</code> 和 <code>$TIME12</code> 使用 TZ 环境变量指定的时区。 若未设置该变量，则使用系统时区；出错时回退到 UTC。</li>
+<li>上述变量会在命令运行_之前_解析。</li>
+<li><strong>不要</strong>运行永不退出的命令。 这会使 <code>AsyncResourceGatherer</code> 卡住，给你带来麻烦。</li>
+</ul>
+</div>
+<details><summary>标签示例</summary>
+
+<pre class="ini"><code>label {
+    monitor =
+    text = Hi there, $USER
+    color = rgba(200, 200, 200, 1.0)
+    font_size = 25
+    font_family = Noto Sans
+
+    position = 0, 80
+    halign = center
+    valign = center
+}</code></pre>
+</details>
+
+<h2 id="user-signals">用户信号 <a class="permalink" href="#user-signals" aria-label="本节链接">#</a></h2>
+<ul>
+<li><code>SIGUSR1</code>：解锁 hyprlock。 例如，可以切换到另一个 TTY 并运行 <code>pkill -USR1 hyprlock</code>。</li>
+<li><code>SIGUSR2</code>：更新标签和图像。 详见上文。</li>
+</ul>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../../../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/hypr-ecosystem/user/hyprlock/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-2" href="#command-line-arguments">命令行参数</a><a class="level-2" href="#configuration">配置</a><a class="level-3" href="#variable-types">变量类型</a><a class="level-3" href="#general">常规设置</a><a class="level-4" href="#compositor-fade-and-live-background">合成器淡入淡出与实时背景</a><a class="level-3" href="#authentication">身份验证</a><a class="level-3" href="#animations">动画</a><a class="level-4" href="#keywords">关键字</a><a class="level-4" href="#animation-tree">动画树</a><a class="level-3" href="#system-configuration">系统配置</a><a class="level-2" href="#keyboard-shortcuts-and-actions">键盘快捷键与操作</a><a class="level-2" href="#widgets">组件</a><a class="level-3" href="#monitor-selection">选择显示器</a><a class="level-3" href="#variable-substitution">变量替换</a><a class="level-2" href="#widget-list">组件列表</a><a class="level-3" href="#general-remarks">通用说明</a><a class="level-3" href="#shadowable">阴影</a><a class="level-3" href="#clickable">点击操作</a><a class="level-3" href="#background">背景</a><a class="level-3" href="#image">图像</a><a class="level-3" href="#shape">形状</a><a class="level-3" href="#input-field">输入框</a><a class="level-3" href="#label">标签</a><a class="level-4" href="#dynamic-labels">动态标签</a><a class="level-2" href="#user-signals">用户信号</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>

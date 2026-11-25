@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>滚动布局 · Hyprland Wiki 中文版</title><link rel="icon" href="../../../assets/hyprland.svg">
+<link rel="stylesheet" href="../../../assets/wiki.css"><script defer src="../../../assets/site.js"></script></head>
+<body data-root="../../../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../../../"><img src="../../../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/configuring/layouts/scrolling-layout/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../../../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../../../">Hyprland 中文文档</a><ul><li><a href="../../../version-selector/">版本选择器 ⚙️</a></li><li><details><summary><a href="../../../getting-started/">入门指南</a></summary><ul><li><a href="../../../getting-started/installation/">安装</a></li><li><a href="../../../getting-started/master-tutorial/">入门教程</a></li><li><a href="../../../getting-started/preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details open><summary><a href="../../">配置</a></summary><ul><li><a href="../../naming-conventions/">命名约定</a></li><li><a href="../../selectors/">选择器</a></li><li><details><summary><a href="../../core/">基础配置</a></summary><ul><li><details><summary><a href="../../core/monitors/">显示器</a></summary><ul><li><a href="../../core/monitors/output-selection/">选择显示输出</a></li><li><a href="../../core/monitors/positioning/">显示器排列</a></li><li><a href="../../core/monitors/modes/">显示模式</a></li><li><a href="../../core/monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="../../core/config-options/">配置选项</a></li><li><a href="../../core/devices/">设备</a></li><li><a href="../../core/dispatchers/">调度器</a></li><li><details><summary><a href="../../core/binds/">按键绑定</a></summary><ul><li><a href="../../core/binds/flags/">标志位</a></li><li><a href="../../core/binds/keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="../../core/binds/devices/">设备绑定</a></summary><ul><li><a href="../../core/binds/devices/mouse/">鼠标</a></li><li><a href="../../core/binds/devices/touchpad/">触摸板</a></li><li><a href="../../core/binds/devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="../../core/binds/submaps/">按键子映射</a></li><li><a href="../../core/binds/globals/">全局快捷键与绑定</a></li><li><a href="../../core/binds/switches/">硬件开关</a></li><li><a href="../../core/binds/gestures/">手势</a></li></ul></details></li><li><details><summary><a href="../../core/rules/">规则</a></summary><ul><li><a href="../../core/rules/window-rules/">窗口规则</a></li><li><a href="../../core/rules/workspace-rules/">工作区规则</a></li><li><a href="../../core/rules/layer-rules/">图层规则</a></li></ul></details></li><li><a href="../../core/environment-variables/">环境变量</a></li><li><a href="../../core/animations/">动画</a></li><li><a href="../../core/autostart/">自动启动</a></li><li><details><summary><a href="../../core/advanced-configuration/">高级配置</a></summary><ul><li><a href="../../core/advanced-configuration/events/">Lua 事件</a></li><li><a href="../../core/advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="../../core/advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="../../core/advanced-configuration/notifications/">通知</a></li><li><a href="../../core/advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details open><summary><a href="../">布局</a></summary><ul><li><a href="../dwindle-layout/">Dwindle 布局</a></li><li><a href="./" aria-current="page">滚动布局</a></li><li><a href="../master-layout/">主从布局</a></li><li><a href="../monocle-layout/">单窗口布局</a></li><li><a href="../custom-layouts/">自定义布局</a></li></ul></details></li><li><details><summary><a href="../../extra/">其他配置</a></summary><ul><li><a href="../../extra/multi-gpu/">多显卡</a></li><li><a href="../../extra/virtual-gpu/">虚拟 GPU</a></li><li><a href="../../extra/performance/">性能</a></li><li><a href="../../extra/tearing/">画面撕裂</a></li><li><a href="../../extra/xwayland/">Xwayland</a></li><li><a href="../../extra/systemd/">systemd</a></li></ul></details></li><li><a href="../../code-snippets/">Lua 代码片段</a></li></ul></details></li><li><details><summary><a href="../../../hypr-ecosystem/">Hypr 生态系统</a></summary><ul><li><details><summary><a href="../../../hypr-ecosystem/user/">用户应用与实用工具</a></summary><ul><li><a href="../../../hypr-ecosystem/user/hyprpaper/">hyprpaper</a></li><li><a href="../../../hypr-ecosystem/user/hyprpicker/">hyprpicker</a></li><li><a href="../../../hypr-ecosystem/user/hyprlauncher/">hyprlauncher</a></li><li><a href="../../../hypr-ecosystem/user/hypridle/">hypridle</a></li><li><a href="../../../hypr-ecosystem/user/hyprlock/">hyprlock</a></li><li><a href="../../../hypr-ecosystem/user/xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li><li><a href="../../../hypr-ecosystem/user/hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../../../hypr-ecosystem/user/hyprsunset/">hyprsunset</a></li><li><a href="../../../hypr-ecosystem/user/hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../../../hypr-ecosystem/user/hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../../../hypr-ecosystem/user/hyprqt6engine/">hyprqt6engine</a></li><li><a href="../../../hypr-ecosystem/user/hyprpwcenter/">hyprpwcenter</a></li><li><a href="../../../hypr-ecosystem/user/hyprshutdown/">hyprshutdown</a></li><li><a href="../../../hypr-ecosystem/user/hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../../../hypr-ecosystem/user/hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../../../hypr-ecosystem/dev/">开发库和工具包</a></summary><ul><li><a href="../../../hypr-ecosystem/dev/aquamarine/">aquamarine</a></li><li><a href="../../../hypr-ecosystem/dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../../../hypr-ecosystem/dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../../../hypr-ecosystem/dev/hyprlang/">hyprlang</a></li><li><a href="../../../hypr-ecosystem/dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../../../hypr-ecosystem/dev/hyprutils/">hyprutils</a></li><li><a href="../../../hypr-ecosystem/dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../hyprland-plugins/">Hyprland 插件</a></summary><ul><li><a href="../../../hyprland-plugins/using-plugins/">使用插件</a></li><li><details><summary><a href="../../../hyprland-plugins/development/">开发</a></summary><ul><li><a href="../../../hyprland-plugins/development/getting-started/">插件开发入门</a></li><li><a href="../../../hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li><li><a href="../../../hyprland-plugins/development/advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../useful-utilities/">实用工具</a></summary><ul><li><a href="../../../useful-utilities/must-have/">必备软件</a></li><li><a href="../../../useful-utilities/status-bars/">状态栏</a></li><li><a href="../../../useful-utilities/wallpapers/">壁纸</a></li><li><a href="../../../useful-utilities/screen-sharing/">屏幕共享</a></li><li><a href="../../../useful-utilities/screenshots-and-recording/">截图与录屏</a></li><li><a href="../../../useful-utilities/app-launchers/">应用启动器</a></li><li><a href="../../../useful-utilities/app-clients/">应用客户端</a></li><li><a href="../../../useful-utilities/phone-connect/">连接手机</a></li><li><a href="../../../useful-utilities/color-pickers/">取色器</a></li><li><a href="../../../useful-utilities/clipboard-managers/">剪贴板管理器</a></li><li><a href="../../../useful-utilities/file-managers/">文件管理器</a></li><li><a href="../../../useful-utilities/other/">其他</a></li><li><a href="../../../useful-utilities/hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="../../../useful-utilities/uwsm/">UWSM</a></li></ul></details></li><li><details><summary><a href="../../../nix/">Nix</a></summary><ul><li><a href="../../../nix/hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../../../nix/installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../../../nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="../../../nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li><li><a href="../../../nix/cachix/">Cachix</a></li><li><a href="../../../nix/advanced/">高级用法</a></li><li><a href="../../../nix/contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../../../nvidia/">NVIDIA</a></li><li><a href="../../../ipc/">IPC</a></li><li><a href="../../../crashes-and-bugs/">崩溃与缺陷</a></li><li><a href="../../../faq/">常见问题</a></li><li><a href="../../../community/">社区</a></li><li><details><summary><a href="../../../contributing-and-debugging/">贡献与调试</a></summary><ul><li><a href="../../../contributing-and-debugging/wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../../../contributing-and-debugging/issue-guidelines/">议题指南</a></li><li><a href="../../../contributing-and-debugging/pr-guidelines/">PR 指南</a></li><li><a href="../../../contributing-and-debugging/tests/">测试</a></li><li><a href="../../../contributing-and-debugging/translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../../../">Hyprland 中文文档</a><span>›</span><a href="../../">配置</a><span>›</span><a href="../">布局</a></nav><article><h1>滚动布局</h1><p>在滚动布局中，窗口沿着一条可无限延伸的滚动带排列。</p>
+<video width="1024" height="566" autoplay muted loop>
+  <source src="https://dl.hypr.land/wiki/demo_scrolling.mp4" type="video/mp4">
+</video>
+
+<h2 id="config">配置 <a class="permalink" href="#config" aria-label="本节链接">#</a></h2>
+<p>类别：<code>scrolling</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fullscreen_on_one_column</td>
+<td>启用后，如果工作区只有一列，该列将始终占满整个屏幕。</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>column_width</td>
+<td>列的默认宽度</td>
+<td>float</td>
+<td><code>0.5</code></td>
+<td>[0.1 - 1.0]</td>
+</tr>
+<tr>
+<td>focus_fit_method</td>
+<td>列获得焦点时，使其进入视野所采用的方式。0 对应 center（居中），1 对应 fit（使整列可见），2 对应 clamped_center（在边界限制内居中）。</td>
+<td>int</td>
+<td><code>1</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>follow_focus</td>
+<td>窗口获得焦点时滚动带的行为。0：焦点变化不会使滚动带移动。1：焦点变化可能使滚动带移动，鼠标点击总会使滚动带移动。2：焦点变化可能使滚动带移动。</td>
+<td>int</td>
+<td><code>1</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>follow_min_visible</td>
+<td>窗口获得焦点时，只有当窗口的可见比例达到指定值，视图才会跟随焦点。通过按键绑定、点击等直接输入切换焦点时，视图始终跟随。</td>
+<td>float</td>
+<td><code>0.4</code></td>
+<td>[0.0 - 1.0]</td>
+</tr>
+<tr>
+<td>explicit_column_widths</td>
+<td>以逗号分隔的预设宽度列表，供 <code>colresize +conf/-conf</code> 使用</td>
+<td>string</td>
+<td><code>"0.333, 0.5, 0.667, 1.0"</code></td>
+<td></td>
+</tr>
+<tr>
+<td>wrap_focus</td>
+<td>启用后，<code>hl.dsp.layout("focus l/r")</code> 可在首尾两端循环切换焦点。</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>wrap_swapcol</td>
+<td>启用后，<code>hl.dsp.layout("swapcol l/r")</code> 可跨越首尾边界交换列。</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>direction</td>
+<td>新窗口出现的方向及布局滚动的方向。可选值为 <code>"left"</code>/<code>"right"</code>/<code>"down"</code>/<code>"up"</code>。</td>
+<td>string</td>
+<td><code>"right"</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="workspace-rules">工作区规则 <a class="permalink" href="#workspace-rules" aria-label="本节链接">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>direction</td>
+<td>与 <code>scrolling.direction</code> 配置选项相同，可按工作区单独设置。</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<p>例如：</p>
+<pre class="lua"><code>hl.workspace_rule({ workspace = &quot;2&quot;, layout_opts = { direction = &quot;right&quot; } })</code></pre>
+<h2 id="layout-messages">布局消息 <a class="permalink" href="#layout-messages" aria-label="本节链接">#</a></h2>
+<p>调度器 <code>hl.dsp.layout()</code> 的参数：</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>center</td>
+<td>将当前拥有焦点的列居中</td>
+<td>无</td>
+</tr>
+<tr>
+<td>colresize</td>
+<td>调整当前列的宽度。可以指定目标宽度或相对变化量（例如 <code>0.5</code>、<code>+0.2</code>、<code>-0.2</code>），也可以用 <code>+conf</code> 或 <code>-conf</code> 循环切换预设宽度。还可以使用 <code>all (number)</code> 将所有列设为指定宽度。</td>
+<td>相对浮点值或相对 <code>conf</code> 步进值</td>
+</tr>
+<tr>
+<td>consume</td>
+<td>将当前窗口移入上一列</td>
+<td>无</td>
+</tr>
+<tr>
+<td>consume_or_expel</td>
+<td>如果当前列还有其他窗口，则将当前窗口移出并单独成列；如果当前列只有这一个窗口，则从相邻列并入一个窗口。</td>
+<td><code>prev</code> 或 <code>next</code></td>
+</tr>
+<tr>
+<td>expel</td>
+<td>将当前窗口移到单独的新列中（如果窗口位于屏幕上半部分，则向后移动，否则向前移动）</td>
+<td>无</td>
+</tr>
+<tr>
+<td>fit</td>
+<td>根据参数执行适配操作。可用值为 <code>active</code>、<code>visible</code>、<code>all</code>、<code>toend</code>、<code>tobeg</code>、<code>expand</code>。<code>expand</code> 会扩展当前窗口，使其占满显示器上剩余的可用空间。</td>
+<td>适配模式</td>
+</tr>
+<tr>
+<td>fit_into_view</td>
+<td>使当前活动列完整显示在视野中</td>
+<td>无</td>
+</tr>
+<tr>
+<td>focus</td>
+<td>移动焦点并使布局居中。到达边界时，焦点会循环到另一端，不会移到相邻显示器。</td>
+<td>direction</td>
+</tr>
+<tr>
+<td>inhibit_scroll</td>
+<td>禁止当前活动工作区的滚动视图移动。每个工作区的开关彼此独立。</td>
+<td>留空表示切换状态，也可使用 <code>bool</code> 显式启用或禁用。</td>
+</tr>
+<tr>
+<td>move</td>
+<td>水平移动布局，可按相对逻辑像素数（<code>-200</code>、<code>+200</code>）或按列（<code>+col</code>、<code>-col</code>）移动。</td>
+<td>移动参数</td>
+</tr>
+<tr>
+<td>promote</td>
+<td>将窗口向前移到单独的新列中</td>
+<td>无</td>
+</tr>
+<tr>
+<td>swapcol</td>
+<td>将当前列与左侧（<code>l</code>）或右侧（<code>r</code>）的相邻列交换。交换时首尾相接（例如，将第一列向左交换会使其移至末尾）。</td>
+<td><code>l</code> 或 <code>r</code></td>
+</tr>
+</tbody>
+</table>
+<p>Hyprland 配置中的按键绑定示例：</p>
+<pre class="lua"><code>hl.bind(mainMod .. &quot; + period&quot;, hl.dsp.layout(&quot;move +col&quot;))
+hl.bind(mainMod .. &quot; + comma&quot;, hl.dsp.layout(&quot;swapcol l&quot;))</code></pre>
+<h2 id="convenience-functions">便捷函数 <a class="permalink" href="#convenience-functions" aria-label="本节链接">#</a></h2>
+<ul>
+<li><code>hl.get_scrolling_offset()</code></li>
+<li><code>hl.set_scrolling_offset(double)</code></li>
+</ul>
+<p>可通过 LSP 查看返回值，也可以自行查阅存根文件。要在代码编辑器中配置 LSP，请参阅<a href="../../core/#editor-autocompletion">此处</a>。</p>
+<h2 id="window-rules">窗口规则 <a class="permalink" href="#window-rules" aria-label="本节链接">#</a></h2>
+<p>使用静态规则 scrolling_width 可以为窗口设置初始列宽。</p>
+<pre class="lua"><code>hl.window_rule({ name = &quot;kitty_starting_width&quot;, match = { class = &quot;kitty&quot; }, scrolling_width = 0.5})</code></pre>
+<h2 id="layout-handled-fullscreen">由布局处理的全屏模式 <a class="permalink" href="#layout-handled-fullscreen" aria-label="本节链接">#</a></h2>
+<p>滚动布局提供一种可选的全屏模式，由布局自身的全屏处理器控制。在这种模式下，你可以滚动到其他位置，全屏窗口仍会保持全屏状态。</p>
+<p>在采用滚动布局的工作区中，调用全屏调度器时设置 <code>layout_aware = true</code>（或直接省略 <code>layout_aware</code> 选项）即可使用此模式。此模式也支持现有的窗口和工作区全屏状态选择器。</p>
+<div class="note">
+<div class="title">
+<p>说明</p>
+</div>
+<p>当全屏窗口获得焦点时，<code>hl.dsp.focus({ direction })</code> 调度器默认会在指定方向上查找其他显示器，而不会在当前显示器上切换窗口。要使用布局提供的滚动功能离开全屏窗口，可以设置 <code>binds.movefocus_cycles_fullscreen = true</code>，让焦点调度器恢复查找窗口的行为，也可以改用滚动布局的 <code>focus</code> 布局消息。</p>
+</div>
+<p>有关全屏处理器的更多信息，请参阅<a href="../../core/dispatchers/#fullscreen-handlers">此处</a>。</p>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../../../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/configuring/layouts/scrolling-layout/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-2" href="#config">配置</a><a class="level-2" href="#workspace-rules">工作区规则</a><a class="level-2" href="#layout-messages">布局消息</a><a class="level-2" href="#convenience-functions">便捷函数</a><a class="level-2" href="#window-rules">窗口规则</a><a class="level-2" href="#layout-handled-fullscreen">由布局处理的全屏模式</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>

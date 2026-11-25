@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>选择器 · Hyprland Wiki 中文版</title><link rel="icon" href="../../assets/hyprland.svg">
+<link rel="stylesheet" href="../../assets/wiki.css"><script defer src="../../assets/site.js"></script></head>
+<body data-root="../../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../../"><img src="../../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/configuring/selectors/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../../">Hyprland 中文文档</a><ul><li><a href="../../version-selector/">版本选择器 ⚙️</a></li><li><details><summary><a href="../../getting-started/">入门指南</a></summary><ul><li><a href="../../getting-started/installation/">安装</a></li><li><a href="../../getting-started/master-tutorial/">入门教程</a></li><li><a href="../../getting-started/preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details open><summary><a href="../">配置</a></summary><ul><li><a href="../naming-conventions/">命名约定</a></li><li><a href="./" aria-current="page">选择器</a></li><li><details><summary><a href="../core/">基础配置</a></summary><ul><li><details><summary><a href="../core/monitors/">显示器</a></summary><ul><li><a href="../core/monitors/output-selection/">选择显示输出</a></li><li><a href="../core/monitors/positioning/">显示器排列</a></li><li><a href="../core/monitors/modes/">显示模式</a></li><li><a href="../core/monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="../core/config-options/">配置选项</a></li><li><a href="../core/devices/">设备</a></li><li><a href="../core/dispatchers/">调度器</a></li><li><details><summary><a href="../core/binds/">按键绑定</a></summary><ul><li><a href="../core/binds/flags/">标志位</a></li><li><a href="../core/binds/keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="../core/binds/devices/">设备绑定</a></summary><ul><li><a href="../core/binds/devices/mouse/">鼠标</a></li><li><a href="../core/binds/devices/touchpad/">触摸板</a></li><li><a href="../core/binds/devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="../core/binds/submaps/">按键子映射</a></li><li><a href="../core/binds/globals/">全局快捷键与绑定</a></li><li><a href="../core/binds/switches/">硬件开关</a></li><li><a href="../core/binds/gestures/">手势</a></li></ul></details></li><li><details><summary><a href="../core/rules/">规则</a></summary><ul><li><a href="../core/rules/window-rules/">窗口规则</a></li><li><a href="../core/rules/workspace-rules/">工作区规则</a></li><li><a href="../core/rules/layer-rules/">图层规则</a></li></ul></details></li><li><a href="../core/environment-variables/">环境变量</a></li><li><a href="../core/animations/">动画</a></li><li><a href="../core/autostart/">自动启动</a></li><li><details><summary><a href="../core/advanced-configuration/">高级配置</a></summary><ul><li><a href="../core/advanced-configuration/events/">Lua 事件</a></li><li><a href="../core/advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="../core/advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="../core/advanced-configuration/notifications/">通知</a></li><li><a href="../core/advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../layouts/">布局</a></summary><ul><li><a href="../layouts/dwindle-layout/">Dwindle 布局</a></li><li><a href="../layouts/scrolling-layout/">滚动布局</a></li><li><a href="../layouts/master-layout/">主从布局</a></li><li><a href="../layouts/monocle-layout/">单窗口布局</a></li><li><a href="../layouts/custom-layouts/">自定义布局</a></li></ul></details></li><li><details><summary><a href="../extra/">其他配置</a></summary><ul><li><a href="../extra/multi-gpu/">多显卡</a></li><li><a href="../extra/virtual-gpu/">虚拟 GPU</a></li><li><a href="../extra/performance/">性能</a></li><li><a href="../extra/tearing/">画面撕裂</a></li><li><a href="../extra/xwayland/">Xwayland</a></li><li><a href="../extra/systemd/">systemd</a></li></ul></details></li><li><a href="../code-snippets/">Lua 代码片段</a></li></ul></details></li><li><details><summary><a href="../../hypr-ecosystem/">Hypr 生态系统</a></summary><ul><li><details><summary><a href="../../hypr-ecosystem/user/">用户应用与实用工具</a></summary><ul><li><a href="../../hypr-ecosystem/user/hyprpaper/">hyprpaper</a></li><li><a href="../../hypr-ecosystem/user/hyprpicker/">hyprpicker</a></li><li><a href="../../hypr-ecosystem/user/hyprlauncher/">hyprlauncher</a></li><li><a href="../../hypr-ecosystem/user/hypridle/">hypridle</a></li><li><a href="../../hypr-ecosystem/user/hyprlock/">hyprlock</a></li><li><a href="../../hypr-ecosystem/user/xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li><li><a href="../../hypr-ecosystem/user/hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../../hypr-ecosystem/user/hyprsunset/">hyprsunset</a></li><li><a href="../../hypr-ecosystem/user/hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../../hypr-ecosystem/user/hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../../hypr-ecosystem/user/hyprqt6engine/">hyprqt6engine</a></li><li><a href="../../hypr-ecosystem/user/hyprpwcenter/">hyprpwcenter</a></li><li><a href="../../hypr-ecosystem/user/hyprshutdown/">hyprshutdown</a></li><li><a href="../../hypr-ecosystem/user/hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../../hypr-ecosystem/user/hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../../hypr-ecosystem/dev/">开发库和工具包</a></summary><ul><li><a href="../../hypr-ecosystem/dev/aquamarine/">aquamarine</a></li><li><a href="../../hypr-ecosystem/dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../../hypr-ecosystem/dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../../hypr-ecosystem/dev/hyprlang/">hyprlang</a></li><li><a href="../../hypr-ecosystem/dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../../hypr-ecosystem/dev/hyprutils/">hyprutils</a></li><li><a href="../../hypr-ecosystem/dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../hyprland-plugins/">Hyprland 插件</a></summary><ul><li><a href="../../hyprland-plugins/using-plugins/">使用插件</a></li><li><details><summary><a href="../../hyprland-plugins/development/">开发</a></summary><ul><li><a href="../../hyprland-plugins/development/getting-started/">插件开发入门</a></li><li><a href="../../hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li><li><a href="../../hyprland-plugins/development/advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../useful-utilities/">实用工具</a></summary><ul><li><a href="../../useful-utilities/must-have/">必备软件</a></li><li><a href="../../useful-utilities/status-bars/">状态栏</a></li><li><a href="../../useful-utilities/wallpapers/">壁纸</a></li><li><a href="../../useful-utilities/screen-sharing/">屏幕共享</a></li><li><a href="../../useful-utilities/screenshots-and-recording/">截图与录屏</a></li><li><a href="../../useful-utilities/app-launchers/">应用启动器</a></li><li><a href="../../useful-utilities/app-clients/">应用客户端</a></li><li><a href="../../useful-utilities/phone-connect/">连接手机</a></li><li><a href="../../useful-utilities/color-pickers/">取色器</a></li><li><a href="../../useful-utilities/clipboard-managers/">剪贴板管理器</a></li><li><a href="../../useful-utilities/file-managers/">文件管理器</a></li><li><a href="../../useful-utilities/other/">其他</a></li><li><a href="../../useful-utilities/hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="../../useful-utilities/uwsm/">UWSM</a></li></ul></details></li><li><details><summary><a href="../../nix/">Nix</a></summary><ul><li><a href="../../nix/hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../../nix/installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../../nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="../../nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li><li><a href="../../nix/cachix/">Cachix</a></li><li><a href="../../nix/advanced/">高级用法</a></li><li><a href="../../nix/contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../../nvidia/">NVIDIA</a></li><li><a href="../../ipc/">IPC</a></li><li><a href="../../crashes-and-bugs/">崩溃与缺陷</a></li><li><a href="../../faq/">常见问题</a></li><li><a href="../../community/">社区</a></li><li><details><summary><a href="../../contributing-and-debugging/">贡献与调试</a></summary><ul><li><a href="../../contributing-and-debugging/wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../../contributing-and-debugging/issue-guidelines/">议题指南</a></li><li><a href="../../contributing-and-debugging/pr-guidelines/">PR 指南</a></li><li><a href="../../contributing-and-debugging/tests/">测试</a></li><li><a href="../../contributing-and-debugging/translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../../">Hyprland 中文文档</a><span>›</span><a href="../">配置</a></nav><article><h1>选择器</h1><p>可以使用以下两种选择器中的任意一种来选择 ID：</p>
+<ul>
+<li>通过 <code>+</code> 或 <code>-</code> 进行相对选择</li>
+<li>通过 ID 本身进行绝对选择</li>
+</ul>
+<h2 id="regex-selector">正则表达式选择器 <a class="permalink" href="#regex-selector" aria-label="本节链接">#</a></h2>
+<p>Hyprland 使用 <a href="https://github.com/google/re2">Google 的 RE2</a> 解析正则表达式。这意味着任何需要多项式时间才能完成的运算都无法使用。有关支持的扩展语法，请参阅 <a href="https://github.com/google/re2/wiki/Syntax">RE2 的 wiki</a>。</p>
+<p>要进一步了解支持的正则表达式语法结构，请<a href="https://github.com/ziishaned/learn-regex/blob/master/README.md">参阅这份速查表</a>。</p>
+<p>如果要对正则表达式_取反_，即仅在正则表达式_匹配失败_时才通过，可以在表达式前加上 <code>negative:</code>（例如 <code>"negative:kitty"</code>）。</p>
+<div class="tip">
+<div class="title">
+<p>提示</p>
+</div>
+<p>Lua 的长括号字符串字面量语法 <code>[[]]</code> 有助于避免反复转义反斜杠。例如，可以将 <code>"\\b\\w*apple\\b"</code> 写成 <code>[[\b\w*apple\b]]</code>。</p>
+</div>
+<h2 id="window-selector">窗口选择器 <a class="permalink" href="#window-selector" aria-label="本节链接">#</a></h2>
+<p>可以通过以下方式选择窗口：</p>
+<ul>
+<li>窗口对象</li>
+<li>精确匹配选择器：
+<ul>
+<li><code>pid:...</code></li>
+<li><code>stableid:...</code></li>
+<li><code>address:0x...</code></li>
+</ul></li>
+<li>正则表达式：
+<ul>
+<li><code>class:...</code></li>
+<li><code>initialclass:...</code></li>
+<li><code>title:...</code></li>
+<li><code>initialtitle:...</code></li>
+<li><code>tag:...</code></li>
+</ul></li>
+<li><code>activewindow</code></li>
+<li><code>floating</code></li>
+<li><code>tiled</code></li>
+</ul>
+<p>如果未指定窗口，则使用活动窗口。</p>
+<h2 id="workspaces">工作区 <a class="permalink" href="#workspaces" aria-label="本节链接">#</a></h2>
+<p>可以通过以下方式引用工作区：</p>
+<ul>
+<li>名称：例如 <code>1</code>、<code>42</code>、<code>Web</code>、<code>Anime</code>、<code>Better anime</code></li>
+<li>上一个工作区：<code>previous</code> 或 <code>previous_per_monitor</code></li>
+<li>特殊工作区：使用 <code>special</code>，对于命名的特殊工作区则使用 <code>special:name</code>。</li>
+<li>工作区对象</li>
+<li><a href="#workspace-filters">工作区过滤器</a></li>
+<li><a href="#workspace-query">工作区查询</a></li>
+</ul>
+<div class="note">
+<div class="title">
+<p>说明</p>
+</div>
+<p>在仅接受特殊工作区的场合（例如 <code>hl.dsp.toggle_special()</code> 的参数），不要包含 <code>special:</code> 工作区前缀。只有在普通工作区也有效的场合才需要此前缀。例如，<code>hl.dsp.toggle_special("foo")</code> 指向通常写作 <code>special:foo</code> 的工作区。</p>
+</div>
+<h3 id="workspace-filters">工作区过滤器 <a class="permalink" href="#workspace-filters" aria-label="本节链接">#</a></h3>
+<p>可以使用工作区过滤器（例如 <code>r[2-4] w[t1]</code>）选取已创建的工作区。</p>
+<p>过滤器由一系列以空格分隔的过滤表达式组成。表达式内部不允许出现空格。</p>
+<ul>
+<li><code>r[A-B]</code> - ID 范围从 A 到 B，包含两端。</li>
+<li><code>s[bool]</code> - 工作区是否为特殊工作区。</li>
+<li><code>n[bool]</code>、<code>n[s:string]</code>、<code>n[e:string]</code> - 按名称筛选。<code>n[bool]</code> 判断工作区是否为命名工作区。<code>s</code> 和 <code>e</code> 分别表示名称以指定字符串开头或结尾。</li>
+<li><code>m[monitor]</code> - 显示器选择器</li>
+<li><code>w[(flags)A-B]</code>、<code>w[(flags)X]</code> - 按工作区中的窗口数量筛选。<code>A-B</code> 表示包含两端的范围，<code>X</code> 表示确切数量。标志可以省略。可用标志如下：
+<ul>
+<li><code>t</code> 仅统计平铺窗口</li>
+<li><code>f</code> 仅统计浮动窗口</li>
+<li><code>g</code> 按组数而非窗口数统计</li>
+<li><code>v</code> 仅统计可见窗口</li>
+<li><code>p</code> 仅统计固定窗口</li>
+</ul></li>
+<li><code>f[-1]</code>、<code>f[0]</code>、<code>f[1]</code>、<code>f[2]</code> - 工作区的全屏状态。<code>-1</code>：无全屏窗口，<code>0</code>：全屏，<code>1</code>：最大化，<code>2</code>：全屏，但不向窗口发送全屏状态。仅匹配有全屏窗口覆盖的工作区。</li>
+</ul>
+<div class="note">
+<div class="title">
+<p>说明</p>
+</div>
+<p>过滤器<em>只能</em>选取已存在的工作区。尝试将规则（例如 <code>persistent</code>）应用到尚不存在的工作区会失败。</p>
+</div>
+<h3 id="workspace-query">工作区查询 <a class="permalink" href="#workspace-query" aria-label="本节链接">#</a></h3>
+<p>在查询选择器后附加带符号的偏移量 <code>+n</code> 或 <code>-n</code>，即可相对于当前活动工作区查找匹配的工作区。要改用从 1 开始编号的绝对 ID，可在选择器与 ID 之间插入 <code>~</code>（例如，<code>m~3</code> 表示当前显示器上的第三个工作区）。</p>
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>说明</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>e</td>
+<td>在所有显示器上查找</td>
+<td>如果查找范围超出该方向上的工作区数量，则从另一端继续查找</td>
+</tr>
+<tr>
+<td>m</td>
+<td>在当前显示器上查找</td>
+<td>如果查找范围超出该方向上的工作区数量，则从另一端继续查找</td>
+</tr>
+<tr>
+<td>r</td>
+<td>在当前显示器上查找，包括空工作区和尚不存在的工作区</td>
+<td>[1 - ...]</td>
+</tr>
+<tr>
+<td>empty</td>
+<td>查找第一个空工作区。可添加后缀 <code>m</code> 将查找范围限定在当前显示器，也可添加后缀 <code>n</code> 查找 <em>下一个</em> 可用的空工作区，还可同时使用两者（例如 <code>emptynm</code>）</td>
+<td>如果计算出的编号超过最后一个数字工作区的编号 2147483647，则回绕到开头</td>
+</tr>
+</tbody>
+</table>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>对于接受 ID 的查询选择器，必须使用正负号或 <code>~</code>。<code>m3</code> 会被解释为工作区名称，而非查询选择器。只有存在名为“m3”的工作区时，它才会生效。</p>
+</div>
+<h2 id="direction">方向 <a class="permalink" href="#direction" aria-label="本节链接">#</a></h2>
+<p>指定一个方向。</p>
+<ul>
+<li><code>l</code>/<code>left</code> - 向左</li>
+<li><code>r</code>/<code>right</code> - 向右</li>
+<li><code>u</code>/<code>up</code> - 向上</li>
+<li><code>d</code>/<code>down</code> - 向下</li>
+</ul>
+<h2 id="monitor">Monitor <a class="permalink" href="#monitor" aria-label="本节链接">#</a></h2>
+<p>可以通过以下方式选择显示器：</p>
+<ul>
+<li>显示器对象</li>
+<li>显示器 ID</li>
+<li><a href="../core/monitors/output-selection/">输出选择器</a></li>
+<li><a href="#direction">方向</a></li>
+<li><code>current</code></li>
+</ul>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/configuring/selectors/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-2" href="#regex-selector">正则表达式选择器</a><a class="level-2" href="#window-selector">窗口选择器</a><a class="level-2" href="#workspaces">工作区</a><a class="level-3" href="#workspace-filters">工作区过滤器</a><a class="level-3" href="#workspace-query">工作区查询</a><a class="level-2" href="#direction">方向</a><a class="level-2" href="#monitor">Monitor</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UWSM · Hyprland Wiki 中文版</title><link rel="icon" href="../../assets/hyprland.svg">
+<link rel="stylesheet" href="../../assets/wiki.css"><script defer src="../../assets/site.js"></script></head>
+<body data-root="../../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../../"><img src="../../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/useful-utilities/uwsm/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../../">Hyprland 中文文档</a><ul><li><a href="../../version-selector/">版本选择器 ⚙️</a></li><li><details><summary><a href="../../getting-started/">入门指南</a></summary><ul><li><a href="../../getting-started/installation/">安装</a></li><li><a href="../../getting-started/master-tutorial/">入门教程</a></li><li><a href="../../getting-started/preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details><summary><a href="../../configuring/">配置</a></summary><ul><li><a href="../../configuring/naming-conventions/">命名约定</a></li><li><a href="../../configuring/selectors/">选择器</a></li><li><details><summary><a href="../../configuring/core/">基础配置</a></summary><ul><li><details><summary><a href="../../configuring/core/monitors/">显示器</a></summary><ul><li><a href="../../configuring/core/monitors/output-selection/">选择显示输出</a></li><li><a href="../../configuring/core/monitors/positioning/">显示器排列</a></li><li><a href="../../configuring/core/monitors/modes/">显示模式</a></li><li><a href="../../configuring/core/monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="../../configuring/core/config-options/">配置选项</a></li><li><a href="../../configuring/core/devices/">设备</a></li><li><a href="../../configuring/core/dispatchers/">调度器</a></li><li><details><summary><a href="../../configuring/core/binds/">按键绑定</a></summary><ul><li><a href="../../configuring/core/binds/flags/">标志位</a></li><li><a href="../../configuring/core/binds/keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="../../configuring/core/binds/devices/">设备绑定</a></summary><ul><li><a href="../../configuring/core/binds/devices/mouse/">鼠标</a></li><li><a href="../../configuring/core/binds/devices/touchpad/">触摸板</a></li><li><a href="../../configuring/core/binds/devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="../../configuring/core/binds/submaps/">按键子映射</a></li><li><a href="../../configuring/core/binds/globals/">全局快捷键与绑定</a></li><li><a href="../../configuring/core/binds/switches/">硬件开关</a></li><li><a href="../../configuring/core/binds/gestures/">手势</a></li></ul></details></li><li><details><summary><a href="../../configuring/core/rules/">规则</a></summary><ul><li><a href="../../configuring/core/rules/window-rules/">窗口规则</a></li><li><a href="../../configuring/core/rules/workspace-rules/">工作区规则</a></li><li><a href="../../configuring/core/rules/layer-rules/">图层规则</a></li></ul></details></li><li><a href="../../configuring/core/environment-variables/">环境变量</a></li><li><a href="../../configuring/core/animations/">动画</a></li><li><a href="../../configuring/core/autostart/">自动启动</a></li><li><details><summary><a href="../../configuring/core/advanced-configuration/">高级配置</a></summary><ul><li><a href="../../configuring/core/advanced-configuration/events/">Lua 事件</a></li><li><a href="../../configuring/core/advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="../../configuring/core/advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="../../configuring/core/advanced-configuration/notifications/">通知</a></li><li><a href="../../configuring/core/advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../configuring/layouts/">布局</a></summary><ul><li><a href="../../configuring/layouts/dwindle-layout/">Dwindle 布局</a></li><li><a href="../../configuring/layouts/scrolling-layout/">滚动布局</a></li><li><a href="../../configuring/layouts/master-layout/">主从布局</a></li><li><a href="../../configuring/layouts/monocle-layout/">单窗口布局</a></li><li><a href="../../configuring/layouts/custom-layouts/">自定义布局</a></li></ul></details></li><li><details><summary><a href="../../configuring/extra/">其他配置</a></summary><ul><li><a href="../../configuring/extra/multi-gpu/">多显卡</a></li><li><a href="../../configuring/extra/virtual-gpu/">虚拟 GPU</a></li><li><a href="../../configuring/extra/performance/">性能</a></li><li><a href="../../configuring/extra/tearing/">画面撕裂</a></li><li><a href="../../configuring/extra/xwayland/">Xwayland</a></li><li><a href="../../configuring/extra/systemd/">systemd</a></li></ul></details></li><li><a href="../../configuring/code-snippets/">Lua 代码片段</a></li></ul></details></li><li><details><summary><a href="../../hypr-ecosystem/">Hypr 生态系统</a></summary><ul><li><details><summary><a href="../../hypr-ecosystem/user/">用户应用与实用工具</a></summary><ul><li><a href="../../hypr-ecosystem/user/hyprpaper/">hyprpaper</a></li><li><a href="../../hypr-ecosystem/user/hyprpicker/">hyprpicker</a></li><li><a href="../../hypr-ecosystem/user/hyprlauncher/">hyprlauncher</a></li><li><a href="../../hypr-ecosystem/user/hypridle/">hypridle</a></li><li><a href="../../hypr-ecosystem/user/hyprlock/">hyprlock</a></li><li><a href="../../hypr-ecosystem/user/xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li><li><a href="../../hypr-ecosystem/user/hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../../hypr-ecosystem/user/hyprsunset/">hyprsunset</a></li><li><a href="../../hypr-ecosystem/user/hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../../hypr-ecosystem/user/hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../../hypr-ecosystem/user/hyprqt6engine/">hyprqt6engine</a></li><li><a href="../../hypr-ecosystem/user/hyprpwcenter/">hyprpwcenter</a></li><li><a href="../../hypr-ecosystem/user/hyprshutdown/">hyprshutdown</a></li><li><a href="../../hypr-ecosystem/user/hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../../hypr-ecosystem/user/hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../../hypr-ecosystem/dev/">开发库和工具包</a></summary><ul><li><a href="../../hypr-ecosystem/dev/aquamarine/">aquamarine</a></li><li><a href="../../hypr-ecosystem/dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../../hypr-ecosystem/dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../../hypr-ecosystem/dev/hyprlang/">hyprlang</a></li><li><a href="../../hypr-ecosystem/dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../../hypr-ecosystem/dev/hyprutils/">hyprutils</a></li><li><a href="../../hypr-ecosystem/dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../hyprland-plugins/">Hyprland 插件</a></summary><ul><li><a href="../../hyprland-plugins/using-plugins/">使用插件</a></li><li><details><summary><a href="../../hyprland-plugins/development/">开发</a></summary><ul><li><a href="../../hyprland-plugins/development/getting-started/">插件开发入门</a></li><li><a href="../../hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li><li><a href="../../hyprland-plugins/development/advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details open><summary><a href="../">实用工具</a></summary><ul><li><a href="../must-have/">必备软件</a></li><li><a href="../status-bars/">状态栏</a></li><li><a href="../wallpapers/">壁纸</a></li><li><a href="../screen-sharing/">屏幕共享</a></li><li><a href="../screenshots-and-recording/">截图与录屏</a></li><li><a href="../app-launchers/">应用启动器</a></li><li><a href="../app-clients/">应用客户端</a></li><li><a href="../phone-connect/">连接手机</a></li><li><a href="../color-pickers/">取色器</a></li><li><a href="../clipboard-managers/">剪贴板管理器</a></li><li><a href="../file-managers/">文件管理器</a></li><li><a href="../other/">其他</a></li><li><a href="../hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="./" aria-current="page">UWSM</a></li></ul></details></li><li><details><summary><a href="../../nix/">Nix</a></summary><ul><li><a href="../../nix/hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../../nix/installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../../nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="../../nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li><li><a href="../../nix/cachix/">Cachix</a></li><li><a href="../../nix/advanced/">高级用法</a></li><li><a href="../../nix/contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../../nvidia/">NVIDIA</a></li><li><a href="../../ipc/">IPC</a></li><li><a href="../../crashes-and-bugs/">崩溃与缺陷</a></li><li><a href="../../faq/">常见问题</a></li><li><a href="../../community/">社区</a></li><li><details><summary><a href="../../contributing-and-debugging/">贡献与调试</a></summary><ul><li><a href="../../contributing-and-debugging/wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../../contributing-and-debugging/issue-guidelines/">议题指南</a></li><li><a href="../../contributing-and-debugging/pr-guidelines/">PR 指南</a></li><li><a href="../../contributing-and-debugging/tests/">测试</a></li><li><a href="../../contributing-and-debugging/translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../../">Hyprland 中文文档</a><span>›</span><a href="../">实用工具</a></nav><article><h1>UWSM</h1><h2 id="uwsm">UWSM <a class="permalink" href="#uwsm" aria-label="本节链接">#</a></h2>
+<p><a href="https://github.com/Vladimir-csp/uwsm">Universal Wayland Session Manager</a> 将独立运行的 Wayland 合成器封装成一组 systemd 单元，提供可靠的会话管理功能，包括管理会话环境、支持 XDG 自动启动、与登录会话双向绑定，以及有序关闭会话。</p>
+<p>请注意，uwsm 面向高级用户，本身也有一些问题和使用时需要留意的特性。</p>
+<h3 id="installation">安装 <a class="permalink" href="#installation" aria-label="本节链接">#</a></h3>
+<details><summary>Arch</summary>
+
+<p>Arch 官方软件仓库提供了 uwsm。</p>
+<pre class="sh"><code>pacman -S uwsm libnewt</code></pre>
+</details>
+
+<details><summary>Nix/NixOS</summary>
+
+<pre class="nix"><code>{
+  programs.hyprland.withUWSM = true;
+}</code></pre>
+<p>上述选项会生成新的桌面条目 <code>hyprland-uwsm.desktop</code>，可在显示管理器中选择。</p>
+<p>详情请参阅<a href="https://search.nixos.org/options?channel=unstable&amp;show=programs.uwsm.enable&amp;from=0&amp;size=50&amp;sort=relevance&amp;type=packages&amp;query=uwsm">该选项的说明</a>。</p>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>如果你使用 <a href="../../nix/configuring-hyprland-with-home-manager/">Home Manager 模块</a>，请务必禁用该模块的 systemd 集成功能，因为它与 uwsm 冲突。</p>
+<pre class="nix"><code>{
+  wayland.windowManager.hyprland.systemd.enable = false;
+}</code></pre>
+</div>
+</details>
+
+<div class="note">
+<div class="title">
+<p>说明</p>
+</div>
+<p>如需了解其他发行版的安装方法或手动构建步骤，请参阅项目页面的<a href="https://github.com/Vladimir-csp/uwsm?tab=readme-ov-file#installation">构建与安装</a>一节。</p>
+</div>
+<h3 id="launching-hyprland-with-uwsm">使用 uwsm 启动 Hyprland <a class="permalink" href="#launching-hyprland-with-uwsm" aria-label="本节链接">#</a></h3>
+<div class="note">
+<div class="title">
+<p>说明</p>
+</div>
+<p>请留意<a href="../../configuring/core/environment-variables/">环境变量</a>、<a href="../../configuring/extra/multi-gpu/">多 GPU</a> 和<a href="../../configuring/core/dispatchers/">调度器</a>章节中的警告。</p>
+</div>
+<h4 id="in-tty">从 TTY 启动 <a class="permalink" href="#in-tty" aria-label="本节链接">#</a></h4>
+<details><summary>为 GNOME Keyring 配置 PAM</summary>
+
+<p>从 TTY 启动时，某些通常由显示管理器处理的会话集成功能可能尚未配置。 <a href="https://wiki.gnome.org/Projects/GnomeKeyring">GNOME Keyring</a> 就是一个常见例子。如果 PAM 登录配置中没有 <code>pam_gnome_keyring.so</code>，密钥环就不会自动解锁，应用程序可能会提示你手动解锁。</p>
+<p>要启用自动解锁，请将包含 <code>pam_gnome_keyring.so</code> 的配置行添加到当前登录方式使用的 PAM 配置文件中（例如，<code>login(1)</code> 使用 <code>/etc/pam.d/login</code>）。 请查阅发行版文档，确认应使用的文件和语法。 以 Arch Linux 为例：</p>
+<pre class="plain"><code>#%PAM-1.0
+
+auth       requisite    pam_nologin.so
+auth       include      system-local-login
+-auth      optional     pam_gnome_keyring.so
+account    include      system-local-login
+password   include      system-local-login
+-password  optional     pam_gnome_keyring.so    use_authtok
+session    include      system-local-login
+-session   optional     pam_gnome_keyring.so    auto_start</code></pre>
+<p>显示管理器（如 GDM、SDDM）通常已包含这项 PAM 配置。 只有通过控制台（TTY）登录时才需要这一步。</p>
+</details>
+
+<p>要使用 uwsm 启动 Hyprland，请将以下代码添加到 shell 的登录配置文件中。</p>
+<pre><code>if uwsm check may-start &amp;&amp; uwsm select; then
+    exec uwsm start default
+fi</code></pre>
+<p>这样，登录 tty1 后就会出现 uwsm 的合成器选择菜单。 选择 <code>Hyprland</code> 条目即可启动。</p>
+<p>如果希望跳过合成器选择菜单，直接启动 Hyprland，请改用以下代码作为 shell 登录配置。</p>
+<pre><code>if uwsm check may-start; then
+    exec uwsm start hyprland.desktop
+fi</code></pre>
+<h4 id="using-a-display-manager">使用显示管理器 <a class="permalink" href="#using-a-display-manager" aria-label="本节链接">#</a></h4>
+<p>如果你使用显示管理器，请在其会话选择菜单中选择 <code>Hyprland (uwsm-managed)</code> 条目。</p>
+<h3 id="launching-applications-inside-session">在会话中启动应用程序 <a class="permalink" href="#launching-applications-inside-session" aria-label="本节链接">#</a></h3>
+<p>使用 systemd 管理会话时，应用程序也应作为单元运行。 uwsm 为此<a href="https://github.com/Vladimir-csp/uwsm#3-applications-and-slices">提供了辅助工具</a>。 不建议在合成器的单元中将应用程序作为子进程运行。</p>
+<p>请在应用程序的启动命令前加上 <code>uwsm app --</code>。 该命令也支持按 ID 或路径启动桌面条目。 详情请参阅 <code>man uwsm</code> 或 <code>uwsm app --help</code>。</p>
+<p>以下工具启动更快：</p>
+<ul>
+<li><code>uwsm-app</code>：与按需启动的守护进程配合使用的 shell 客户端，是 uwsm 的可选组件。</li>
+<li><a href="https://github.com/Vladimir-csp/app2unit"><code>app2unit</code></a>：纯 shell 实现的替代工具，也可用于打开文件，通常会更早支持新功能。</li>
+<li><a href="https://github.com/c4rlo/runapp/"><code>runapp</code></a>：用 C++ 实现的替代工具，速度更快，支持的功能可能有所不同。</li>
+</ul>
+<h2 id="autostart">自动启动 <a class="permalink" href="#autostart" aria-label="本节链接">#</a></h2>
+<p>systemd 负责处理 XDG 自动启动。由 uwsm 管理的会话会自动激活相应的目标单元。 用户服务通常需要先激活 <code>graphical-session.target</code>，本页介绍的任一启动方式都可以激活它。</p>
+<p>有些应用程序自带原生 systemd 用户单元，可借此自动启动。 你可能需要运行 <code>systemctl --user enable [some-app.service]</code> 显式启用这些单元。 如果单元缺少 <code>[Install]</code> 段，可以用更直接的方式启用它：<code>systemctl --user add-wants graphical-session.target [some-app.service]</code>。 还需确保单元设置了 <code>After=graphical-session.target</code> 启动顺序（可通过 drop-in 配置文件添加）。</p>
+<p>例如，只需运行一次 <code>systemctl --user enable hyprpaper.service</code>，此后 systemd 就会自动启动 hyprpaper，无需在配置中写入 <code>hl.exec_cmd("hyprpaper")</code>。</p>
+<p>更多自动启动示例和技巧请见<a href="https://github.com/Vladimir-csp/uwsm/tree/master/example-units">这里</a>。</p>
+<h2 id="notes">注意事项 <a class="permalink" href="#notes" aria-label="本节链接">#</a></h2>
+<p>建议改在 <code>~/.config/uwsm/env-hyprland</code> 中导出 <code>AQ_DRM_DEVICES</code> 变量。 这样可确保将该变量正确导出到 systemd 环境中，同时避免与其他合成器或桌面环境冲突。</p>
+<pre class="plain"><code>export AQ_DRM_DEVICES=&quot;/dev/dri/card0:/dev/dri/card1&quot;</code></pre>
+<p>uwsm 会自动设置 XDG 环境变量，无需显式设置。</p>
+<p>请避免在 <code>hyprland.lua</code> 文件中设置环境变量。 请将主题、XCursor、NVIDIA 和工具包相关变量放在 <code>~/.config/uwsm/env</code> 中，将 <code>HYPR*</code> 和 <code>AQ_*</code> 变量放在 <code>~/.config/uwsm/env-hyprland</code> 中。 格式为 <code>export KEY=VAL</code>。</p>
+<pre class="plain"><code>export XCURSOR_SIZE=24</code></pre>
+<p>更多信息请参阅 <a href="https://github.com/Vladimir-csp/uwsm?tab=readme-ov-file#4-environments-and-shell-profile">uwsm 的 README</a>。</p>
+<p>请避免使用 Hyprland 的 <code>exit</code> 调度器或直接终止 Hyprland 进程。这会让仍在运行的客户端失去合成器，打乱正常的关闭顺序，导致会话被强制关闭。 请使用 <code>uwsm stop</code>（或<a href="https://github.com/Vladimir-csp/uwsm#how-to-stop">其他变体</a>）有序关闭图形会话。如果图形会话绑定了登录会话，登录会话也会一并关闭。 如果单元进入不一致状态，影响后续会话，请改用 <code>loginctl terminate-user ""</code>（这会终止该用户的所有单元）。</p>
+<h2 id="nixos-uwsm">在 NixOS 上使用 UWSM <a class="permalink" href="#nixos-uwsm" aria-label="本节链接">#</a></h2>
+<p>如果你在 NixOS 模块中启用了 UWSM（<code>programs.hyprland.withUWSM = true</code>），可以按以下方式<a href="https://github.com/Vladimir-csp/uwsm?tab=readme-ov-file#4-environments-and-shell-profile" title="UWSM 的环境和 shell 配置">设置环境变量</a>：</p>
+<pre class="nix"><code>{
+  xdg.configFile.&quot;uwsm/env&quot;.source = &quot;${config.home.sessionVariablesPackage}/etc/profile.d/hm-session-vars.sh&quot;;
+}</code></pre>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/useful-utilities/uwsm/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-2" href="#uwsm">UWSM</a><a class="level-3" href="#installation">安装</a><a class="level-3" href="#launching-hyprland-with-uwsm">使用 uwsm 启动 Hyprland</a><a class="level-4" href="#in-tty">从 TTY 启动</a><a class="level-4" href="#using-a-display-manager">使用显示管理器</a><a class="level-3" href="#launching-applications-inside-session">在会话中启动应用程序</a><a class="level-2" href="#autostart">自动启动</a><a class="level-2" href="#notes">注意事项</a><a class="level-2" href="#nixos-uwsm">在 NixOS 上使用 UWSM</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>

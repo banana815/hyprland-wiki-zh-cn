@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IPC · Hyprland Wiki 中文版</title><link rel="icon" href="../assets/hyprland.svg">
+<link rel="stylesheet" href="../assets/wiki.css"><script defer src="../assets/site.js"></script></head>
+<body data-root="../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../"><img src="../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/ipc/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../">Hyprland 中文文档</a><ul><li><a href="../version-selector/">版本选择器 ⚙️</a></li><li><details><summary><a href="../getting-started/">入门指南</a></summary><ul><li><a href="../getting-started/installation/">安装</a></li><li><a href="../getting-started/master-tutorial/">入门教程</a></li><li><a href="../getting-started/preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details><summary><a href="../configuring/">配置</a></summary><ul><li><a href="../configuring/naming-conventions/">命名约定</a></li><li><a href="../configuring/selectors/">选择器</a></li><li><details><summary><a href="../configuring/core/">基础配置</a></summary><ul><li><details><summary><a href="../configuring/core/monitors/">显示器</a></summary><ul><li><a href="../configuring/core/monitors/output-selection/">选择显示输出</a></li><li><a href="../configuring/core/monitors/positioning/">显示器排列</a></li><li><a href="../configuring/core/monitors/modes/">显示模式</a></li><li><a href="../configuring/core/monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="../configuring/core/config-options/">配置选项</a></li><li><a href="../configuring/core/devices/">设备</a></li><li><a href="../configuring/core/dispatchers/">调度器</a></li><li><details><summary><a href="../configuring/core/binds/">按键绑定</a></summary><ul><li><a href="../configuring/core/binds/flags/">标志位</a></li><li><a href="../configuring/core/binds/keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="../configuring/core/binds/devices/">设备绑定</a></summary><ul><li><a href="../configuring/core/binds/devices/mouse/">鼠标</a></li><li><a href="../configuring/core/binds/devices/touchpad/">触摸板</a></li><li><a href="../configuring/core/binds/devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="../configuring/core/binds/submaps/">按键子映射</a></li><li><a href="../configuring/core/binds/globals/">全局快捷键与绑定</a></li><li><a href="../configuring/core/binds/switches/">硬件开关</a></li><li><a href="../configuring/core/binds/gestures/">手势</a></li></ul></details></li><li><details><summary><a href="../configuring/core/rules/">规则</a></summary><ul><li><a href="../configuring/core/rules/window-rules/">窗口规则</a></li><li><a href="../configuring/core/rules/workspace-rules/">工作区规则</a></li><li><a href="../configuring/core/rules/layer-rules/">图层规则</a></li></ul></details></li><li><a href="../configuring/core/environment-variables/">环境变量</a></li><li><a href="../configuring/core/animations/">动画</a></li><li><a href="../configuring/core/autostart/">自动启动</a></li><li><details><summary><a href="../configuring/core/advanced-configuration/">高级配置</a></summary><ul><li><a href="../configuring/core/advanced-configuration/events/">Lua 事件</a></li><li><a href="../configuring/core/advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="../configuring/core/advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="../configuring/core/advanced-configuration/notifications/">通知</a></li><li><a href="../configuring/core/advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../configuring/layouts/">布局</a></summary><ul><li><a href="../configuring/layouts/dwindle-layout/">Dwindle 布局</a></li><li><a href="../configuring/layouts/scrolling-layout/">滚动布局</a></li><li><a href="../configuring/layouts/master-layout/">主从布局</a></li><li><a href="../configuring/layouts/monocle-layout/">单窗口布局</a></li><li><a href="../configuring/layouts/custom-layouts/">自定义布局</a></li></ul></details></li><li><details><summary><a href="../configuring/extra/">其他配置</a></summary><ul><li><a href="../configuring/extra/multi-gpu/">多显卡</a></li><li><a href="../configuring/extra/virtual-gpu/">虚拟 GPU</a></li><li><a href="../configuring/extra/performance/">性能</a></li><li><a href="../configuring/extra/tearing/">画面撕裂</a></li><li><a href="../configuring/extra/xwayland/">Xwayland</a></li><li><a href="../configuring/extra/systemd/">systemd</a></li></ul></details></li><li><a href="../configuring/code-snippets/">Lua 代码片段</a></li></ul></details></li><li><details><summary><a href="../hypr-ecosystem/">Hypr 生态系统</a></summary><ul><li><details><summary><a href="../hypr-ecosystem/user/">用户应用与实用工具</a></summary><ul><li><a href="../hypr-ecosystem/user/hyprpaper/">hyprpaper</a></li><li><a href="../hypr-ecosystem/user/hyprpicker/">hyprpicker</a></li><li><a href="../hypr-ecosystem/user/hyprlauncher/">hyprlauncher</a></li><li><a href="../hypr-ecosystem/user/hypridle/">hypridle</a></li><li><a href="../hypr-ecosystem/user/hyprlock/">hyprlock</a></li><li><a href="../hypr-ecosystem/user/xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li><li><a href="../hypr-ecosystem/user/hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../hypr-ecosystem/user/hyprsunset/">hyprsunset</a></li><li><a href="../hypr-ecosystem/user/hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../hypr-ecosystem/user/hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../hypr-ecosystem/user/hyprqt6engine/">hyprqt6engine</a></li><li><a href="../hypr-ecosystem/user/hyprpwcenter/">hyprpwcenter</a></li><li><a href="../hypr-ecosystem/user/hyprshutdown/">hyprshutdown</a></li><li><a href="../hypr-ecosystem/user/hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../hypr-ecosystem/user/hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../hypr-ecosystem/dev/">开发库和工具包</a></summary><ul><li><a href="../hypr-ecosystem/dev/aquamarine/">aquamarine</a></li><li><a href="../hypr-ecosystem/dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../hypr-ecosystem/dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../hypr-ecosystem/dev/hyprlang/">hyprlang</a></li><li><a href="../hypr-ecosystem/dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../hypr-ecosystem/dev/hyprutils/">hyprutils</a></li><li><a href="../hypr-ecosystem/dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../hyprland-plugins/">Hyprland 插件</a></summary><ul><li><a href="../hyprland-plugins/using-plugins/">使用插件</a></li><li><details><summary><a href="../hyprland-plugins/development/">开发</a></summary><ul><li><a href="../hyprland-plugins/development/getting-started/">插件开发入门</a></li><li><a href="../hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li><li><a href="../hyprland-plugins/development/advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../useful-utilities/">实用工具</a></summary><ul><li><a href="../useful-utilities/must-have/">必备软件</a></li><li><a href="../useful-utilities/status-bars/">状态栏</a></li><li><a href="../useful-utilities/wallpapers/">壁纸</a></li><li><a href="../useful-utilities/screen-sharing/">屏幕共享</a></li><li><a href="../useful-utilities/screenshots-and-recording/">截图与录屏</a></li><li><a href="../useful-utilities/app-launchers/">应用启动器</a></li><li><a href="../useful-utilities/app-clients/">应用客户端</a></li><li><a href="../useful-utilities/phone-connect/">连接手机</a></li><li><a href="../useful-utilities/color-pickers/">取色器</a></li><li><a href="../useful-utilities/clipboard-managers/">剪贴板管理器</a></li><li><a href="../useful-utilities/file-managers/">文件管理器</a></li><li><a href="../useful-utilities/other/">其他</a></li><li><a href="../useful-utilities/hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="../useful-utilities/uwsm/">UWSM</a></li></ul></details></li><li><details><summary><a href="../nix/">Nix</a></summary><ul><li><a href="../nix/hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../nix/installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="../nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li><li><a href="../nix/cachix/">Cachix</a></li><li><a href="../nix/advanced/">高级用法</a></li><li><a href="../nix/contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../nvidia/">NVIDIA</a></li><li><a href="./" aria-current="page">IPC</a></li><li><a href="../crashes-and-bugs/">崩溃与缺陷</a></li><li><a href="../faq/">常见问题</a></li><li><a href="../community/">社区</a></li><li><details><summary><a href="../contributing-and-debugging/">贡献与调试</a></summary><ul><li><a href="../contributing-and-debugging/wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../contributing-and-debugging/issue-guidelines/">议题指南</a></li><li><a href="../contributing-and-debugging/pr-guidelines/">PR 指南</a></li><li><a href="../contributing-and-debugging/tests/">测试</a></li><li><a href="../contributing-and-debugging/translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../">Hyprland 中文文档</a></nav><article><h1>IPC</h1><p>Hyprland 提供两个 UNIX 套接字，可通过代码或 shell 工具控制 Hyprland 或获取其信息。</p>
+<h2 id="hyprland-instance-signature-his">Hyprland 实例签名（HIS） <a class="permalink" href="#hyprland-instance-signature-his" aria-label="本节链接">#</a></h2>
+<pre class="sh"><code>echo $HYPRLAND_INSTANCE_SIGNATURE</code></pre>
+<h2 id="xdg_runtime_dirhyprhissocketsock"><code>$XDG_RUNTIME_DIR/hypr/[HIS]/.socket.sock</code> <a class="permalink" href="#xdg_runtime_dirhyprhissocketsock" aria-label="本节链接">#</a></h2>
+<p>用于处理类似 hyprctl 的请求。 可用命令见 <a href="../configuring/core/advanced-configuration/using-hyprctl/">Hyprctl 页面</a>。</p>
+<p>请求的基本写法是向套接字写入 <code>[flags]/command args</code>。</p>
+<div class="note">
+<div class="title">
+<p>说明</p>
+</div>
+<p>Hyprland 完全以同步方式处理此套接字上的连接。因此，任何未关闭的连接<em>都会导致 Hyprland 卡住</em>，直到 5 秒后超时。 每次都应在即将写入请求时才打开套接字，写完后就将其关闭。</p>
+</div>
+<h2 id="xdg_runtime_dirhyprhissocket2sock"><code>$XDG_RUNTIME_DIR/hypr/[HIS]/.socket2.sock</code> <a class="permalink" href="#xdg_runtime_dirhyprhissocket2sock" aria-label="本节链接">#</a></h2>
+<p>用于接收事件。 Hyprland 会按以下格式向每个已连接的客户端实时发送事件：</p>
+<p><code>EVENT&gt;&gt;DATA\n</code>（<code>\n</code> 表示换行符）</p>
+<p>例如：<code>workspace&gt;&gt;2</code></p>
+<h2 id="events-list">事件列表 <a class="permalink" href="#events-list" aria-label="本节链接">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>数据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>workspace</td>
+<td>工作区切换时触发。仅在用户请求切换工作区时触发，移动鼠标不会触发（见 <code>focusedmon</code>）。</td>
+<td><code>WORKSPACEADDRESS</code></td>
+</tr>
+<tr>
+<td>workspacev2</td>
+<td>工作区切换时触发。仅在用户请求切换工作区时触发，移动鼠标不会触发（见 <code>focusedmon</code>）。</td>
+<td><code>WORKSPACEADDRESS,WORKSPACENAME</code></td>
+</tr>
+<tr>
+<td>focusedmon</td>
+<td>活动显示器变更时触发。</td>
+<td><code>MONNAME,WORKSPACEADDRESS</code></td>
+</tr>
+<tr>
+<td>focusedmonv2</td>
+<td>活动显示器变更时触发。</td>
+<td><code>MONNAME,WORKSPACEADDRESS</code></td>
+</tr>
+<tr>
+<td>activewindow</td>
+<td>活动窗口变更时触发。</td>
+<td><code>WINDOWCLASS,WINDOWTITLE</code></td>
+</tr>
+<tr>
+<td>activewindowv2</td>
+<td>活动窗口变更时触发。</td>
+<td><code>WINDOWADDRESS</code></td>
+</tr>
+<tr>
+<td>fullscreen</td>
+<td>窗口的全屏状态改变时触发。</td>
+<td><code>0/1</code>（退出全屏/进入全屏）</td>
+</tr>
+<tr>
+<td>monitorremoved</td>
+<td>移除显示器（断开连接）时触发。</td>
+<td><code>MONITORNAME</code></td>
+</tr>
+<tr>
+<td>monitorremovedv2</td>
+<td>移除显示器（断开连接）时触发。</td>
+<td><code>MONITORID,MONITORNAME,MONITORDESCRIPTION</code></td>
+</tr>
+<tr>
+<td>monitoradded</td>
+<td>添加显示器（建立连接）时触发。</td>
+<td><code>MONITORNAME</code></td>
+</tr>
+<tr>
+<td>monitoraddedv2</td>
+<td>添加显示器（建立连接）时触发。</td>
+<td><code>MONITORID,MONITORNAME,MONITORDESCRIPTION</code></td>
+</tr>
+<tr>
+<td>createworkspace</td>
+<td>创建工作区时触发。</td>
+<td><code>WORKSPACEADDRESS</code></td>
+</tr>
+<tr>
+<td>createworkspacev2</td>
+<td>创建工作区时触发。</td>
+<td><code>WORKSPACEADDRESS,WORKSPACENAME</code></td>
+</tr>
+<tr>
+<td>destroyworkspace</td>
+<td>销毁工作区时触发。</td>
+<td><code>WORKSPACEADDRESS</code></td>
+</tr>
+<tr>
+<td>destroyworkspacev2</td>
+<td>销毁工作区时触发。</td>
+<td><code>WORKSPACEADDRESS,WORKSPACENAME</code></td>
+</tr>
+<tr>
+<td>moveworkspace</td>
+<td>将工作区移至另一台显示器时触发。</td>
+<td><code>WORKSPACEADDRESS,MONNAME</code></td>
+</tr>
+<tr>
+<td>moveworkspacev2</td>
+<td>将工作区移至另一台显示器时触发。</td>
+<td><code>WORKSPACEADDRESS,WORKSPACENAME,MONNAME</code></td>
+</tr>
+<tr>
+<td>renameworkspace</td>
+<td>重命名工作区时触发。</td>
+<td><code>WORKSPACEADDRESS,NEWNAME</code></td>
+</tr>
+<tr>
+<td>activespecial</td>
+<td>显示器上打开的特殊工作区发生变化时触发（关闭时 <code>WORKSPACEADDRESS</code> 为空）。</td>
+<td><code>WORKSPACEADDRESS,MONNAME</code></td>
+</tr>
+<tr>
+<td>activespecialv2</td>
+<td>显示器上打开的特殊工作区发生变化时触发（关闭时 <code>WORKSPACEADDRESS</code> 和 <code>WORKSPACENAME</code> 均为空）。</td>
+<td><code>WORKSPACEADDRESS,WORKSPACENAME,MONNAME</code></td>
+</tr>
+<tr>
+<td>activelayout</td>
+<td>当前活动键盘的布局改变时触发。</td>
+<td><code>KEYBOARDNAME,LAYOUTNAME</code></td>
+</tr>
+<tr>
+<td>openwindow</td>
+<td>打开窗口时触发。</td>
+<td><code>WINDOWADDRESS,WORKSPACEADDRESS,WINDOWCLASS,WINDOWTITLE</code></td>
+</tr>
+<tr>
+<td>closewindow</td>
+<td>关闭窗口时触发。</td>
+<td><code>WINDOWADDRESS</code></td>
+</tr>
+<tr>
+<td>kill</td>
+<td>通过 <code>hyprctl kill</code> 强制终止窗口时触发。</td>
+<td><code>WINDOWADDRESS</code></td>
+</tr>
+<tr>
+<td>movewindow</td>
+<td>将窗口移至某个工作区时触发。</td>
+<td><code>WINDOWADDRESS</code>,<code>WORKSPACEADDRESS</code></td>
+</tr>
+<tr>
+<td>movewindowv2</td>
+<td>将窗口移至某个工作区时触发。</td>
+<td><code>WINDOWADDRESS</code>,<code>WORKSPACEADDRESS</code>,<code>WORKSPACENAME</code></td>
+</tr>
+<tr>
+<td>openlayer</td>
+<td>映射 layerSurface 时触发。</td>
+<td><code>NAMESPACE</code></td>
+</tr>
+<tr>
+<td>closelayer</td>
+<td>取消映射 layerSurface 时触发。</td>
+<td><code>NAMESPACE</code></td>
+</tr>
+<tr>
+<td>submap</td>
+<td>键位绑定子映射改变时触发。空值表示默认映射。</td>
+<td><code>SUBMAPNAME</code></td>
+</tr>
+<tr>
+<td>changefloatingmode</td>
+<td>窗口的浮动模式改变时触发。<code>FLOATING</code> 的值为 0 或 1。</td>
+<td><code>WINDOWADDRESS</code>,<code>FLOATING</code></td>
+</tr>
+<tr>
+<td>urgent</td>
+<td>窗口请求进入 <code>urgent</code> 状态时触发。</td>
+<td><code>WINDOWADDRESS</code></td>
+</tr>
+<tr>
+<td>screencast</td>
+<td>客户端的屏幕捕获状态改变时触发。可能同时存在多个独立客户端。状态值为 0 或 1，owner 的取值为 monitor（显示器）、window（窗口）或 region（区域）。</td>
+<td><code>STATE,OWNER</code></td>
+</tr>
+<tr>
+<td>screencastv2</td>
+<td>客户端的屏幕捕获状态改变时触发。可能同时存在多个独立客户端。状态值为 0 或 1，owner 的取值为 monitor（显示器）、window（窗口）或 region（区域），name 是共享目标的标识（显示器名称或窗口标题）。</td>
+<td><code>STATE,OWNER,NAME</code></td>
+</tr>
+<tr>
+<td>windowtitle</td>
+<td>窗口标题改变时触发。</td>
+<td><code>WINDOWADDRESS</code></td>
+</tr>
+<tr>
+<td>windowtitlev2</td>
+<td>窗口标题改变时触发。</td>
+<td><code>WINDOWADDRESS,WINDOWTITLE</code></td>
+</tr>
+<tr>
+<td>togglegroup</td>
+<td>使用 <code>togglegroup</code> 命令时触发。返回 <code>state,handle</code>，其中 <code>state</code> 表示切换后的状态，<code>handle</code> 是一个或多个以逗号分隔的窗口地址（例如，在 <code>0,64cea2525760,64cea2522380</code> 中，<code>0</code> 表示窗口组已解散，其余值是原组成员的窗口地址）。</td>
+<td><code>0/1,WINDOWADDRESS(ES)</code></td>
+</tr>
+<tr>
+<td>moveintogroup</td>
+<td>窗口并入组时触发，返回该窗口的地址。</td>
+<td><code>WINDOWADDRESS</code></td>
+</tr>
+<tr>
+<td>moveoutofgroup</td>
+<td>窗口移出组时触发，返回该窗口的地址。</td>
+<td><code>WINDOWADDRESS</code></td>
+</tr>
+<tr>
+<td>ignoregrouplock</td>
+<td>切换 <code>ignoregrouplock</code> 时触发。</td>
+<td><code>0/1</code></td>
+</tr>
+<tr>
+<td>lockgroups</td>
+<td>切换 <code>lockgroups</code> 时触发。</td>
+<td><code>0/1</code></td>
+</tr>
+<tr>
+<td>configreloaded</td>
+<td>配置重新加载完毕时触发。</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td>pin</td>
+<td>固定窗口或取消固定时触发。</td>
+<td><code>WINDOWADDRESS,PINSTATE</code></td>
+</tr>
+<tr>
+<td>minimized</td>
+<td>任务栏一类的外部应用请求最小化窗口时触发。</td>
+<td><code>WINDOWADDRESS,0/1</code></td>
+</tr>
+<tr>
+<td>bell</td>
+<td>应用通过 <code>xdg-system-bell-v1</code> 请求响起系统铃声时触发。窗口地址参数可能为空。</td>
+<td><code>WINDOWADDRESS</code></td>
+</tr>
+</tbody>
+</table>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>进入和退出全屏的事件不一定会交替出现、每次各触发一次。 有些窗口可能多次请求进入全屏，从而触发多个全屏事件。</p>
+</div>
+<h2 id="how-to-use-socket2-with-bash">如何在 bash 中使用 socket2 <a class="permalink" href="#how-to-use-socket2-with-bash" aria-label="本节链接">#</a></h2>
+<p>以下示例脚本使用 bash 和 <code>socat</code> 处理 socket2 事件：</p>
+<pre class="sh"><code>#!/bin/sh
+
+handle() {
+  case $1 in
+    monitoradded*) do_something ;;
+    focusedmon*) do_something_else ;;
+  esac
+}
+
+socat -U - UNIX-CONNECT:$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock | while read -r line; do handle &quot;$line&quot;; done</code></pre>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/ipc/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-2" href="#hyprland-instance-signature-his">Hyprland 实例签名（HIS）</a><a class="level-2" href="#xdg_runtime_dirhyprhissocketsock">$XDG_RUNTIME_DIR/hypr/[HIS]/.socket.sock</a><a class="level-2" href="#xdg_runtime_dirhyprhissocket2sock">$XDG_RUNTIME_DIR/hypr/[HIS]/.socket2.sock</a><a class="level-2" href="#events-list">事件列表</a><a class="level-2" href="#how-to-use-socket2-with-bash">如何在 bash 中使用 socket2</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>

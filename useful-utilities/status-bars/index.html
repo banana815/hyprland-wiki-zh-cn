@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>状态栏 · Hyprland Wiki 中文版</title><link rel="icon" href="../../assets/hyprland.svg">
+<link rel="stylesheet" href="../../assets/wiki.css"><script defer src="../../assets/site.js"></script></head>
+<body data-root="../../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../../"><img src="../../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/useful-utilities/status-bars/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../../">Hyprland 中文文档</a><ul><li><a href="../../version-selector/">版本选择器 ⚙️</a></li><li><details><summary><a href="../../getting-started/">入门指南</a></summary><ul><li><a href="../../getting-started/installation/">安装</a></li><li><a href="../../getting-started/master-tutorial/">入门教程</a></li><li><a href="../../getting-started/preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details><summary><a href="../../configuring/">配置</a></summary><ul><li><a href="../../configuring/naming-conventions/">命名约定</a></li><li><a href="../../configuring/selectors/">选择器</a></li><li><details><summary><a href="../../configuring/core/">基础配置</a></summary><ul><li><details><summary><a href="../../configuring/core/monitors/">显示器</a></summary><ul><li><a href="../../configuring/core/monitors/output-selection/">选择显示输出</a></li><li><a href="../../configuring/core/monitors/positioning/">显示器排列</a></li><li><a href="../../configuring/core/monitors/modes/">显示模式</a></li><li><a href="../../configuring/core/monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="../../configuring/core/config-options/">配置选项</a></li><li><a href="../../configuring/core/devices/">设备</a></li><li><a href="../../configuring/core/dispatchers/">调度器</a></li><li><details><summary><a href="../../configuring/core/binds/">按键绑定</a></summary><ul><li><a href="../../configuring/core/binds/flags/">标志位</a></li><li><a href="../../configuring/core/binds/keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="../../configuring/core/binds/devices/">设备绑定</a></summary><ul><li><a href="../../configuring/core/binds/devices/mouse/">鼠标</a></li><li><a href="../../configuring/core/binds/devices/touchpad/">触摸板</a></li><li><a href="../../configuring/core/binds/devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="../../configuring/core/binds/submaps/">按键子映射</a></li><li><a href="../../configuring/core/binds/globals/">全局快捷键与绑定</a></li><li><a href="../../configuring/core/binds/switches/">硬件开关</a></li><li><a href="../../configuring/core/binds/gestures/">手势</a></li></ul></details></li><li><details><summary><a href="../../configuring/core/rules/">规则</a></summary><ul><li><a href="../../configuring/core/rules/window-rules/">窗口规则</a></li><li><a href="../../configuring/core/rules/workspace-rules/">工作区规则</a></li><li><a href="../../configuring/core/rules/layer-rules/">图层规则</a></li></ul></details></li><li><a href="../../configuring/core/environment-variables/">环境变量</a></li><li><a href="../../configuring/core/animations/">动画</a></li><li><a href="../../configuring/core/autostart/">自动启动</a></li><li><details><summary><a href="../../configuring/core/advanced-configuration/">高级配置</a></summary><ul><li><a href="../../configuring/core/advanced-configuration/events/">Lua 事件</a></li><li><a href="../../configuring/core/advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="../../configuring/core/advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="../../configuring/core/advanced-configuration/notifications/">通知</a></li><li><a href="../../configuring/core/advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../configuring/layouts/">布局</a></summary><ul><li><a href="../../configuring/layouts/dwindle-layout/">Dwindle 布局</a></li><li><a href="../../configuring/layouts/scrolling-layout/">滚动布局</a></li><li><a href="../../configuring/layouts/master-layout/">主从布局</a></li><li><a href="../../configuring/layouts/monocle-layout/">单窗口布局</a></li><li><a href="../../configuring/layouts/custom-layouts/">自定义布局</a></li></ul></details></li><li><details><summary><a href="../../configuring/extra/">其他配置</a></summary><ul><li><a href="../../configuring/extra/multi-gpu/">多显卡</a></li><li><a href="../../configuring/extra/virtual-gpu/">虚拟 GPU</a></li><li><a href="../../configuring/extra/performance/">性能</a></li><li><a href="../../configuring/extra/tearing/">画面撕裂</a></li><li><a href="../../configuring/extra/xwayland/">Xwayland</a></li><li><a href="../../configuring/extra/systemd/">systemd</a></li></ul></details></li><li><a href="../../configuring/code-snippets/">Lua 代码片段</a></li></ul></details></li><li><details><summary><a href="../../hypr-ecosystem/">Hypr 生态系统</a></summary><ul><li><details><summary><a href="../../hypr-ecosystem/user/">用户应用与实用工具</a></summary><ul><li><a href="../../hypr-ecosystem/user/hyprpaper/">hyprpaper</a></li><li><a href="../../hypr-ecosystem/user/hyprpicker/">hyprpicker</a></li><li><a href="../../hypr-ecosystem/user/hyprlauncher/">hyprlauncher</a></li><li><a href="../../hypr-ecosystem/user/hypridle/">hypridle</a></li><li><a href="../../hypr-ecosystem/user/hyprlock/">hyprlock</a></li><li><a href="../../hypr-ecosystem/user/xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li><li><a href="../../hypr-ecosystem/user/hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../../hypr-ecosystem/user/hyprsunset/">hyprsunset</a></li><li><a href="../../hypr-ecosystem/user/hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../../hypr-ecosystem/user/hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../../hypr-ecosystem/user/hyprqt6engine/">hyprqt6engine</a></li><li><a href="../../hypr-ecosystem/user/hyprpwcenter/">hyprpwcenter</a></li><li><a href="../../hypr-ecosystem/user/hyprshutdown/">hyprshutdown</a></li><li><a href="../../hypr-ecosystem/user/hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../../hypr-ecosystem/user/hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../../hypr-ecosystem/dev/">开发库和工具包</a></summary><ul><li><a href="../../hypr-ecosystem/dev/aquamarine/">aquamarine</a></li><li><a href="../../hypr-ecosystem/dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../../hypr-ecosystem/dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../../hypr-ecosystem/dev/hyprlang/">hyprlang</a></li><li><a href="../../hypr-ecosystem/dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../../hypr-ecosystem/dev/hyprutils/">hyprutils</a></li><li><a href="../../hypr-ecosystem/dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../hyprland-plugins/">Hyprland 插件</a></summary><ul><li><a href="../../hyprland-plugins/using-plugins/">使用插件</a></li><li><details><summary><a href="../../hyprland-plugins/development/">开发</a></summary><ul><li><a href="../../hyprland-plugins/development/getting-started/">插件开发入门</a></li><li><a href="../../hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li><li><a href="../../hyprland-plugins/development/advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details open><summary><a href="../">实用工具</a></summary><ul><li><a href="../must-have/">必备软件</a></li><li><a href="./" aria-current="page">状态栏</a></li><li><a href="../wallpapers/">壁纸</a></li><li><a href="../screen-sharing/">屏幕共享</a></li><li><a href="../screenshots-and-recording/">截图与录屏</a></li><li><a href="../app-launchers/">应用启动器</a></li><li><a href="../app-clients/">应用客户端</a></li><li><a href="../phone-connect/">连接手机</a></li><li><a href="../color-pickers/">取色器</a></li><li><a href="../clipboard-managers/">剪贴板管理器</a></li><li><a href="../file-managers/">文件管理器</a></li><li><a href="../other/">其他</a></li><li><a href="../hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="../uwsm/">UWSM</a></li></ul></details></li><li><details><summary><a href="../../nix/">Nix</a></summary><ul><li><a href="../../nix/hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../../nix/installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../../nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="../../nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li><li><a href="../../nix/cachix/">Cachix</a></li><li><a href="../../nix/advanced/">高级用法</a></li><li><a href="../../nix/contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../../nvidia/">NVIDIA</a></li><li><a href="../../ipc/">IPC</a></li><li><a href="../../crashes-and-bugs/">崩溃与缺陷</a></li><li><a href="../../faq/">常见问题</a></li><li><a href="../../community/">社区</a></li><li><details><summary><a href="../../contributing-and-debugging/">贡献与调试</a></summary><ul><li><a href="../../contributing-and-debugging/wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../../contributing-and-debugging/issue-guidelines/">议题指南</a></li><li><a href="../../contributing-and-debugging/pr-guidelines/">PR 指南</a></li><li><a href="../../contributing-and-debugging/tests/">测试</a></li><li><a href="../../contributing-and-debugging/translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../../">Hyprland 中文文档</a><span>›</span><a href="../">实用工具</a></nav><article><h1>状态栏</h1><h2 id="simple-status-bars">简易状态栏 <a class="permalink" href="#simple-status-bars" aria-label="本节链接">#</a></h2>
+<p>通常只需写很少的代码，甚至无需编程，就能调整小组件的顺序和样式。</p>
+<h3 id="waybar">Waybar <a class="permalink" href="#waybar" aria-label="本节链接">#</a></h3>
+<p>Waybar 是专为基于 wlroots 的合成器设计的 GTK 状态栏，默认支持 Hyprland。 建议通过发行版提供的软件包安装 Waybar。</p>
+<p>开始配置前，先将配置文件从 <code>/etc/xdg/waybar/</code> 复制到 <code>~/.config/waybar/</code>。</p>
+<p>要使用工作区模块，请将配置中所有的 <code>sway/workspaces</code> 替换为 <code>hyprland/workspaces</code>。 同时，将所有的 <code>sway/mode</code> 替换为 <code>hyprland/submap</code>。</p>
+<p>有关配置的更多信息，请参阅 <a href="https://github.com/Alexays/Waybar/wiki/Module:-Hyprland">Waybar Wiki</a>。</p>
+<h4 id="how-to-launch">启动方法 <a class="permalink" href="#how-to-launch" aria-label="本节链接">#</a></h4>
+<p>在终端中输入 <code>waybar</code>。 要让 Waybar 随 Hyprland 一起启动，请将 <code>waybar</code> 添加到 Hyprland 配置的自启动项中。</p>
+<p>Waybar 也提供 systemd 服务。 如果你通过 <a href="../uwsm/">uwsm</a> 使用 Hyprland，可以用以下命令启用该服务：</p>
+<pre class="sh"><code>systemctl --user enable --now waybar.service</code></pre>
+<h4 id="waybar-faq">Waybar 常见问题 <a class="permalink" href="#waybar-faq" aria-label="本节链接">#</a></h4>
+<h5 id="active-workspace-doesnt-show-up">当前工作区未显示 <a class="permalink" href="#active-workspace-doesnt-show-up" aria-label="本节链接">#</a></h5>
+<p>在 <code>~/.config/waybar/style.css</code> 中，将 <code>#workspaces button.focused</code> 替换为 <code>#workspaces button.active</code>。</p>
+<h5 id="scrolling-through-workspaces">滚动切换工作区 <a class="permalink" href="#scrolling-through-workspaces" aria-label="本节链接">#</a></h5>
+<p>由于 <code>hyprland/workspaces</code> 缺少 <code>sway/workspaces</code> 中的许多配置选项，你可能需要自行实现部分功能。 例如，要通过滚动切换工作区，可以这样配置：</p>
+<pre class="json"><code>&quot;hyprland/workspaces&quot;: {
+     &quot;format&quot;: &quot;{icon}&quot;,
+     &quot;on-scroll-up&quot;: &quot;hyprctl dispatch &#39;hl.dsp.focus({workspace=\&quot;e+1\&quot;})&#39; &quot;,
+     &quot;on-scroll-down&quot;: &quot;hyprctl dispatch &#39;hl.dsp.focus({workspace=\&quot;e-1\&quot;})&#39; &quot;,
+}</code></pre>
+<h5 id="window-title-is-missing">窗口标题未显示 <a class="permalink" href="#window-title-is-missing" aria-label="本节链接">#</a></h5>
+<p>用于显示标题的窗口模块使用 <code>hyprland</code> 前缀，而非 <code>wlr</code>。 请在 Waybar 配置中添加以下模块：</p>
+<pre class="json"><code>&quot;modules-center&quot;: [&quot;hyprland/window&quot;],</code></pre>
+<p>如果使用多个显示器，可以考虑添加以下选项：</p>
+<pre class="json"><code>&quot;hyprland/window&quot;: {
+    &quot;separate-outputs&quot;: true
+},</code></pre>
+<h3 id="ashell">ashell <a class="permalink" href="#ashell" aria-label="本节链接">#</a></h3>
+<p><a href="https://malpenzibo.github.io/ashell/">ashell</a> 是一款面向 Hyprland、开箱即用的 Wayland 状态栏。</p>
+<ul>
+<li>Ashell 安装后即可使用。 装好就能启动，只需按需调整配置。</li>
+<li>Ashell 自带工作区、时间、电池、网络等常用模块。 无需四处寻找插件或编写自定义脚本。</li>
+<li>基于 Rust 跨平台图形界面库 iced 构建。</li>
+<li>配置选项较少。 这既是优点，也是局限。 你可以很快配置出不错的效果，但无法像使用 Waybar 那样进行一些高度个性化的调整。</li>
+</ul>
+<h2 id="desktop-shells">桌面 Shell <a class="permalink" href="#desktop-shells" aria-label="本节链接">#</a></h2>
+<p>这类软件将状态栏、启动器、通知和锁屏等工具集成在同一个软件包中。 几乎无需编程，装好就能获得类似完整桌面环境的体验。</p>
+<h3 id="noctalia">Noctalia <a class="permalink" href="#noctalia" aria-label="本节链接">#</a></h3>
+<p><a href="https://noctalia.dev/">Noctalia</a> 是一款美观、简约的 Wayland 桌面 Shell。</p>
+<ul>
+<li>采用精简的现代技术栈，外观沉静且独具特色，可按个人桌面风格调整。</li>
+<li>主题设置丰富，既可选用预设配色，也可根据壁纸自动生成配色。</li>
+<li>通知系统支持查看历史记录和开启勿扰模式。</li>
+<li>支持插件。</li>
+<li>基于 Quickshell 构建。</li>
+</ul>
+<h3 id="dankmaterialshell">DankMaterialShell <a class="permalink" href="#dankmaterialshell" aria-label="本节链接">#</a></h3>
+<p><a href="https://danklinux.com/">DankMaterialShell</a> 是一款功能完整的桌面 Shell，设计灵感来自 Material 3，适用于 Hyprland 和其他 Wayland 合成器。</p>
+<ul>
+<li>自带状态栏、启动器、通知中心、控制中心和锁屏，一个软件包即可替代 waybar、fuzzel、mako、swaylock 等工具。</li>
+<li>可根据壁纸自动生成主题，并将其应用到 GTK/Qt 应用和终端。</li>
+<li>可通过内置的图形设置应用进行配置，也可通过插件和小组件扩展功能。</li>
+<li>基于 Quickshell 和 Go 构建。</li>
+</ul>
+<h2 id="widget-systems">小组件系统 <a class="permalink" href="#widget-systems" aria-label="本节链接">#</a></h2>
+<p>如果想要自行设计菜单并完全掌控布局，可以使用小组件系统。 通常需要编写代码，但小组件系统能显著简化这项工作。 以下按字母顺序列出三种常用选择。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><a href="https://aylur.github.io/astal/">AGS/Astal</a></th>
+<th><a href="https://elkowar.github.io/eww/">EWW</a></th>
+<th><a href="https://quickshell.outfoxxed.me/">Quickshell</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>界面工具包</td>
+<td>GTK 3/4</td>
+<td>GTK 3</td>
+<td>Qt</td>
+</tr>
+<tr>
+<td>配置语言</td>
+<td>JS(X)、TS 或其他支持 <a href="https://en.wikipedia.org/wiki/List_of_language_bindings_for_GTK">GObject 内省</a>的语言</td>
+<td>Yuck（EWW 的 Lisp 方言）</td>
+<td>QML</td>
+</tr>
+</tbody>
+</table>
+<h3 id="agsastal">AGS/Astal <a class="permalink" href="#agsastal" aria-label="本节链接">#</a></h3>
+<ul>
+<li><a href="https://aylur.github.io/astal/">Astal</a> 是一套工具和框架，可用 GTK 构建桌面 Shell 和 Wayland 小组件。</li>
+<li><a href="https://aylur.github.io/ags/">AGS</a>（Aylur's GTK Shell）是一个脚手架工具，适用于使用 TypeScript 或 JavaScript(X) 的 Astal 项目。 它简化了使用这些语言创建 Astal 项目的过程。</li>
+</ul>
+<p>要开始使用 Astal，请参阅<a href="https://aylur.github.io/astal/guide/installation">安装说明</a>和<a href="https://aylur.github.io/astal/guide/introduction#supported-languages">示例</a>。 要使用 AGS，请参阅其<a href="https://aylur.github.io/ags/guide/quick-start.html">快速入门</a>页面。</p>
+<h4 id="advantages">优点 <a class="permalink" href="#advantages" aria-label="本节链接">#</a></h4>
+<ul>
+<li>语言选择灵活：只要你喜欢的语言支持 <a href="https://en.wikipedia.org/wiki/List_of_language_bindings_for_GTK">GObject 内省</a>，就可以使用它（不过 AGS 对 JS(X) 和 TS 的支持最完善）。</li>
+<li>提供丰富的库，涵盖网络（Wi-Fi 和以太网）、蓝牙等功能。</li>
+</ul>
+<h4 id="disadvantages">缺点 <a class="permalink" href="#disadvantages" aria-label="本节链接">#</a></h4>
+<ul>
+<li>默认不支持热重载。</li>
+</ul>
+<h3 id="eww">Eww <a class="permalink" href="#eww" aria-label="本节链接">#</a></h3>
+<p><a href="https://github.com/elkowar/eww">Eww</a>（ElKowar's Wacky Widgets）是一个用 Rust 和 GTK 构建的小组件系统，可以像在 AwesomeWM 中一样创建自定义小组件。 主要区别在于，Eww 不依赖特定的窗口管理器或合成器。</p>
+<p>可以在发行版的软件包管理器中搜索 <code>eww-wayland</code> 并安装 Eww，也可以手动编译。 如果选择手动编译，请参阅 Eww 的<a href="https://elkowar.github.io/eww">官方说明</a>。</p>
+<h4 id="advantages-1">优点 <a class="permalink" href="#advantages-1" aria-label="本节链接">#</a></h4>
+<ul>
+<li>与其他配置语言相比，其类似 Lisp 的配置语法较为简单。</li>
+<li>原生支持使用 SCSS 设置样式。</li>
+</ul>
+<h4 id="disadvantages-1">缺点 <a class="permalink" href="#disadvantages-1" aria-label="本节链接">#</a></h4>
+<ul>
+<li>自带的库较少，因此很大程度上依赖外部脚本和程序。</li>
+<li>性能方面有以下局限：
+<ul>
+<li>仅支持 GTK 3，而 GTK 3 不支持 GPU 加速。</li>
+<li>调用外部脚本会产生开销，重新计算数据时也会因不必要地重新创建组件而增加开销。</li>
+</ul></li>
+</ul>
+<h4 id="configuration">配置 <a class="permalink" href="#configuration" aria-label="本节链接">#</a></h4>
+<p><a href="https://github.com/elkowar/eww">自述文件</a>中列出了几个示例。 也强烈建议通读<a href="https://elkowar.github.io/eww/configuration.html">配置选项</a>。</p>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>请仔细阅读 <a href="https://elkowar.github.io/eww/configuration.html#wayland">Wayland 一节</a>，否则 Eww 将无法在 Hyprland 上运行。</p>
+</div>
+<p>以下小组件示例可能对 Hyprland 用户有所帮助：</p>
+<details><summary>工作区小组件</summary>
+
+<p>此小组件列出编号为 1 至 10 的工作区。 点击任一工作区即可跳转，在小组件上滚动则可循环切换工作区。 可以为当前工作区、已有窗口的工作区和空工作区分别设置样式。 此小组件依赖以下程序： <a href="https://linux.die.net/man/1/bash">bash</a>、 <a href="https://linux.die.net/man/1/awk">awk</a>、 <a href="https://linux.die.net/man/1/stdbuf">stdbuf</a>、 <a href="https://linux.die.net/man/1/grep">grep</a>、 <a href="https://linux.die.net/man/1/seq">seq</a>、 <a href="https://linux.die.net/man/1/socat">socat</a>、 <a href="https://stedolan.github.io/jq/">jq</a> 和 <a href="https://www.python.org/">Python 3</a>。</p>
+<h5 id="configewwyuck"><code>~/.config/eww.yuck</code> <a class="permalink" href="#configewwyuck" aria-label="本节链接">#</a></h5>
+<pre class="lisp"><code>...
+(deflisten workspaces :initial &quot;[]&quot; &quot;bash ~/.config/eww/scripts/get-workspaces&quot;)
+(deflisten current_workspace :initial &quot;1&quot; &quot;bash ~/.config/eww/scripts/get-active-workspace&quot;)
+(defwidget workspaces []
+  (eventbox :onscroll &quot;bash ~/.config/eww/scripts/change-active-workspace {} ${current_workspace}&quot; :class &quot;workspaces-widget&quot;
+    (box :space-evenly true
+      (label :text &quot;${workspaces}${current_workspace}&quot; :visible false)
+      (for workspace in workspaces
+        (eventbox :onclick &quot;hyprctl dispatch workspace ${workspace.id}&quot;
+          (box :class &quot;workspace-entry ${workspace.windows &gt; 0 ? &quot;occupied&quot; : &quot;empty&quot;}&quot;
+            (label :text &quot;${workspace.id}&quot; :class &quot;workspace-entry ${workspace.id == current_workspace ? &quot;current&quot; : &quot;&quot;}&quot; )
+            )
+          )
+        )
+      )
+    )
+  )
+...</code></pre>
+<h5 id="configewwscriptschange-active-workspace"><code>~/.config/eww/scripts/change-active-workspace</code> <a class="permalink" href="#configewwscriptschange-active-workspace" aria-label="本节链接">#</a></h5>
+<pre class="sh"><code>#!/usr/bin/env bash
+function clamp {
+  min=$1
+  max=$2
+  val=$3
+  python -c &quot;print(max($min, min($val, $max)))&quot;
+}
+
+direction=$1
+current=$2
+if test &quot;$direction&quot; = &quot;down&quot;
+then
+  target=$(clamp 1 10 $(($current+1)))
+  echo &quot;jumping to $target&quot;
+  hyprctl dispatch workspace $target
+elif test &quot;$direction&quot; = &quot;up&quot;
+then
+  target=$(clamp 1 10 $(($current-1)))
+  echo &quot;jumping to $target&quot;
+  hyprctl dispatch workspace $target
+fi</code></pre>
+<h5 id="configewwscriptsget-active-workspace"><code>~/.config/eww/scripts/get-active-workspace</code> <a class="permalink" href="#configewwscriptsget-active-workspace" aria-label="本节链接">#</a></h5>
+<pre class="sh"><code>#!/usr/bin/env bash
+
+hyprctl monitors -j | jq &#39;.[] | select(.focused) | .activeWorkspace.id&#39;
+
+socat -u UNIX-CONNECT:$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock - |
+  stdbuf -o0 awk -F &#39;&gt;&gt;|,&#39; -e &#39;/^workspace&gt;&gt;/ {print $2}&#39; -e &#39;/^focusedmon&gt;&gt;/ {print $3}&#39;</code></pre>
+<h5 id="configewwscriptsget-workspaces"><code>~/.config/eww/scripts/get-workspaces</code> <a class="permalink" href="#configewwscriptsget-workspaces" aria-label="本节链接">#</a></h5>
+<pre class="sh"><code>#!/usr/bin/env bash
+
+spaces (){
+  WORKSPACE_WINDOWS=$(hyprctl workspaces -j | jq &#39;map({key: .id | tostring, value: .windows}) | from_entries&#39;)
+  seq 1 10 | jq --argjson windows &quot;${WORKSPACE_WINDOWS}&quot; --slurp -Mc &#39;map(tostring) | map({id: ., windows: ($windows[.]//0)})&#39;
+}
+
+spaces
+socat -u UNIX-CONNECT:$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock - | while read -r line; do
+  spaces
+done</code></pre>
+</details>
+
+<details><summary>活动窗口标题小组件</summary>
+
+<p>此小组件仅显示当前活动窗口的标题。 它依赖以下程序： <a href="https://linux.die.net/man/1/awk">awk</a>、 <a href="https://linux.die.net/man/1/stdbuf">stdbuf</a>、 <a href="https://linux.die.net/man/1/socat">socat</a> 和 <a href="https://stedolan.github.io/jq/">jq</a>。</p>
+<h5 id="configewwewwyuck"><code>~/.config/eww/eww.yuck</code> <a class="permalink" href="#configewwewwyuck" aria-label="本节链接">#</a></h5>
+<pre class="lisp"><code>...
+(deflisten window :initial &quot;...&quot; &quot;sh ~/.config/eww/scripts/get-window-title&quot;)
+(defwidget window_w []
+  (box
+    (label :text &quot;${window}&quot;
+    )
+  )
+...</code></pre>
+<h5 id="configewwscriptsget-window-title"><code>~/.config/eww/scripts/get-window-title</code> <a class="permalink" href="#configewwscriptsget-window-title" aria-label="本节链接">#</a></h5>
+<pre class="sh"><code>#!/bin/sh
+hyprctl activewindow -j | jq --raw-output .title
+socat -u UNIX-CONNECT:$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock - | stdbuf -o0 awk -F &#39;&gt;&gt;|,&#39; &#39;/^activewindow&gt;&gt;/{print $3}&#39;</code></pre>
+</details>
+
+<h3 id="quickshell">Quickshell <a class="permalink" href="#quickshell" aria-label="本节链接">#</a></h3>
+<p><a href="https://quickshell.outfoxxed.me/">Quickshell</a> 是一款基于 QtQuick 的灵活桌面 Shell 工具包。 虽然 Qt 的主题定制出了名地困难，但 Quickshell 的样式可以独立设置。</p>
+<p>入门请参阅<a href="https://quickshell.outfoxxed.me/docs/configuration/getting-started/">设置说明</a>和 <a href="https://quickshell.outfoxxed.me/docs/configuration/intro/">Hello World 分步教程</a>。</p>
+<h4 id="advantages-2">优点 <a class="permalink" href="#advantages-2" aria-label="本节链接">#</a></h4>
+<ul>
+<li>提供与 Wayland 和 Hyprland 深度集成的功能，例如实时窗口预览。</li>
+<li>默认会在配置更改后自动重新加载。</li>
+</ul>
+<h4 id="disadvantages-2">缺点 <a class="permalink" href="#disadvantages-2" aria-label="本节链接">#</a></h4>
+<ul>
+<li>由于 Qt 的定位机制，使用 Qt 布置组件时可能不如 GTK 直观。</li>
+<li>截至本文撰写时，尚未提供 Wi-Fi 服务。</li>
+<li>仍处于 alpha 阶段，后续可能会有小幅的不兼容改动。</li>
+<li>样式通过组件声明，而不是用 CSS 编写，部分用户可能不太熟悉这种方式。</li>
+</ul>
+<h2 id="tips">提示 <a class="permalink" href="#tips" aria-label="本节链接">#</a></h2>
+<h3 id="blur">模糊效果 <a class="permalink" href="#blur" aria-label="本节链接">#</a></h3>
+<p>使用 <code>blur</code> 和 <code>ignore_alpha</code> <a href="../../configuring/core/rules/layer-rules/">图层规则</a>。 前者启用模糊效果，后者让模糊效果忽略不透明度过低的区域。 理想情况下，<code>ignore_alpha</code> 的值应高于阴影的不透明度，同时低于状态栏或菜单内容的不透明度。 如果状态栏或菜单带有透明弹出窗口，还可以使用 <code>blur_popups</code> 规则。</p>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/useful-utilities/status-bars/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-2" href="#simple-status-bars">简易状态栏</a><a class="level-3" href="#waybar">Waybar</a><a class="level-4" href="#how-to-launch">启动方法</a><a class="level-4" href="#waybar-faq">Waybar 常见问题</a><a class="level-5" href="#active-workspace-doesnt-show-up">当前工作区未显示</a><a class="level-5" href="#scrolling-through-workspaces">滚动切换工作区</a><a class="level-5" href="#window-title-is-missing">窗口标题未显示</a><a class="level-3" href="#ashell">ashell</a><a class="level-2" href="#desktop-shells">桌面 Shell</a><a class="level-3" href="#noctalia">Noctalia</a><a class="level-3" href="#dankmaterialshell">DankMaterialShell</a><a class="level-2" href="#widget-systems">小组件系统</a><a class="level-3" href="#agsastal">AGS/Astal</a><a class="level-4" href="#advantages">优点</a><a class="level-4" href="#disadvantages">缺点</a><a class="level-3" href="#eww">Eww</a><a class="level-4" href="#advantages-1">优点</a><a class="level-4" href="#disadvantages-1">缺点</a><a class="level-4" href="#configuration">配置</a><a class="level-5" href="#configewwyuck">~/.config/eww.yuck</a><a class="level-5" href="#configewwscriptschange-active-workspace">~/.config/eww/scripts/change-active-workspace</a><a class="level-5" href="#configewwscriptsget-active-workspace">~/.config/eww/scripts/get-active-workspace</a><a class="level-5" href="#configewwscriptsget-workspaces">~/.config/eww/scripts/get-workspaces</a><a class="level-5" href="#configewwewwyuck">~/.config/eww/eww.yuck</a><a class="level-5" href="#configewwscriptsget-window-title">~/.config/eww/scripts/get-window-title</a><a class="level-3" href="#quickshell">Quickshell</a><a class="level-4" href="#advantages-2">优点</a><a class="level-4" href="#disadvantages-2">缺点</a><a class="level-2" href="#tips">提示</a><a class="level-3" href="#blur">模糊效果</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>

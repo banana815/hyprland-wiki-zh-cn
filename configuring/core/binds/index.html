@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>按键绑定 · Hyprland Wiki 中文版</title><link rel="icon" href="../../../assets/hyprland.svg">
+<link rel="stylesheet" href="../../../assets/wiki.css"><script defer src="../../../assets/site.js"></script></head>
+<body data-root="../../../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../../../"><img src="../../../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/configuring/core/binds/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../../../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../../../">Hyprland 中文文档</a><ul><li><a href="../../../version-selector/">版本选择器 ⚙️</a></li><li><details><summary><a href="../../../getting-started/">入门指南</a></summary><ul><li><a href="../../../getting-started/installation/">安装</a></li><li><a href="../../../getting-started/master-tutorial/">入门教程</a></li><li><a href="../../../getting-started/preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details open><summary><a href="../../">配置</a></summary><ul><li><a href="../../naming-conventions/">命名约定</a></li><li><a href="../../selectors/">选择器</a></li><li><details open><summary><a href="../">基础配置</a></summary><ul><li><details><summary><a href="../monitors/">显示器</a></summary><ul><li><a href="../monitors/output-selection/">选择显示输出</a></li><li><a href="../monitors/positioning/">显示器排列</a></li><li><a href="../monitors/modes/">显示模式</a></li><li><a href="../monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="../config-options/">配置选项</a></li><li><a href="../devices/">设备</a></li><li><a href="../dispatchers/">调度器</a></li><li><details open><summary><a href="./" aria-current="page">按键绑定</a></summary><ul><li><a href="flags/">标志位</a></li><li><a href="keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="devices/">设备绑定</a></summary><ul><li><a href="devices/mouse/">鼠标</a></li><li><a href="devices/touchpad/">触摸板</a></li><li><a href="devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="submaps/">按键子映射</a></li><li><a href="globals/">全局快捷键与绑定</a></li><li><a href="switches/">硬件开关</a></li><li><a href="gestures/">手势</a></li></ul></details></li><li><details><summary><a href="../rules/">规则</a></summary><ul><li><a href="../rules/window-rules/">窗口规则</a></li><li><a href="../rules/workspace-rules/">工作区规则</a></li><li><a href="../rules/layer-rules/">图层规则</a></li></ul></details></li><li><a href="../environment-variables/">环境变量</a></li><li><a href="../animations/">动画</a></li><li><a href="../autostart/">自动启动</a></li><li><details><summary><a href="../advanced-configuration/">高级配置</a></summary><ul><li><a href="../advanced-configuration/events/">Lua 事件</a></li><li><a href="../advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="../advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="../advanced-configuration/notifications/">通知</a></li><li><a href="../advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../layouts/">布局</a></summary><ul><li><a href="../../layouts/dwindle-layout/">Dwindle 布局</a></li><li><a href="../../layouts/scrolling-layout/">滚动布局</a></li><li><a href="../../layouts/master-layout/">主从布局</a></li><li><a href="../../layouts/monocle-layout/">单窗口布局</a></li><li><a href="../../layouts/custom-layouts/">自定义布局</a></li></ul></details></li><li><details><summary><a href="../../extra/">其他配置</a></summary><ul><li><a href="../../extra/multi-gpu/">多显卡</a></li><li><a href="../../extra/virtual-gpu/">虚拟 GPU</a></li><li><a href="../../extra/performance/">性能</a></li><li><a href="../../extra/tearing/">画面撕裂</a></li><li><a href="../../extra/xwayland/">Xwayland</a></li><li><a href="../../extra/systemd/">systemd</a></li></ul></details></li><li><a href="../../code-snippets/">Lua 代码片段</a></li></ul></details></li><li><details><summary><a href="../../../hypr-ecosystem/">Hypr 生态系统</a></summary><ul><li><details><summary><a href="../../../hypr-ecosystem/user/">用户应用与实用工具</a></summary><ul><li><a href="../../../hypr-ecosystem/user/hyprpaper/">hyprpaper</a></li><li><a href="../../../hypr-ecosystem/user/hyprpicker/">hyprpicker</a></li><li><a href="../../../hypr-ecosystem/user/hyprlauncher/">hyprlauncher</a></li><li><a href="../../../hypr-ecosystem/user/hypridle/">hypridle</a></li><li><a href="../../../hypr-ecosystem/user/hyprlock/">hyprlock</a></li><li><a href="../../../hypr-ecosystem/user/xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li><li><a href="../../../hypr-ecosystem/user/hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../../../hypr-ecosystem/user/hyprsunset/">hyprsunset</a></li><li><a href="../../../hypr-ecosystem/user/hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../../../hypr-ecosystem/user/hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../../../hypr-ecosystem/user/hyprqt6engine/">hyprqt6engine</a></li><li><a href="../../../hypr-ecosystem/user/hyprpwcenter/">hyprpwcenter</a></li><li><a href="../../../hypr-ecosystem/user/hyprshutdown/">hyprshutdown</a></li><li><a href="../../../hypr-ecosystem/user/hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../../../hypr-ecosystem/user/hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../../../hypr-ecosystem/dev/">开发库和工具包</a></summary><ul><li><a href="../../../hypr-ecosystem/dev/aquamarine/">aquamarine</a></li><li><a href="../../../hypr-ecosystem/dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../../../hypr-ecosystem/dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../../../hypr-ecosystem/dev/hyprlang/">hyprlang</a></li><li><a href="../../../hypr-ecosystem/dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../../../hypr-ecosystem/dev/hyprutils/">hyprutils</a></li><li><a href="../../../hypr-ecosystem/dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../hyprland-plugins/">Hyprland 插件</a></summary><ul><li><a href="../../../hyprland-plugins/using-plugins/">使用插件</a></li><li><details><summary><a href="../../../hyprland-plugins/development/">开发</a></summary><ul><li><a href="../../../hyprland-plugins/development/getting-started/">插件开发入门</a></li><li><a href="../../../hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li><li><a href="../../../hyprland-plugins/development/advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../useful-utilities/">实用工具</a></summary><ul><li><a href="../../../useful-utilities/must-have/">必备软件</a></li><li><a href="../../../useful-utilities/status-bars/">状态栏</a></li><li><a href="../../../useful-utilities/wallpapers/">壁纸</a></li><li><a href="../../../useful-utilities/screen-sharing/">屏幕共享</a></li><li><a href="../../../useful-utilities/screenshots-and-recording/">截图与录屏</a></li><li><a href="../../../useful-utilities/app-launchers/">应用启动器</a></li><li><a href="../../../useful-utilities/app-clients/">应用客户端</a></li><li><a href="../../../useful-utilities/phone-connect/">连接手机</a></li><li><a href="../../../useful-utilities/color-pickers/">取色器</a></li><li><a href="../../../useful-utilities/clipboard-managers/">剪贴板管理器</a></li><li><a href="../../../useful-utilities/file-managers/">文件管理器</a></li><li><a href="../../../useful-utilities/other/">其他</a></li><li><a href="../../../useful-utilities/hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="../../../useful-utilities/uwsm/">UWSM</a></li></ul></details></li><li><details><summary><a href="../../../nix/">Nix</a></summary><ul><li><a href="../../../nix/hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../../../nix/installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../../../nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="../../../nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li><li><a href="../../../nix/cachix/">Cachix</a></li><li><a href="../../../nix/advanced/">高级用法</a></li><li><a href="../../../nix/contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../../../nvidia/">NVIDIA</a></li><li><a href="../../../ipc/">IPC</a></li><li><a href="../../../crashes-and-bugs/">崩溃与缺陷</a></li><li><a href="../../../faq/">常见问题</a></li><li><a href="../../../community/">社区</a></li><li><details><summary><a href="../../../contributing-and-debugging/">贡献与调试</a></summary><ul><li><a href="../../../contributing-and-debugging/wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../../../contributing-and-debugging/issue-guidelines/">议题指南</a></li><li><a href="../../../contributing-and-debugging/pr-guidelines/">PR 指南</a></li><li><a href="../../../contributing-and-debugging/tests/">测试</a></li><li><a href="../../../contributing-and-debugging/translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../../../">Hyprland 中文文档</a><span>›</span><a href="../../">配置</a><span>›</span><a href="../">基础配置</a></nav><article><h1>按键绑定</h1><div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p><strong>按键绑定处理函数不得阻塞。</strong> Lua 回调在合成器的事件循环中运行。请避免在按键绑定函数中使用 <code>io.popen</code>、执行网络 I/O、调用剪贴板工具（<code>wl-paste</code>、<code>xclip</code>）、休眠或执行其他耗时操作。运行外部命令时，优先使用 <code>hl.dsp.exec_cmd(...)</code>，让命令在按键绑定回调之外执行。如果必须从 Lua 中查询系统状态，请限制等待时间（例如使用 <code>timeout</code>）。调用一旦卡住或执行缓慢，输入和整个桌面都会冻结，直到调用返回。</p>
+</div>
+<div class="tip">
+<div class="title">
+<p>提示</p>
+</div>
+<p>如果不确定某个键的名称、键符号（keysym）或键码（keycode），可以使用 <a href="https://github.com/jwrdegoede/wev"><code>wev</code></a> 查看。</p>
+</div>
+<h2 id="basics">基础知识 <a class="permalink" href="#basics" aria-label="本节链接">#</a></h2>
+<p>基本语法如下：</p>
+<pre class="lua"><code>hl.bind(&quot;keys&quot;, dispatcher or function(), { bind_flags })</code></pre>
+<p>调度器列表见<a href="../dispatchers/">调度器</a>。也可以为按键绑定传入 Lua 函数，触发绑定时就会调用该函数。</p>
+<p>按键绑定标志的说明见<a href="flags/">标志</a>。</p>
+<details><summary>示例</summary>
+
+<pre class="lua"><code>-- 将 SUPER + SHIFT + Q 绑定为打开 Firefox
+hl.bind(&quot;SUPER + SHIFT + Q&quot;, hl.dsp.exec_cmd(&quot;firefox&quot;))
+
+-- 将按键绑定到包含处理逻辑的匿名函数
+hl.bind(&quot;SUPER + SHIFT + X&quot;, function()
+    -- 更多处理逻辑……
+    hl.dispatch(hl.dsp.window.float())
+end)</code></pre>
+</details>
+
+<h2 id="uncommon-syms--binding-with-a-keycode">不常见的键符号与使用键码进行绑定 <a class="permalink" href="#uncommon-syms--binding-with-a-keycode" aria-label="本节链接">#</a></h2>
+<p>所有键符号均列在 <a href="https://github.com/xkbcommon/libxkbcommon/blob/master/include/xkbcommon/xkbcommon-keysyms.h">xkbcommon-keysyms.h 头文件</a>中。绑定时应使用 <code>XKB_KEY_</code> 之后的部分作为名称。</p>
+<p>要使用键码进行绑定，请在键码前加上 <code>code:</code> 前缀。例如：</p>
+<pre class="lua"><code>hl.bind(&quot;SUPER + code:28&quot;, hl.dsp.exec_cmd(&quot;amongus&quot;))</code></pre>
+<p>上例会绑定 <code>SUPER + T</code>，因为 <code>T</code> 的键码是 28。</p>
+<h2 id="binding-modkeys-only">仅绑定修饰键 <a class="permalink" href="#binding-modkeys-only" aria-label="本节链接">#</a></h2>
+<p>要单独绑定一个修饰键，请使用对应的键符号名称。该名称通常由 <code>MOD</code> 键名加上 <code>_L</code> 或 <code>_R</code> 后缀构成。使用键符号时，这些键不再被当作修饰键处理，因此按键的先后顺序会影响绑定的触发。</p>
+<details><summary>示例</summary>
+
+<pre class="lua"><code>-- 将 `amongus` 绑定到左侧 alt 键
+hl.bind(&quot;Alt_L&quot;, hl.dsp.exec_cmd(&quot;amongus&quot;))
+
+-- 将左侧 super 与左侧 ctrl 的组合键绑定为打开 kitty
+hl.bind(&quot;Super_L + Alt_L&quot;, hl.dsp.exec_cmd(&quot;kitty&quot;))
+
+-- 绑定左侧 ctrl 与右侧 ctrl 的组合键
+hl.bind(&quot;Ctrl_L + Ctrl_R&quot;, hl.dsp.exec_cmd(&quot;kitty&quot;))
+
+-- 绑定 super 键的释放事件，仅当该键未参与组合键时触发
+hl.bind(&quot;Super_L&quot;, hl.dsp.exec_cmd(&quot;hyprlauncher -t&quot;), { release = true })</code></pre>
+</details>
+
+<h2 id="multiple-binds-to-one-key">为同一个键设置多个绑定 <a class="permalink" href="#multiple-binds-to-one-key" aria-label="本节链接">#</a></h2>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>这些按键绑定会按编写顺序自上而下执行。</p>
+</div>
+<p>可以使用 Lua 匿名函数，让同一个按键绑定触发多个操作。该函数可以依次发起多次调度调用：</p>
+<pre class="lua"><code>-- 要在浮动工作区中切换窗口：
+hl.bind(&quot;SUPER + Tab&quot;, function()
+    -- 将焦点移到另一个窗口
+    hl.dispatch(hl.dsp.window.cycle_next())
+    -- 将该窗口移至最上层
+    hl.dispatch(hl.dsp.window.alter_zorder({ mode = &quot;top&quot; }))
+end)</code></pre>
+<h2 id="unbind">解除绑定 <a class="permalink" href="#unbind" aria-label="本节链接">#</a></h2>
+<p>要解除按键绑定，可以使用 <code>hl.unbind("key")</code>，也可以将绑定保存到变量中，再调用其 <code>:unbind()</code> 或 <code>:remove()</code> 方法。<code>hl.unbind</code> 中的键名区分大小写，必须与要解除的 <code>hl.bind</code> 绑定中的键名大小写完全一致。解除绑定会移除此前为该键注册的所有绑定。</p>
+<details><summary>示例</summary>
+
+<pre class="lua"><code>hl.bind(&quot;SUPER + TAB&quot;, hl.focus.workspace(&quot;e+1&quot;))
+hl.unbind(&quot;SUPER + Tab&quot;) -- 这不会解除绑定
+hl.unbind(&quot;SUPER + TAB&quot;) -- 这会解除绑定
+
+-- 将绑定赋给 &quot;lft&quot;
+local moveLeft = hl.bind(&quot;SUPER + L&quot;, hl.dsp.window.move({ direction = &quot;left&quot; }) )
+
+-- 解除 &quot;SUPER + L&quot; 的绑定
+moveLeft:unbind()
+-- 或者
+moveLeft:remove()</code></pre>
+</details>
+
+<h2 id="xkb-options">XKB 选项 <a class="permalink" href="#xkb-options" aria-label="本节链接">#</a></h2>
+<p>要更改某些按键的行为，请使用 <code>kb_options</code>。</p>
+<p>要查看所有可用选项，请运行：</p>
+<pre class="sh"><code>cat /usr/share/X11/xkb/rules/base.lst</code></pre>
+<details><summary>示例</summary>
+
+<p>要将 Caps Lock 重新映射为 Ctrl：</p>
+<pre class="lua"><code>hl.config({
+    input = {
+        kb_options = &quot;ctrl:nocaps&quot;
+    }
+})</code></pre>
+<p>要交换 Caps Lock 和 Escape 的功能：</p>
+<pre class="lua"><code>hl.config({
+    input =  {
+        kb_options = &quot;caps:swapescape&quot;
+    }
+})</code></pre>
+</details>
+
+<h2 id="binding-quirks">按键绑定的注意事项 <a class="permalink" href="#binding-quirks" aria-label="本节链接">#</a></h2>
+<h3 id="conditional-bind-resolution-at-bind-time">在创建绑定时求值的条件 <a class="permalink" href="#conditional-bind-resolution-at-bind-time" aria-label="本节链接">#</a></h3>
+<p>创建包含条件判断的按键绑定时，几乎总是应该将判断逻辑放在函数中。例如，下面的绑定：</p>
+<pre class="lua"><code>hl.bind(&quot;SUPER + L&quot;, hl.dsp.exec_cmd(&quot;foot&quot;, { float = not (hl.get_active_window().title == &quot;foot&quot;) }) )</code></pre>
+<p>会被解析为：</p>
+<pre class="lua"><code>hl.bind(&quot;SUPER + L&quot;, hl.dsp.exec_cmd(&quot;foot&quot;, { float = false }) )
+-- 或者，取决于重新加载配置时焦点所在的位置
+hl.bind(&quot;SUPER + L&quot;, hl.dsp.exec_cmd(&quot;foot&quot;, { float = true }) )</code></pre>
+<p>绑定会一直保持这个结果，直到下次重新加载配置。要让它按预期工作，必须将判断逻辑放在函数中：</p>
+<pre class="lua"><code>hl.bind(&quot;SUPER + L&quot;, function()
+    local is_foot = hl.get_active_window().title == &quot;foot&quot;
+    hl.dispatch( hl.dsp.exec_cmd(&quot;foot&quot;, { float = not is_foot }) )
+end)</code></pre>
+<p>这样，每次触发绑定时都会重新判断条件，而不会只在加载配置时判断一次。</p>
+<h3 id="auto-consuming-binds-and-return--ok--false-">自动消耗按键事件的绑定与 <code>return { ok = false }</code> <a class="permalink" href="#auto-consuming-binds-and-return--ok--false-" aria-label="本节链接">#</a></h3>
+<p>调度器执行完毕后，可以返回 <code>ok</code> 值来表示执行是否成功。设置 <code>auto_consuming</code> 标志后，<code>hl.bind</code> 会检查该值，以决定是消耗这次按键事件，还是将其继续传递下去。</p>
+<details><summary>示例</summary>
+
+<pre class="lua"><code>hl.bind(&quot;p&quot;, function()
+    local window = hl.get_active_window()
+    if window and window.title == &quot;some cool app&quot; then
+        hl.dispatch(hl.dsp.exec_cmd(&quot;another_cool_app&quot;))
+    else
+        return { ok = false }
+    end
+end, { auto_consuming = true })</code></pre>
+<p>如果当前活动窗口的标题为 <code>"some cool app"</code>，此绑定会启动 <code>another_cool_app</code>；否则会将 <code>p</code> 键事件传递给当前活动窗口。</p>
+</details>
+
+<h3 id="binding-to-keys-handled-by-systemd-logind">为 systemd-logind 处理的按键设置按键绑定 <a class="permalink" href="#binding-to-keys-handled-by-systemd-logind" aria-label="本节链接">#</a></h3>
+<p>通常，systemd-logind 会处理按下电源键、开合笔记本盖等硬件事件。可以通过编辑其配置文件在全局禁用这类处理，但更合适的做法是仅在 Hyprland 运行期间阻止它处理相应事件。</p>
+<p>可以使用 <code>systemd-inhibit</code> 来实现。例如，可以通过 <code>systemd-inhibit --what=handle-power-key Hyprland</code> 启动 Hyprland，然后为相应的按键事件（本例中为 <code>XF86PowerOff</code>）创建按键绑定。</p>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../../../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/configuring/core/binds/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-2" href="#basics">基础知识</a><a class="level-2" href="#uncommon-syms--binding-with-a-keycode">不常见的键符号与使用键码进行绑定</a><a class="level-2" href="#binding-modkeys-only">仅绑定修饰键</a><a class="level-2" href="#multiple-binds-to-one-key">为同一个键设置多个绑定</a><a class="level-2" href="#unbind">解除绑定</a><a class="level-2" href="#xkb-options">XKB 选项</a><a class="level-2" href="#binding-quirks">按键绑定的注意事项</a><a class="level-3" href="#conditional-bind-resolution-at-bind-time">在创建绑定时求值的条件</a><a class="level-3" href="#auto-consuming-binds-and-return--ok--false-">自动消耗按键事件的绑定与 return { ok = false }</a><a class="level-3" href="#binding-to-keys-handled-by-systemd-logind">为 systemd-logind 处理的按键设置按键绑定</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>

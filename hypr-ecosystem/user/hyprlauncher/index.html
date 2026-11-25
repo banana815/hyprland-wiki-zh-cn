@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>hyprlauncher · Hyprland Wiki 中文版</title><link rel="icon" href="../../../assets/hyprland.svg">
+<link rel="stylesheet" href="../../../assets/wiki.css"><script defer src="../../../assets/site.js"></script></head>
+<body data-root="../../../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../../../"><img src="../../../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/hypr-ecosystem/user/hyprlauncher/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../../../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../../../">Hyprland 中文文档</a><ul><li><a href="../../../version-selector/">版本选择器 ⚙️</a></li><li><details><summary><a href="../../../getting-started/">入门指南</a></summary><ul><li><a href="../../../getting-started/installation/">安装</a></li><li><a href="../../../getting-started/master-tutorial/">入门教程</a></li><li><a href="../../../getting-started/preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details><summary><a href="../../../configuring/">配置</a></summary><ul><li><a href="../../../configuring/naming-conventions/">命名约定</a></li><li><a href="../../../configuring/selectors/">选择器</a></li><li><details><summary><a href="../../../configuring/core/">基础配置</a></summary><ul><li><details><summary><a href="../../../configuring/core/monitors/">显示器</a></summary><ul><li><a href="../../../configuring/core/monitors/output-selection/">选择显示输出</a></li><li><a href="../../../configuring/core/monitors/positioning/">显示器排列</a></li><li><a href="../../../configuring/core/monitors/modes/">显示模式</a></li><li><a href="../../../configuring/core/monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="../../../configuring/core/config-options/">配置选项</a></li><li><a href="../../../configuring/core/devices/">设备</a></li><li><a href="../../../configuring/core/dispatchers/">调度器</a></li><li><details><summary><a href="../../../configuring/core/binds/">按键绑定</a></summary><ul><li><a href="../../../configuring/core/binds/flags/">标志位</a></li><li><a href="../../../configuring/core/binds/keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="../../../configuring/core/binds/devices/">设备绑定</a></summary><ul><li><a href="../../../configuring/core/binds/devices/mouse/">鼠标</a></li><li><a href="../../../configuring/core/binds/devices/touchpad/">触摸板</a></li><li><a href="../../../configuring/core/binds/devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="../../../configuring/core/binds/submaps/">按键子映射</a></li><li><a href="../../../configuring/core/binds/globals/">全局快捷键与绑定</a></li><li><a href="../../../configuring/core/binds/switches/">硬件开关</a></li><li><a href="../../../configuring/core/binds/gestures/">手势</a></li></ul></details></li><li><details><summary><a href="../../../configuring/core/rules/">规则</a></summary><ul><li><a href="../../../configuring/core/rules/window-rules/">窗口规则</a></li><li><a href="../../../configuring/core/rules/workspace-rules/">工作区规则</a></li><li><a href="../../../configuring/core/rules/layer-rules/">图层规则</a></li></ul></details></li><li><a href="../../../configuring/core/environment-variables/">环境变量</a></li><li><a href="../../../configuring/core/animations/">动画</a></li><li><a href="../../../configuring/core/autostart/">自动启动</a></li><li><details><summary><a href="../../../configuring/core/advanced-configuration/">高级配置</a></summary><ul><li><a href="../../../configuring/core/advanced-configuration/events/">Lua 事件</a></li><li><a href="../../../configuring/core/advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="../../../configuring/core/advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="../../../configuring/core/advanced-configuration/notifications/">通知</a></li><li><a href="../../../configuring/core/advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../configuring/layouts/">布局</a></summary><ul><li><a href="../../../configuring/layouts/dwindle-layout/">Dwindle 布局</a></li><li><a href="../../../configuring/layouts/scrolling-layout/">滚动布局</a></li><li><a href="../../../configuring/layouts/master-layout/">主从布局</a></li><li><a href="../../../configuring/layouts/monocle-layout/">单窗口布局</a></li><li><a href="../../../configuring/layouts/custom-layouts/">自定义布局</a></li></ul></details></li><li><details><summary><a href="../../../configuring/extra/">其他配置</a></summary><ul><li><a href="../../../configuring/extra/multi-gpu/">多显卡</a></li><li><a href="../../../configuring/extra/virtual-gpu/">虚拟 GPU</a></li><li><a href="../../../configuring/extra/performance/">性能</a></li><li><a href="../../../configuring/extra/tearing/">画面撕裂</a></li><li><a href="../../../configuring/extra/xwayland/">Xwayland</a></li><li><a href="../../../configuring/extra/systemd/">systemd</a></li></ul></details></li><li><a href="../../../configuring/code-snippets/">Lua 代码片段</a></li></ul></details></li><li><details open><summary><a href="../../">Hypr 生态系统</a></summary><ul><li><details open><summary><a href="../">用户应用与实用工具</a></summary><ul><li><a href="../hyprpaper/">hyprpaper</a></li><li><a href="../hyprpicker/">hyprpicker</a></li><li><a href="./" aria-current="page">hyprlauncher</a></li><li><a href="../hypridle/">hypridle</a></li><li><a href="../hyprlock/">hyprlock</a></li><li><a href="../xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li><li><a href="../hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../hyprsunset/">hyprsunset</a></li><li><a href="../hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../hyprqt6engine/">hyprqt6engine</a></li><li><a href="../hyprpwcenter/">hyprpwcenter</a></li><li><a href="../hyprshutdown/">hyprshutdown</a></li><li><a href="../hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../../dev/">开发库和工具包</a></summary><ul><li><a href="../../dev/aquamarine/">aquamarine</a></li><li><a href="../../dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../../dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../../dev/hyprlang/">hyprlang</a></li><li><a href="../../dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../../dev/hyprutils/">hyprutils</a></li><li><a href="../../dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../hyprland-plugins/">Hyprland 插件</a></summary><ul><li><a href="../../../hyprland-plugins/using-plugins/">使用插件</a></li><li><details><summary><a href="../../../hyprland-plugins/development/">开发</a></summary><ul><li><a href="../../../hyprland-plugins/development/getting-started/">插件开发入门</a></li><li><a href="../../../hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li><li><a href="../../../hyprland-plugins/development/advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../useful-utilities/">实用工具</a></summary><ul><li><a href="../../../useful-utilities/must-have/">必备软件</a></li><li><a href="../../../useful-utilities/status-bars/">状态栏</a></li><li><a href="../../../useful-utilities/wallpapers/">壁纸</a></li><li><a href="../../../useful-utilities/screen-sharing/">屏幕共享</a></li><li><a href="../../../useful-utilities/screenshots-and-recording/">截图与录屏</a></li><li><a href="../../../useful-utilities/app-launchers/">应用启动器</a></li><li><a href="../../../useful-utilities/app-clients/">应用客户端</a></li><li><a href="../../../useful-utilities/phone-connect/">连接手机</a></li><li><a href="../../../useful-utilities/color-pickers/">取色器</a></li><li><a href="../../../useful-utilities/clipboard-managers/">剪贴板管理器</a></li><li><a href="../../../useful-utilities/file-managers/">文件管理器</a></li><li><a href="../../../useful-utilities/other/">其他</a></li><li><a href="../../../useful-utilities/hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="../../../useful-utilities/uwsm/">UWSM</a></li></ul></details></li><li><details><summary><a href="../../../nix/">Nix</a></summary><ul><li><a href="../../../nix/hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../../../nix/installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../../../nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="../../../nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li><li><a href="../../../nix/cachix/">Cachix</a></li><li><a href="../../../nix/advanced/">高级用法</a></li><li><a href="../../../nix/contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../../../nvidia/">NVIDIA</a></li><li><a href="../../../ipc/">IPC</a></li><li><a href="../../../crashes-and-bugs/">崩溃与缺陷</a></li><li><a href="../../../faq/">常见问题</a></li><li><a href="../../../community/">社区</a></li><li><details><summary><a href="../../../contributing-and-debugging/">贡献与调试</a></summary><ul><li><a href="../../../contributing-and-debugging/wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../../../contributing-and-debugging/issue-guidelines/">议题指南</a></li><li><a href="../../../contributing-and-debugging/pr-guidelines/">PR 指南</a></li><li><a href="../../../contributing-and-debugging/tests/">测试</a></li><li><a href="../../../contributing-and-debugging/translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../../../">Hyprland 中文文档</a><span>›</span><a href="../../">Hypr 生态系统</a><span>›</span><a href="../">用户应用与实用工具</a></nav><article><h1>hyprlauncher</h1><p><a href="https://github.com/hyprwm/hyprlauncher">hyprlauncher</a> 是一款适用于 Hyprland 的多用途启动器和选择器。 它快速、简单，并提供多种模块。</p>
+<h2 id="usage">用法 <a class="permalink" href="#usage" aria-label="本节链接">#</a></h2>
+<p>hyprlauncher _始终_以守护进程方式运行。 启动时，它会创建一个守护进程来监听请求。 如果使用 <code>hyprlauncher -d</code> 启动，首次启动时不会打开窗口。</p>
+<p>要打开 hyprlauncher，只需将 <code>hyprlauncher</code> 绑定到一个按键。</p>
+<h2 id="configuration">配置 <a class="permalink" href="#configuration" aria-label="本节链接">#</a></h2>
+<h3 id="theming">主题 <a class="permalink" href="#theming" aria-label="本节链接">#</a></h3>
+<p>hyprlauncher 会沿用你的 <a href="../../dev/hyprtoolkit/">hyprtoolkit</a> 主题。</p>
+<h3 id="config">配置文件 <a class="permalink" href="#config" aria-label="本节链接">#</a></h3>
+<p><code>~/.config/hypr/hyprlauncher.conf</code></p>
+<p>各配置类别及其选项和取值如下：</p>
+<h4 id="general">常规 <a class="permalink" href="#general" aria-label="本节链接">#</a></h4>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>grab_focus</code></td>
+<td>是否强制独占键盘焦点。</td>
+<td>bool</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="cache">缓存 <a class="permalink" href="#cache" aria-label="本节链接">#</a></h4>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enabled</td>
+<td>是否允许模块缓存常用条目。 <br> 这些历史记录以明文形式保存在磁盘上的 <code>~/.local/share/hyprlauncher</code> 中。</td>
+<td>bool</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="finders">查找器 <a class="permalink" href="#finders" aria-label="本节链接">#</a></h4>
+<p>可用的查找器有 <code>math</code>、<code>desktop</code> 和 <code>unicode</code>。</p>
+<p>前缀最多只能有一个字符。</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>default_finder</code></td>
+<td>指定默认使用的查找器。</td>
+<td>string</td>
+<td><code>desktop</code></td>
+</tr>
+<tr>
+<td><code>desktop_prefix</code></td>
+<td>桌面应用查找器的前缀。</td>
+<td>string</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td><code>unicode_prefix</code></td>
+<td>Unicode 查找器的前缀。</td>
+<td>string</td>
+<td><code>.</code></td>
+</tr>
+<tr>
+<td><code>math_prefix</code></td>
+<td>数学查找器的前缀。</td>
+<td>string</td>
+<td><code>=</code></td>
+</tr>
+<tr>
+<td><code>font_prefix</code></td>
+<td>字体查找器的前缀。</td>
+<td>string</td>
+<td><code>'</code></td>
+</tr>
+<tr>
+<td><code>desktop_launch_prefix</code></td>
+<td>启动每个桌面应用时使用的命令前缀，例如 <code>uwsm app -- </code>。</td>
+<td>string</td>
+<td>[[Empty]]</td>
+</tr>
+<tr>
+<td><code>desktop_icons</code></td>
+<td>是否在结果中显示桌面应用图标。</td>
+<td>bool</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="ui">用户界面 <a class="permalink" href="#ui" aria-label="本节链接">#</a></h4>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>window_size</td>
+<td>启动器窗口的大小。</td>
+<td>vec2</td>
+<td><code>400 260</code></td>
+</tr>
+</tbody>
+</table>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../../../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/hypr-ecosystem/user/hyprlauncher/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-2" href="#usage">用法</a><a class="level-2" href="#configuration">配置</a><a class="level-3" href="#theming">主题</a><a class="level-3" href="#config">配置文件</a><a class="level-4" href="#general">常规</a><a class="level-4" href="#cache">缓存</a><a class="level-4" href="#finders">查找器</a><a class="level-4" href="#ui">用户界面</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>

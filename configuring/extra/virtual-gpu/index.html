@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>虚拟 GPU · Hyprland Wiki 中文版</title><link rel="icon" href="../../../assets/hyprland.svg">
+<link rel="stylesheet" href="../../../assets/wiki.css"><script defer src="../../../assets/site.js"></script></head>
+<body data-root="../../../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../../../"><img src="../../../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/configuring/extra/virtual-gpu/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../../../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../../../">Hyprland 中文文档</a><ul><li><a href="../../../version-selector/">版本选择器 ⚙️</a></li><li><details><summary><a href="../../../getting-started/">入门指南</a></summary><ul><li><a href="../../../getting-started/installation/">安装</a></li><li><a href="../../../getting-started/master-tutorial/">入门教程</a></li><li><a href="../../../getting-started/preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details open><summary><a href="../../">配置</a></summary><ul><li><a href="../../naming-conventions/">命名约定</a></li><li><a href="../../selectors/">选择器</a></li><li><details><summary><a href="../../core/">基础配置</a></summary><ul><li><details><summary><a href="../../core/monitors/">显示器</a></summary><ul><li><a href="../../core/monitors/output-selection/">选择显示输出</a></li><li><a href="../../core/monitors/positioning/">显示器排列</a></li><li><a href="../../core/monitors/modes/">显示模式</a></li><li><a href="../../core/monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="../../core/config-options/">配置选项</a></li><li><a href="../../core/devices/">设备</a></li><li><a href="../../core/dispatchers/">调度器</a></li><li><details><summary><a href="../../core/binds/">按键绑定</a></summary><ul><li><a href="../../core/binds/flags/">标志位</a></li><li><a href="../../core/binds/keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="../../core/binds/devices/">设备绑定</a></summary><ul><li><a href="../../core/binds/devices/mouse/">鼠标</a></li><li><a href="../../core/binds/devices/touchpad/">触摸板</a></li><li><a href="../../core/binds/devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="../../core/binds/submaps/">按键子映射</a></li><li><a href="../../core/binds/globals/">全局快捷键与绑定</a></li><li><a href="../../core/binds/switches/">硬件开关</a></li><li><a href="../../core/binds/gestures/">手势</a></li></ul></details></li><li><details><summary><a href="../../core/rules/">规则</a></summary><ul><li><a href="../../core/rules/window-rules/">窗口规则</a></li><li><a href="../../core/rules/workspace-rules/">工作区规则</a></li><li><a href="../../core/rules/layer-rules/">图层规则</a></li></ul></details></li><li><a href="../../core/environment-variables/">环境变量</a></li><li><a href="../../core/animations/">动画</a></li><li><a href="../../core/autostart/">自动启动</a></li><li><details><summary><a href="../../core/advanced-configuration/">高级配置</a></summary><ul><li><a href="../../core/advanced-configuration/events/">Lua 事件</a></li><li><a href="../../core/advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="../../core/advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="../../core/advanced-configuration/notifications/">通知</a></li><li><a href="../../core/advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../layouts/">布局</a></summary><ul><li><a href="../../layouts/dwindle-layout/">Dwindle 布局</a></li><li><a href="../../layouts/scrolling-layout/">滚动布局</a></li><li><a href="../../layouts/master-layout/">主从布局</a></li><li><a href="../../layouts/monocle-layout/">单窗口布局</a></li><li><a href="../../layouts/custom-layouts/">自定义布局</a></li></ul></details></li><li><details open><summary><a href="../">其他配置</a></summary><ul><li><a href="../multi-gpu/">多显卡</a></li><li><a href="./" aria-current="page">虚拟 GPU</a></li><li><a href="../performance/">性能</a></li><li><a href="../tearing/">画面撕裂</a></li><li><a href="../xwayland/">Xwayland</a></li><li><a href="../systemd/">systemd</a></li></ul></details></li><li><a href="../../code-snippets/">Lua 代码片段</a></li></ul></details></li><li><details><summary><a href="../../../hypr-ecosystem/">Hypr 生态系统</a></summary><ul><li><details><summary><a href="../../../hypr-ecosystem/user/">用户应用与实用工具</a></summary><ul><li><a href="../../../hypr-ecosystem/user/hyprpaper/">hyprpaper</a></li><li><a href="../../../hypr-ecosystem/user/hyprpicker/">hyprpicker</a></li><li><a href="../../../hypr-ecosystem/user/hyprlauncher/">hyprlauncher</a></li><li><a href="../../../hypr-ecosystem/user/hypridle/">hypridle</a></li><li><a href="../../../hypr-ecosystem/user/hyprlock/">hyprlock</a></li><li><a href="../../../hypr-ecosystem/user/xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li><li><a href="../../../hypr-ecosystem/user/hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../../../hypr-ecosystem/user/hyprsunset/">hyprsunset</a></li><li><a href="../../../hypr-ecosystem/user/hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../../../hypr-ecosystem/user/hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../../../hypr-ecosystem/user/hyprqt6engine/">hyprqt6engine</a></li><li><a href="../../../hypr-ecosystem/user/hyprpwcenter/">hyprpwcenter</a></li><li><a href="../../../hypr-ecosystem/user/hyprshutdown/">hyprshutdown</a></li><li><a href="../../../hypr-ecosystem/user/hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../../../hypr-ecosystem/user/hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../../../hypr-ecosystem/dev/">开发库和工具包</a></summary><ul><li><a href="../../../hypr-ecosystem/dev/aquamarine/">aquamarine</a></li><li><a href="../../../hypr-ecosystem/dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../../../hypr-ecosystem/dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../../../hypr-ecosystem/dev/hyprlang/">hyprlang</a></li><li><a href="../../../hypr-ecosystem/dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../../../hypr-ecosystem/dev/hyprutils/">hyprutils</a></li><li><a href="../../../hypr-ecosystem/dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../hyprland-plugins/">Hyprland 插件</a></summary><ul><li><a href="../../../hyprland-plugins/using-plugins/">使用插件</a></li><li><details><summary><a href="../../../hyprland-plugins/development/">开发</a></summary><ul><li><a href="../../../hyprland-plugins/development/getting-started/">插件开发入门</a></li><li><a href="../../../hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li><li><a href="../../../hyprland-plugins/development/advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../useful-utilities/">实用工具</a></summary><ul><li><a href="../../../useful-utilities/must-have/">必备软件</a></li><li><a href="../../../useful-utilities/status-bars/">状态栏</a></li><li><a href="../../../useful-utilities/wallpapers/">壁纸</a></li><li><a href="../../../useful-utilities/screen-sharing/">屏幕共享</a></li><li><a href="../../../useful-utilities/screenshots-and-recording/">截图与录屏</a></li><li><a href="../../../useful-utilities/app-launchers/">应用启动器</a></li><li><a href="../../../useful-utilities/app-clients/">应用客户端</a></li><li><a href="../../../useful-utilities/phone-connect/">连接手机</a></li><li><a href="../../../useful-utilities/color-pickers/">取色器</a></li><li><a href="../../../useful-utilities/clipboard-managers/">剪贴板管理器</a></li><li><a href="../../../useful-utilities/file-managers/">文件管理器</a></li><li><a href="../../../useful-utilities/other/">其他</a></li><li><a href="../../../useful-utilities/hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="../../../useful-utilities/uwsm/">UWSM</a></li></ul></details></li><li><details><summary><a href="../../../nix/">Nix</a></summary><ul><li><a href="../../../nix/hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../../../nix/installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../../../nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="../../../nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li><li><a href="../../../nix/cachix/">Cachix</a></li><li><a href="../../../nix/advanced/">高级用法</a></li><li><a href="../../../nix/contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../../../nvidia/">NVIDIA</a></li><li><a href="../../../ipc/">IPC</a></li><li><a href="../../../crashes-and-bugs/">崩溃与缺陷</a></li><li><a href="../../../faq/">常见问题</a></li><li><a href="../../../community/">社区</a></li><li><details><summary><a href="../../../contributing-and-debugging/">贡献与调试</a></summary><ul><li><a href="../../../contributing-and-debugging/wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../../../contributing-and-debugging/issue-guidelines/">议题指南</a></li><li><a href="../../../contributing-and-debugging/pr-guidelines/">PR 指南</a></li><li><a href="../../../contributing-and-debugging/tests/">测试</a></li><li><a href="../../../contributing-and-debugging/translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../../../">Hyprland 中文文档</a><span>›</span><a href="../../">配置</a><span>›</span><a href="../">其他配置</a></nav><article><h1>虚拟 GPU</h1><h2 id="general">概述 <a class="permalink" href="#general" aria-label="本节链接">#</a></h2>
+<p>如果你的 GPU 属于以下类别之一：</p>
+<ul>
+<li>Intel Arc Pro 显卡</li>
+<li>Intel 笔记本电脑集成显卡</li>
+<li>NVIDIA 工作站或服务器显卡</li>
+<li>NVIDIA RTX 2000 系列显卡</li>
+<li>AMD Radeon Instinct 显卡</li>
+</ul>
+<p>那么你的显卡很可能支持通过中介设备或 SR-IOV 进行虚拟分区。启用虚拟分区的方法因厂商而异，差别很大，超出了本 Wiki 的讨论范围。</p>
+<p>例如，启用虚拟分区后，RTX A5000 显卡会创建以下设备：</p>
+<pre class="console"><code># lspci -d 10de:
+01:00.0 3D controller: NVIDIA Corporation GA102GL [RTX A5000] (rev a1)
+01:00.4 3D controller: NVIDIA Corporation GA102GL [RTX A5000] (rev a1)
+01:00.5 3D controller: NVIDIA Corporation GA102GL [RTX A5000] (rev a1)
+01:00.6 3D controller: NVIDIA Corporation GA102GL [RTX A5000] (rev a1)
+01:00.7 3D controller: NVIDIA Corporation GA102GL [RTX A5000] (rev a1)
+01:01.0 3D controller: NVIDIA Corporation GA102GL [RTX A5000] (rev a1)
+01:01.1 3D controller: NVIDIA Corporation GA102GL [RTX A5000] (rev a1)
+01:01.2 3D controller: NVIDIA Corporation GA102GL [RTX A5000] (rev a1)
+01:01.3 3D controller: NVIDIA Corporation GA102GL [RTX A5000] (rev a1)
+01:01.4 3D controller: NVIDIA Corporation GA102GL [RTX A5000] (rev a1)
+01:01.5 3D controller: NVIDIA Corporation GA102GL [RTX A5000] (rev a1)
+01:01.6 3D controller: NVIDIA Corporation GA102GL [RTX A5000] (rev a1)
+01:01.7 3D controller: NVIDIA Corporation GA102GL [RTX A5000] (rev a1)
+01:02.0 3D controller: NVIDIA Corporation GA102GL [RTX A5000] (rev a1)
+01:02.1 3D controller: NVIDIA Corporation GA102GL [RTX A5000] (rev a1)
+01:02.2 3D controller: NVIDIA Corporation GA102GL [RTX A5000] (rev a1)
+01:02.3 3D controller: NVIDIA Corporation GA102GL [RTX A5000] (rev a1)
+01:02.4 3D controller: NVIDIA Corporation GA102GL [RTX A5000] (rev a1)
+01:02.5 3D controller: NVIDIA Corporation GA102GL [RTX A5000] (rev a1)
+01:02.6 3D controller: NVIDIA Corporation GA102GL [RTX A5000] (rev a1)
+01:02.7 3D controller: NVIDIA Corporation GA102GL [RTX A5000] (rev a1)
+01:03.0 3D controller: NVIDIA Corporation GA102GL [RTX A5000] (rev a1)
+01:03.1 3D controller: NVIDIA Corporation GA102GL [RTX A5000] (rev a1)
+01:03.2 3D controller: NVIDIA Corporation GA102GL [RTX A5000] (rev a1)
+01:03.3 3D controller: NVIDIA Corporation GA102GL [RTX A5000] (rev a1)</code></pre>
+<p>如果想在虚拟机中使用硬件加速运行 Hyprland，可以将其中一个虚拟 GPU 分区（也称为 vGPU）直通给虚拟机。</p>
+<div class="note">
+<div class="title">
+<p>说明</p>
+</div>
+<p>以下步骤<strong>不适用于 Virtio-GPU 等半虚拟化驱动程序</strong>。</p>
+<p>Virtio-GPU 是完全由软件模拟的设备，会将图形处理工作转交给宿主机的 GPU。它不需要从物理 GPU 划出分区。Virtio-GPU 专为这种场景设计，自带模拟显示输出，因此你可以直接使用它正常运行 Hyprland。</p>
+</div>
+<h2 id="running-hyprland-on-vgpu">在 vGPU 上运行 Hyprland <a class="permalink" href="#running-hyprland-on-vgpu" aria-label="本节链接">#</a></h2>
+<p>默认情况下，Hyprland 要求显卡<strong>至少有一个显示输出</strong>。</p>
+<p>不过，各厂商的 vGPU 都是仅用于渲染的显卡，在 Linux 上没有模拟的显示输出。这是因为它们面向虚拟桌面基础设施（VDI）、3D 渲染、编码和计算等远程使用场景。从设备描述的前缀也能看出这一点：vGPU 的前缀是“3D controller”（3D 控制器），而不是“VGA compatible controller”（VGA 兼容控制器）。</p>
+<p><strong>要让 Hyprland</strong> 在<strong>没有显示输出的显卡上运行，必须在启动 Hyprland 时启用</strong> <code>AQ_NO_KMS_REQUIREMENT</code> 环境标志：</p>
+<pre class="lua"><code>hl.env(&quot;AQ_NO_KMS_REQUIREMENT&quot;, &quot;1&quot;)</code></pre>
+<h3 id="usage-of-both-a-gpu-and-vgpu">同时使用 GPU 和 vGPU <a class="permalink" href="#usage-of-both-a-gpu-and-vgpu" aria-label="本节链接">#</a></h3>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>本节适用于在 QEMU 虚拟机中同时使用直通 vGPU 和 Virtio-GPU 设备的用户。</p>
+</div>
+<p>大多数硬件驱动程序和半虚拟化驱动程序都会在 <code>/dev/dri</code> 目录下为同一张显卡提供两个设备节点。一个节点可供所有用户访问，提供渲染功能；另一个节点需要特权才能访问，提供一个或多个显示输出。</p>
+<pre class="console"><code>$ ls -lh /dev/dri/
+total 0
+drwxr-xr-x  2 root root         80 Apr 20 07:01 by-path/
+crw-rw----+ 1 root video  226,   1 Apr 20 07:01 card1           # 带有显示输出的 KMS 显卡
+crw-rw-rw-  1 root render 226, 128 Apr 20 07:01 renderD128      # 仅用于渲染的 DRM 显卡</code></pre>
+<p>默认情况下，Hyprland 只会选择系统中具有显示输出的节点，忽略 <code>render</code> 节点。启用 <code>AQ_NO_KMS_REQUIREMENT</code> 解除这一限制后，<code>render</code> 节点也可以被选中。</p>
+<p>如果在同一台虚拟机中同时使用虚拟 GPU 和硬件 GPU，<strong>必须设置 <code>AQ_DRM_DEVICES</code> 标志</strong>。有关此标志的详细说明，请参阅<a href="../multi-gpu/">多 GPU</a>：</p>
+<pre class="lua"><code>hl.env(&quot;AQ_NO_KMS_REQUIREMENT&quot;, &quot;1&quot;)
+hl.env(&quot;AQ_DRM_DEVICES&quot;, &quot;/dev/dri/card0:/dev/dri/card1&quot;)</code></pre>
+<p>实际使用中，虚拟机选择设备节点作为主渲染器的顺序并不固定，因此务必手动指定优先级。</p>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>某些虚拟机监控程序提供的 PCI 拓扑在每次启动时可能会被解析为不同的设备顺序。为确保选中正确的节点，请参阅<a href="../multi-gpu/#creating-consistent-device-paths-for-specific-cards">多 GPU 文档中关于为特定显卡创建固定设备路径的章节</a>，了解如何重命名节点，使配置在重启后保持一致。</p>
+</div>
+<h2 id="accessing-the-virtual-display">访问虚拟显示器 <a class="permalink" href="#accessing-the-virtual-display" aria-label="本节链接">#</a></h2>
+<p>如果启动 Hyprland 时没有任何显示输出，它会初始化一个名为 <code>HEADLESS-0</code> 的无头输出，其分辨率和帧率为 <code>1920x1080@60Hz</code>。你可以在平时使用的 <code>hyprland.lua</code> 配置文件中调整这些参数。</p>
+<p>要访问该显示器并与 Hyprland 交互，必须使用支持 wlroots 屏幕捕获协议的远程桌面服务器。</p>
+<p>已知支持以下服务器：</p>
+<ul>
+<li><a href="https://app.lizardbyte.dev/Sunshine/">Sunshine/Moonlight</a></li>
+<li><a href="https://github.com/ClassicOldSong/Apollo">Apollo/Artemis(Moonlight Noir)</a></li>
+<li><a href="https://github.com/any1/wayvnc">Wayvnc</a></li>
+</ul>
+<p>启动 Hyprland 后，即可在客户机上使用 <code>hyprctl</code> 远程启动服务器（参见<a href="../../core/advanced-configuration/using-hyprctl/">使用 hyprctl</a>）。</p>
+<pre class="bash"><code>hyprctl --instance 0 eval &#39;hl.exec_cmd(&quot;Sunshine&quot;)&#39;</code></pre>
+<p>远程显示服务器应作为 Hyprland 的子进程或后代进程运行，以继承其所有环境变量，否则服务器将找不到无头显示器。</p>
+<p>如果一切配置妥当且运行正常，可以在 <code>hyprland.lua</code> 文件中将服务器设为自动启动（参见<a href="../../core/autostart/">自动启动</a>）。例如：</p>
+<pre class="lua"><code>hl.on(&quot;hyprland.start&quot;, function()
+    hl.exec_cmd(&quot;Sunshine&quot;)
+end)</code></pre>
+<p>恭喜你拥有了自己的 Hyprland 虚拟桌面！</p>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../../../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/configuring/extra/virtual-gpu/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-2" href="#general">概述</a><a class="level-2" href="#running-hyprland-on-vgpu">在 vGPU 上运行 Hyprland</a><a class="level-3" href="#usage-of-both-a-gpu-and-vgpu">同时使用 GPU 和 vGPU</a><a class="level-2" href="#accessing-the-virtual-display">访问虚拟显示器</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>

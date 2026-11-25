@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>插件开发入门 · Hyprland Wiki 中文版</title><link rel="icon" href="../../../assets/hyprland.svg">
+<link rel="stylesheet" href="../../../assets/wiki.css"><script defer src="../../../assets/site.js"></script></head>
+<body data-root="../../../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../../../"><img src="../../../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/hyprland-plugins/development/getting-started/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../../../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../../../">Hyprland 中文文档</a><ul><li><a href="../../../version-selector/">版本选择器 ⚙️</a></li><li><details><summary><a href="../../../getting-started/">入门指南</a></summary><ul><li><a href="../../../getting-started/installation/">安装</a></li><li><a href="../../../getting-started/master-tutorial/">入门教程</a></li><li><a href="../../../getting-started/preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details><summary><a href="../../../configuring/">配置</a></summary><ul><li><a href="../../../configuring/naming-conventions/">命名约定</a></li><li><a href="../../../configuring/selectors/">选择器</a></li><li><details><summary><a href="../../../configuring/core/">基础配置</a></summary><ul><li><details><summary><a href="../../../configuring/core/monitors/">显示器</a></summary><ul><li><a href="../../../configuring/core/monitors/output-selection/">选择显示输出</a></li><li><a href="../../../configuring/core/monitors/positioning/">显示器排列</a></li><li><a href="../../../configuring/core/monitors/modes/">显示模式</a></li><li><a href="../../../configuring/core/monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="../../../configuring/core/config-options/">配置选项</a></li><li><a href="../../../configuring/core/devices/">设备</a></li><li><a href="../../../configuring/core/dispatchers/">调度器</a></li><li><details><summary><a href="../../../configuring/core/binds/">按键绑定</a></summary><ul><li><a href="../../../configuring/core/binds/flags/">标志位</a></li><li><a href="../../../configuring/core/binds/keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="../../../configuring/core/binds/devices/">设备绑定</a></summary><ul><li><a href="../../../configuring/core/binds/devices/mouse/">鼠标</a></li><li><a href="../../../configuring/core/binds/devices/touchpad/">触摸板</a></li><li><a href="../../../configuring/core/binds/devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="../../../configuring/core/binds/submaps/">按键子映射</a></li><li><a href="../../../configuring/core/binds/globals/">全局快捷键与绑定</a></li><li><a href="../../../configuring/core/binds/switches/">硬件开关</a></li><li><a href="../../../configuring/core/binds/gestures/">手势</a></li></ul></details></li><li><details><summary><a href="../../../configuring/core/rules/">规则</a></summary><ul><li><a href="../../../configuring/core/rules/window-rules/">窗口规则</a></li><li><a href="../../../configuring/core/rules/workspace-rules/">工作区规则</a></li><li><a href="../../../configuring/core/rules/layer-rules/">图层规则</a></li></ul></details></li><li><a href="../../../configuring/core/environment-variables/">环境变量</a></li><li><a href="../../../configuring/core/animations/">动画</a></li><li><a href="../../../configuring/core/autostart/">自动启动</a></li><li><details><summary><a href="../../../configuring/core/advanced-configuration/">高级配置</a></summary><ul><li><a href="../../../configuring/core/advanced-configuration/events/">Lua 事件</a></li><li><a href="../../../configuring/core/advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="../../../configuring/core/advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="../../../configuring/core/advanced-configuration/notifications/">通知</a></li><li><a href="../../../configuring/core/advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../configuring/layouts/">布局</a></summary><ul><li><a href="../../../configuring/layouts/dwindle-layout/">Dwindle 布局</a></li><li><a href="../../../configuring/layouts/scrolling-layout/">滚动布局</a></li><li><a href="../../../configuring/layouts/master-layout/">主从布局</a></li><li><a href="../../../configuring/layouts/monocle-layout/">单窗口布局</a></li><li><a href="../../../configuring/layouts/custom-layouts/">自定义布局</a></li></ul></details></li><li><details><summary><a href="../../../configuring/extra/">其他配置</a></summary><ul><li><a href="../../../configuring/extra/multi-gpu/">多显卡</a></li><li><a href="../../../configuring/extra/virtual-gpu/">虚拟 GPU</a></li><li><a href="../../../configuring/extra/performance/">性能</a></li><li><a href="../../../configuring/extra/tearing/">画面撕裂</a></li><li><a href="../../../configuring/extra/xwayland/">Xwayland</a></li><li><a href="../../../configuring/extra/systemd/">systemd</a></li></ul></details></li><li><a href="../../../configuring/code-snippets/">Lua 代码片段</a></li></ul></details></li><li><details><summary><a href="../../../hypr-ecosystem/">Hypr 生态系统</a></summary><ul><li><details><summary><a href="../../../hypr-ecosystem/user/">用户应用与实用工具</a></summary><ul><li><a href="../../../hypr-ecosystem/user/hyprpaper/">hyprpaper</a></li><li><a href="../../../hypr-ecosystem/user/hyprpicker/">hyprpicker</a></li><li><a href="../../../hypr-ecosystem/user/hyprlauncher/">hyprlauncher</a></li><li><a href="../../../hypr-ecosystem/user/hypridle/">hypridle</a></li><li><a href="../../../hypr-ecosystem/user/hyprlock/">hyprlock</a></li><li><a href="../../../hypr-ecosystem/user/xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li><li><a href="../../../hypr-ecosystem/user/hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../../../hypr-ecosystem/user/hyprsunset/">hyprsunset</a></li><li><a href="../../../hypr-ecosystem/user/hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../../../hypr-ecosystem/user/hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../../../hypr-ecosystem/user/hyprqt6engine/">hyprqt6engine</a></li><li><a href="../../../hypr-ecosystem/user/hyprpwcenter/">hyprpwcenter</a></li><li><a href="../../../hypr-ecosystem/user/hyprshutdown/">hyprshutdown</a></li><li><a href="../../../hypr-ecosystem/user/hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../../../hypr-ecosystem/user/hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../../../hypr-ecosystem/dev/">开发库和工具包</a></summary><ul><li><a href="../../../hypr-ecosystem/dev/aquamarine/">aquamarine</a></li><li><a href="../../../hypr-ecosystem/dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../../../hypr-ecosystem/dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../../../hypr-ecosystem/dev/hyprlang/">hyprlang</a></li><li><a href="../../../hypr-ecosystem/dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../../../hypr-ecosystem/dev/hyprutils/">hyprutils</a></li><li><a href="../../../hypr-ecosystem/dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details open><summary><a href="../../">Hyprland 插件</a></summary><ul><li><a href="../../using-plugins/">使用插件</a></li><li><details open><summary><a href="../">开发</a></summary><ul><li><a href="./" aria-current="page">插件开发入门</a></li><li><a href="../plugin-guidelines/">插件开发指南</a></li><li><a href="../advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../useful-utilities/">实用工具</a></summary><ul><li><a href="../../../useful-utilities/must-have/">必备软件</a></li><li><a href="../../../useful-utilities/status-bars/">状态栏</a></li><li><a href="../../../useful-utilities/wallpapers/">壁纸</a></li><li><a href="../../../useful-utilities/screen-sharing/">屏幕共享</a></li><li><a href="../../../useful-utilities/screenshots-and-recording/">截图与录屏</a></li><li><a href="../../../useful-utilities/app-launchers/">应用启动器</a></li><li><a href="../../../useful-utilities/app-clients/">应用客户端</a></li><li><a href="../../../useful-utilities/phone-connect/">连接手机</a></li><li><a href="../../../useful-utilities/color-pickers/">取色器</a></li><li><a href="../../../useful-utilities/clipboard-managers/">剪贴板管理器</a></li><li><a href="../../../useful-utilities/file-managers/">文件管理器</a></li><li><a href="../../../useful-utilities/other/">其他</a></li><li><a href="../../../useful-utilities/hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="../../../useful-utilities/uwsm/">UWSM</a></li></ul></details></li><li><details><summary><a href="../../../nix/">Nix</a></summary><ul><li><a href="../../../nix/hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../../../nix/installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../../../nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="../../../nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li><li><a href="../../../nix/cachix/">Cachix</a></li><li><a href="../../../nix/advanced/">高级用法</a></li><li><a href="../../../nix/contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../../../nvidia/">NVIDIA</a></li><li><a href="../../../ipc/">IPC</a></li><li><a href="../../../crashes-and-bugs/">崩溃与缺陷</a></li><li><a href="../../../faq/">常见问题</a></li><li><a href="../../../community/">社区</a></li><li><details><summary><a href="../../../contributing-and-debugging/">贡献与调试</a></summary><ul><li><a href="../../../contributing-and-debugging/wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../../../contributing-and-debugging/issue-guidelines/">议题指南</a></li><li><a href="../../../contributing-and-debugging/pr-guidelines/">PR 指南</a></li><li><a href="../../../contributing-and-debugging/tests/">测试</a></li><li><a href="../../../contributing-and-debugging/translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../../../">Hyprland 中文文档</a><span>›</span><a href="../../">Hyprland 插件</a><span>›</span><a href="../">开发</a></nav><article><h1>插件开发入门</h1><p>本页介绍从零开始编写 Hyprland 插件的基础知识。</p>
+<h2 id="how-do-plugins-work">插件如何工作？ <a class="permalink" href="#how-do-plugins-work" aria-label="本节链接">#</a></h2>
+<p>插件本质上是由 Hyprland 动态加载的共享对象。 插件几乎可以完全访问 Hyprland 进程内部的各个部分，因此能修改的内容比脚本多得多。</p>
+<h2 id="prerequisites">前提条件 <a class="permalink" href="#prerequisites" aria-label="本节链接">#</a></h2>
+<p>编写 Hyprland 插件需要：</p>
+<ul>
+<li>掌握 C++</li>
+<li>具备阅读能力</li>
+<li>大致了解 Hyprland 的内部机制（<em>可以</em> 边开发边学）</li>
+</ul>
+<h2 id="making-your-first-plugin">编写你的第一个插件 <a class="permalink" href="#making-your-first-plugin" aria-label="本节链接">#</a></h2>
+<p>打开你喜欢的代码编辑器。</p>
+<p>新建一个目录，本例使用 <code>MyPlugin</code>。</p>
+<p><em><strong>→ 如果你已经有 Hyprland 的头文件</strong></em></p>
+<p>如果你是通过 <code>make install</code> 安装的 Hyprland，头文件应该已经安装好了。 这种情况下，无需额外操作。</p>
+<p><em><strong>→ 如果你尚未克隆 Hyprland 源码</strong></em></p>
+<p>将 Hyprland 源码克隆到一个子目录，本例使用 <code>MyPlugin/Hyprland</code>。 运行 <code>cd Hyprland &amp;&amp; make debug &amp;&amp; sudo make installheaders &amp;&amp; cd ..</code>。</p>
+<p>准备好 Hyprland 源码后，如果你知道该怎么做，就可以从头编写插件；也可以先看看<a href="https://github.com/hyprwm/hyprland-plugins">官方插件仓库</a>中的一些简单插件，例如 <code>csgo-vulkan-fix</code> 或 <code>hyprwinwrap</code>。</p>
+<h3 id="the-basic-parts-of-the-plugin">插件的基本组成部分 <a class="permalink" href="#the-basic-parts-of-the-plugin" aria-label="本节链接">#</a></h3>
+<p>先在文件开头引入插件 API：</p>
+<pre class="cpp"><code>#include &lt;hyprland/src/plugins/PluginAPI.hpp&gt;</code></pre>
+<p>可以看看这个头文件。 里面有不少有用的注释。</p>
+<p>我们还要创建一个全局指针，用来保存插件句柄：</p>
+<pre class="cpp"><code>inline HANDLE PHANDLE = nullptr;</code></pre>
+<p>稍后我们会在插件的初始化函数中初始化这个指针。 它充当插件的内部标识。</p>
+<p>接下来是返回 API 版本的方法：</p>
+<pre class="cpp"><code>// 切勿修改此函数。
+APICALL EXPORT std::string PLUGIN_API_VERSION() {
+    return HYPRLAND_API_VERSION;
+}</code></pre>
+<p>这个方法告诉 Hyprland 编译插件时使用的是哪个 API 版本。 切勿修改它。 编译时会自动填入正确的值。</p>
+<p>跳过几个示例处理函数，接下来是两个重要的函数：</p>
+<pre class="cpp"><code>APICALL EXPORT PLUGIN_DESCRIPTION_INFO PLUGIN_INIT(HANDLE handle) {
+    PHANDLE = handle;
+
+    const std::string COMPOSITOR_HASH = __hyprland_api_get_hash();
+    const std::string CLIENT_HASH = __hyprland_api_get_client_hash();
+
+    // 务必在插件中加入这段代码，以防止因
+    // 头文件版本不匹配而导致的随机崩溃。
+    if (COMPOSITOR_HASH != CLIENT_HASH) {
+        HyprlandAPI::addNotification(PHANDLE, &quot;[MyPlugin] Mismatched headers! Can&#39;t proceed.&quot;,
+                                     CHyprColor{1.0, 0.2, 0.2, 1.0}, 5000);
+        throw std::runtime_error(&quot;[MyPlugin] Version mismatch&quot;);
+    }
+
+    // ...
+
+    return {&quot;MyPlugin&quot;, &quot;An amazing plugin that is going to change the world!&quot;, &quot;Me&quot;, &quot;1.0&quot;};
+}
+
+APICALL EXPORT void PLUGIN_EXIT() {
+    // ...
+}</code></pre>
+<p>Hyprland 会在初始化（加载）插件时调用第一个函数，因此它是 <em>必需的</em>。 你可以在这里初始化插件可能用到的一切，通常也应该这样做。 务必保存 <code>HANDLE</code>，调用 API 时需要用到它。</p>
+<p>请注意，<em>只有</em> 在这个函数中才能添加配置变量。</p>
+<p>返回值应为 <code>PLUGIN_DESCRIPTION_INFO</code> 结构体，Hyprland 通过它获取插件的名称、描述、作者和版本。</p>
+<p>第二个函数是可选的，用户卸载插件时，Hyprland 会调用它。</p>
+<p>如果插件因自身发生故障而被卸载，Hyprland <em>不会</em> 调用这个函数。</p>
+<p>你无需在退出函数中卸载布局、移除配置项、分发器或窗口装饰，也无需注销钩子。 Hyprland 会为你完成这些工作。</p>
+<h3 id="setting-up-a-development-environment">搭建开发环境 <a class="permalink" href="#setting-up-a-development-environment" aria-label="本节链接">#</a></h3>
+<p>为了方便开发，建议在嵌套的 Hyprland 调试会话中工作。 除非要测试依赖真实硬件的功能（例如触控板手势），否则强烈建议使用嵌套会话。</p>
+<p>有关搭建开发环境的步骤，请参阅<a href="../../../contributing-and-debugging/#development-environment">贡献指南</a>。</p>
+<h3 id="loading--reloading-plugins">加载与重新加载插件 <a class="permalink" href="#loading--reloading-plugins" aria-label="本节链接">#</a></h3>
+<p>构建插件后，可以在嵌套会话中用以下命令加载它：</p>
+<pre class="sh"><code>hyprctl plugin load /absolute/path/to/plugin.so</code></pre>
+<p>卸载插件则使用：</p>
+<pre class="sh"><code>hyprctl plugin unload /absolute/path/to/plugin.so</code></pre>
+<p>通常的开发流程是先加载插件，检查改动的效果，再修改代码并重新构建插件，然后卸载并再次加载插件，如此反复。</p>
+<p>可以将这些操作写成一行命令：</p>
+<pre class="sh"><code>hyprctl plugin unload /absolute/path/to/plugin.so ; hyprctl plugin load /absolute/path/to/plugin.so</code></pre>
+<p>这样就能“重新加载”插件。</p>
+<h3 id="more-advanced-stuff">进阶内容 <a class="permalink" href="#more-advanced-stuff" aria-label="本节链接">#</a></h3>
+<p>可以看看 <code>src/plugins/PluginAPI.hpp</code> 头文件。 其中每个方法都有注释说明其用途。</p>
+<p>有关一些概念的进一步说明，请参阅<a href="../advanced/">进阶内容</a>和<a href="../plugin-guidelines/">插件开发指南</a>。</p>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../../../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/hyprland-plugins/development/getting-started/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-2" href="#how-do-plugins-work">插件如何工作？</a><a class="level-2" href="#prerequisites">前提条件</a><a class="level-2" href="#making-your-first-plugin">编写你的第一个插件</a><a class="level-3" href="#the-basic-parts-of-the-plugin">插件的基本组成部分</a><a class="level-3" href="#setting-up-a-development-environment">搭建开发环境</a><a class="level-3" href="#loading--reloading-plugins">加载与重新加载插件</a><a class="level-3" href="#more-advanced-stuff">进阶内容</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>

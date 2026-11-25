@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lua 代码片段 · Hyprland Wiki 中文版</title><link rel="icon" href="../../assets/hyprland.svg">
+<link rel="stylesheet" href="../../assets/wiki.css"><script defer src="../../assets/site.js"></script></head>
+<body data-root="../../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../../"><img src="../../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/configuring/code-snippets/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../../">Hyprland 中文文档</a><ul><li><a href="../../version-selector/">版本选择器 ⚙️</a></li><li><details><summary><a href="../../getting-started/">入门指南</a></summary><ul><li><a href="../../getting-started/installation/">安装</a></li><li><a href="../../getting-started/master-tutorial/">入门教程</a></li><li><a href="../../getting-started/preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details open><summary><a href="../">配置</a></summary><ul><li><a href="../naming-conventions/">命名约定</a></li><li><a href="../selectors/">选择器</a></li><li><details><summary><a href="../core/">基础配置</a></summary><ul><li><details><summary><a href="../core/monitors/">显示器</a></summary><ul><li><a href="../core/monitors/output-selection/">选择显示输出</a></li><li><a href="../core/monitors/positioning/">显示器排列</a></li><li><a href="../core/monitors/modes/">显示模式</a></li><li><a href="../core/monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="../core/config-options/">配置选项</a></li><li><a href="../core/devices/">设备</a></li><li><a href="../core/dispatchers/">调度器</a></li><li><details><summary><a href="../core/binds/">按键绑定</a></summary><ul><li><a href="../core/binds/flags/">标志位</a></li><li><a href="../core/binds/keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="../core/binds/devices/">设备绑定</a></summary><ul><li><a href="../core/binds/devices/mouse/">鼠标</a></li><li><a href="../core/binds/devices/touchpad/">触摸板</a></li><li><a href="../core/binds/devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="../core/binds/submaps/">按键子映射</a></li><li><a href="../core/binds/globals/">全局快捷键与绑定</a></li><li><a href="../core/binds/switches/">硬件开关</a></li><li><a href="../core/binds/gestures/">手势</a></li></ul></details></li><li><details><summary><a href="../core/rules/">规则</a></summary><ul><li><a href="../core/rules/window-rules/">窗口规则</a></li><li><a href="../core/rules/workspace-rules/">工作区规则</a></li><li><a href="../core/rules/layer-rules/">图层规则</a></li></ul></details></li><li><a href="../core/environment-variables/">环境变量</a></li><li><a href="../core/animations/">动画</a></li><li><a href="../core/autostart/">自动启动</a></li><li><details><summary><a href="../core/advanced-configuration/">高级配置</a></summary><ul><li><a href="../core/advanced-configuration/events/">Lua 事件</a></li><li><a href="../core/advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="../core/advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="../core/advanced-configuration/notifications/">通知</a></li><li><a href="../core/advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../layouts/">布局</a></summary><ul><li><a href="../layouts/dwindle-layout/">Dwindle 布局</a></li><li><a href="../layouts/scrolling-layout/">滚动布局</a></li><li><a href="../layouts/master-layout/">主从布局</a></li><li><a href="../layouts/monocle-layout/">单窗口布局</a></li><li><a href="../layouts/custom-layouts/">自定义布局</a></li></ul></details></li><li><details><summary><a href="../extra/">其他配置</a></summary><ul><li><a href="../extra/multi-gpu/">多显卡</a></li><li><a href="../extra/virtual-gpu/">虚拟 GPU</a></li><li><a href="../extra/performance/">性能</a></li><li><a href="../extra/tearing/">画面撕裂</a></li><li><a href="../extra/xwayland/">Xwayland</a></li><li><a href="../extra/systemd/">systemd</a></li></ul></details></li><li><a href="./" aria-current="page">Lua 代码片段</a></li></ul></details></li><li><details><summary><a href="../../hypr-ecosystem/">Hypr 生态系统</a></summary><ul><li><details><summary><a href="../../hypr-ecosystem/user/">用户应用与实用工具</a></summary><ul><li><a href="../../hypr-ecosystem/user/hyprpaper/">hyprpaper</a></li><li><a href="../../hypr-ecosystem/user/hyprpicker/">hyprpicker</a></li><li><a href="../../hypr-ecosystem/user/hyprlauncher/">hyprlauncher</a></li><li><a href="../../hypr-ecosystem/user/hypridle/">hypridle</a></li><li><a href="../../hypr-ecosystem/user/hyprlock/">hyprlock</a></li><li><a href="../../hypr-ecosystem/user/xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li><li><a href="../../hypr-ecosystem/user/hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../../hypr-ecosystem/user/hyprsunset/">hyprsunset</a></li><li><a href="../../hypr-ecosystem/user/hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../../hypr-ecosystem/user/hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../../hypr-ecosystem/user/hyprqt6engine/">hyprqt6engine</a></li><li><a href="../../hypr-ecosystem/user/hyprpwcenter/">hyprpwcenter</a></li><li><a href="../../hypr-ecosystem/user/hyprshutdown/">hyprshutdown</a></li><li><a href="../../hypr-ecosystem/user/hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../../hypr-ecosystem/user/hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../../hypr-ecosystem/dev/">开发库和工具包</a></summary><ul><li><a href="../../hypr-ecosystem/dev/aquamarine/">aquamarine</a></li><li><a href="../../hypr-ecosystem/dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../../hypr-ecosystem/dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../../hypr-ecosystem/dev/hyprlang/">hyprlang</a></li><li><a href="../../hypr-ecosystem/dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../../hypr-ecosystem/dev/hyprutils/">hyprutils</a></li><li><a href="../../hypr-ecosystem/dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../hyprland-plugins/">Hyprland 插件</a></summary><ul><li><a href="../../hyprland-plugins/using-plugins/">使用插件</a></li><li><details><summary><a href="../../hyprland-plugins/development/">开发</a></summary><ul><li><a href="../../hyprland-plugins/development/getting-started/">插件开发入门</a></li><li><a href="../../hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li><li><a href="../../hyprland-plugins/development/advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../useful-utilities/">实用工具</a></summary><ul><li><a href="../../useful-utilities/must-have/">必备软件</a></li><li><a href="../../useful-utilities/status-bars/">状态栏</a></li><li><a href="../../useful-utilities/wallpapers/">壁纸</a></li><li><a href="../../useful-utilities/screen-sharing/">屏幕共享</a></li><li><a href="../../useful-utilities/screenshots-and-recording/">截图与录屏</a></li><li><a href="../../useful-utilities/app-launchers/">应用启动器</a></li><li><a href="../../useful-utilities/app-clients/">应用客户端</a></li><li><a href="../../useful-utilities/phone-connect/">连接手机</a></li><li><a href="../../useful-utilities/color-pickers/">取色器</a></li><li><a href="../../useful-utilities/clipboard-managers/">剪贴板管理器</a></li><li><a href="../../useful-utilities/file-managers/">文件管理器</a></li><li><a href="../../useful-utilities/other/">其他</a></li><li><a href="../../useful-utilities/hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="../../useful-utilities/uwsm/">UWSM</a></li></ul></details></li><li><details><summary><a href="../../nix/">Nix</a></summary><ul><li><a href="../../nix/hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../../nix/installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../../nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="../../nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li><li><a href="../../nix/cachix/">Cachix</a></li><li><a href="../../nix/advanced/">高级用法</a></li><li><a href="../../nix/contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../../nvidia/">NVIDIA</a></li><li><a href="../../ipc/">IPC</a></li><li><a href="../../crashes-and-bugs/">崩溃与缺陷</a></li><li><a href="../../faq/">常见问题</a></li><li><a href="../../community/">社区</a></li><li><details><summary><a href="../../contributing-and-debugging/">贡献与调试</a></summary><ul><li><a href="../../contributing-and-debugging/wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../../contributing-and-debugging/issue-guidelines/">议题指南</a></li><li><a href="../../contributing-and-debugging/pr-guidelines/">PR 指南</a></li><li><a href="../../contributing-and-debugging/tests/">测试</a></li><li><a href="../../contributing-and-debugging/translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../../">Hyprland 中文文档</a><span>›</span><a href="../">配置</a></nav><article><h1>Lua 代码片段</h1><h2 id="code-snippets">代码片段 <a class="permalink" href="#code-snippets" aria-label="本节链接">#</a></h2>
+<p>本页的代码片段可供参考，也可以直接复制粘贴使用。</p>
+<h3 id="per-layout-binds">为不同布局设置按键绑定 <a class="permalink" href="#per-layout-binds" aria-label="本节链接">#</a></h3>
+<pre class="lua"><code>---@param bind_table table&lt;HL.LayoutNamespace, HL.Dispatcher&gt;
+---@return fun()
+local function layout_bind(bind_table)
+    return function ()
+        local workspace = hl.get_active_special_workspace() or hl.get_active_workspace()
+        if not workspace then return end
+
+        local layout = workspace.tiled_layout
+
+        if bind_table[layout] then
+            hl.dispatch(bind_table[layout])
+        end
+    end
+end</code></pre>
+<p>用法：</p>
+<pre class="lua"><code>hl.bind(&quot;SUPER + A&quot;, layout_bind({
+    scrolling = hl.dsp.layout(&quot;swapcol l&quot;),  -- Scrolling 布局：将当前列与左侧相邻列互换
+    dwindle   = hl.dsp.layout(&quot;swapsplit&quot;),  -- Dwindle 布局：交换窗口在分割中的位置
+    monocle   = hl.dsp.layout(&quot;cycleprev&quot;),  -- Monocle 和 master 布局：循环切换到上一个窗口
+    master    = hl.dsp.layout(&quot;cycleprev&quot;),
+}))
+
+hl.bind(&quot;SUPER + D&quot;, layout_bind({
+    scrolling = hl.dsp.layout(&quot;swapcol r&quot;),   -- Scrolling 布局：将当前列与右侧相邻列互换
+    dwindle   = hl.dsp.layout(&quot;togglesplit&quot;), -- Dwindle 布局：切换窗口的分割方向
+    monocle   = hl.dsp.layout(&quot;cyclenext&quot;),   -- Monocle 和 master 布局：循环切换到下一个窗口
+    master    = hl.dsp.layout(&quot;cyclenext&quot;),
+}))</code></pre>
+<h3 id="minimize-windows-using-special-workspaces">使用特殊工作区最小化窗口 <a class="permalink" href="#minimize-windows-using-special-workspaces" aria-label="本节链接">#</a></h3>
+<p>这种方法借助特殊工作区模拟“最小化窗口”功能，用一个按键绑定即可在最小化和还原之间切换。请注意，每个按键绑定只能控制一个窗口。</p>
+<pre class="lua"><code>hl.bind(&quot;SUPER + X&quot;, function ()
+    if hl.get_workspace(&quot;special:minimized&quot;) then
+        hl.dispatch(hl.dsp.window.move({ workspace = hl.get_active_workspace(), window = &quot;tag:minimized&quot; }))
+        hl.dispatch(hl.dsp.window.clear_tags({ window = &quot;tag:minimized&quot; }))
+    else
+        hl.dispatch(hl.dsp.window.tag({ tag = &quot;minimized&quot;, window = hl.get_active_window() }))
+        hl.dispatch(hl.dsp.window.move({ workspace = &quot;special:minimized&quot;, follow = false }))
+    end
+end)</code></pre>
+<h3 id="share-keybinds-with-nested-sessions">与嵌套会话共享按键绑定 <a class="permalink" href="#share-keybinds-with-nested-sessions" aria-label="本节链接">#</a></h3>
+<p>在为 Hyprland 做开发（或编写插件）时，你可能希望常用的 Hyprland 会话与嵌套会话共用按键绑定。为此，请将以下内容添加到 Lua 配置中：</p>
+<pre class="lua"><code>hl.define_submap(&quot;locked&quot;, function()
+    hl.bind(&quot;catchall&quot;, hl.dsp.no_op(), { non_consuming = true })
+
+    -- 紧急退出方式
+    hl.bind(&quot;CTRL + SHIFT + Escape&quot;, hl.dsp.submap(&quot;reset&quot;))
+end)
+
+hl.on(&quot;window.active&quot;, function(window)
+    if window and window.class == &quot;aquamarine&quot; then
+        hl.dispatch(hl.dsp.submap(&quot;locked&quot;))
+    else
+        hl.dispatch(hl.dsp.submap(&quot;reset&quot;))
+    end
+end)</code></pre>
+<p>当焦点位于嵌套会话时，这段配置会阻止宿主会话接收按键事件，让你能在宿主和嵌套 Hyprland 会话中使用相同的快捷键。切换活动窗口或关闭嵌套会话后，默认按键绑定就会恢复。需要时，也可以按 <code>CTRL + SHIFT + Escape</code> 强制恢复默认按键绑定。</p>
+<h3 id="smart-gaps">智能间距 <a class="permalink" href="#smart-gaps" aria-label="本节链接">#</a></h3>
+<p>要实现其他窗口管理器或合成器中的“智能间距”功能，即“只有一个窗口时不留间距”，可使用以下配置：</p>
+<pre class="lua"><code>hl.workspace_rule({ workspace = &quot;w[tv1]&quot;, gaps_out = 0, gaps_in = 0 })
+hl.workspace_rule({ workspace = &quot;f[1]&quot;, gaps_out = 0, gaps_in = 0 })
+hl.window_rule({ match = { float = false, workspace = &quot;w[tv1]&quot; }, border_size = 0 })
+hl.window_rule({ match = { float = false, workspace = &quot;w[tv1]&quot; }, rounding = 0 })
+hl.window_rule({ match = { float = false, workspace = &quot;f[1]&quot; }, border_size = 0 })
+hl.window_rule({ match = { float = false, workspace = &quot;f[1]&quot; }, rounding = 0 })</code></pre>
+<h4 id="smart-gaps-ignoring-special-workspaces">智能间距（忽略特殊工作区） <a class="permalink" href="#smart-gaps-ignoring-special-workspaces" aria-label="本节链接">#</a></h4>
+<p>你可以组合工作区选择器，更精细地控制规则的适用范围。例如，要忽略特殊工作区：</p>
+<pre class="lua"><code>hl.workspace_rule({ workspace = &quot;w[tv1]s[false]&quot;, gaps_out = 0, gaps_in = 0 })
+hl.workspace_rule({ workspace = &quot;f[1]s[false]&quot;, gaps_out = 0, gaps_in = 0 })
+hl.window_rule({ match = { float = false, workspace = &quot;w[tv1]s[false]&quot; }, border_size = 0 })
+hl.window_rule({ match = { float = false, workspace = &quot;w[tv1]s[false]&quot; }, rounding = 0 })
+hl.window_rule({ match = { float = false, workspace = &quot;f[1]s[false]&quot; }, border_size = 0 })
+hl.window_rule({ match = { float = false, workspace = &quot;f[1]s[false]&quot; }, rounding = 0 })</code></pre>
+<h3 id="float-browsers-extension-windows">让浏览器扩展窗口浮动 <a class="permalink" href="#float-browsers-extension-windows" aria-label="本节链接">#</a></h3>
+<p>所有已知浏览器都有一个恼人的“特性”：它们会把扩展窗口的标题设为浏览器自身的名称。以下函数会监听窗口打开事件，并将匹配的窗口设为浮动：</p>
+<pre class="lua"><code>hl.on(&quot;window.open&quot;, function(w)
+    if w.class ~= &quot;firefox&quot; then return end
+    if w.initial_title ~= &quot;Mozilla Firefox&quot; then return end
+
+    local ff_windows = hl.get_windows({ class = &quot;firefox&quot; })
+    if #ff_windows &lt;= 1 then return end
+
+    hl.dispatch(hl.dsp.window.float({ action = &quot;set&quot;, window = w }))
+
+    local sub
+    sub = hl.on(&quot;window.title&quot;, function(tw)
+        if tw.address ~= w.address then return end
+        if tw.title == &quot;&quot;
+            or tw.title == &quot;Mozilla Firefox&quot;
+            or tw.title == &quot;about:blank&quot;
+            or tw.title:match(&quot;^about:.*Mozilla Firefox$&quot;) then return end
+
+        sub:remove()
+
+        if tw.title:match(&quot;^Extension:&quot;) then
+            hl.dispatch(hl.dsp.window.resize({ x = 800, y = 600, window = tw }))
+            hl.dispatch(hl.dsp.window.center({ window = tw }))
+            hl.dispatch(hl.dsp.focus({ window = tw }))
+        else
+            hl.dispatch(hl.dsp.window.float({ action = &quot;unset&quot;, window = tw }))
+        end
+    end)
+end)</code></pre>
+<h3 id="open-tor-browser-and-mullvad-browser-at-their-default-window-size">以默认窗口大小打开 Tor Browser 和 Mullvad Browser <a class="permalink" href="#open-tor-browser-and-mullvad-browser-at-their-default-window-size" aria-label="本节链接">#</a></h3>
+<p>Tor Browser 和 Mullvad Browser 都会以各自所有用户共用的窗口大小启动，这样就不会有用户因屏幕尺寸而显得与众不同。平铺、最大化或全屏时，窗口大小取决于实际布局，浏览器会在内容周围留白以作补偿。详见 <a href="https://blog.torproject.org/new-release-tor-browser-90/">Tor Browser 9.0 发行说明</a>和 <a href="https://github.com/arkenfox/TZP">TZP</a>。</p>
+<p>将这两个浏览器的窗口设为浮动，即可保留默认大小：</p>
+<pre class="lua"><code>hl.window_rule({
+    name = &quot;privacy-browsers-float&quot;,
+    match = { class = &quot;^(Tor Browser|Mullvad Browser)$&quot; },
+    float = true,
+    center = true,
+    fullscreen_state = &quot;0 0&quot;,
+    suppress_event = &quot;maximize&quot;,
+})</code></pre>
+<p>请勿为这些窗口添加 <code>size</code> 规则。</p>
+<h3 id="config-versioning">按版本调整配置 <a class="permalink" href="#config-versioning" aria-label="本节链接">#</a></h3>
+<p>有些更新会引入不兼容的改动，你可以根据 Hyprland 版本提前在配置中作出相应处理。</p>
+<p>你可以使用 <code>hl.version()</code> 为配置添加版本条件，例如：</p>
+<pre class="lua"><code>if hl.version() == &quot;0.55.2&quot; then
+    hl.config({
+        general = {
+            changed_property = &quot;value&quot;
+        }
+    })
+else
+    hl.notification.create({
+        text = &quot;You&#39;re using: &quot;.. hl.version(),
+        timeout = 10000
+    })
+end</code></pre>
+<h3 id="starts-with-helper-function">判断字符串是否以指定前缀开头的辅助函数 <a class="permalink" href="#starts-with-helper-function" aria-label="本节链接">#</a></h3>
+<pre class="lua"><code>---@param string string
+---@param prefix string
+---@return boolean
+local function starts_with(string, prefix)
+    return string:find(prefix, 1, true) == 1
+end</code></pre>
+<h3 id="toggle-animationsbluretc-hotkey">用于开关动画、模糊等效果的快捷键 <a class="permalink" href="#toggle-animationsbluretc-hotkey" aria-label="本节链接">#</a></h3>
+<p>你可以通过一个按键绑定轻松开关动画和其他效果，暂时减少干扰，或在笔记本电脑上节省电量：</p>
+<pre class="lua"><code>local game_mode = false
+
+hl.bind(&quot;SUPER + F1&quot;, function ()
+    if game_mode then
+        hl.dispatch(hl.dsp.reload_config())
+        return
+    end
+
+    hl.config({
+        general = {
+            gaps_in = 0,
+            gaps_out = 0,
+            border_size = 0,
+        },
+
+        animations = {
+            enabled = false,
+        },
+
+        decoration = {
+            shadow = { enabled = false },
+            blur = { enabled = false },
+            rounding = 0,
+        }
+    })
+
+    game_mode = true
+end)</code></pre>
+<h3 id="cycle-layout-for-current-workspace">循环切换当前工作区的布局 <a class="permalink" href="#cycle-layout-for-current-workspace" aria-label="本节链接">#</a></h3>
+<p>要更改当前工作区的布局，可以使用以下按键绑定：</p>
+<pre class="lua"><code>hl.bind(&quot;SUPER + tab&quot;, function ()
+    local layouts   = { &quot;scrolling&quot;, &quot;dwindle&quot;, &quot;master&quot;, &quot;monocle&quot; }
+    local next_layout
+
+    local workspace = hl.get_active_special_workspace() or hl.get_active_workspace()
+    if not workspace then return end
+
+    for i = 1, #layouts do
+        if layouts[i] == workspace.tiled_layout then
+            next_layout = layouts[ i % #layouts + 1 ]
+            goto dispatch
+        end
+    end
+
+    ::dispatch::
+    hl.workspace_rule({ workspace = workspace.addressable_name, layout = next_layout })
+end)</code></pre>
+<h3 id="windows-magnifier-like-cursor-zoom">类似 Windows 放大镜的光标跟随缩放 <a class="permalink" href="#windows-magnifier-like-cursor-zoom" aria-label="本节链接">#</a></h3>
+<p>这些按键绑定可调整整个屏幕的缩放倍数。放大后的视图会随光标移动，让光标始终可见，效果类似于 Windows 放大镜的全屏模式。</p>
+<pre class="lua"><code>local MAX_ZOOM = 3
+local MIN_ZOOM = 1
+local ZOOM_TOGGLE_FACTOR = 0.5
+
+---@param offset number
+---@return nil
+local function zoom(offset)
+    local current = hl.get_config(&quot;cursor.zoom_factor&quot;)
+
+    -- 如果未提供偏移量，切换后默认执行缩放；否则使用传入的缩放值
+    current = current + (offset and offset or ZOOM_TOGGLE_FACTOR)
+    if current &lt; MIN_ZOOM then current = MIN_ZOOM end
+    if current &gt; MAX_ZOOM then current = MAX_ZOOM end
+
+    hl.config({ cursor = { zoom_factor = current } })
+end
+
+hl.bind(&quot;SUPER + Z&quot;, zoom)
+hl.bind(&quot;SUPER + KP_ADD&quot;, function()
+    zoom(0.5)
+end)
+hl.bind(&quot;SUPER + Minus&quot;, function()
+    zoom(-0.5)
+end)</code></pre>
+<h3 id="launching-programs-on-workspace-creation">创建工作区时启动程序 <a class="permalink" href="#launching-programs-on-workspace-creation" aria-label="本节链接">#</a></h3>
+<p>要实现旧版 <code>on_created_empty</code> 工作区规则的效果，可通过 <code>workspace.created</code> <a href="../core/advanced-configuration/events/">事件</a>启动程序。例如：</p>
+<pre class="lua"><code>local workspace_programs = {
+    [&quot;5&quot;]               = { &quot;firefox&quot;, { float = true } },
+    [&quot;6&quot;]               = { &quot;kitty&quot;,   { fullscreen = true } },
+    [&quot;special:special&quot;] = { &quot;discord&quot;, {} },
+}
+
+hl.on(&quot;workspace.created&quot;, function(ws)
+    if not ws.is_empty then return end
+
+    local program = workspace_programs[ws.addressable_name]
+    if not program then return end
+
+    local cmd, rules = table.unpack(program)
+
+    -- 浅拷贝规则表
+    -- 如果不创建副本，就会修改 workspace_programs 中的原始表
+    local shallow_rules = {}
+    for k, v in pairs(rules) do shallow_rules[k] = v end
+    shallow_rules.workspace = ws.addressable_name .. &quot; silent&quot;
+
+    hl.exec_cmd(cmd, shallow_rules)
+end)</code></pre>
+<h3 id="move-focus-between-tiled-and-floating-windows">在平铺窗口和浮动窗口之间切换焦点 <a class="permalink" href="#move-focus-between-tiled-and-floating-windows" aria-label="本节链接">#</a></h3>
+<p>其作用类似于 i3 的 <code>focus mode_toggle</code> 按键绑定。</p>
+<pre class="lua"><code>hl.bind(&quot;SUPER + space&quot;, function()
+    local window = hl.get_active_window()
+    if not window then return end
+
+    hl.dispatch(hl.dsp.window.cycle_next({
+        floating = not window.floating,
+        tiled = window.floating,
+    }))
+end, { description = &quot;Switch focus between tiled and floating windows&quot; })</code></pre>
+<h3 id="pin-floating-windows-with-no_focus-and-restore-them">使用 no_focus 固定浮动窗口并将其还原 <a class="permalink" href="#pin-floating-windows-with-no_focus-and-restore-them" aria-label="本节链接">#</a></h3>
+<p>这个函数能让歌词窗口等浮动窗口在每个工作区都保持可见，同时避免抢占其他窗口的焦点。需要移动这些窗口时，也可以用这个函数将它们还原为普通浮动窗口。 注意：在普通窗口上再次调用此函数，会还原之前被设为该状态的所有窗口。</p>
+<pre class="lua"><code>local function pin_nofocus_toggle()
+    local tag = &quot;pin_nofocus&quot;
+
+    local function has_tag(window)
+        for _, t in ipairs(window.tags or {}) do
+            if t == tag then
+                return true
+            end
+        end
+        return false
+    end
+
+    return function()
+        local window = hl.get_active_window()
+        if not window then return end
+
+        if window.floating and window.fullscreen == 0 and not window.pinned and not has_tag(window) then
+            -- 给窗口添加标签，并将其设为置顶，同时启用 no_focus
+            hl.dispatch(hl.dsp.window.tag({ tag = &quot;+&quot; .. tag, window = window }))
+            hl.dispatch(hl.dsp.window.pin({ window = window }))
+            hl.dispatch(hl.dsp.window.set_prop({ prop = &quot;no_focus&quot;, value = &quot;1&quot;, window = window }))
+        else
+            -- 恢复所有以这种方式标记的窗口
+            for _, marked_window in ipairs(hl.get_windows({ tag = tag })) do
+                hl.dispatch(hl.dsp.window.set_prop({ prop = &quot;no_focus&quot;, value = &quot;unset&quot;, window = marked_window }))
+                if marked_window.pinned then
+                    hl.dispatch(hl.dsp.window.pin({ window = marked_window }))
+                end
+                hl.dispatch(hl.dsp.window.tag({ tag = &quot;-&quot; .. tag, window = marked_window }))
+            end
+        end
+    end
+end
+hl.bind(&quot;SUPER + P&quot;, pin_nofocus_toggle())</code></pre>
+<h3 id="vim-like-keymaps">类似 Vim 的按键映射 <a class="permalink" href="#vim-like-keymaps" aria-label="本节链接">#</a></h3>
+<p>Hyprland 的功能很多，如果想为每项功能都设置按键绑定，键盘上的键可能不够用。不用担心，如果需要更多绑定，可以利用子映射创建按键映射。与需要同时按下多个修饰键的单个按键绑定相比，这些映射也更容易操作。</p>
+<p>下面是用这种方式管理窗口组的示例：</p>
+<pre class="lua"><code>hl.bind(&quot;SUPER + G&quot;, hl.dsp.submap(&quot;group_management&quot;), { description = &quot;Enter a group management submap&quot; })
+
+---@param keys string
+---@param action HL.Dispatcher
+---@param description string
+---@return HL.Keybind
+local map = function(key, action, description)
+    hl.bind(key, function()
+        hl.dispatch(action)
+        hl.dispatch(hl.dsp.submap(&quot;reset&quot;))
+    end, { description = description })
+end
+
+hl.define_submap(&quot;group_management&quot;, function()
+    map(&quot;G&quot;, hl.dsp.group.toggle(), &quot;Toggle window group&quot;)
+
+    map(&quot;H&quot;, hl.dsp.window.move({ into_group = &quot;l&quot; }), &quot;Move window into a group on the left&quot;)
+    map(&quot;J&quot;, hl.dsp.window.move({ into_group = &quot;d&quot; }), &quot;Move window into a group on the bottom&quot;)
+    map(&quot;K&quot;, hl.dsp.window.move({ into_group = &quot;u&quot; }), &quot;Move window into a group on the top&quot;)
+    map(&quot;L&quot;, hl.dsp.window.move({ into_group = &quot;r&quot; }), &quot;Move window into a group on the right&quot;)
+
+    map(&quot;E&quot;, hl.dsp.window.move({ out_of_group = true }), &quot;Move window out of group&quot;)
+
+    map(&quot;N&quot;, hl.dsp.group.next(), &quot;Next window in group&quot;)
+    map(&quot;P&quot;, hl.dsp.group.prev(), &quot;Previous window in group&quot;)
+
+    map(&quot;F&quot;, hl.dsp.group.move_window(), &quot;Move window forward in the group order&quot;)
+    map(&quot;B&quot;, hl.dsp.group.move_window({ forward = false }), &quot;Move window backward in the group order&quot;)
+
+    map(&quot;T&quot;, hl.dsp.group.lock_active(), &quot;Toggle group lock&quot;)
+
+    for i = 1, 10 do
+        map(tostring(i % 10), hl.dsp.group.active({ index = i }), &quot;Focus window &quot; .. i .. &quot; in a group&quot;)
+    end
+
+    hl.bind(&quot;Escape&quot;, hl.dsp.submap(&quot;reset&quot;), { description = &quot;Quit submap&quot; })
+end)</code></pre>
+<h3 id="close-all-windows-at-once">一次关闭所有窗口 <a class="permalink" href="#close-all-windows-at-once" aria-label="本节链接">#</a></h3>
+<pre class="lua"><code>local function closeAllWindows()
+    local windows = hl.get_windows()
+
+    for _,w in pairs(windows) do
+        hl.dispatch(hl.dsp.window.close({ window = w }))
+    end
+end
+
+local function closeAllWindowsCurrentWorkspace()
+    local cws = hl.get_active_special_workspace() or hl.get_active_workspace()
+    local windows = hl.get_windows({ workspace = cws })
+
+    for _,w in pairs(windows) do
+        hl.dispatch(hl.dsp.window.close({ window = w }))
+    end
+end
+
+hl.bind(&quot;SUPER + BackSpace&quot;, closeAllWindowsCurrentWorkspace )
+hl.bind(&quot;SUPER + Delete&quot;, closeAllWindows )</code></pre>
+<h3 id="move-all-windows-in-current-workspace-to-another">将当前工作区的所有窗口移至另一个工作区 <a class="permalink" href="#move-all-windows-in-current-workspace-to-another" aria-label="本节链接">#</a></h3>
+<pre class="lua"><code>---@param ws HL.Workspace
+---@param follow boolean
+---@return nil
+local function moveWindowsCurrentWorkspace(ws, follow)
+    local cws = hl.get_active_special_workspace() or hl.get_active_workspace()
+    local windows = hl.get_windows({ workspace = cws })
+
+    for _, w in pairs(windows) do
+        hl.dispatch(
+            hl.dsp.window.move({
+                window = w,
+                workspace = ws,
+                follow = follow
+            })
+        )
+    end
+end
+
+for i = 1, 10 do
+    local key = i % 10
+    hl.bind(&quot;SUPER + SHIFT + ALT + &quot; .. key, function()
+        moveWindowsCurrentWorkspace(i, true)
+    end)
+end
+
+for i = 1, 10 do
+    local key = i % 10
+    hl.bind(&quot;SUPER + CTRL + ALT + &quot; .. key, function()
+        moveWindowsCurrentWorkspace(i, false)
+    end)
+end</code></pre>
+<h3 id="switch-to-workspaces-01-99">切换到 01 至 99 号工作区 <a class="permalink" href="#switch-to-workspaces-01-99" aria-label="本节链接">#</a></h3>
+<pre class="lua"><code>hl.bind(&quot;SUPER + P&quot;, hl.dsp.submap(&quot;ws_tens&quot;), { description = &quot;Workspace picker (01-99)&quot; })
+
+hl.define_submap(&quot;ws_tens&quot;, function()
+    for tens = 0, 9 do
+        hl.bind(tostring(tens), hl.dsp.submap(&quot;ws_units_&quot; .. tens))
+    end
+
+    local letters = &quot;abcdefghijklmnopqrstuvwxyz&quot;
+    for i = 1, #letters do
+        hl.bind(letters:sub(i, i), hl.dsp.submap(&quot;reset&quot;))
+    end
+    hl.bind(&quot;Escape&quot;, hl.dsp.submap(&quot;reset&quot;))
+end)
+
+for tens = 0, 9 do
+    hl.define_submap(&quot;ws_units_&quot; .. tens, &quot;reset&quot;, function()
+        for units = 0, 9 do
+            local target = tens * 10 + units
+            if target &gt; 0 then
+                hl.bind(tostring(units), hl.dsp.focus({ workspace = target }))
+            end
+        end
+        hl.bind(&quot;Escape&quot;, hl.dsp.submap(&quot;reset&quot;))
+        hl.bind(&quot;catchall&quot;, hl.dsp.submap(&quot;reset&quot;))
+    end)
+end</code></pre>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/configuring/code-snippets/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-2" href="#code-snippets">代码片段</a><a class="level-3" href="#per-layout-binds">为不同布局设置按键绑定</a><a class="level-3" href="#minimize-windows-using-special-workspaces">使用特殊工作区最小化窗口</a><a class="level-3" href="#share-keybinds-with-nested-sessions">与嵌套会话共享按键绑定</a><a class="level-3" href="#smart-gaps">智能间距</a><a class="level-4" href="#smart-gaps-ignoring-special-workspaces">智能间距（忽略特殊工作区）</a><a class="level-3" href="#float-browsers-extension-windows">让浏览器扩展窗口浮动</a><a class="level-3" href="#open-tor-browser-and-mullvad-browser-at-their-default-window-size">以默认窗口大小打开 Tor Browser 和 Mullvad Browser</a><a class="level-3" href="#config-versioning">按版本调整配置</a><a class="level-3" href="#starts-with-helper-function">判断字符串是否以指定前缀开头的辅助函数</a><a class="level-3" href="#toggle-animationsbluretc-hotkey">用于开关动画、模糊等效果的快捷键</a><a class="level-3" href="#cycle-layout-for-current-workspace">循环切换当前工作区的布局</a><a class="level-3" href="#windows-magnifier-like-cursor-zoom">类似 Windows 放大镜的光标跟随缩放</a><a class="level-3" href="#launching-programs-on-workspace-creation">创建工作区时启动程序</a><a class="level-3" href="#move-focus-between-tiled-and-floating-windows">在平铺窗口和浮动窗口之间切换焦点</a><a class="level-3" href="#pin-floating-windows-with-no_focus-and-restore-them">使用 no_focus 固定浮动窗口并将其还原</a><a class="level-3" href="#vim-like-keymaps">类似 Vim 的按键映射</a><a class="level-3" href="#close-all-windows-at-once">一次关闭所有窗口</a><a class="level-3" href="#move-all-windows-in-current-workspace-to-another">将当前工作区的所有窗口移至另一个工作区</a><a class="level-3" href="#switch-to-workspaces-01-99">切换到 01 至 99 号工作区</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>

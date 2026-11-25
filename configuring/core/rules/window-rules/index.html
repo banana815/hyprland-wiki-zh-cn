@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>窗口规则 · Hyprland Wiki 中文版</title><link rel="icon" href="../../../../assets/hyprland.svg">
+<link rel="stylesheet" href="../../../../assets/wiki.css"><script defer src="../../../../assets/site.js"></script></head>
+<body data-root="../../../../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../../../../"><img src="../../../../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/configuring/core/rules/window-rules/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../../../../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../../../../">Hyprland 中文文档</a><ul><li><a href="../../../../version-selector/">版本选择器 ⚙️</a></li><li><details><summary><a href="../../../../getting-started/">入门指南</a></summary><ul><li><a href="../../../../getting-started/installation/">安装</a></li><li><a href="../../../../getting-started/master-tutorial/">入门教程</a></li><li><a href="../../../../getting-started/preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details open><summary><a href="../../../">配置</a></summary><ul><li><a href="../../../naming-conventions/">命名约定</a></li><li><a href="../../../selectors/">选择器</a></li><li><details open><summary><a href="../../">基础配置</a></summary><ul><li><details><summary><a href="../../monitors/">显示器</a></summary><ul><li><a href="../../monitors/output-selection/">选择显示输出</a></li><li><a href="../../monitors/positioning/">显示器排列</a></li><li><a href="../../monitors/modes/">显示模式</a></li><li><a href="../../monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="../../config-options/">配置选项</a></li><li><a href="../../devices/">设备</a></li><li><a href="../../dispatchers/">调度器</a></li><li><details><summary><a href="../../binds/">按键绑定</a></summary><ul><li><a href="../../binds/flags/">标志位</a></li><li><a href="../../binds/keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="../../binds/devices/">设备绑定</a></summary><ul><li><a href="../../binds/devices/mouse/">鼠标</a></li><li><a href="../../binds/devices/touchpad/">触摸板</a></li><li><a href="../../binds/devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="../../binds/submaps/">按键子映射</a></li><li><a href="../../binds/globals/">全局快捷键与绑定</a></li><li><a href="../../binds/switches/">硬件开关</a></li><li><a href="../../binds/gestures/">手势</a></li></ul></details></li><li><details open><summary><a href="../">规则</a></summary><ul><li><a href="./" aria-current="page">窗口规则</a></li><li><a href="../workspace-rules/">工作区规则</a></li><li><a href="../layer-rules/">图层规则</a></li></ul></details></li><li><a href="../../environment-variables/">环境变量</a></li><li><a href="../../animations/">动画</a></li><li><a href="../../autostart/">自动启动</a></li><li><details><summary><a href="../../advanced-configuration/">高级配置</a></summary><ul><li><a href="../../advanced-configuration/events/">Lua 事件</a></li><li><a href="../../advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="../../advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="../../advanced-configuration/notifications/">通知</a></li><li><a href="../../advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../layouts/">布局</a></summary><ul><li><a href="../../../layouts/dwindle-layout/">Dwindle 布局</a></li><li><a href="../../../layouts/scrolling-layout/">滚动布局</a></li><li><a href="../../../layouts/master-layout/">主从布局</a></li><li><a href="../../../layouts/monocle-layout/">单窗口布局</a></li><li><a href="../../../layouts/custom-layouts/">自定义布局</a></li></ul></details></li><li><details><summary><a href="../../../extra/">其他配置</a></summary><ul><li><a href="../../../extra/multi-gpu/">多显卡</a></li><li><a href="../../../extra/virtual-gpu/">虚拟 GPU</a></li><li><a href="../../../extra/performance/">性能</a></li><li><a href="../../../extra/tearing/">画面撕裂</a></li><li><a href="../../../extra/xwayland/">Xwayland</a></li><li><a href="../../../extra/systemd/">systemd</a></li></ul></details></li><li><a href="../../../code-snippets/">Lua 代码片段</a></li></ul></details></li><li><details><summary><a href="../../../../hypr-ecosystem/">Hypr 生态系统</a></summary><ul><li><details><summary><a href="../../../../hypr-ecosystem/user/">用户应用与实用工具</a></summary><ul><li><a href="../../../../hypr-ecosystem/user/hyprpaper/">hyprpaper</a></li><li><a href="../../../../hypr-ecosystem/user/hyprpicker/">hyprpicker</a></li><li><a href="../../../../hypr-ecosystem/user/hyprlauncher/">hyprlauncher</a></li><li><a href="../../../../hypr-ecosystem/user/hypridle/">hypridle</a></li><li><a href="../../../../hypr-ecosystem/user/hyprlock/">hyprlock</a></li><li><a href="../../../../hypr-ecosystem/user/xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li><li><a href="../../../../hypr-ecosystem/user/hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../../../../hypr-ecosystem/user/hyprsunset/">hyprsunset</a></li><li><a href="../../../../hypr-ecosystem/user/hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../../../../hypr-ecosystem/user/hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../../../../hypr-ecosystem/user/hyprqt6engine/">hyprqt6engine</a></li><li><a href="../../../../hypr-ecosystem/user/hyprpwcenter/">hyprpwcenter</a></li><li><a href="../../../../hypr-ecosystem/user/hyprshutdown/">hyprshutdown</a></li><li><a href="../../../../hypr-ecosystem/user/hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../../../../hypr-ecosystem/user/hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../../../../hypr-ecosystem/dev/">开发库和工具包</a></summary><ul><li><a href="../../../../hypr-ecosystem/dev/aquamarine/">aquamarine</a></li><li><a href="../../../../hypr-ecosystem/dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../../../../hypr-ecosystem/dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../../../../hypr-ecosystem/dev/hyprlang/">hyprlang</a></li><li><a href="../../../../hypr-ecosystem/dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../../../../hypr-ecosystem/dev/hyprutils/">hyprutils</a></li><li><a href="../../../../hypr-ecosystem/dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../../hyprland-plugins/">Hyprland 插件</a></summary><ul><li><a href="../../../../hyprland-plugins/using-plugins/">使用插件</a></li><li><details><summary><a href="../../../../hyprland-plugins/development/">开发</a></summary><ul><li><a href="../../../../hyprland-plugins/development/getting-started/">插件开发入门</a></li><li><a href="../../../../hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li><li><a href="../../../../hyprland-plugins/development/advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../../useful-utilities/">实用工具</a></summary><ul><li><a href="../../../../useful-utilities/must-have/">必备软件</a></li><li><a href="../../../../useful-utilities/status-bars/">状态栏</a></li><li><a href="../../../../useful-utilities/wallpapers/">壁纸</a></li><li><a href="../../../../useful-utilities/screen-sharing/">屏幕共享</a></li><li><a href="../../../../useful-utilities/screenshots-and-recording/">截图与录屏</a></li><li><a href="../../../../useful-utilities/app-launchers/">应用启动器</a></li><li><a href="../../../../useful-utilities/app-clients/">应用客户端</a></li><li><a href="../../../../useful-utilities/phone-connect/">连接手机</a></li><li><a href="../../../../useful-utilities/color-pickers/">取色器</a></li><li><a href="../../../../useful-utilities/clipboard-managers/">剪贴板管理器</a></li><li><a href="../../../../useful-utilities/file-managers/">文件管理器</a></li><li><a href="../../../../useful-utilities/other/">其他</a></li><li><a href="../../../../useful-utilities/hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="../../../../useful-utilities/uwsm/">UWSM</a></li></ul></details></li><li><details><summary><a href="../../../../nix/">Nix</a></summary><ul><li><a href="../../../../nix/hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../../../../nix/installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../../../../nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="../../../../nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li><li><a href="../../../../nix/cachix/">Cachix</a></li><li><a href="../../../../nix/advanced/">高级用法</a></li><li><a href="../../../../nix/contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../../../../nvidia/">NVIDIA</a></li><li><a href="../../../../ipc/">IPC</a></li><li><a href="../../../../crashes-and-bugs/">崩溃与缺陷</a></li><li><a href="../../../../faq/">常见问题</a></li><li><a href="../../../../community/">社区</a></li><li><details><summary><a href="../../../../contributing-and-debugging/">贡献与调试</a></summary><ul><li><a href="../../../../contributing-and-debugging/wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../../../../contributing-and-debugging/issue-guidelines/">议题指南</a></li><li><a href="../../../../contributing-and-debugging/pr-guidelines/">PR 指南</a></li><li><a href="../../../../contributing-and-debugging/tests/">测试</a></li><li><a href="../../../../contributing-and-debugging/translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../../../../">Hyprland 中文文档</a><span>›</span><a href="../../../">配置</a><span>›</span><a href="../../">基础配置</a><span>›</span><a href="../">规则</a></nav><article><h1>窗口规则</h1><h2 id="syntax">语法 <a class="permalink" href="#syntax" aria-label="本节链接">#</a></h2>
+<pre class="lua"><code>hl.window_rule({
+    name? = string,
+    match = {
+        prop = some_prop_value,
+    },
+    effect = some_effect_value,
+})</code></pre>
+<h2 id="window-rules">窗口规则 <a class="permalink" href="#window-rules" aria-label="本节链接">#</a></h2>
+<p>可以设置窗口规则，根据窗口属性为不同窗口指定不同的行为。</p>
+<h3 id="props">匹配属性 <a class="permalink" href="#props" aria-label="本节链接">#</a></h3>
+<p><code>match</code> 表支持以下字段：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>class</td>
+<td><code>class</code> 与 <code>RegEx</code> 匹配的窗口</td>
+<td>[RegEx]</td>
+</tr>
+<tr>
+<td>content</td>
+<td>具有指定内容类型（none、photo、video、game）的窗口</td>
+<td>string</td>
+</tr>
+<tr>
+<td>focus</td>
+<td>当前获得焦点的窗口</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>fullscreen</td>
+<td>全屏窗口（包括覆盖式和非覆盖式）</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>fullscreen_state_client</td>
+<td><code>fullscreenstate</code> 匹配的窗口。<code>0</code> - 无，<code>1</code> - 最大化，<code>2</code> - 全屏，<code>3</code> - 同时最大化和全屏</td>
+<td>int</td>
+</tr>
+<tr>
+<td>fullscreen_state_internal</td>
+<td><code>fullscreenstate</code> 匹配的窗口。<code>0</code> - 无，<code>1</code> - 最大化，<code>2</code> - 全屏，<code>3</code> - 同时最大化和全屏</td>
+<td>int</td>
+</tr>
+<tr>
+<td>float</td>
+<td>浮动窗口</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>group</td>
+<td>已加入窗口组的窗口</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>initial_class</td>
+<td><code>initialClass</code> 与 <code>RegEx</code> 匹配的窗口</td>
+<td>[RegEx]</td>
+</tr>
+<tr>
+<td>initial_title</td>
+<td><code>initialTitle</code> 与 <code>RegEx</code> 匹配的窗口</td>
+<td>[RegEx]</td>
+</tr>
+<tr>
+<td>modal</td>
+<td>模态窗口（例如询问“是否确定”的弹窗）</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>pin</td>
+<td>固定窗口（即在所有工作区上显示该窗口）。<strong>重要：非浮动窗口会忽略固定设置</strong></td>
+<td>bool</td>
+</tr>
+<tr>
+<td>tag</td>
+<td><code>tag</code> 匹配的窗口</td>
+<td>string</td>
+</tr>
+<tr>
+<td>title</td>
+<td><code>title</code> 与 <code>RegEx</code> 匹配的窗口</td>
+<td>[RegEx]</td>
+</tr>
+<tr>
+<td>workspace</td>
+<td>位于匹配工作区中的窗口</td>
+<td>工作区选择器</td>
+</tr>
+<tr>
+<td>xdg_tag</td>
+<td>根据窗口的 xdgTag 匹配窗口</td>
+<td>[RegEx]</td>
+</tr>
+<tr>
+<td>xwayland</td>
+<td>Xwayland 窗口</td>
+<td>bool</td>
+</tr>
+</tbody>
+</table>
+<h2 id="effects">效果 <a class="permalink" href="#effects" aria-label="本节链接">#</a></h2>
+<h3 id="static-effects">静态效果 <a class="permalink" href="#static-effects" aria-label="本节链接">#</a></h3>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>窗口创建后，无法根据 <code>title</code> 的变化对窗口应用 <code>float</code> 或其他静态规则。此限制适用于这里列出的所有静态效果。</p>
+<p>请改用<a href="../../advanced-configuration/events/">事件</a>监听器触发一次<a href="../../dispatchers/">调度调用</a>，在窗口创建后应用该效果：</p>
+<pre class="lua"><code>hl.on(&quot;window.title&quot;, function(w)
+    if w ~= nil and w.title == &quot;foo&quot; then
+        hl.dispatch(hl.dsp.window.float({ action = &quot;set&quot; }))
+    end
+end)</code></pre>
+</div>
+<p>静态效果只在窗口打开时求值一次，之后不会再次求值。因此，按 <code>title</code> 和 <code>class</code> 匹配时，实际匹配到的始终分别是 <code>initialTitle</code> 和 <code>initialClass</code>。</p>
+<table>
+<thead>
+<tr>
+<th>效果</th>
+<th>说明</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>center</td>
+<td>如果窗口为浮动窗口，则将其置于所在显示器的中央</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>content</td>
+<td>设置内容类型：<code>"none"</code>、<code>"photo"</code>、<code>"video"</code> 或 <code>"game"</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td>float</td>
+<td>使窗口浮动</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>fullscreen</td>
+<td>使窗口全屏显示</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>fullscreen_state</td>
+<td>设置内部客户端的全屏模式（例如 <code>"1 2"</code>）。可用值：<code>0</code> 表示无，<code>1</code> 表示最大化，<code>2</code> 表示全屏，<code>3</code> 表示同时最大化和全屏</td>
+<td>string</td>
+</tr>
+<tr>
+<td>group</td>
+<td>设置窗口组属性。请参阅下文的<a href="#group-window-rule-options">窗口组选项</a></td>
+<td>string</td>
+</tr>
+<tr>
+<td>maximize</td>
+<td>使窗口最大化</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>monitor</td>
+<td>指定窗口应在哪台显示器上打开（例如 <code>"1"</code>、<code>"DP-1"</code>）。可在末尾追加 <code>" silent"</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td>move</td>
+<td>将浮动窗口移动到指定位置，坐标相对于所在显示器。请参阅下文的<a href="#position-and-size">位置和大小</a></td>
+<td>table 或 string</td>
+</tr>
+<tr>
+<td>no_close_for</td>
+<td>在窗口打开后的指定毫秒数内，禁止使用 <code>killactive</code> 关闭该窗口</td>
+<td>int</td>
+</tr>
+<tr>
+<td>no_initial_focus</td>
+<td>禁止窗口在打开时获得初始焦点</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>pin</td>
+<td>固定窗口，使其显示在所有工作区上。<em>注意：固定设置对非浮动窗口无效。通常应与 <code>float = true</code> 配合使用。</em></td>
+<td>bool</td>
+</tr>
+<tr>
+<td>pseudo</td>
+<td>使窗口采用伪平铺模式</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>scrolling_width</td>
+<td>设置窗口在使用滚动布局的工作区中打开时所在列的宽度</td>
+<td>float</td>
+</tr>
+<tr>
+<td>size</td>
+<td>调整浮动窗口的大小。参见下文的<a href="#position-and-size">位置和大小</a></td>
+<td>table 或 string</td>
+</tr>
+<tr>
+<td>suppress_event</td>
+<td>忽略指定事件。多个事件用空格分隔：<code>"fullscreen"</code>、<code>"maximize"</code>、<code>"activate"</code>、<code>"activatefocus"</code>、<code>"fullscreenoutput"</code>、<code>"x11configurerequest"</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td>tile</td>
+<td>平铺窗口</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>workspace</td>
+<td>设置窗口打开时所在的工作区。也可以设为 <code>"unset"</code>，或在工作区标识后追加 <code>" silent"</code></td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="position-and-size">位置和大小 <a class="permalink" href="#position-and-size" aria-label="本节链接">#</a></h4>
+<p>位置和大小参数接受 Lua 表或字符串。每个值可以是数字或<a href="#expressions">表达式</a>。字符串参数在第一个空白字符处分割。</p>
+<p>只提供一个值、表中的元素个数不等于两个，或使用空白字符以外的分隔符（如 <code>"800,600"</code>、<code>"800x600"</code>），都会导致配置错误。</p>
+<h5 id="expressions">表达式 <a class="permalink" href="#expressions" aria-label="本节链接">#</a></h5>
+<p>表达式是表示基本信息的简写。所有位置变量都使用相对于显示器的坐标。在字符串参数中，表达式不能含有空格，否则无法正确解析。</p>
+<ul>
+<li><code>monitor_w</code> 和 <code>monitor_h</code> 分别表示显示器的宽度和高度</li>
+<li><code>window_x</code> 和 <code>window_y</code> 分别表示窗口的横坐标和纵坐标</li>
+<li><code>window_w</code> 和 <code>window_h</code> 分别表示窗口的宽度和高度</li>
+<li><code>cursor_x</code> 和 <code>cursor_y</code> 分别表示光标的横坐标和纵坐标</li>
+</ul>
+<details><summary>示例</summary>
+
+<pre class="lua"><code>-- 将尺寸设为 x = 800, y = 600
+size = { 800, 600 }
+
+-- 尺寸相同，但通过字符串指定
+size = &quot;800 600&quot;
+
+-- 将窗口中心移到光标位置
+move = { &quot;cursor_x - (window_w * 0.5)&quot;, &quot;cursor_y - (window_h * 0.5)&quot; }
+
+-- 将窗口与显示器左边缘对齐，并置于显示器中心下方 17 像素处
+move = { &quot;window_w * 0.5&quot;, &quot;(monitor_h / 2) + 17&quot; }
+
+-- 将窗口的宽和高分别设为显示器分辨率对应尺寸的一半
+size = { &quot;monitor_w * 0.5&quot;, &quot;monitor_h * 0.5&quot; }
+
+-- 将 max_size 的宽和高分别设为显示器宽度和高度的一半
+max_size = &quot;monitor_w*0.5 monitor_h*0.5&quot;</code></pre>
+</details>
+
+<h3 id="dynamic-effects">动态效果 <a class="permalink" href="#dynamic-effects" aria-label="本节链接">#</a></h3>
+<p>每当属性发生变化时，都会重新计算动态效果。</p>
+<table>
+<thead>
+<tr>
+<th>效果</th>
+<th>说明</th>
+<th>参数</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>allows_input</td>
+<td>强制 Xwayland 窗口接收输入，即使窗口请求不接收输入</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>animation</td>
+<td>强制对窗口应用动画，可指定动画样式（如 <code>"popin"</code>、<code>"popin 80%"</code>）</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>border_color</td>
+<td>将窗口边框设为纯色或渐变色。参见下文的 <a href="#border_color-window-rule">border_color 窗口规则</a></td>
+<td>gradient</td>
+<td></td>
+</tr>
+<tr>
+<td>border_size</td>
+<td>设置边框宽度</td>
+<td>int</td>
+<td></td>
+</tr>
+<tr>
+<td>confine_pointer</td>
+<td>将鼠标光标限制在窗口内。主要用于在游戏时将光标限制在一台显示器上</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>dim_around</td>
+<td>使窗口周围的一切变暗。此效果适用于浮动窗口</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>decorate</td>
+<td>是否绘制窗口装饰（默认值：<code>true</code>）</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>focus_on_activate</td>
+<td>当应用请求获得焦点时，Hyprland 是否将焦点移至该应用</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>idle_inhibit</td>
+<td>设置阻止系统进入空闲状态的规则。可用模式：<code>"none"</code>、<code>"always"</code>、<code>"focus"</code>、<code>"fullscreen"</code></td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>immediate</td>
+<td>强制允许该窗口出现画面撕裂</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>keep_aspect_ratio</td>
+<td>使用鼠标调整窗口大小时强制保持宽高比</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>max_size</td>
+<td>设置浮动窗口的最大尺寸。参见上文的<a href="#position-and-size">位置和大小</a></td>
+<td>表或字符串</td>
+<td></td>
+</tr>
+<tr>
+<td>min_size</td>
+<td>设置浮动窗口的最小尺寸。参见上文的<a href="#position-and-size">位置和大小</a></td>
+<td>表或字符串</td>
+<td></td>
+</tr>
+<tr>
+<td>nearest_neighbor</td>
+<td>强制使用最近邻过滤</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>no_anim</td>
+<td>禁用该窗口的动画</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>no_auto_hdr</td>
+<td>禁用该窗口的 AutoHDR，可防止 <code>foot</code> 等程序在全屏时触发 AutoHDR</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>no_blur</td>
+<td>禁用该窗口的模糊效果</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>no_dim</td>
+<td>禁用该窗口的变暗效果</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>no_focus</td>
+<td>禁止该窗口获得焦点</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>no_follow_mouse</td>
+<td>设置了 <code>input.follow_mouse=1</code> 时，阻止该窗口在鼠标移入时获得焦点</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>no_glow</td>
+<td>禁用该窗口的辉光效果</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>no_max_size</td>
+<td>移除窗口的最大尺寸限制</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>no_screen_share</td>
+<td>在屏幕共享画面中用黑色矩形遮住该窗口及其弹出窗口</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>no_shadow</td>
+<td>禁用该窗口的阴影</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>no_shortcuts_inhibit</td>
+<td>禁止应用屏蔽快捷键</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>no_vrr</td>
+<td>禁用该窗口的可变刷新率（VRR）。仅在 <code>misc.vrr</code> 设为 <code>2</code> 或 <code>3</code> 时生效</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>no_wobble</td>
+<td>禁用该窗口的晃动效果</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>no_xdg_drags</td>
+<td>设为 true 时，禁用该窗口由 XDG 驱动的拖动操作（如拖动客户端装饰的顶栏）</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>opacity</td>
+<td>设置额外的不透明度乘数（例如，<code>"0.8"</code> 用于所有状态，<code>"0.9 0.7"</code> 分别用于活动和非活动状态，<code>"1.0 0.8 0.9"</code> 分别用于活动、非活动和全屏状态）。在每个值后追加 <code>" override"</code>，即可将该值用作绝对不透明度，而非乘数</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>opaque</td>
+<td>将该窗口的 <code>decoration.active/inactive/fullscreen_opacity</code> 设为 <code>1</code></td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>force_rgbx</td>
+<td>禁用窗口自身的透明效果*（与 opaque 规则不同，此设置不影响 Hyprland 为窗口指定的透明度）*</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>persistent_size</td>
+<td>在内部保存浮动窗口的大小。打开类名和标题均相同的新浮动窗口时，恢复已保存的大小</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>render_unfocused</td>
+<td>即使窗口不可见，也强制让它认为自身正在被渲染</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>rounding</td>
+<td>强制将圆角半径设为 X 像素，忽略默认值</td>
+<td>int / <code>{ top_left?, top_right?, bottom_left?, bottom_right?}</code></td>
+<td></td>
+</tr>
+<tr>
+<td>rounding_power</td>
+<td>覆盖该窗口的圆角曲线指数</td>
+<td>float</td>
+<td></td>
+</tr>
+<tr>
+<td>scroll_mouse</td>
+<td>强制该窗口覆盖 <code>input.scroll_factor</code> 的设置</td>
+<td>float</td>
+<td></td>
+</tr>
+<tr>
+<td>scroll_touchpad</td>
+<td>强制该窗口覆盖 <code>input.touchpad.scroll_factor</code> 的设置</td>
+<td>float</td>
+<td></td>
+</tr>
+<tr>
+<td>stay_focused</td>
+<td>只要该窗口可见，就强制它保持焦点</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>sync_fullscreen</td>
+<td>实际使用的全屏模式是否应始终与发送给窗口的全屏模式一致</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>tag</td>
+<td>应用标签。使用前缀 <code>+</code> 添加标签，使用 <code>-</code> 移除标签，省略前缀则切换标签状态（如 <code>"+myTag"</code>）</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>tonemap</td>
+<td>色调映射方式：<code>on</code> 启用色调映射（默认），<code>off</code> 禁用色调映射，<code>clamp</code> 将源亮度限制在目标亮度范围内，<code>limited</code> 使用动态曲线，仅对超出目标亮度上限的高亮部分进行色调映射</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>xray</td>
+<td>设置该窗口的模糊效果 xray 模式</td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>所有动态效果都可以通过 <a href="../../dispatchers/#set_prop"><code>set_prop()</code></a> 设置。</p>
+<h3 id="group-window-rule-options"><code>group</code> 窗口规则选项 <a class="permalink" href="#group-window-rule-options" aria-label="本节链接">#</a></h3>
+<p><code>group</code> 效果接受一个字符串，其中的选项用空格分隔：</p>
+<ul>
+<li><code>"barred"</code> - 禁止将窗口自动加入当前拥有焦点且未锁定的组。</li>
+<li><code>"deny"</code> - 禁止将窗口切换为组或加入已有的组。</li>
+<li><code>"invade"</code> - 强制在已锁定的组中打开窗口。</li>
+<li><code>"lock"</code> [<code>"always"</code>] - 锁定组。与 <code>"set"</code> 或 <code>"new"</code> 配合使用。</li>
+<li><code>"new"</code> - <code>"barred set"</code> 的简写。</li>
+<li><code>"override"</code> [其他选项] - 覆盖其他 <code>group</code> 规则。</li>
+<li><code>"set"</code> [<code>"always"</code>] - 将窗口作为一个组打开。</li>
+<li><code>"unset"</code> - 清除所有 <code>group</code> 规则。</li>
+</ul>
+<div class="note">
+<div class="title">
+<p>说明</p>
+</div>
+<p>不带选项的 <code>group</code> 是 <code>group = "set"</code> 的简写。</p>
+<p>默认情况下，<code>set</code> 和 <code>lock</code> 仅对新窗口生效一次。使用 <code>always</code> 限定符可使它们持续生效。</p>
+</div>
+<h3 id="border_color-window-rule"><code>border_color</code> 窗口规则 <a class="permalink" href="#border_color-window-rule" aria-label="本节链接">#</a></h3>
+<p><code>border_color</code> 规则接受单一颜色或渐变色：</p>
+<pre class="lua"><code>-- 单色
+border_color = &quot;rgb(FF0000)&quot;
+-- 渐变色
+border_color = { colors = { &quot;rgba(33ccffee)&quot;, &quot;rgba(00ff99ee)&quot; }, angle = 45 }</code></pre>
+<p><code>border_color</code> 规则也可以与 <code>focus</code> 属性配合使用，分别设置窗口在活动和非活动状态下的边框颜色。例如：</p>
+<pre class="lua"><code>-- 将 Firefox 非活动窗口的边框颜色设为从品红到青色的渐变
+hl.window_rule(
+    match = { class = &quot;firefox&quot;, focus = false },
+    border_color = { colors = { &quot;rgba(ffff00ee)&quot;, &quot;rgba(00ffffee)&quot; }, angle = 33 }
+)</code></pre>
+<div class="tip">
+<div class="title">
+<p>提示</p>
+</div>
+<p>组合使用两条规则，一条设置 <code>focus = true</code>，另一条设置 <code>focus = false</code>，即可分别指定特定窗口在活动和非活动状态下的边框颜色（类似于 <code>general.col.active_border</code> 和 <code>general.col.inactive_border</code> 通常对窗口起到的作用）。</p>
+</div>
+<h3 id="tags">标签 <a class="permalink" href="#tags" aria-label="本节链接">#</a></h3>
+<p>窗口标签分为静态标签和动态标签。动态标签带有 <code>*</code> 后缀。使用 <code>hyprctl clients</code> 可查看窗口标签。</p>
+<p>使用 <code>hl.dsp.window.tag</code> 调度器添加静态标签，使用 <code>tag</code> 窗口规则添加动态标签。</p>
+<p><code>tag</code> 规则只能操作动态标签，<code>hl.dsp.window.tag</code> 只能操作静态标签（调用该调度器时会清除动态标签）。</p>
+<details><summary>示例</summary>
+
+<pre class="bash"><code>hyprctl dispatch &#39;hl.dsp.window.tag({ tag = &quot;+code&quot; })&#39; # 为当前窗口添加标签。
+hyprctl dispatch &#39;hl.dsp.window.tag({ tag = &quot;-code&quot; })&#39; # 从当前窗口移除标签。
+hyprctl dispatch &#39;hl.dsp.window.tag({ tag = &quot;code&quot; })&#39;  # 切换当前窗口的标签。
+
+# 也可以指定目标窗口
+hyprctl dispatch &#39;hl.dsp.window.tag({ tag = &quot;+music&quot;, window = &quot;class:Celluloid&quot; })&#39;</code></pre>
+<pre class="lua"><code>-- 将 kitty 移至 100 100，并设置动画样式（命名规则）
+hl.window_rule({
+  name      = &quot;move-kitty&quot;,
+  match     = { class = &quot;kitty&quot; },
+  move      = {100, 100},
+  animation = &quot;popin&quot;,
+})
+
+-- 为 firefox 禁用模糊效果
+hl.window_rule({ match = { class = &quot;firefox&quot; }, no_blur = true })
+
+-- 将 kitty 窗口的中心移到光标位置
+hl.window_rule({
+  match = { class = &quot;kitty&quot; },
+  move  = {&quot;cursor_x-(window_w*0.5)&quot;, &quot;cursor_y-(window_h*0.5)&quot;},
+})
+
+-- 窗口全屏时将边框颜色设为红色
+hl.window_rule({
+  match        = { fullscreen = true },
+  border_color = &quot;rgb(FF0000) rgb(880808)&quot;,
+})
+
+-- 标题包含 Hyprland 时将边框颜色设为黄色
+hl.window_rule({
+  match        = { title = &quot;.*Hyprland.*&quot; },
+  border_color = &quot;rgb(FFFF00)&quot;,
+})
+
+-- 将 kitty 的不透明度设为活动时 1.0、非活动时 0.5、全屏时 0.8
+hl.window_rule({
+  match   = { class = &quot;kitty&quot; },
+  opacity = &quot;1.0 override 0.5 override 0.8 override&quot;,
+})
+
+-- 将 kitty 的圆角半径设为 10
+hl.window_rule({ match = { class = &quot;kitty&quot; }, rounding = 10 })
+
+-- 修复 pinentry 丢失焦点的问题
+hl.window_rule({
+  match        = { class = &quot;(pinentry-)(.*)&quot; },
+  stay_focused = true,
+})
+
+hl.window_rule({ match = { class = &quot;footclient&quot; }, tag = &quot;+term&quot; })   -- 添加动态标签 `term*`
+hl.window_rule({ match = { class = &quot;footclient&quot; }, tag = &quot;term&quot; })    -- 切换动态标签 `term*`
+hl.window_rule({ match = { tag = &quot;cpp&quot; },          tag = &quot;+code&quot; })   -- 为带有 `cpp` 标签的窗口添加 `code*`
+hl.window_rule({ match = { tag = &quot;code&quot; },         opacity = &quot;0.8&quot; }) -- 为带有 `code` 或 `code*` 标签的窗口设置不透明度
+hl.window_rule({ match = { tag = &quot;cpp&quot; },          opacity = &quot;0.7&quot; }) -- `cpp`-tagged windows match both; last wins
+hl.window_rule({ match = { tag = &quot;term*&quot; },        opacity = &quot;0.6&quot; }) -- 仅匹配 `term*`，不匹配不带星号的 `term`
+hl.window_rule({ match = { tag = &quot;term&quot; },         tag = &quot;-code&quot; })   -- 从带有 `term`/`term*` 标签的窗口移除动态标签 `code*`
+
+-- 也可以使用按键绑定
+hl.bind(&quot;SUPER + CTRL + 2&quot;, hl.dsp.window.tag({ tag = &quot;alpha_0.2&quot; }))
+hl.bind(&quot;SUPER + CTRL + 4&quot;, hl.dsp.window.tag({ tag = &quot;alpha_0.4&quot; }))
+hl.window_rule({ match = { tag = &quot;alpha_0.2&quot; }, opacity = &quot;0.2 override&quot; })
+hl.window_rule({ match = { tag = &quot;alpha_0.4&quot; }, opacity = &quot;0.4 override&quot; })</code></pre>
+</details>
+
+<h3 id="notes">注意事项 <a class="permalink" href="#notes" aria-label="本节链接">#</a></h3>
+<p>每当窗口用于匹配规则的属性发生变化时，都会重新计算标记为_动态_的效果。例如，如果某条规则在窗口浮动时更改其 <code>border_color</code>，那么当窗口恢复平铺时，边框颜色也会恢复为默认值。</p>
+<p>效果按从上到下的顺序处理，_最后_匹配的规则优先。</p>
+<p>在这个例子中，所有非全屏的 kitty 窗口都应用 <code>opacity 0.8</code>，其中浮动窗口的不透明度则为 <code>0.5</code>。其他所有浮动窗口的不透明度也为 <code>0.5</code>。</p>
+<pre class="lua"><code>hl.window_rule({ match = { float = true },    opacity = &quot;0.5 override 0.5 override&quot; })
+hl.window_rule({ match = { class = &quot;kitty&quot; }, opacity = &quot;0.8 override 0.8 override&quot; })</code></pre>
+<h3 id="dynamically-enabling--disabling--changing-rules">动态启用、禁用或更改规则 <a class="permalink" href="#dynamically-enabling--disabling--changing-rules" aria-label="本节链接">#</a></h3>
+<p>只有具名规则才能动态更改、启用或禁用。<code>hl.window_rule()</code> 返回一个句柄对象：</p>
+<pre class="lua"><code>local myRule = hl.window_rule({
+  name        = &quot;my-rule&quot;,
+  match       = { class = &quot;kitty&quot; },
+  border_size = 5,
+})
+
+myRule:set_enabled(false)  -- 禁用
+myRule:set_enabled(true)   -- 重新启用
+myRule:is_enabled()        -- 查询状态</code></pre>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../../../../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/configuring/core/rules/window-rules/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-2" href="#syntax">语法</a><a class="level-2" href="#window-rules">窗口规则</a><a class="level-3" href="#props">匹配属性</a><a class="level-2" href="#effects">效果</a><a class="level-3" href="#static-effects">静态效果</a><a class="level-4" href="#position-and-size">位置和大小</a><a class="level-5" href="#expressions">表达式</a><a class="level-3" href="#dynamic-effects">动态效果</a><a class="level-3" href="#group-window-rule-options">group 窗口规则选项</a><a class="level-3" href="#border_color-window-rule">border_color 窗口规则</a><a class="level-3" href="#tags">标签</a><a class="level-3" href="#notes">注意事项</a><a class="level-3" href="#dynamically-enabling--disabling--changing-rules">动态启用、禁用或更改规则</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>

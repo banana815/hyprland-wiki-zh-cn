@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>常见问题 · Hyprland Wiki 中文版</title><link rel="icon" href="../assets/hyprland.svg">
+<link rel="stylesheet" href="../assets/wiki.css"><script defer src="../assets/site.js"></script></head>
+<body data-root="../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../"><img src="../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/faq/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../">Hyprland 中文文档</a><ul><li><a href="../version-selector/">版本选择器 ⚙️</a></li><li><details><summary><a href="../getting-started/">入门指南</a></summary><ul><li><a href="../getting-started/installation/">安装</a></li><li><a href="../getting-started/master-tutorial/">入门教程</a></li><li><a href="../getting-started/preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details><summary><a href="../configuring/">配置</a></summary><ul><li><a href="../configuring/naming-conventions/">命名约定</a></li><li><a href="../configuring/selectors/">选择器</a></li><li><details><summary><a href="../configuring/core/">基础配置</a></summary><ul><li><details><summary><a href="../configuring/core/monitors/">显示器</a></summary><ul><li><a href="../configuring/core/monitors/output-selection/">选择显示输出</a></li><li><a href="../configuring/core/monitors/positioning/">显示器排列</a></li><li><a href="../configuring/core/monitors/modes/">显示模式</a></li><li><a href="../configuring/core/monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="../configuring/core/config-options/">配置选项</a></li><li><a href="../configuring/core/devices/">设备</a></li><li><a href="../configuring/core/dispatchers/">调度器</a></li><li><details><summary><a href="../configuring/core/binds/">按键绑定</a></summary><ul><li><a href="../configuring/core/binds/flags/">标志位</a></li><li><a href="../configuring/core/binds/keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="../configuring/core/binds/devices/">设备绑定</a></summary><ul><li><a href="../configuring/core/binds/devices/mouse/">鼠标</a></li><li><a href="../configuring/core/binds/devices/touchpad/">触摸板</a></li><li><a href="../configuring/core/binds/devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="../configuring/core/binds/submaps/">按键子映射</a></li><li><a href="../configuring/core/binds/globals/">全局快捷键与绑定</a></li><li><a href="../configuring/core/binds/switches/">硬件开关</a></li><li><a href="../configuring/core/binds/gestures/">手势</a></li></ul></details></li><li><details><summary><a href="../configuring/core/rules/">规则</a></summary><ul><li><a href="../configuring/core/rules/window-rules/">窗口规则</a></li><li><a href="../configuring/core/rules/workspace-rules/">工作区规则</a></li><li><a href="../configuring/core/rules/layer-rules/">图层规则</a></li></ul></details></li><li><a href="../configuring/core/environment-variables/">环境变量</a></li><li><a href="../configuring/core/animations/">动画</a></li><li><a href="../configuring/core/autostart/">自动启动</a></li><li><details><summary><a href="../configuring/core/advanced-configuration/">高级配置</a></summary><ul><li><a href="../configuring/core/advanced-configuration/events/">Lua 事件</a></li><li><a href="../configuring/core/advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="../configuring/core/advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="../configuring/core/advanced-configuration/notifications/">通知</a></li><li><a href="../configuring/core/advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../configuring/layouts/">布局</a></summary><ul><li><a href="../configuring/layouts/dwindle-layout/">Dwindle 布局</a></li><li><a href="../configuring/layouts/scrolling-layout/">滚动布局</a></li><li><a href="../configuring/layouts/master-layout/">主从布局</a></li><li><a href="../configuring/layouts/monocle-layout/">单窗口布局</a></li><li><a href="../configuring/layouts/custom-layouts/">自定义布局</a></li></ul></details></li><li><details><summary><a href="../configuring/extra/">其他配置</a></summary><ul><li><a href="../configuring/extra/multi-gpu/">多显卡</a></li><li><a href="../configuring/extra/virtual-gpu/">虚拟 GPU</a></li><li><a href="../configuring/extra/performance/">性能</a></li><li><a href="../configuring/extra/tearing/">画面撕裂</a></li><li><a href="../configuring/extra/xwayland/">Xwayland</a></li><li><a href="../configuring/extra/systemd/">systemd</a></li></ul></details></li><li><a href="../configuring/code-snippets/">Lua 代码片段</a></li></ul></details></li><li><details><summary><a href="../hypr-ecosystem/">Hypr 生态系统</a></summary><ul><li><details><summary><a href="../hypr-ecosystem/user/">用户应用与实用工具</a></summary><ul><li><a href="../hypr-ecosystem/user/hyprpaper/">hyprpaper</a></li><li><a href="../hypr-ecosystem/user/hyprpicker/">hyprpicker</a></li><li><a href="../hypr-ecosystem/user/hyprlauncher/">hyprlauncher</a></li><li><a href="../hypr-ecosystem/user/hypridle/">hypridle</a></li><li><a href="../hypr-ecosystem/user/hyprlock/">hyprlock</a></li><li><a href="../hypr-ecosystem/user/xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li><li><a href="../hypr-ecosystem/user/hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../hypr-ecosystem/user/hyprsunset/">hyprsunset</a></li><li><a href="../hypr-ecosystem/user/hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../hypr-ecosystem/user/hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../hypr-ecosystem/user/hyprqt6engine/">hyprqt6engine</a></li><li><a href="../hypr-ecosystem/user/hyprpwcenter/">hyprpwcenter</a></li><li><a href="../hypr-ecosystem/user/hyprshutdown/">hyprshutdown</a></li><li><a href="../hypr-ecosystem/user/hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../hypr-ecosystem/user/hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../hypr-ecosystem/dev/">开发库和工具包</a></summary><ul><li><a href="../hypr-ecosystem/dev/aquamarine/">aquamarine</a></li><li><a href="../hypr-ecosystem/dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../hypr-ecosystem/dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../hypr-ecosystem/dev/hyprlang/">hyprlang</a></li><li><a href="../hypr-ecosystem/dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../hypr-ecosystem/dev/hyprutils/">hyprutils</a></li><li><a href="../hypr-ecosystem/dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../hyprland-plugins/">Hyprland 插件</a></summary><ul><li><a href="../hyprland-plugins/using-plugins/">使用插件</a></li><li><details><summary><a href="../hyprland-plugins/development/">开发</a></summary><ul><li><a href="../hyprland-plugins/development/getting-started/">插件开发入门</a></li><li><a href="../hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li><li><a href="../hyprland-plugins/development/advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../useful-utilities/">实用工具</a></summary><ul><li><a href="../useful-utilities/must-have/">必备软件</a></li><li><a href="../useful-utilities/status-bars/">状态栏</a></li><li><a href="../useful-utilities/wallpapers/">壁纸</a></li><li><a href="../useful-utilities/screen-sharing/">屏幕共享</a></li><li><a href="../useful-utilities/screenshots-and-recording/">截图与录屏</a></li><li><a href="../useful-utilities/app-launchers/">应用启动器</a></li><li><a href="../useful-utilities/app-clients/">应用客户端</a></li><li><a href="../useful-utilities/phone-connect/">连接手机</a></li><li><a href="../useful-utilities/color-pickers/">取色器</a></li><li><a href="../useful-utilities/clipboard-managers/">剪贴板管理器</a></li><li><a href="../useful-utilities/file-managers/">文件管理器</a></li><li><a href="../useful-utilities/other/">其他</a></li><li><a href="../useful-utilities/hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="../useful-utilities/uwsm/">UWSM</a></li></ul></details></li><li><details><summary><a href="../nix/">Nix</a></summary><ul><li><a href="../nix/hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../nix/installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="../nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li><li><a href="../nix/cachix/">Cachix</a></li><li><a href="../nix/advanced/">高级用法</a></li><li><a href="../nix/contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../nvidia/">NVIDIA</a></li><li><a href="../ipc/">IPC</a></li><li><a href="../crashes-and-bugs/">崩溃与缺陷</a></li><li><a href="./" aria-current="page">常见问题</a></li><li><a href="../community/">社区</a></li><li><details><summary><a href="../contributing-and-debugging/">贡献与调试</a></summary><ul><li><a href="../contributing-and-debugging/wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../contributing-and-debugging/issue-guidelines/">议题指南</a></li><li><a href="../contributing-and-debugging/pr-guidelines/">PR 指南</a></li><li><a href="../contributing-and-debugging/tests/">测试</a></li><li><a href="../contributing-and-debugging/translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../">Hyprland 中文文档</a></nav><article><h1>常见问题</h1><h3 id="symbol-lookup-errors">符号查找错误 <a class="permalink" href="#symbol-lookup-errors" aria-label="本节链接">#</a></h3>
+<p>如果你看到类似这样的错误：</p>
+<pre><code>&lt;app&gt;: symbol lookup error: &lt;app&gt;: undefined symbol: &lt;symbol&gt;</code></pre>
+<p>或：</p>
+<pre><code>&lt;app&gt;: error while loading shared libraries: &lt;lib&gt;: cannot open shared object file: No such file or directory.</code></pre>
+<p>或者有时没有任何报错，Hyprland 却在启动时或运行中随机崩溃，那么很可能是你自行构建了 Hyprland，而相关组件的版本已经不匹配。 每个 hypr* 应用都依赖多个库。 如果更新了这些库，却没有重新构建整套 hypr* 组件，就会出现上述错误或崩溃。</p>
+<p>要彻底避免这类错误，<em>请使用预编译软件包，不要自行构建</em>。 如果选择自行构建，就得由<strong>你</strong>负责确保各组件的版本保持一致！</p>
+<p>自行构建时，<em>所有 hypr* 组件都必须自行构建</em>，不能一部分安装预编译软件包，另一部分从源码仓库构建。</p>
+<p><strong>Arch 用户请注意：</strong> 安装 <code>-git</code> 软件包也算自行构建。</p>
+<p>构建顺序请见<a href="../getting-started/installation/#manual-build">这里</a>。</p>
+<h3 id="will-rest-of-the-hypr-ecosystem-switch-to-lua-from-hyprlang">Hypr* 生态中的其他项目也会从 hyprlang 切换到 Lua 吗？ <a class="permalink" href="#will-rest-of-the-hypr-ecosystem-switch-to-lua-from-hyprlang" aria-label="本节链接">#</a></h3>
+<p>Hyprland 将继续使用 Lua。 其他 Hypr* 项目目前没有从 Hyprlang 迁移的计划。</p>
+<h3 id="my-apps-are-pixelated">我的应用显示有锯齿 <a class="permalink" href="#my-apps-are-pixelated" aria-label="本节链接">#</a></h3>
+<p>这说明它们是通过 Xwayland 运行的，而 Xwayland 本身无法进行分数缩放。</p>
+<p>要强制它们以原生 Wayland 模式运行，请参阅<a href="../getting-started/master-tutorial/#force-apps-to-use-wayland">主教程</a>。</p>
+<p>如果它们无法以原生 Wayland 模式运行，请参阅 <a href="../configuring/extra/xwayland/">Xwayland 页面</a>。</p>
+<h3 id="my-external-monitor-is-blank--doesnt-render--receives-no-signal-laptop">笔记本电脑的外接显示器黑屏、没有画面或收不到信号 <a class="permalink" href="#my-external-monitor-is-blank--doesnt-render--receives-no-signal-laptop" aria-label="本节链接">#</a></h3>
+<p>对于使用 NVIDIA 显卡的系统，525.60.11 及更高版本的 NVIDIA 驱动似乎已解决此问题，但旧版驱动可能仍有这个问题。</p>
+<p>对于硬件受限的系统（例如使用集成显卡、USB-C 或 USB 集线器的系统），请在配置中将环境变量 <code>AQ_NO_MODIFIERS</code> 设为 <code>1</code>。 要确认你遇到的是否正是这个问题，可以获取 <a href="../crashes-and-bugs/#debugging-drm-issues">DRM 日志</a>，并在其中查找以下内容：</p>
+<pre class="plain"><code>Requested display configuration exceeds system DDB limitations</code></pre>
+<p>除此之外，还可以尝试以下几种方法，_可能_对你有效：</p>
+<ol type="1">
+<li>_只用_外接显示器。<br />
+设置环境变量 <code>AQ_DRM_DEVICES=/dev/dri/card1</code>（也可能是 <code>card0</code>），可以强制 Hyprland 只使用独立显卡。这样笔记本内置屏幕将不再显示画面，但外接显示器可以正常工作。</li>
+<li>使用所有显示输出，代价是电池续航缩短。<br />
+在 BIOS 中将笔记本设为只使用独立显卡，_可能_就能让所有显示输出正常工作，但耗电量会很高。</li>
+</ol>
+<div class="note">
+<div class="title">
+<p>说明</p>
+</div>
+<p>这些方法的效果很大程度上取决于具体机型，未必有效。 如果都不奏效，恐怕就没有什么办法了。</p>
+</div>
+<p>不过，你还可以试试 USB-C 转 HDMI 适配器，这样外接显示器或许能通过集成显卡输出画面。</p>
+<h3 id="how-do-i-screenshot">如何截图？ <a class="permalink" href="#how-do-i-screenshot" aria-label="本节链接">#</a></h3>
+<p>从<a href="../useful-utilities/screenshots-and-recording/">截图与录屏</a>中选择一个工具并完成配置即可。</p>
+<h3 id="screenshare--obs-no-worky">屏幕共享或 OBS 无法使用 <a class="permalink" href="#screenshare--obs-no-worky" aria-label="本节链接">#</a></h3>
+<p>请参阅<a href="../useful-utilities/screen-sharing/">屏幕共享</a>。</p>
+<p>要使用 OBS，还必须安装 <code>qt6-wayland</code>。</p>
+<h3 id="how-do-i-change-my-wallpaper">如何更换壁纸？ <a class="permalink" href="#how-do-i-change-my-wallpaper" aria-label="本节链接">#</a></h3>
+<p>请参阅<a href="../useful-utilities/wallpapers/">壁纸</a>。</p>
+<h3 id="how-heavy-is-this">Hyprland 的资源占用有多高？ <a class="permalink" href="#how-heavy-is-this" aria-label="本节链接">#</a></h3>
+<p>只比 Xorg 高一点。 如果想获得最佳性能，可以考虑关闭模糊效果和动画。</p>
+<h3 id="my-monitor-no-worky">我的显示器无法正常工作 <a class="permalink" href="#my-monitor-no-worky" aria-label="本节链接">#</a></h3>
+<p>试着在配置中更改显示模式。 如果首选模式无法使用，请尝试分辨率或刷新率较低的模式。 要查看显示器报告的模式列表，请运行 <code>hyprctl monitors</code>。</p>
+<h3 id="my-monitor-has-flickering-brightness-when-i-turn-on-vrr">开启 VRR 后，显示器亮度忽明忽暗 <a class="permalink" href="#my-monitor-has-flickering-brightness-when-i-turn-on-vrr" aria-label="本节链接">#</a></h3>
+<p>将 VRR 选项设为 <code>2</code>（全屏），让它只在玩游戏时启用。 有些显示器的亮度会随刷新率变化。如果刷新率快速变化（例如按键后屏幕短暂刷新），亮度也会随之快速变化。</p>
+<p>如果仍想始终开启 VRR，可以修改显示器 EDID 中的 VRR 范围，以减轻甚至消除闪烁。 详情请参阅 <a href="https://wiki.archlinux.org/title/Kernel_mode_setting#Forcing_modes_and_EDID">Arch Wiki</a>。</p>
+<h3 id="how-do-i-update">如何更新？ <a class="permalink" href="#how-do-i-update" aria-label="本节链接">#</a></h3>
+<p>在克隆的仓库目录中打开终端。</p>
+<pre class="bash"><code>git pull
+make all &amp;&amp; sudo make install</code></pre>
+<p>如果使用 AUR 软件包（<code>hyprland-git</code>），更新时需要清理旧的构建文件并重新构建。 Paru 以前在更新时出过问题，请使用 Yay。</p>
+<h3 id="how-do-i-screen-lock">如何锁屏？ <a class="permalink" href="#how-do-i-screen-lock" aria-label="本节链接">#</a></h3>
+<p>请使用兼容 Wayland 且支持 WLR 协议的锁屏工具（例如 <code>swaylock</code>）。 请注意，即使已锁屏，仍可使用 <code>Ctrl-Alt-F1</code> 至 <code>F7</code> 这组快捷键切换 TTY。</p>
+<h3 id="how-do-i-change-my-mouse-cursor">如何更换鼠标指针？ <a class="permalink" href="#how-do-i-change-my-mouse-cursor" aria-label="本节链接">#</a></h3>
+<p>请参阅 <a href="../hypr-ecosystem/user/hyprcursor/">hyprcursor</a>。</p>
+<ol type="1">
+<li>使用 <a href="https://github.com/nwg-piotr/nwg-look">nwg-look</a> 设置 GTK 指针。</li>
+<li>将 <code>hyprctl setcursor [THEME] [SIZE]</code> 添加到配置的自动启动命令中，然后重启 Hyprland。</li>
+</ol>
+<p>如果使用 flatpak，请运行 <code>flatpak override --filesystem=~/.themes:ro --filesystem=~/.icons:ro --user</code>。 将主题同时放入 <code>/usr/share/themes</code> 和 <code>~/.themes</code>，并将图标和指针同时放入 <code>/usr/share/icons</code> 和 <code>~/.icons</code>。</p>
+<p>对于 Qt 应用，Hyprland 会将环境变量 XCURSOR_SIZE 导出为默认值 24。 可以使用 <code>env</code> 将 XCURSOR_SIZE 设为其他值，覆盖默认设置。</p>
+<p>也可以尝试运行 <code>gsettings set org.gnome.desktop.interface cursor-theme 'theme-name'</code>，或将这条命令添加到配置中的自动启动命令之后。</p>
+<p>如果不想安装 GTK 设置编辑器，请按照 <a href="https://wiki.archlinux.org/title/Cursor_themes#Configuration">XDG 规范</a>修改配置文件。 如果没有使用 <code>nwg-look</code> 之类的工具，请务必同时编辑 <code>~/.config/gtk-4.0/settings.ini</code> 和 <code>~/.gtkrc-2.0</code>。</p>
+<h3 id="gtk-settings-no-work--whatever">GTK 设置不生效或有其他问题 <a class="permalink" href="#gtk-settings-no-work--whatever" aria-label="本节链接">#</a></h3>
+<p><a href="https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland"><span>https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland</span></a></p>
+<h3 id="my-program-name-is-freezing">我的 [程序名] 卡住了 <a class="permalink" href="#my-program-name-is-freezing" aria-label="本节链接">#</a></h3>
+<p>请确保通知守护进程正在运行，例如 <code>dunst</code>。 如果常规的 D-Bus 自动启动机制失效，可以在配置中设置自动启动通知守护进程。</p>
+<h3 id="waybar-workspaces-no-worky">Waybar 的工作区功能无法使用？ <a class="permalink" href="#waybar-workspaces-no-worky" aria-label="本节链接">#</a></h3>
+<p>使用 Waybar 时，有一些注意事项和设置需要了解。 解决方法请参阅<a href="../useful-utilities/status-bars/">状态栏</a>。</p>
+<h3 id="how-do-i-autostart-my-favorite-apps">如何自动启动常用应用？ <a class="permalink" href="#how-do-i-autostart-my-favorite-apps" aria-label="本节链接">#</a></h3>
+<p>可以使用窗口规则将应用分配到工作区，这样就能在不同工作区打开多个应用。 以下方法可以静默启动这些应用（即屏幕不会因来回切换工作区而闪烁）。</p>
+<p>例如，在 <code>hyprland.lua</code> 中添加以下内容：</p>
+<pre class="lua"><code>hl.on(&quot;hyprland.start&quot;, function()
+  hl.exec_cmd(&quot;kitty&quot;)
+  hl.exec_cmd(&quot;dolphin&quot;)
+  hl.exec_cmd(&quot;dunst&quot;)
+  hl.exec_cmd(&quot;amongus&quot;, { workspace = &quot;1 silent&quot; })
+end)</code></pre>
+<h3 id="how-do-i-move-my-favorite-workspaces-to-a-new-monitor-when-i-plug-it-in">插入新显示器时，如何将常用工作区移到上面？ <a class="permalink" href="#how-do-i-move-my-favorite-workspaces-to-a-new-monitor-when-i-plug-it-in" aria-label="本节链接">#</a></h3>
+<p>可以监听 <code>monitor.added</code> 事件，并在事件触发时将工作区移到新显示器上。</p>
+<h3 id="my-tablet-no-worky">我的数位板无法使用？ <a class="permalink" href="#my-tablet-no-worky" aria-label="本节链接">#</a></h3>
+<p>请使用 <a href="https://github.com/OpenTabletDriver/OpenTabletDriver">Open Tablet Driver</a> 配置数位板。 今后将支持直接在配置文件中设置数位板。 在此之前，请使用 OTD。</p>
+<h3 id="some-of-my-apps-take-a-really-long-time-to-open">为什么有些应用要等很久才能打开？ <a class="permalink" href="#some-of-my-apps-take-a-really-long-time-to-open" aria-label="本节链接">#</a></h3>
+<pre class="lua"><code>hl.on(&quot;hyprland.start&quot;, function()
+  hl.exec_cmd(&quot;dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP&quot;)
+end)</code></pre>
+<p>请确保桌面门户（portal）在上述命令_执行之后_才启动。 在某些系统上，桌面门户可能会提前启动。</p>
+<p>在这种情况下，可以使用类似下面的脚本：</p>
+<pre class="bash"><code>#!/usr/bin/env bash
+sleep 4
+killall -e xdg-desktop-portal-hyprland
+killall xdg-desktop-portal
+/usr/lib/xdg-desktop-portal-hyprland &amp;
+sleep 4
+/usr/lib/xdg-desktop-portal &amp;</code></pre>
+<p>在系统启动时运行这个脚本，应该就能解决上述问题。 可以根据需要调整脚本中的等待时间。</p>
+<h3 id="how-do-i-export-env-vars-for-hyprland">如何为 Hyprland 导出环境变量？ <a class="permalink" href="#how-do-i-export-env-vars-for-hyprland" aria-label="本节链接">#</a></h3>
+<p>可以使用 <code>hl.env()</code> 函数。例如：</p>
+<pre class="lua"><code>hl.env(&quot;XDG_CURRENT_DESKTOP&quot;, &quot;Hyprland&quot;)</code></pre>
+<p>详情请参阅<a href="../configuring/core/environment-variables/">环境变量</a>。</p>
+<h3 id="how-to-disable-middle-click-paste">如何禁用鼠标中键粘贴？ <a class="permalink" href="#how-to-disable-middle-click-paste" aria-label="本节链接">#</a></h3>
+<p>将 <code>misc.middle_click_paste</code> 设为 <code>false</code> 即可彻底禁用中键粘贴，但某些浏览器（尤其是 Firefox）会通过自身的内置机制模拟此功能。 这种情况下，还必须在浏览器设置中禁用该功能。</p>
+<h3 id="my-apps-take-a-long-time-to-start--cant-screenshare">我的应用启动缓慢或无法共享屏幕 <a class="permalink" href="#my-apps-take-a-long-time-to-start--cant-screenshare" aria-label="本节链接">#</a></h3>
+<p>请参阅 <a href="../hypr-ecosystem/user/xdg-desktop-portal-hyprland/#debugging">XDPH 页面</a>。</p>
+<p>很可能是系统中安装了多个桌面门户实现，或某个实现未能启动。</p>
+<h3 id="my-screenshot-utilities-wont-work-with-multiple-screens">我的截图工具在多显示器环境下无法使用 <a class="permalink" href="#my-screenshot-utilities-wont-work-with-multiple-screens" aria-label="本节链接">#</a></h3>
+<p>Flameshot 等程序目前对 Wayland 的支持有限，可以考虑使用专为 Wayland 开发的原生截图工具。</p>
+<h3 id="i-cannot-bind-super-as-my-mod-key-on-my-laptop">笔记本电脑上无法将 SUPER 绑定为修饰键 <a class="permalink" href="#i-cannot-bind-super-as-my-mod-key-on-my-laptop" aria-label="本节链接">#</a></h3>
+<p>许多笔记本电脑内置了切换功能，可将 <code>SUPER</code> 键切换到单次按键模式或按住模式。 <code>SUPER</code> 键上的挂锁图标通常表示它支持这项功能。</p>
+<p>先安装并运行 <code>wev</code>，然后按住 <code>SUPER</code>。 如果看到按键按下事件后立即出现释放事件，那么 <code>SUPER</code> 键很可能处于单次按键模式。</p>
+<p>在大多数笔记本电脑上，按 <code>FN+SUPER</code> 即可解决这个问题，然后可以用 <code>wev</code> 验证。 按住 <code>SUPER</code> 时，应该不会立即出现按键释放事件。 如果 <code>FN+SUPER</code> 不起作用，请查阅笔记本电脑的使用手册。</p>
+<h3 id="my-vm-doesnt-receive-keybinds-i-have-set-in-hyprland">虚拟机收不到我在 Hyprland 中设置的键位绑定 <a class="permalink" href="#my-vm-doesnt-receive-keybinds-i-have-set-in-hyprland" aria-label="本节链接">#</a></h3>
+<p>这是正常现象，因为 Hyprland 会优先处理这些按键。 一个简单的解决办法是创建一个空的“直通”子映射：</p>
+<pre class="lua"><code>hl.define_submap(&quot;passthru&quot;, function()
+  hl.bind(&quot;SUPER + Escape&quot;, hl.dsp.submap(&quot;reset&quot;))
+end)
+hl.bind(&quot;...&quot;, hl.dsp.submap(&quot;passthru&quot;))</code></pre>
+<p>按下选定的组合键后，就会进入直通模式。在此模式下，Hyprland 会忽略你的键位绑定，将按键事件传给虚拟机。 按 <code>SUPER + Escape</code> 即可退出该模式。</p>
+<h3 id="steams-file-picker-no-worky">Steam 的文件选择器用不了 <a class="permalink" href="#steams-file-picker-no-worky" aria-label="本节链接">#</a></h3>
+<p>如果你的 Steam 库位于另一个驱动器上，需要将其添加到 Steam，那么在 Steam 中选择目录时，Hyprland 的文件选择器通常不会弹出。</p>
+<p>Steam 自带文件选择器，但它无法正常工作。 安装 <code>xdg-desktop-portal-gtk</code> 即可调出桌面的文件选择器。</p>
+<h3 id="i-get-a-so-file-missing-error-on-launch">启动时提示缺少 .so 文件 <a class="permalink" href="#i-get-a-so-file-missing-error-on-launch" aria-label="本节链接">#</a></h3>
+<p>如果你使用 -git 软件包，遇到破坏 ABI 兼容性的更新时，这种情况很常见。</p>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p><em><strong>千万不要</strong></em>在不同版本的 .so 文件之间创建符号链接，这会导致程序崩溃！</p>
+</div>
+<p>请找出所有已安装且名称中带 <code>-git</code> 的 hypr* 软件包，卸载后重新安装（可能还需要卸载它们的依赖包）。</p>
+<p>如果使用 yay，请确保对每个软件包都执行 <code>CleanBuild</code>。 如果使用 paru，请手动删除 <code>~/.cache/paru</code> 中 hypr* 软件包的缓存。</p>
+<p>如果你没有使用任何 -git 软件包，那就是发行版的打包出了问题，应由发行版修复。</p>
+<h3 id="my-cursor-is-a-hyprland-icon">为什么我的光标变成了 Hyprland 图标？ <a class="permalink" href="#my-cursor-is-a-hyprland-icon" aria-label="本节链接">#</a></h3>
+<p>这表示你没有安装 hyprcursor 主题，而且 Hyprland 也找不到 XCursor 主题。 请安装一个光标主题。</p>
+<h3 id="smart-gaps-please">怎么设置智能间距？ <a class="permalink" href="#smart-gaps-please" aria-label="本节链接">#</a></h3>
+<p>请看<a href="../configuring/code-snippets/#smart-gaps">这里</a>。</p>
+<h3 id="i-cant-create-discord-binds">我无法在 Discord 中创建键位绑定 <a class="permalink" href="#i-cant-create-discord-binds" aria-label="本节链接">#</a></h3>
+<p>你的配置里很可能设置了 <code>ELECTRON_OZONE_PLATFORM_HINT = wayland</code>。</p>
+<p>试着用 <code>ELECTRON_OZONE_PLATFORM_HINT= discord</code> 启动 Discord。</p>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>请注意，这会让 Discord 在 Xwayland 下运行。</p>
+</div>
+<p>如果有效，请找到 Discord 的桌面条目文件（通常位于 <code>/usr/share/applications/</code>）。 复制一份，将副本中的 <code>Exec=/usr/bin/discord</code> 替换为 <code>Exec=env -u ELECTRON_OZONE_PLATFORM_HINT /usr/bin/discord</code>。 你也可以给副本起个新名字（例如 <code>Name=DiscordX</code>），方便区分两个条目。</p>
+<h3 id="fullscreen-applicationssteam-games-open-with-secondary-monitors-resolution">全屏应用和 Steam 游戏启动时使用副显示器的分辨率 <a class="permalink" href="#fullscreen-applicationssteam-games-open-with-secondary-monitors-resolution" aria-label="本节链接">#</a></h3>
+<p>原因很可能是 X11 的默认显示器并非你想用的主显示器。 可以按以下步骤解决：</p>
+<p>在配置的自动启动项中添加 <code>xrandr --output [MONITOR_ID] --primary</code>，并将 <code>[MONITOR_ID]</code> 替换为主显示器的 ID（例如 <code>DP-3</code>）。 运行 <code>hyprctl monitors</code> 即可查看显示器 ID。</p>
+<p>将这条命令添加到 Hyprland 配置后，X11 应用就会默认使用你的主显示器。</p>
+<h3 id="my-mouse-cursor-keeps-escaping-the-game-window">我的鼠标光标总是跑出游戏窗口！ <a class="permalink" href="#my-mouse-cursor-keeps-escaping-the-game-window" aria-label="本节链接">#</a></h3>
+<p>大多数游戏都能自动将光标锁定在窗口内，你也可以使用 <code>confine_pointer</code> 窗口规则，让 Hyprland 来锁定光标。 要对所有内容类型为 'game' 的全屏应用生效，使用以下规则即可：</p>
+<pre class="lua"><code>hl.window_rule({ match = { content = &quot;game&quot;, fullscreen = true }, confine_pointer = true })</code></pre>
+<h3 id="spring-damping">弹簧阻尼拼作 <code>damping</code>？ <a class="permalink" href="#spring-damping" aria-label="本节链接">#</a></h3>
+<p>是的，拼作 <code>damping</code>。是 <code>damping</code>，不是 <code>dampening</code>。</p>
+<p><a href="https://en.wikipedia.org/wiki/Damping">https://en.wikipedia.org/wiki/Damping</a></p>
+<h3 id="blur">模糊效果 <a class="permalink" href="#blur" aria-label="本节链接">#</a></h3>
+<p>如果模糊效果在某些应用中不起作用，可能是因为这些应用使用了背景效果协议，而应用设置中禁用了模糊效果。</p>
+<p>已知 GTK 4 默认在整个工具包中禁用了模糊效果。 你可以设置环境变量 <code>GDK_WAYLAND_DISABLE=ext_background_effect_manager_v1</code> 来禁用 GTK 中的这一协议，也可以在 gtk.css 中为特定元素启用模糊效果，例如使用 <code>window { backdrop-filter: blur(20px); }</code>。 要了解应为哪些元素设置样式，请查阅客户端文档。</p>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/faq/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-3" href="#symbol-lookup-errors">符号查找错误</a><a class="level-3" href="#will-rest-of-the-hypr-ecosystem-switch-to-lua-from-hyprlang">Hypr* 生态中的其他项目也会从 hyprlang 切换到 Lua 吗？</a><a class="level-3" href="#my-apps-are-pixelated">我的应用显示有锯齿</a><a class="level-3" href="#my-external-monitor-is-blank--doesnt-render--receives-no-signal-laptop">笔记本电脑的外接显示器黑屏、没有画面或收不到信号</a><a class="level-3" href="#how-do-i-screenshot">如何截图？</a><a class="level-3" href="#screenshare--obs-no-worky">屏幕共享或 OBS 无法使用</a><a class="level-3" href="#how-do-i-change-my-wallpaper">如何更换壁纸？</a><a class="level-3" href="#how-heavy-is-this">Hyprland 的资源占用有多高？</a><a class="level-3" href="#my-monitor-no-worky">我的显示器无法正常工作</a><a class="level-3" href="#my-monitor-has-flickering-brightness-when-i-turn-on-vrr">开启 VRR 后，显示器亮度忽明忽暗</a><a class="level-3" href="#how-do-i-update">如何更新？</a><a class="level-3" href="#how-do-i-screen-lock">如何锁屏？</a><a class="level-3" href="#how-do-i-change-my-mouse-cursor">如何更换鼠标指针？</a><a class="level-3" href="#gtk-settings-no-work--whatever">GTK 设置不生效或有其他问题</a><a class="level-3" href="#my-program-name-is-freezing">我的 [程序名] 卡住了</a><a class="level-3" href="#waybar-workspaces-no-worky">Waybar 的工作区功能无法使用？</a><a class="level-3" href="#how-do-i-autostart-my-favorite-apps">如何自动启动常用应用？</a><a class="level-3" href="#how-do-i-move-my-favorite-workspaces-to-a-new-monitor-when-i-plug-it-in">插入新显示器时，如何将常用工作区移到上面？</a><a class="level-3" href="#my-tablet-no-worky">我的数位板无法使用？</a><a class="level-3" href="#some-of-my-apps-take-a-really-long-time-to-open">为什么有些应用要等很久才能打开？</a><a class="level-3" href="#how-do-i-export-env-vars-for-hyprland">如何为 Hyprland 导出环境变量？</a><a class="level-3" href="#how-to-disable-middle-click-paste">如何禁用鼠标中键粘贴？</a><a class="level-3" href="#my-apps-take-a-long-time-to-start--cant-screenshare">我的应用启动缓慢或无法共享屏幕</a><a class="level-3" href="#my-screenshot-utilities-wont-work-with-multiple-screens">我的截图工具在多显示器环境下无法使用</a><a class="level-3" href="#i-cannot-bind-super-as-my-mod-key-on-my-laptop">笔记本电脑上无法将 SUPER 绑定为修饰键</a><a class="level-3" href="#my-vm-doesnt-receive-keybinds-i-have-set-in-hyprland">虚拟机收不到我在 Hyprland 中设置的键位绑定</a><a class="level-3" href="#steams-file-picker-no-worky">Steam 的文件选择器用不了</a><a class="level-3" href="#i-get-a-so-file-missing-error-on-launch">启动时提示缺少 .so 文件</a><a class="level-3" href="#my-cursor-is-a-hyprland-icon">为什么我的光标变成了 Hyprland 图标？</a><a class="level-3" href="#smart-gaps-please">怎么设置智能间距？</a><a class="level-3" href="#i-cant-create-discord-binds">我无法在 Discord 中创建键位绑定</a><a class="level-3" href="#fullscreen-applicationssteam-games-open-with-secondary-monitors-resolution">全屏应用和 Steam 游戏启动时使用副显示器的分辨率</a><a class="level-3" href="#my-mouse-cursor-keeps-escaping-the-game-window">我的鼠标光标总是跑出游戏窗口！</a><a class="level-3" href="#spring-damping">弹簧阻尼拼作 damping ？</a><a class="level-3" href="#blur">模糊效果</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>

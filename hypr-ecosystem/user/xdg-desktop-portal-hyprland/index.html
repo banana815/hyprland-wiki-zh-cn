@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>xdg-desktop-portal-hyprland · Hyprland Wiki 中文版</title><link rel="icon" href="../../../assets/hyprland.svg">
+<link rel="stylesheet" href="../../../assets/wiki.css"><script defer src="../../../assets/site.js"></script></head>
+<body data-root="../../../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../../../"><img src="../../../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/hypr-ecosystem/user/xdg-desktop-portal-hyprland/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../../../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../../../">Hyprland 中文文档</a><ul><li><a href="../../../version-selector/">版本选择器 ⚙️</a></li><li><details><summary><a href="../../../getting-started/">入门指南</a></summary><ul><li><a href="../../../getting-started/installation/">安装</a></li><li><a href="../../../getting-started/master-tutorial/">入门教程</a></li><li><a href="../../../getting-started/preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details><summary><a href="../../../configuring/">配置</a></summary><ul><li><a href="../../../configuring/naming-conventions/">命名约定</a></li><li><a href="../../../configuring/selectors/">选择器</a></li><li><details><summary><a href="../../../configuring/core/">基础配置</a></summary><ul><li><details><summary><a href="../../../configuring/core/monitors/">显示器</a></summary><ul><li><a href="../../../configuring/core/monitors/output-selection/">选择显示输出</a></li><li><a href="../../../configuring/core/monitors/positioning/">显示器排列</a></li><li><a href="../../../configuring/core/monitors/modes/">显示模式</a></li><li><a href="../../../configuring/core/monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="../../../configuring/core/config-options/">配置选项</a></li><li><a href="../../../configuring/core/devices/">设备</a></li><li><a href="../../../configuring/core/dispatchers/">调度器</a></li><li><details><summary><a href="../../../configuring/core/binds/">按键绑定</a></summary><ul><li><a href="../../../configuring/core/binds/flags/">标志位</a></li><li><a href="../../../configuring/core/binds/keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="../../../configuring/core/binds/devices/">设备绑定</a></summary><ul><li><a href="../../../configuring/core/binds/devices/mouse/">鼠标</a></li><li><a href="../../../configuring/core/binds/devices/touchpad/">触摸板</a></li><li><a href="../../../configuring/core/binds/devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="../../../configuring/core/binds/submaps/">按键子映射</a></li><li><a href="../../../configuring/core/binds/globals/">全局快捷键与绑定</a></li><li><a href="../../../configuring/core/binds/switches/">硬件开关</a></li><li><a href="../../../configuring/core/binds/gestures/">手势</a></li></ul></details></li><li><details><summary><a href="../../../configuring/core/rules/">规则</a></summary><ul><li><a href="../../../configuring/core/rules/window-rules/">窗口规则</a></li><li><a href="../../../configuring/core/rules/workspace-rules/">工作区规则</a></li><li><a href="../../../configuring/core/rules/layer-rules/">图层规则</a></li></ul></details></li><li><a href="../../../configuring/core/environment-variables/">环境变量</a></li><li><a href="../../../configuring/core/animations/">动画</a></li><li><a href="../../../configuring/core/autostart/">自动启动</a></li><li><details><summary><a href="../../../configuring/core/advanced-configuration/">高级配置</a></summary><ul><li><a href="../../../configuring/core/advanced-configuration/events/">Lua 事件</a></li><li><a href="../../../configuring/core/advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="../../../configuring/core/advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="../../../configuring/core/advanced-configuration/notifications/">通知</a></li><li><a href="../../../configuring/core/advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../configuring/layouts/">布局</a></summary><ul><li><a href="../../../configuring/layouts/dwindle-layout/">Dwindle 布局</a></li><li><a href="../../../configuring/layouts/scrolling-layout/">滚动布局</a></li><li><a href="../../../configuring/layouts/master-layout/">主从布局</a></li><li><a href="../../../configuring/layouts/monocle-layout/">单窗口布局</a></li><li><a href="../../../configuring/layouts/custom-layouts/">自定义布局</a></li></ul></details></li><li><details><summary><a href="../../../configuring/extra/">其他配置</a></summary><ul><li><a href="../../../configuring/extra/multi-gpu/">多显卡</a></li><li><a href="../../../configuring/extra/virtual-gpu/">虚拟 GPU</a></li><li><a href="../../../configuring/extra/performance/">性能</a></li><li><a href="../../../configuring/extra/tearing/">画面撕裂</a></li><li><a href="../../../configuring/extra/xwayland/">Xwayland</a></li><li><a href="../../../configuring/extra/systemd/">systemd</a></li></ul></details></li><li><a href="../../../configuring/code-snippets/">Lua 代码片段</a></li></ul></details></li><li><details open><summary><a href="../../">Hypr 生态系统</a></summary><ul><li><details open><summary><a href="../">用户应用与实用工具</a></summary><ul><li><a href="../hyprpaper/">hyprpaper</a></li><li><a href="../hyprpicker/">hyprpicker</a></li><li><a href="../hyprlauncher/">hyprlauncher</a></li><li><a href="../hypridle/">hypridle</a></li><li><a href="../hyprlock/">hyprlock</a></li><li><a href="./" aria-current="page">xdg-desktop-portal-hyprland</a></li><li><a href="../hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../hyprsunset/">hyprsunset</a></li><li><a href="../hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../hyprqt6engine/">hyprqt6engine</a></li><li><a href="../hyprpwcenter/">hyprpwcenter</a></li><li><a href="../hyprshutdown/">hyprshutdown</a></li><li><a href="../hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../../dev/">开发库和工具包</a></summary><ul><li><a href="../../dev/aquamarine/">aquamarine</a></li><li><a href="../../dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../../dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../../dev/hyprlang/">hyprlang</a></li><li><a href="../../dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../../dev/hyprutils/">hyprutils</a></li><li><a href="../../dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../hyprland-plugins/">Hyprland 插件</a></summary><ul><li><a href="../../../hyprland-plugins/using-plugins/">使用插件</a></li><li><details><summary><a href="../../../hyprland-plugins/development/">开发</a></summary><ul><li><a href="../../../hyprland-plugins/development/getting-started/">插件开发入门</a></li><li><a href="../../../hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li><li><a href="../../../hyprland-plugins/development/advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../useful-utilities/">实用工具</a></summary><ul><li><a href="../../../useful-utilities/must-have/">必备软件</a></li><li><a href="../../../useful-utilities/status-bars/">状态栏</a></li><li><a href="../../../useful-utilities/wallpapers/">壁纸</a></li><li><a href="../../../useful-utilities/screen-sharing/">屏幕共享</a></li><li><a href="../../../useful-utilities/screenshots-and-recording/">截图与录屏</a></li><li><a href="../../../useful-utilities/app-launchers/">应用启动器</a></li><li><a href="../../../useful-utilities/app-clients/">应用客户端</a></li><li><a href="../../../useful-utilities/phone-connect/">连接手机</a></li><li><a href="../../../useful-utilities/color-pickers/">取色器</a></li><li><a href="../../../useful-utilities/clipboard-managers/">剪贴板管理器</a></li><li><a href="../../../useful-utilities/file-managers/">文件管理器</a></li><li><a href="../../../useful-utilities/other/">其他</a></li><li><a href="../../../useful-utilities/hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="../../../useful-utilities/uwsm/">UWSM</a></li></ul></details></li><li><details><summary><a href="../../../nix/">Nix</a></summary><ul><li><a href="../../../nix/hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../../../nix/installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../../../nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="../../../nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li><li><a href="../../../nix/cachix/">Cachix</a></li><li><a href="../../../nix/advanced/">高级用法</a></li><li><a href="../../../nix/contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../../../nvidia/">NVIDIA</a></li><li><a href="../../../ipc/">IPC</a></li><li><a href="../../../crashes-and-bugs/">崩溃与缺陷</a></li><li><a href="../../../faq/">常见问题</a></li><li><a href="../../../community/">社区</a></li><li><details><summary><a href="../../../contributing-and-debugging/">贡献与调试</a></summary><ul><li><a href="../../../contributing-and-debugging/wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../../../contributing-and-debugging/issue-guidelines/">议题指南</a></li><li><a href="../../../contributing-and-debugging/pr-guidelines/">PR 指南</a></li><li><a href="../../../contributing-and-debugging/tests/">测试</a></li><li><a href="../../../contributing-and-debugging/translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../../../">Hyprland 中文文档</a><span>›</span><a href="../../">Hypr 生态系统</a><span>›</span><a href="../">用户应用与实用工具</a></nav><article><h1>xdg-desktop-portal-hyprland</h1><p>XDG 桌面门户是一种程序，其他应用程序可以通过它使用 D-Bus 与合成器通信。</p>
+<p>门户提供特定功能，例如打开文件选择器或共享屏幕。</p>
+<p><a href="https://github.com/hyprwm/xdg-desktop-portal-hyprland">xdg-desktop-portal-hyprland</a> 是 Hyprland 的 xdg-desktop-portal 实现。 它支持屏幕共享、全局快捷键等功能。</p>
+<div class="note">
+<div class="title">
+<p>说明</p>
+</div>
+<p>本文将 <code>xdg-desktop-portal-hyprland</code> 简称为 XDPH。</p>
+</div>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>XDPH 没有实现文件选择器。 如需此功能，建议在安装 XDPH 的同时安装 <code>xdg-desktop-portal-gtk</code>。</p>
+</div>
+<h2 id="installing">安装 <a class="permalink" href="#installing" aria-label="本节链接">#</a></h2>
+<details><summary>Arch Linux</summary>
+
+<pre class="sh"><code>pacman -S xdg-desktop-portal-hyprland</code></pre>
+<p>如果要安装 -git 版本，则使用：</p>
+<pre class="sh"><code>yay -S xdg-desktop-portal-hyprland-git</code></pre>
+</details>
+
+<details><summary>NixOS</summary>
+
+<p>在 NixOS 上，设置 <code>programs.hyprland.enable = true;</code> 时，<a href="../../../nix/installing-hyprland-on-nixos/">Hyprland 的 NixOS 模块</a> 就会启用 XDPH。</p>
+</details>
+
+<details><summary>Gentoo</summary>
+
+<h3 id="unmask-dependencies">解除对依赖包的屏蔽 <a class="permalink" href="#unmask-dependencies" aria-label="本节链接">#</a></h3>
+<pre class="plain"><code>dev-qt/qtbase
+dev-qt/qtwayland
+dev-qt/qtdeclarative
+dev-qt/qtshadertools</code></pre>
+<h3 id="apply-necessary-useflags">设置所需的 USE 标志 <a class="permalink" href="#apply-necessary-useflags" aria-label="本节链接">#</a></h3>
+<pre class="plain"><code>dev-qt/qtbase opengl egl eglfs gles2-only
+dev-qt/qtdeclarative opengl
+sys-apps/xdg-desktop-portal screencast</code></pre>
+<h3 id="unmask-dependencies-and-xdph">解除对依赖包和 XDPH 的屏蔽 <a class="permalink" href="#unmask-dependencies-and-xdph" aria-label="本节链接">#</a></h3>
+<pre class="plain"><code>gui-libs/xdg-desktop-portal-hyprland
+dev-qt/qtbase
+dev-qt/qtwayland
+dev-qt/qtdeclarative
+dev-qt/qtshadertools</code></pre>
+<h3 id="installation">安装 <a class="permalink" href="#installation" aria-label="本节链接">#</a></h3>
+<pre class="sh"><code>eselect repository enable hyprovelay
+emaint sync -r hyproverlay
+emerge --ask --verbose gui-libs/xdg-desktop-portal-hyprland</code></pre>
+</details>
+
+<details><summary>手动安装</summary>
+
+<p>参见 <a href="https://github.com/hyprwm/xdg-desktop-portal-hyprland">GitHub 仓库的 README</a>。</p>
+</details>
+
+<h2 id="usage">使用 <a class="permalink" href="#usage" aria-label="本节链接">#</a></h2>
+<p>Hyprland 启动后，D-Bus 会自动启动 XDPH。</p>
+<p>要检查一切是否正常，可以尝试共享任意屏幕内容，或者打开 OBS 并选择 PipeWire 来源。 如果 XDPH 正在运行，就会弹出一个 Qt 菜单，让你选择要共享的内容。</p>
+<p>XDPH 也可以在其他基于 wlroots 的合成器上运行，但窗口共享等 Hyprland 专属功能将不可用。</p>
+<p>作为最后的手段，你可以使用以下脚本，并将其设为自动启动：</p>
+<pre class="sh"><code>#!/bin/sh
+sleep 1
+killall -e xdg-desktop-portal-hyprland
+killall xdg-desktop-portal
+/usr/lib/xdg-desktop-portal-hyprland &amp;
+sleep 2
+/usr/lib/xdg-desktop-portal &amp;</code></pre>
+<p>如果路径不正确，请按实际情况调整。</p>
+<h2 id="share-picker-doesnt-use-the-system-theme">共享选择器未使用系统主题 <a class="permalink" href="#share-picker-doesnt-use-the-system-theme" aria-label="本节链接">#</a></h2>
+<p>可以尝试以下两种方法中的一种，也可以两种都试：</p>
+<pre class="sh"><code>dbus-update-activation-environment --systemd --all
+systemctl --user import-environment QT_QPA_PLATFORMTHEME</code></pre>
+<p>如果有效，请将相应命令添加到配置的自动启动项中。</p>
+<h2 id="using-the-kde-file-picker-with-xdph">在 XDPH 中使用 KDE 文件选择器 <a class="permalink" href="#using-the-kde-file-picker-with-xdph" aria-label="本节链接">#</a></h2>
+<p>XDPH 没有实现文件选择器，默认使用 GTK 文件选择器作为后备（参见 <code>/usr/share/xdg-desktop-portal/hyprland-portals.conf</code>）。 如果你想使用 KDE 文件选择器，同时让 XDPH 处理其他所有功能，请创建文件 <code>~/.config/xdg-desktop-portal/hyprland-portals.conf</code>，并写入以下内容：</p>
+<pre class="ini"><code>[preferred]
+default = hyprland;gtk
+org.freedesktop.impl.portal.FileChooser = kde</code></pre>
+<p>更多信息请参阅 <a href="https://wiki.archlinux.org/title/XDG_Desktop_Portal">Arch Wiki 上的 xdg-desktop-portal 文档</a>。 请注意，Firefox 等应用程序可能需要额外配置才能使用 KDE 文件选择器。</p>
+<h2 id="debugging">调试 <a class="permalink" href="#debugging" aria-label="本节链接">#</a></h2>
+<p>如果应用程序启动缓慢，或屏幕共享无法使用，请查看日志。</p>
+<pre class="sh"><code>systemctl --user status xdg-desktop-portal-hyprland</code></pre>
+<p>如果出现崩溃，很可能是因为缺少 <code>qt6-wayland</code> 或 <code>qt5-wayland</code>。</p>
+<p>如果门户没有自动启动，手动启动后也无法正常工作，而且没有生成任何错误日志，那么很可能是 XDG <a href="../../../configuring/core/environment-variables/">环境变量</a>设置有误。 Hyprland 默认会为你设置这些变量，除非你很清楚修改的影响，否则请避免覆盖它们。</p>
+<h2 id="configuration">配置 <a class="permalink" href="#configuration" aria-label="本节链接">#</a></h2>
+<p>配置文件 <code>~/.config/hypr/xdph.conf</code> 支持以下变量：</p>
+<h3 id="screencopy">屏幕复制 <a class="permalink" href="#screencopy" aria-label="本节链接">#</a></h3>
+<p><code>screencopy</code> 类别中的变量：</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_fps</code></td>
+<td>屏幕共享会话的最高帧率。<code>0</code> 表示不限帧率</td>
+<td>int</td>
+<td><code>120</code></td>
+</tr>
+<tr>
+<td><code>allow_token_by_default</code></td>
+<td>启用后，默认勾选“允许恢复令牌”复选框</td>
+<td>bool</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>custom_picker_binary</code></td>
+<td>如果值非空，则使用指定的<strong>二进制程序</strong>作为共享选择器。该程序必须遵循 <code>hyprland-share-picker</code> 将选择结果写入标准输出时所用的格式</td>
+<td>string</td>
+<td><code>"hyprland-share-picker"</code></td>
+</tr>
+<tr>
+<td><code>force_shm</code></td>
+<td>启用后，屏幕共享会跳过 DMA-BUF，始终使用 SHM。SHM 比 DMA-BUF 慢，尤其是在高分辨率下，但它可以绕过多 GPU 系统上的 DMA-BUF 分配失败问题</td>
+<td>bool</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cursor_mode</code></td>
+<td>客户端（如浏览器）未指定光标模式时使用的默认模式。可设为 <a href="https://flatpak.github.io/xdg-desktop-portal/docs/doc-org.freedesktop.portal.ScreenCast.html#org-freedesktop-portal-screencast-availablecursormodes">XDG 屏幕投射门户</a>已实现的任一模式，即 <code>1</code> 表示隐藏，<code>2</code> 表示嵌入。默认采用协议的默认模式（隐藏）</td>
+<td>int</td>
+<td><code>0</code></td>
+</tr>
+</tbody>
+</table>
+<details><summary>示例</summary>
+
+<pre class="ini"><code>screencopy {
+    max_fps = 60
+}</code></pre>
+</details>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../../../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/hypr-ecosystem/user/xdg-desktop-portal-hyprland/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-2" href="#installing">安装</a><a class="level-3" href="#unmask-dependencies">解除对依赖包的屏蔽</a><a class="level-3" href="#apply-necessary-useflags">设置所需的 USE 标志</a><a class="level-3" href="#unmask-dependencies-and-xdph">解除对依赖包和 XDPH 的屏蔽</a><a class="level-3" href="#installation">安装</a><a class="level-2" href="#usage">使用</a><a class="level-2" href="#share-picker-doesnt-use-the-system-theme">共享选择器未使用系统主题</a><a class="level-2" href="#using-the-kde-file-picker-with-xdph">在 XDPH 中使用 KDE 文件选择器</a><a class="level-2" href="#debugging">调试</a><a class="level-2" href="#configuration">配置</a><a class="level-3" href="#screencopy">屏幕复制</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>

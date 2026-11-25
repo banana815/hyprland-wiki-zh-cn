@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PR 指南 · Hyprland Wiki 中文版</title><link rel="icon" href="../../assets/hyprland.svg">
+<link rel="stylesheet" href="../../assets/wiki.css"><script defer src="../../assets/site.js"></script></head>
+<body data-root="../../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../../"><img src="../../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/contributing-and-debugging/pr-guidelines/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../../">Hyprland 中文文档</a><ul><li><a href="../../version-selector/">版本选择器 ⚙️</a></li><li><details><summary><a href="../../getting-started/">入门指南</a></summary><ul><li><a href="../../getting-started/installation/">安装</a></li><li><a href="../../getting-started/master-tutorial/">入门教程</a></li><li><a href="../../getting-started/preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details><summary><a href="../../configuring/">配置</a></summary><ul><li><a href="../../configuring/naming-conventions/">命名约定</a></li><li><a href="../../configuring/selectors/">选择器</a></li><li><details><summary><a href="../../configuring/core/">基础配置</a></summary><ul><li><details><summary><a href="../../configuring/core/monitors/">显示器</a></summary><ul><li><a href="../../configuring/core/monitors/output-selection/">选择显示输出</a></li><li><a href="../../configuring/core/monitors/positioning/">显示器排列</a></li><li><a href="../../configuring/core/monitors/modes/">显示模式</a></li><li><a href="../../configuring/core/monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="../../configuring/core/config-options/">配置选项</a></li><li><a href="../../configuring/core/devices/">设备</a></li><li><a href="../../configuring/core/dispatchers/">调度器</a></li><li><details><summary><a href="../../configuring/core/binds/">按键绑定</a></summary><ul><li><a href="../../configuring/core/binds/flags/">标志位</a></li><li><a href="../../configuring/core/binds/keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="../../configuring/core/binds/devices/">设备绑定</a></summary><ul><li><a href="../../configuring/core/binds/devices/mouse/">鼠标</a></li><li><a href="../../configuring/core/binds/devices/touchpad/">触摸板</a></li><li><a href="../../configuring/core/binds/devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="../../configuring/core/binds/submaps/">按键子映射</a></li><li><a href="../../configuring/core/binds/globals/">全局快捷键与绑定</a></li><li><a href="../../configuring/core/binds/switches/">硬件开关</a></li><li><a href="../../configuring/core/binds/gestures/">手势</a></li></ul></details></li><li><details><summary><a href="../../configuring/core/rules/">规则</a></summary><ul><li><a href="../../configuring/core/rules/window-rules/">窗口规则</a></li><li><a href="../../configuring/core/rules/workspace-rules/">工作区规则</a></li><li><a href="../../configuring/core/rules/layer-rules/">图层规则</a></li></ul></details></li><li><a href="../../configuring/core/environment-variables/">环境变量</a></li><li><a href="../../configuring/core/animations/">动画</a></li><li><a href="../../configuring/core/autostart/">自动启动</a></li><li><details><summary><a href="../../configuring/core/advanced-configuration/">高级配置</a></summary><ul><li><a href="../../configuring/core/advanced-configuration/events/">Lua 事件</a></li><li><a href="../../configuring/core/advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="../../configuring/core/advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="../../configuring/core/advanced-configuration/notifications/">通知</a></li><li><a href="../../configuring/core/advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../configuring/layouts/">布局</a></summary><ul><li><a href="../../configuring/layouts/dwindle-layout/">Dwindle 布局</a></li><li><a href="../../configuring/layouts/scrolling-layout/">滚动布局</a></li><li><a href="../../configuring/layouts/master-layout/">主从布局</a></li><li><a href="../../configuring/layouts/monocle-layout/">单窗口布局</a></li><li><a href="../../configuring/layouts/custom-layouts/">自定义布局</a></li></ul></details></li><li><details><summary><a href="../../configuring/extra/">其他配置</a></summary><ul><li><a href="../../configuring/extra/multi-gpu/">多显卡</a></li><li><a href="../../configuring/extra/virtual-gpu/">虚拟 GPU</a></li><li><a href="../../configuring/extra/performance/">性能</a></li><li><a href="../../configuring/extra/tearing/">画面撕裂</a></li><li><a href="../../configuring/extra/xwayland/">Xwayland</a></li><li><a href="../../configuring/extra/systemd/">systemd</a></li></ul></details></li><li><a href="../../configuring/code-snippets/">Lua 代码片段</a></li></ul></details></li><li><details><summary><a href="../../hypr-ecosystem/">Hypr 生态系统</a></summary><ul><li><details><summary><a href="../../hypr-ecosystem/user/">用户应用与实用工具</a></summary><ul><li><a href="../../hypr-ecosystem/user/hyprpaper/">hyprpaper</a></li><li><a href="../../hypr-ecosystem/user/hyprpicker/">hyprpicker</a></li><li><a href="../../hypr-ecosystem/user/hyprlauncher/">hyprlauncher</a></li><li><a href="../../hypr-ecosystem/user/hypridle/">hypridle</a></li><li><a href="../../hypr-ecosystem/user/hyprlock/">hyprlock</a></li><li><a href="../../hypr-ecosystem/user/xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li><li><a href="../../hypr-ecosystem/user/hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../../hypr-ecosystem/user/hyprsunset/">hyprsunset</a></li><li><a href="../../hypr-ecosystem/user/hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../../hypr-ecosystem/user/hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../../hypr-ecosystem/user/hyprqt6engine/">hyprqt6engine</a></li><li><a href="../../hypr-ecosystem/user/hyprpwcenter/">hyprpwcenter</a></li><li><a href="../../hypr-ecosystem/user/hyprshutdown/">hyprshutdown</a></li><li><a href="../../hypr-ecosystem/user/hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../../hypr-ecosystem/user/hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../../hypr-ecosystem/dev/">开发库和工具包</a></summary><ul><li><a href="../../hypr-ecosystem/dev/aquamarine/">aquamarine</a></li><li><a href="../../hypr-ecosystem/dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../../hypr-ecosystem/dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../../hypr-ecosystem/dev/hyprlang/">hyprlang</a></li><li><a href="../../hypr-ecosystem/dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../../hypr-ecosystem/dev/hyprutils/">hyprutils</a></li><li><a href="../../hypr-ecosystem/dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../hyprland-plugins/">Hyprland 插件</a></summary><ul><li><a href="../../hyprland-plugins/using-plugins/">使用插件</a></li><li><details><summary><a href="../../hyprland-plugins/development/">开发</a></summary><ul><li><a href="../../hyprland-plugins/development/getting-started/">插件开发入门</a></li><li><a href="../../hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li><li><a href="../../hyprland-plugins/development/advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../useful-utilities/">实用工具</a></summary><ul><li><a href="../../useful-utilities/must-have/">必备软件</a></li><li><a href="../../useful-utilities/status-bars/">状态栏</a></li><li><a href="../../useful-utilities/wallpapers/">壁纸</a></li><li><a href="../../useful-utilities/screen-sharing/">屏幕共享</a></li><li><a href="../../useful-utilities/screenshots-and-recording/">截图与录屏</a></li><li><a href="../../useful-utilities/app-launchers/">应用启动器</a></li><li><a href="../../useful-utilities/app-clients/">应用客户端</a></li><li><a href="../../useful-utilities/phone-connect/">连接手机</a></li><li><a href="../../useful-utilities/color-pickers/">取色器</a></li><li><a href="../../useful-utilities/clipboard-managers/">剪贴板管理器</a></li><li><a href="../../useful-utilities/file-managers/">文件管理器</a></li><li><a href="../../useful-utilities/other/">其他</a></li><li><a href="../../useful-utilities/hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="../../useful-utilities/uwsm/">UWSM</a></li></ul></details></li><li><details><summary><a href="../../nix/">Nix</a></summary><ul><li><a href="../../nix/hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../../nix/installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../../nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="../../nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li><li><a href="../../nix/cachix/">Cachix</a></li><li><a href="../../nix/advanced/">高级用法</a></li><li><a href="../../nix/contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../../nvidia/">NVIDIA</a></li><li><a href="../../ipc/">IPC</a></li><li><a href="../../crashes-and-bugs/">崩溃与缺陷</a></li><li><a href="../../faq/">常见问题</a></li><li><a href="../../community/">社区</a></li><li><details open><summary><a href="../">贡献与调试</a></summary><ul><li><a href="../wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../issue-guidelines/">议题指南</a></li><li><a href="./" aria-current="page">PR 指南</a></li><li><a href="../tests/">测试</a></li><li><a href="../translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../../">Hyprland 中文文档</a><span>›</span><a href="../">贡献与调试</a></nav><article><h1>PR 指南</h1><h2 id="pr-requirements">PR 要求 <a class="permalink" href="#pr-requirements" aria-label="本节链接">#</a></h2>
+<ul>
+<li>代码简洁清晰，避免取巧的写法</li>
+<li>说明改了什么，以及_为什么_这样改</li>
+<li>遵循下文的代码风格</li>
+</ul>
+<h2 id="ai-policy">AI 政策 <a class="permalink" href="#ai-policy" aria-label="本节链接">#</a></h2>
+<p>你<strong>必须</strong>遵守我们的 <a href="https://github.com/hyprwm/.github/blob/main/policies/AI_USAGE.md">AI 政策</a>。 违反政策可能会导致你今后被禁止提交任何 PR！</p>
+<h2 id="code-style">代码风格 <a class="permalink" href="#code-style" aria-label="本节链接">#</a></h2>
+<p>提交 PR 前请阅读本节，以免维护者在审查时反复指出风格上的小问题，节省他们的时间。</p>
+<h3 id="before-you-submit">提交前 <a class="permalink" href="#before-you-submit" aria-label="本节链接">#</a></h3>
+<p>请确保已运行 clang-format：<code>make format-fix</code></p>
+<p>检查你的改动是否违反了 <code>clang-tidy</code> 规则。 通常可以直接在 IDE 中进行这项检查。</p>
+<h3 id="clang-format">Clang-format <a class="permalink" href="#clang-format" aria-label="本节链接">#</a></h3>
+<p>这项要求没有商量的余地。 你的代码<strong>必须</strong>经过格式化。</p>
+<h3 id="clang-tidy">Clang-tidy <a class="permalink" href="#clang-tidy" aria-label="本节链接">#</a></h3>
+<p>项目不强制要求解决所有 Clang-tidy 报告的问题，但请尽量减少这类问题，_只有_在确实必要时才忽略。</p>
+<p>我们已调整过规则，99% 的情况下，你都应该修复它报告的问题。</p>
+<h3 id="testing">测试 <a class="permalink" href="#testing" aria-label="本节链接">#</a></h3>
+<p>有关 Hyprland 及相关项目的测试，请参阅<a href="../tests/">测试</a>页面。</p>
+<p>_必须_保证原本通过的测试继续通过。如果改动可以测试，就_必须_添加新测试（例如，图形界面方面的改动无法测试）。</p>
+<h3 id="other">其他 <a class="permalink" href="#other" aria-label="本节链接">#</a></h3>
+<p>以下是 clang-tidy 和 clang-format 检查不到的一些问题：</p>
+<ul>
+<li><em>基本类型</em>（int、float、double、size_t 等）的变量必须初始化。</li>
+<li>如果 if/else 分支体只有一_行_（按行数算，不按语句数算），就不要用 <code>{}</code> 把它括起来。
+<ul>
+<li>上一条规则不适用于循环等结构。</li>
+</ul></li>
+<li>空函数体内可以考虑加一个 <code>;</code>。</li>
+<li>初始化包含大量元素的 vector、数组或 map 时，在最后一个元素后加上 <code>,</code>，让排版更整齐。</li>
+<li>在头文件中，能用前向声明代替包含头文件时，可以考虑使用前向声明，以缩短编译时间。</li>
+<li>禁止使用 <code>using namespace std;</code>。<code>using namespace (anything else)</code> 只允许出现在源文件中，不能出现在头文件中。</li>
+<li>优先使用提前返回来减少嵌套。<code>if(!valid) return;</code> 比 <code>if (valid) { /* a billion things */ }</code> 好得多。</li>
+</ul>
+<h3 id="naming-conventions">命名约定 <a class="permalink" href="#naming-conventions" aria-label="本节链接">#</a></h3>
+<p>代码应使用 <code>camelCase</code> 命名。如果变量是类的成员，还应加上 <code>m_</code> 前缀（结构体成员不加）。</p>
+<p>另有以下约定：</p>
+<ul>
+<li>类名以 <code>C</code> 开头，例如 <code>CMyClass</code></li>
+<li>结构体名以 <code>S</code> 开头，例如 <code>SMyStruct</code></li>
+<li>接口名以 <code>I</code> 开头，例如 <code>IMyInterface</code></li>
+<li>指向单例的全局指针以 <code>g_</code> 开头，例如 <code>g_someManager</code></li>
+<li>常量名全部大写，例如 <code>const auto MYVARIABLE = ...</code></li>
+</ul>
+<h2 id="general-code-requirements">通用代码要求 <a class="permalink" href="#general-code-requirements" aria-label="本节链接">#</a></h2>
+<h3 id="no-raw-pointers">不使用裸指针 <a class="permalink" href="#no-raw-pointers" aria-label="本节链接">#</a></h3>
+<p>规则很简单：除非_确有必要_，否则不要使用裸指针（例如 <code>CMyClass*</code>）。 你可以使用 <code>UP</code>、<code>SP</code> 和 <code>WP</code>。 它们分别是独占指针、共享指针和弱指针。</p>
+<h3 id="no-malloc">不使用 malloc <a class="permalink" href="#no-malloc" aria-label="本节链接">#</a></h3>
+<p>除非确有必要，否则不要使用 <code>malloc</code>/<code>free</code>。 你_一定会_忘记释放内存。</p>
+<h3 id="avoid-dubious-cleanups">避免不可靠的资源清理方式 <a class="permalink" href="#avoid-dubious-cleanups" aria-label="本节链接">#</a></h3>
+<p>如果某个函数以 C 风格分配资源（例如 <code>some_c_call_make_new()</code>），通常就需要调用配套的 <code>some_c_call_free()</code> 来释放资源。 这种情况下，可以采用以下任一做法：</p>
+<ul>
+<li>用 C++ 类封装该资源。</li>
+<li>如果资源只在一个函数内使用，就用 <code>CScopeGuard</code> 确保函数退出时总会释放它。</li>
+</ul>
+<h3 id="use-the-stl">使用 STL <a class="permalink" href="#use-the-stl" aria-label="本节链接">#</a></h3>
+<p>通常应使用 STL，避免重复实现已有功能。</p>
+<h3 id="use-hyprutils">使用 hyprutils <a class="permalink" href="#use-hyprutils" aria-label="本节链接">#</a></h3>
+<p>Hyprutils 提供了许多特别适合 Hyprland 和其他 hypr* 项目的实用工具。 请使用它们。</p>
+<h3 id="no-absolute-includes-from-src">包含头文件时不要使用以 /src 为起点的绝对路径 <a class="permalink" href="#no-absolute-includes-from-src" aria-label="本节链接">#</a></h3>
+<p>假设目录结构如下：</p>
+<pre><code>src/
+   a/
+      a.hpp
+   b/
+      b.hpp</code></pre>
+<p>如果要在 <code>a.hpp</code> 中包含 <code>b.hpp</code>，就_必须_使用 <code>../b/b.hpp</code>，_不能_使用 <code>b/b.hpp</code>。 后一种写法会导致插件无法正常工作。</p>
+<p>你可能会在代码中看到一个例外：允许使用从项目根目录算起的绝对路径（例如 <code>protocols/some-protocol.hpp</code>）。</p>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/contributing-and-debugging/pr-guidelines/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-2" href="#pr-requirements">PR 要求</a><a class="level-2" href="#ai-policy">AI 政策</a><a class="level-2" href="#code-style">代码风格</a><a class="level-3" href="#before-you-submit">提交前</a><a class="level-3" href="#clang-format">Clang-format</a><a class="level-3" href="#clang-tidy">Clang-tidy</a><a class="level-3" href="#testing">测试</a><a class="level-3" href="#other">其他</a><a class="level-3" href="#naming-conventions">命名约定</a><a class="level-2" href="#general-code-requirements">通用代码要求</a><a class="level-3" href="#no-raw-pointers">不使用裸指针</a><a class="level-3" href="#no-malloc">不使用 malloc</a><a class="level-3" href="#avoid-dubious-cleanups">避免不可靠的资源清理方式</a><a class="level-3" href="#use-the-stl">使用 STL</a><a class="level-3" href="#use-hyprutils">使用 hyprutils</a><a class="level-3" href="#no-absolute-includes-from-src">包含头文件时不要使用以 /src 为起点的绝对路径</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>

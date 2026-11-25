@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>命名约定 · Hyprland Wiki 中文版</title><link rel="icon" href="../../assets/hyprland.svg">
+<link rel="stylesheet" href="../../assets/wiki.css"><script defer src="../../assets/site.js"></script></head>
+<body data-root="../../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../../"><img src="../../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/configuring/naming-conventions/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../../">Hyprland 中文文档</a><ul><li><a href="../../version-selector/">版本选择器 ⚙️</a></li><li><details><summary><a href="../../getting-started/">入门指南</a></summary><ul><li><a href="../../getting-started/installation/">安装</a></li><li><a href="../../getting-started/master-tutorial/">入门教程</a></li><li><a href="../../getting-started/preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details open><summary><a href="../">配置</a></summary><ul><li><a href="./" aria-current="page">命名约定</a></li><li><a href="../selectors/">选择器</a></li><li><details><summary><a href="../core/">基础配置</a></summary><ul><li><details><summary><a href="../core/monitors/">显示器</a></summary><ul><li><a href="../core/monitors/output-selection/">选择显示输出</a></li><li><a href="../core/monitors/positioning/">显示器排列</a></li><li><a href="../core/monitors/modes/">显示模式</a></li><li><a href="../core/monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="../core/config-options/">配置选项</a></li><li><a href="../core/devices/">设备</a></li><li><a href="../core/dispatchers/">调度器</a></li><li><details><summary><a href="../core/binds/">按键绑定</a></summary><ul><li><a href="../core/binds/flags/">标志位</a></li><li><a href="../core/binds/keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="../core/binds/devices/">设备绑定</a></summary><ul><li><a href="../core/binds/devices/mouse/">鼠标</a></li><li><a href="../core/binds/devices/touchpad/">触摸板</a></li><li><a href="../core/binds/devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="../core/binds/submaps/">按键子映射</a></li><li><a href="../core/binds/globals/">全局快捷键与绑定</a></li><li><a href="../core/binds/switches/">硬件开关</a></li><li><a href="../core/binds/gestures/">手势</a></li></ul></details></li><li><details><summary><a href="../core/rules/">规则</a></summary><ul><li><a href="../core/rules/window-rules/">窗口规则</a></li><li><a href="../core/rules/workspace-rules/">工作区规则</a></li><li><a href="../core/rules/layer-rules/">图层规则</a></li></ul></details></li><li><a href="../core/environment-variables/">环境变量</a></li><li><a href="../core/animations/">动画</a></li><li><a href="../core/autostart/">自动启动</a></li><li><details><summary><a href="../core/advanced-configuration/">高级配置</a></summary><ul><li><a href="../core/advanced-configuration/events/">Lua 事件</a></li><li><a href="../core/advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="../core/advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="../core/advanced-configuration/notifications/">通知</a></li><li><a href="../core/advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../layouts/">布局</a></summary><ul><li><a href="../layouts/dwindle-layout/">Dwindle 布局</a></li><li><a href="../layouts/scrolling-layout/">滚动布局</a></li><li><a href="../layouts/master-layout/">主从布局</a></li><li><a href="../layouts/monocle-layout/">单窗口布局</a></li><li><a href="../layouts/custom-layouts/">自定义布局</a></li></ul></details></li><li><details><summary><a href="../extra/">其他配置</a></summary><ul><li><a href="../extra/multi-gpu/">多显卡</a></li><li><a href="../extra/virtual-gpu/">虚拟 GPU</a></li><li><a href="../extra/performance/">性能</a></li><li><a href="../extra/tearing/">画面撕裂</a></li><li><a href="../extra/xwayland/">Xwayland</a></li><li><a href="../extra/systemd/">systemd</a></li></ul></details></li><li><a href="../code-snippets/">Lua 代码片段</a></li></ul></details></li><li><details><summary><a href="../../hypr-ecosystem/">Hypr 生态系统</a></summary><ul><li><details><summary><a href="../../hypr-ecosystem/user/">用户应用与实用工具</a></summary><ul><li><a href="../../hypr-ecosystem/user/hyprpaper/">hyprpaper</a></li><li><a href="../../hypr-ecosystem/user/hyprpicker/">hyprpicker</a></li><li><a href="../../hypr-ecosystem/user/hyprlauncher/">hyprlauncher</a></li><li><a href="../../hypr-ecosystem/user/hypridle/">hypridle</a></li><li><a href="../../hypr-ecosystem/user/hyprlock/">hyprlock</a></li><li><a href="../../hypr-ecosystem/user/xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li><li><a href="../../hypr-ecosystem/user/hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../../hypr-ecosystem/user/hyprsunset/">hyprsunset</a></li><li><a href="../../hypr-ecosystem/user/hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../../hypr-ecosystem/user/hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../../hypr-ecosystem/user/hyprqt6engine/">hyprqt6engine</a></li><li><a href="../../hypr-ecosystem/user/hyprpwcenter/">hyprpwcenter</a></li><li><a href="../../hypr-ecosystem/user/hyprshutdown/">hyprshutdown</a></li><li><a href="../../hypr-ecosystem/user/hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../../hypr-ecosystem/user/hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../../hypr-ecosystem/dev/">开发库和工具包</a></summary><ul><li><a href="../../hypr-ecosystem/dev/aquamarine/">aquamarine</a></li><li><a href="../../hypr-ecosystem/dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../../hypr-ecosystem/dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../../hypr-ecosystem/dev/hyprlang/">hyprlang</a></li><li><a href="../../hypr-ecosystem/dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../../hypr-ecosystem/dev/hyprutils/">hyprutils</a></li><li><a href="../../hypr-ecosystem/dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../hyprland-plugins/">Hyprland 插件</a></summary><ul><li><a href="../../hyprland-plugins/using-plugins/">使用插件</a></li><li><details><summary><a href="../../hyprland-plugins/development/">开发</a></summary><ul><li><a href="../../hyprland-plugins/development/getting-started/">插件开发入门</a></li><li><a href="../../hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li><li><a href="../../hyprland-plugins/development/advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../useful-utilities/">实用工具</a></summary><ul><li><a href="../../useful-utilities/must-have/">必备软件</a></li><li><a href="../../useful-utilities/status-bars/">状态栏</a></li><li><a href="../../useful-utilities/wallpapers/">壁纸</a></li><li><a href="../../useful-utilities/screen-sharing/">屏幕共享</a></li><li><a href="../../useful-utilities/screenshots-and-recording/">截图与录屏</a></li><li><a href="../../useful-utilities/app-launchers/">应用启动器</a></li><li><a href="../../useful-utilities/app-clients/">应用客户端</a></li><li><a href="../../useful-utilities/phone-connect/">连接手机</a></li><li><a href="../../useful-utilities/color-pickers/">取色器</a></li><li><a href="../../useful-utilities/clipboard-managers/">剪贴板管理器</a></li><li><a href="../../useful-utilities/file-managers/">文件管理器</a></li><li><a href="../../useful-utilities/other/">其他</a></li><li><a href="../../useful-utilities/hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="../../useful-utilities/uwsm/">UWSM</a></li></ul></details></li><li><details><summary><a href="../../nix/">Nix</a></summary><ul><li><a href="../../nix/hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../../nix/installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../../nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="../../nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li><li><a href="../../nix/cachix/">Cachix</a></li><li><a href="../../nix/advanced/">高级用法</a></li><li><a href="../../nix/contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../../nvidia/">NVIDIA</a></li><li><a href="../../ipc/">IPC</a></li><li><a href="../../crashes-and-bugs/">崩溃与缺陷</a></li><li><a href="../../faq/">常见问题</a></li><li><a href="../../community/">社区</a></li><li><details><summary><a href="../../contributing-and-debugging/">贡献与调试</a></summary><ul><li><a href="../../contributing-and-debugging/wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../../contributing-and-debugging/issue-guidelines/">议题指南</a></li><li><a href="../../contributing-and-debugging/pr-guidelines/">PR 指南</a></li><li><a href="../../contributing-and-debugging/tests/">测试</a></li><li><a href="../../contributing-and-debugging/translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../../">Hyprland 中文文档</a><span>›</span><a href="../">配置</a></nav><article><h1>命名约定</h1><h2 id="syntax">语法 <a class="permalink" href="#syntax" aria-label="本节链接">#</a></h2>
+<div class="tip">
+<div class="title">
+<p>提示</p>
+</div>
+<p>为便于理解，本 wiki 对部分元素采用了特殊记法。</p>
+</div>
+<h3 id="parameters">参数 <a class="permalink" href="#parameters" aria-label="本节链接">#</a></h3>
+<p>Hyprland 的许多 Lua 函数接受 Lua 表作为输入。将键值对放在花括号中即可创建表，例如 <code>{ key1 = value1, key2 = value2 }</code>。表中键值对的顺序无关紧要，访问不存在的键时会得到 <code>nil</code>。</p>
+<p>参数名后带问号（<code>?</code>）表示该参数可选，可以省略。此处的问号不属于 Lua 语法，不能写入实际配置。</p>
+<p>参数后带 <code>= data_type</code> 表示该参数仅接受指定的数据类型。可选参数后可以带 <code>= value</code>，表示未设置该参数时使用的默认值。</p>
+<p>有关 Lua 表的更多信息，请参阅<a href="https://www.lua.org/pil/2.5.html">此处</a>。</p>
+<details><summary>参数示例</summary>
+
+<p>下面以这段代码中的调度器为例，说明不同参数类型之间的区别：</p>
+<pre class="lua"><code>hl.bind(&quot;SUPER + SHIFT + S&quot;, hl.dsp.window.move({ workspace = &quot;special:magic&quot; }))
+hl.bind(&quot;SUPER + S&quot;, hl.dsp.workspace.toggle_special(&quot;magic&quot;))</code></pre>
+<p>在第一个按键绑定中，<code>hl.dsp.window.move</code> 接受一个表作为参数。调度器参数记法 <code>move({ window?, workspace, follow? })</code> 用花括号（<code>{}</code>）表示表，其中列出了 <code>window?, workspace, follow?</code>。这里，<code>workspace</code> 为必填项，<code>window</code> 和 <code>follow</code> 为可选项，默认值分别为 <code>"activewindow"</code> 和 <code>true</code>。</p>
+<p>在第二个按键绑定中，调度器接受一个普通的位置参数，而非表。调度器参数记法 <code>toggle_special( special_name )</code> 中没有花括号（<code>{}</code>），即表示这种用法。</p>
+</details>
+
+<h3 id="value-ranges">取值范围 <a class="permalink" href="#value-ranges" aria-label="本节链接">#</a></h3>
+<p><code>[value1 - value2]</code> 表示在相应数据类型中从 <code>value1</code> 到 <code>value2</code> 的取值范围。若未指定上限或下限，则在相应位置使用 <code>...</code>。</p>
+<details><summary>示例</summary>
+
+<p><code>[0.25 - 5.0]</code> 表示允许取 0.25 到 5.0 之间的所有浮点数。 <code>[0 - ...]</code> 表示允许取从 0 到当前机器的 int 类型上限之间的所有整数。</p>
+</details>
+
+<h3 id="coordinates">坐标 <a class="permalink" href="#coordinates" aria-label="本节链接">#</a></h3>
+<p>坐标采用 Y 轴朝下的笛卡尔坐标系，向右为 X 轴正方向（+x），向下为 Y 轴正方向（+y）。</p>
+<h2 id="data-types">数据类型 <a class="permalink" href="#data-types" aria-label="本节链接">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td>整数</td>
+</tr>
+<tr>
+<td>float</td>
+<td>浮点数</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>布尔值，取 <code>true</code> 或 <code>false</code></td>
+</tr>
+<tr>
+<td>string</td>
+<td>Lua 字符串。用 <code>""</code>、<code>''</code> 或 <code>[[]]</code> 将字符括起来（例如 <code>"dwindle"</code>、<code>'master'</code>、<code>[[scrolling]]</code>）。使用 Lua 的长括号字符串字面量（<code>[[]]</code>）时，无需转义 <code>"</code> 和 <code>'</code>。</td>
+</tr>
+<tr>
+<td>table</td>
+<td>Lua 表，写作 <code>{ }</code></td>
+</tr>
+<tr>
+<td>vec2</td>
+<td>由两个浮点数构成的向量，写作 <code>{x, y}</code>（例如 <code>{20, 20}</code>）</td>
+</tr>
+<tr>
+<td>css_gaps</td>
+<td>一个浮点数，或 <code>{ top?, left?, right?, bottom? }</code></td>
+</tr>
+<tr>
+<td>color</td>
+<td>颜色。有关颜色的说明，请参阅下方提示。</td>
+</tr>
+<tr>
+<td>gradient</td>
+<td>渐变。可传入单个颜色，也可使用 <code>{ colors = { color, color }, angle? = float }</code> 结构。部分选项可能提供额外的渐变参数。</td>
+</tr>
+<tr>
+<td>font_weight</td>
+<td>100 到 1000 之间的整数，或以下预设值之一：<code>thin</code>（100）、<code>ultralight</code>（200）、<code>light</code>（300）、<code>semilight</code>（350）、<code>book</code>（380）、<code>normal</code>（400）、<code>medium</code>（500）、<code>semibold</code>（600）、<code>bold</code>（700）、<code>ultrabold</code>（800）、<code>heavy</code>（900）、<code>ultraheavy</code>（1000）</td>
+</tr>
+</tbody>
+</table>
+<p>某些类型之间可以隐式转换，但这可能导致后续出现未定义行为。配合 Lua 存根使用 LSP，可在类型使用错误时收到警告。详情请参阅<a href="../core/#editor-autocompletion">此处</a>。</p>
+<h3 id="colors">颜色 <a class="permalink" href="#colors" aria-label="本节链接">#</a></h3>
+<p>颜色有以下四种写法：</p>
+<ul>
+<li>Web 风格的 RGB 或 RGBA 十六进制写法，以 # 开头：<code style="background-color:#FAFC21;color:#000000">"#FAFC32"</code>、<code style="background-color:#DDD;color:#000000">"#DDD"</code> 或 <code style="background-color:#FA3D7BFF;color:#000000">"#FA3D7BFF"</code></li>
+<li>rgba()：<code style="background-color:#57BBFFEE;color:#000000">"rgba(57BBFFEE)"</code>，或等价的十进制写法 <code style="background-color:#57BBFFEE;color:#000000">"rgba(87,187,255,0.933)"</code></li>
+<li>rgb()：<code style="background-color:#FF4410;color:#000000">"rgb(FF4410)"</code>，或等价的十进制写法 <code style="background-color:#FF4410;color:#000000">"rgb(255,68,16)"</code></li>
+<li>旧版 ARGB 格式：<code style="background-color:#B3FF1A;color:#000000">"0xeeb3ff1a"</code></li>
+</ul>
+<p>请注意，<code>rgb()</code>/<code>rgba()</code> 中的十进制参数之间不能有空格。</p>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/configuring/naming-conventions/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-2" href="#syntax">语法</a><a class="level-3" href="#parameters">参数</a><a class="level-3" href="#value-ranges">取值范围</a><a class="level-3" href="#coordinates">坐标</a><a class="level-2" href="#data-types">数据类型</a><a class="level-3" href="#colors">颜色</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>

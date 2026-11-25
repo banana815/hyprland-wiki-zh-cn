@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>使用 Home Manager 配置 Hyprland · Hyprland Wiki 中文版</title><link rel="icon" href="../../assets/hyprland.svg">
+<link rel="stylesheet" href="../../assets/wiki.css"><script defer src="../../assets/site.js"></script></head>
+<body data-root="../../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../../"><img src="../../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/nix/configuring-hyprland-with-home-manager/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../../">Hyprland 中文文档</a><ul><li><a href="../../version-selector/">版本选择器 ⚙️</a></li><li><details><summary><a href="../../getting-started/">入门指南</a></summary><ul><li><a href="../../getting-started/installation/">安装</a></li><li><a href="../../getting-started/master-tutorial/">入门教程</a></li><li><a href="../../getting-started/preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details><summary><a href="../../configuring/">配置</a></summary><ul><li><a href="../../configuring/naming-conventions/">命名约定</a></li><li><a href="../../configuring/selectors/">选择器</a></li><li><details><summary><a href="../../configuring/core/">基础配置</a></summary><ul><li><details><summary><a href="../../configuring/core/monitors/">显示器</a></summary><ul><li><a href="../../configuring/core/monitors/output-selection/">选择显示输出</a></li><li><a href="../../configuring/core/monitors/positioning/">显示器排列</a></li><li><a href="../../configuring/core/monitors/modes/">显示模式</a></li><li><a href="../../configuring/core/monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="../../configuring/core/config-options/">配置选项</a></li><li><a href="../../configuring/core/devices/">设备</a></li><li><a href="../../configuring/core/dispatchers/">调度器</a></li><li><details><summary><a href="../../configuring/core/binds/">按键绑定</a></summary><ul><li><a href="../../configuring/core/binds/flags/">标志位</a></li><li><a href="../../configuring/core/binds/keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="../../configuring/core/binds/devices/">设备绑定</a></summary><ul><li><a href="../../configuring/core/binds/devices/mouse/">鼠标</a></li><li><a href="../../configuring/core/binds/devices/touchpad/">触摸板</a></li><li><a href="../../configuring/core/binds/devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="../../configuring/core/binds/submaps/">按键子映射</a></li><li><a href="../../configuring/core/binds/globals/">全局快捷键与绑定</a></li><li><a href="../../configuring/core/binds/switches/">硬件开关</a></li><li><a href="../../configuring/core/binds/gestures/">手势</a></li></ul></details></li><li><details><summary><a href="../../configuring/core/rules/">规则</a></summary><ul><li><a href="../../configuring/core/rules/window-rules/">窗口规则</a></li><li><a href="../../configuring/core/rules/workspace-rules/">工作区规则</a></li><li><a href="../../configuring/core/rules/layer-rules/">图层规则</a></li></ul></details></li><li><a href="../../configuring/core/environment-variables/">环境变量</a></li><li><a href="../../configuring/core/animations/">动画</a></li><li><a href="../../configuring/core/autostart/">自动启动</a></li><li><details><summary><a href="../../configuring/core/advanced-configuration/">高级配置</a></summary><ul><li><a href="../../configuring/core/advanced-configuration/events/">Lua 事件</a></li><li><a href="../../configuring/core/advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="../../configuring/core/advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="../../configuring/core/advanced-configuration/notifications/">通知</a></li><li><a href="../../configuring/core/advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../configuring/layouts/">布局</a></summary><ul><li><a href="../../configuring/layouts/dwindle-layout/">Dwindle 布局</a></li><li><a href="../../configuring/layouts/scrolling-layout/">滚动布局</a></li><li><a href="../../configuring/layouts/master-layout/">主从布局</a></li><li><a href="../../configuring/layouts/monocle-layout/">单窗口布局</a></li><li><a href="../../configuring/layouts/custom-layouts/">自定义布局</a></li></ul></details></li><li><details><summary><a href="../../configuring/extra/">其他配置</a></summary><ul><li><a href="../../configuring/extra/multi-gpu/">多显卡</a></li><li><a href="../../configuring/extra/virtual-gpu/">虚拟 GPU</a></li><li><a href="../../configuring/extra/performance/">性能</a></li><li><a href="../../configuring/extra/tearing/">画面撕裂</a></li><li><a href="../../configuring/extra/xwayland/">Xwayland</a></li><li><a href="../../configuring/extra/systemd/">systemd</a></li></ul></details></li><li><a href="../../configuring/code-snippets/">Lua 代码片段</a></li></ul></details></li><li><details><summary><a href="../../hypr-ecosystem/">Hypr 生态系统</a></summary><ul><li><details><summary><a href="../../hypr-ecosystem/user/">用户应用与实用工具</a></summary><ul><li><a href="../../hypr-ecosystem/user/hyprpaper/">hyprpaper</a></li><li><a href="../../hypr-ecosystem/user/hyprpicker/">hyprpicker</a></li><li><a href="../../hypr-ecosystem/user/hyprlauncher/">hyprlauncher</a></li><li><a href="../../hypr-ecosystem/user/hypridle/">hypridle</a></li><li><a href="../../hypr-ecosystem/user/hyprlock/">hyprlock</a></li><li><a href="../../hypr-ecosystem/user/xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li><li><a href="../../hypr-ecosystem/user/hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../../hypr-ecosystem/user/hyprsunset/">hyprsunset</a></li><li><a href="../../hypr-ecosystem/user/hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../../hypr-ecosystem/user/hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../../hypr-ecosystem/user/hyprqt6engine/">hyprqt6engine</a></li><li><a href="../../hypr-ecosystem/user/hyprpwcenter/">hyprpwcenter</a></li><li><a href="../../hypr-ecosystem/user/hyprshutdown/">hyprshutdown</a></li><li><a href="../../hypr-ecosystem/user/hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../../hypr-ecosystem/user/hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../../hypr-ecosystem/dev/">开发库和工具包</a></summary><ul><li><a href="../../hypr-ecosystem/dev/aquamarine/">aquamarine</a></li><li><a href="../../hypr-ecosystem/dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../../hypr-ecosystem/dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../../hypr-ecosystem/dev/hyprlang/">hyprlang</a></li><li><a href="../../hypr-ecosystem/dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../../hypr-ecosystem/dev/hyprutils/">hyprutils</a></li><li><a href="../../hypr-ecosystem/dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../hyprland-plugins/">Hyprland 插件</a></summary><ul><li><a href="../../hyprland-plugins/using-plugins/">使用插件</a></li><li><details><summary><a href="../../hyprland-plugins/development/">开发</a></summary><ul><li><a href="../../hyprland-plugins/development/getting-started/">插件开发入门</a></li><li><a href="../../hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li><li><a href="../../hyprland-plugins/development/advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../useful-utilities/">实用工具</a></summary><ul><li><a href="../../useful-utilities/must-have/">必备软件</a></li><li><a href="../../useful-utilities/status-bars/">状态栏</a></li><li><a href="../../useful-utilities/wallpapers/">壁纸</a></li><li><a href="../../useful-utilities/screen-sharing/">屏幕共享</a></li><li><a href="../../useful-utilities/screenshots-and-recording/">截图与录屏</a></li><li><a href="../../useful-utilities/app-launchers/">应用启动器</a></li><li><a href="../../useful-utilities/app-clients/">应用客户端</a></li><li><a href="../../useful-utilities/phone-connect/">连接手机</a></li><li><a href="../../useful-utilities/color-pickers/">取色器</a></li><li><a href="../../useful-utilities/clipboard-managers/">剪贴板管理器</a></li><li><a href="../../useful-utilities/file-managers/">文件管理器</a></li><li><a href="../../useful-utilities/other/">其他</a></li><li><a href="../../useful-utilities/hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="../../useful-utilities/uwsm/">UWSM</a></li></ul></details></li><li><details open><summary><a href="../">Nix</a></summary><ul><li><a href="../hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="./" aria-current="page">使用 Home Manager 配置 Hyprland</a></li><li><a href="../cachix/">Cachix</a></li><li><a href="../advanced/">高级用法</a></li><li><a href="../contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../../nvidia/">NVIDIA</a></li><li><a href="../../ipc/">IPC</a></li><li><a href="../../crashes-and-bugs/">崩溃与缺陷</a></li><li><a href="../../faq/">常见问题</a></li><li><a href="../../community/">社区</a></li><li><details><summary><a href="../../contributing-and-debugging/">贡献与调试</a></summary><ul><li><a href="../../contributing-and-debugging/wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../../contributing-and-debugging/issue-guidelines/">议题指南</a></li><li><a href="../../contributing-and-debugging/pr-guidelines/">PR 指南</a></li><li><a href="../../contributing-and-debugging/tests/">测试</a></li><li><a href="../../contributing-and-debugging/translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../../">Hyprland 中文文档</a><span>›</span><a href="../">Nix</a></nav><article><h1>使用 Home Manager 配置 Hyprland</h1><p>可用选项的完整列表见 <a href="https://nix-community.github.io/home-manager/options.xhtml#opt-wayland.windowManager.hyprland.enable">Home Manager 选项</a>。</p>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p><strong>必需：</strong></p>
+<ul>
+<li><strong>NixOS 模块：</strong> 启用 Hyprland 正常运行所需的关键组件。 如果未启用此模块，显示管理器可能会因缺少会话文件而出现问题。</li>
+</ul>
+<p><strong>可选</strong>：</p>
+<ul>
+<li><strong>Home Manager 模块：</strong> 让你可以通过 Home Manager 以声明式方式配置 Hyprland。</li>
+<li>该模块会配置 Hyprland 并将其加入当前用户的 <code>$PATH</code>，但不会执行某些系统级更改，例如为显示管理器添加桌面会话文件。 启用 NixOS 模块后，这些更改由它负责。</li>
+</ul>
+</div>
+<h2 id="installation">安装 <a class="permalink" href="#installation" aria-label="本节链接">#</a></h2>
+<details><summary>Home Manager</summary>
+
+<pre class="nix"><code>{
+  wayland.windowManager.hyprland.enable = true;
+}</code></pre>
+</details>
+
+<details><summary>Hyprland flake</summary>
+
+<p>以下代码演示如何从 flake 输入中引入 Hyprland flake，并在 Home Manager 中使用它提供的软件包。 你可以根据自己的环境调整代码。</p>
+<p>记得将 <code>user@hostname</code> 替换为你自己的用户名和主机名！</p>
+<pre class="nix"><code>{
+  inputs = {
+    nixpkgs.url = &quot;github:NixOS/nixpkgs/nixos-unstable&quot;;
+
+    home-manager = {
+      url = &quot;github:nix-community/home-manager&quot;;
+      inputs.nixpkgs.follows = &quot;nixpkgs&quot;;
+    };
+
+    hyprland.url = &quot;github:hyprwm/Hyprland&quot;;
+  };
+
+  outputs = {nixpkgs, home-manager, hyprland, ...}: {
+    homeConfigurations.&quot;user@hostname&quot; = home-manager.lib.homeManagerConfiguration {
+      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+
+      modules = [
+        {
+          wayland.windowManager.hyprland = {
+            enable = true;
+            # 设置 flake 软件包
+            package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+            portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+          };
+        }
+        # ...
+      ];
+    };
+  };
+}</code></pre>
+</details>
+
+<details><summary>flake-compat</summary>
+
+<p>本节介绍如何在不支持 Nix flakes 的 NixOS 系统上使用 Hyprland flake。</p>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>flake 模块只是对 Home Manager 下游模块的扩展。 它主要用于试用新选项，因此除非你是测试人员，否则应使用 Home Manager 下游模块。</p>
+</div>
+<p>以下代码演示如何从 flake 输入中引入 Hyprland flake，并在 Home Manager 的选项中使用它提供的软件包。 你可以根据自己的环境调整代码。</p>
+<pre class="nix"><code>{pkgs, ...}: let
+  flake-compat = builtins.fetchTarball &quot;https://github.com/edolstra/flake-compat/archive/master.tar.gz&quot;;
+
+  hyprland = (import flake-compat {
+    src = builtins.fetchTarball &quot;https://github.com/hyprwm/Hyprland/archive/main.tar.gz&quot;;
+  }).defaultNix;
+in {
+  wayland.windowManager.hyprland = {
+    enable = true;
+    # 设置 flake 软件包
+    package = hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    portalPackage = hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+  }
+}</code></pre>
+</details>
+
+<h2 id="usage">用法 <a class="permalink" href="#usage" aria-label="本节链接">#</a></h2>
+<p>启用模块后，就可以用它以声明式方式配置 Hyprland。 配置示例如下：</p>
+<pre class="nix"><code>{
+  wayland.windowManager.hyprland.settings = {
+    &quot;$mod&quot; = &quot;SUPER&quot;;
+    bind =
+      [
+        &quot;$mod, F, exec, firefox&quot;
+        &quot;, Print, exec, grimblast copy area&quot;
+      ]
+      ++ (
+        # 工作区
+        # 将 $mod + [shift +] {1..9} 绑定为切换到工作区 {1..9}（按住 shift 时将窗口移至对应工作区）
+        builtins.concatLists (builtins.genList (i:
+            let ws = i + 1;
+            in [
+              &quot;$mod, code:1${toString i}, workspace, ${toString ws}&quot;
+              &quot;$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}&quot;
+            ]
+          )
+          9)
+      );
+  };
+}</code></pre>
+<h2 id="plugins">插件 <a class="permalink" href="#plugins" aria-label="本节链接">#</a></h2>
+<p>在 Nix 上管理 Hyprland 插件的方式与其他发行版不同。 最明显的区别是 Nix 不支持 <code>hyprpm</code>，但我们提供了自己的插件构建和管理方式。</p>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>要使用以下语法配置插件，你必须通过 <a href="./">Home Manager 模块</a>或<a href="../installing-hyprland-on-nixos/">上游 NixOS 模块</a>使用 Hyprland。</p>
+</div>
+<h2 id="using-plugins-from-nixpkgs">使用 Nixpkgs 中的插件 <a class="permalink" href="#using-plugins-from-nixpkgs" aria-label="本节链接">#</a></h2>
+<p>Nixpkgs 提供了针对其所含 Hyprland 版本打包的插件。 用法如下：</p>
+<pre class="nix"><code>{pkgs, ...}: {
+  wayland.windowManager.hyprland.plugins = [
+    pkgs.hyprlandPlugins.&lt;plugin&gt;
+  ];
+}</code></pre>
+<p>可以使用 <code>nix search nixpkgs#hyprlandPlugins ^</code> 查看 Nixpkgs 包含哪些插件。</p>
+<h2 id="hyprland-plugins">hyprland-plugins <a class="permalink" href="#hyprland-plugins" aria-label="本节链接">#</a></h2>
+<p>这些官方插件由 vaxry 开发和维护。</p>
+<p>要使用这些插件，建议先采用 Hyprland flake，<strong>不要</strong>使用 Nixpkgs 中的 Hyprland 版本。</p>
+<p>首先，将 hyprland-plugins flake 添加到你的 flake 输入中：</p>
+<pre class="nix"><code>{
+  inputs = {
+    hyprland.url = &quot;github:hyprwm/Hyprland&quot;;
+
+    hyprland-plugins = {
+      url = &quot;github:hyprwm/hyprland-plugins&quot;;
+      inputs.hyprland.follows = &quot;hyprland&quot;;
+    };
+
+    # ...
+  }
+}</code></pre>
+<p><code>inputs.hyprland.follows</code> 这一行让 hyprland-plugins 使用你锁定的同一个 Hyprland 修订版本。 这样，只要同时更新这两个输入，就不会出现版本不匹配的问题。</p>
+<p>接下来，将插件添加到 Hyprland：</p>
+<pre class="nix"><code>{inputs, pkgs, ...}: {
+  wayland.windowManager.hyprland = {
+    enable = true;
+
+    plugins = [
+      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.&lt;plugin&gt;
+    ];
+  };
+}</code></pre>
+<h2 id="faq">常见问题 <a class="permalink" href="#faq" aria-label="本节链接">#</a></h2>
+<h3 id="fixing-problems-with-themes">解决主题问题 <a class="permalink" href="#fixing-problems-with-themes" aria-label="本节链接">#</a></h3>
+<p>如果鼠标指针、图标或窗口的主题无法正确加载，可以尝试通过 <code>home.pointerCursor</code> 和 <code>gtk.theme</code> 设置主题。这些设置会启用多项兼容性选项，让主题在各种情况下都能正常加载。</p>
+<p>配置示例：</p>
+<pre class="nix"><code>{
+  home.pointerCursor = {
+    gtk.enable = true;
+    # x11.enable = true;
+    package = pkgs.bibata-cursors;
+    name = &quot;Bibata-Modern-Classic&quot;;
+    size = 16;
+  };
+
+  gtk = {
+    enable = true;
+
+    theme = {
+      package = pkgs.flat-remix-gtk;
+      name = &quot;Flat-Remix-GTK-Grey-Darkest&quot;;
+    };
+
+    iconTheme = {
+      package = pkgs.adwaita-icon-theme;
+      name = &quot;Adwaita&quot;;
+    };
+
+    font = {
+      name = &quot;Sans&quot;;
+      size = 11;
+    };
+  };
+}</code></pre>
+<h3 id="using-the-home-manager-module-with-nixos">在 NixOS 上使用 Home Manager 模块 <a class="permalink" href="#using-the-home-manager-module-with-nixos" aria-label="本节链接">#</a></h3>
+<p>如果你希望 Home Manager 模块使用你在 NixOS 模块中指定的 Hyprland 软件包，只要使用 <a href="https://github.com/nix-community/home-manager/commit/5dc1c2e40410f7dabef3ba8bf4fdb3145eae3ceb">Home Manager <code>5dc1c2e40410f7dabef3ba8bf4fdb3145eae3ceb</code></a> 或更高版本，就可以将 <code>package</code> 和 <code>portalPackage</code> 都设为 <code>null</code> 来实现。</p>
+<pre class="nix"><code>{
+  wayland.windowManager.hyprland = {
+    enable = true;
+    # 将 Hyprland 和 XDPH 的软件包设为 null，以使用 NixOS 模块提供的软件包
+    package = null;
+    portalPackage = null;
+  };
+}</code></pre>
+<p><strong>不要</strong>混用版本不匹配的 Hyprland 和 XDPH。 如果你的 NixOS 配置使用 flake 提供的 Hyprland，也应使用同一 flake 提供的 XDPH。 如果你将 Home Manager 的 Hyprland 模块中的 Hyprland 软件包设为 <code>null</code>，也应将 XDPH 软件包设为 <code>null</code>。</p>
+<h3 id="programs-dont-work-in-systemd-services-but-do-on-the-terminal">程序在终端中可以运行，却无法在 systemd 服务中运行 <a class="permalink" href="#programs-dont-work-in-systemd-services-but-do-on-the-terminal" aria-label="本节链接">#</a></h3>
+<p>出现这个问题是因为 systemd 默认不导入环境变量。 它无法获取 <code>PATH</code>，因此无法运行服务中的命令。 最常受影响的是用户自行配置的服务，例如 <code>hypridle</code> 或 <code>swayidle</code>。</p>
+<p>要解决这个问题，请将以下内容添加到配置中：</p>
+<pre class="nix"><code>{
+  wayland.windowManager.hyprland.systemd.variables = [&quot;--all&quot;];
+}</code></pre>
+<p>这项设置会在 Hyprland 配置中生成以下条目：</p>
+<pre class="lua"><code>hl.on(&quot;hyprland.start&quot;, function()
+    hl.exec_cmd(&quot;dbus-update-activation-environment --systemd --all&quot;)
+end)</code></pre>
+<p>如果你没有使用 Home Manager 模块，请务必在 Hyprland 配置中使用上述命令。</p>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/nix/configuring-hyprland-with-home-manager/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-2" href="#installation">安装</a><a class="level-2" href="#usage">用法</a><a class="level-2" href="#plugins">插件</a><a class="level-2" href="#using-plugins-from-nixpkgs">使用 Nixpkgs 中的插件</a><a class="level-2" href="#hyprland-plugins">hyprland-plugins</a><a class="level-2" href="#faq">常见问题</a><a class="level-3" href="#fixing-problems-with-themes">解决主题问题</a><a class="level-3" href="#using-the-home-manager-module-with-nixos">在 NixOS 上使用 Home Manager 模块</a><a class="level-3" href="#programs-dont-work-in-systemd-services-but-do-on-the-terminal">程序在终端中可以运行，却无法在 systemd 服务中运行</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>

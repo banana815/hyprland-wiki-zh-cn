@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>调度器 · Hyprland Wiki 中文版</title><link rel="icon" href="../../../assets/hyprland.svg">
+<link rel="stylesheet" href="../../../assets/wiki.css"><script defer src="../../../assets/site.js"></script></head>
+<body data-root="../../../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../../../"><img src="../../../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/configuring/core/dispatchers/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../../../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../../../">Hyprland 中文文档</a><ul><li><a href="../../../version-selector/">版本选择器 ⚙️</a></li><li><details><summary><a href="../../../getting-started/">入门指南</a></summary><ul><li><a href="../../../getting-started/installation/">安装</a></li><li><a href="../../../getting-started/master-tutorial/">入门教程</a></li><li><a href="../../../getting-started/preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details open><summary><a href="../../">配置</a></summary><ul><li><a href="../../naming-conventions/">命名约定</a></li><li><a href="../../selectors/">选择器</a></li><li><details open><summary><a href="../">基础配置</a></summary><ul><li><details><summary><a href="../monitors/">显示器</a></summary><ul><li><a href="../monitors/output-selection/">选择显示输出</a></li><li><a href="../monitors/positioning/">显示器排列</a></li><li><a href="../monitors/modes/">显示模式</a></li><li><a href="../monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="../config-options/">配置选项</a></li><li><a href="../devices/">设备</a></li><li><a href="./" aria-current="page">调度器</a></li><li><details><summary><a href="../binds/">按键绑定</a></summary><ul><li><a href="../binds/flags/">标志位</a></li><li><a href="../binds/keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="../binds/devices/">设备绑定</a></summary><ul><li><a href="../binds/devices/mouse/">鼠标</a></li><li><a href="../binds/devices/touchpad/">触摸板</a></li><li><a href="../binds/devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="../binds/submaps/">按键子映射</a></li><li><a href="../binds/globals/">全局快捷键与绑定</a></li><li><a href="../binds/switches/">硬件开关</a></li><li><a href="../binds/gestures/">手势</a></li></ul></details></li><li><details><summary><a href="../rules/">规则</a></summary><ul><li><a href="../rules/window-rules/">窗口规则</a></li><li><a href="../rules/workspace-rules/">工作区规则</a></li><li><a href="../rules/layer-rules/">图层规则</a></li></ul></details></li><li><a href="../environment-variables/">环境变量</a></li><li><a href="../animations/">动画</a></li><li><a href="../autostart/">自动启动</a></li><li><details><summary><a href="../advanced-configuration/">高级配置</a></summary><ul><li><a href="../advanced-configuration/events/">Lua 事件</a></li><li><a href="../advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="../advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="../advanced-configuration/notifications/">通知</a></li><li><a href="../advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../layouts/">布局</a></summary><ul><li><a href="../../layouts/dwindle-layout/">Dwindle 布局</a></li><li><a href="../../layouts/scrolling-layout/">滚动布局</a></li><li><a href="../../layouts/master-layout/">主从布局</a></li><li><a href="../../layouts/monocle-layout/">单窗口布局</a></li><li><a href="../../layouts/custom-layouts/">自定义布局</a></li></ul></details></li><li><details><summary><a href="../../extra/">其他配置</a></summary><ul><li><a href="../../extra/multi-gpu/">多显卡</a></li><li><a href="../../extra/virtual-gpu/">虚拟 GPU</a></li><li><a href="../../extra/performance/">性能</a></li><li><a href="../../extra/tearing/">画面撕裂</a></li><li><a href="../../extra/xwayland/">Xwayland</a></li><li><a href="../../extra/systemd/">systemd</a></li></ul></details></li><li><a href="../../code-snippets/">Lua 代码片段</a></li></ul></details></li><li><details><summary><a href="../../../hypr-ecosystem/">Hypr 生态系统</a></summary><ul><li><details><summary><a href="../../../hypr-ecosystem/user/">用户应用与实用工具</a></summary><ul><li><a href="../../../hypr-ecosystem/user/hyprpaper/">hyprpaper</a></li><li><a href="../../../hypr-ecosystem/user/hyprpicker/">hyprpicker</a></li><li><a href="../../../hypr-ecosystem/user/hyprlauncher/">hyprlauncher</a></li><li><a href="../../../hypr-ecosystem/user/hypridle/">hypridle</a></li><li><a href="../../../hypr-ecosystem/user/hyprlock/">hyprlock</a></li><li><a href="../../../hypr-ecosystem/user/xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li><li><a href="../../../hypr-ecosystem/user/hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../../../hypr-ecosystem/user/hyprsunset/">hyprsunset</a></li><li><a href="../../../hypr-ecosystem/user/hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../../../hypr-ecosystem/user/hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../../../hypr-ecosystem/user/hyprqt6engine/">hyprqt6engine</a></li><li><a href="../../../hypr-ecosystem/user/hyprpwcenter/">hyprpwcenter</a></li><li><a href="../../../hypr-ecosystem/user/hyprshutdown/">hyprshutdown</a></li><li><a href="../../../hypr-ecosystem/user/hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../../../hypr-ecosystem/user/hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../../../hypr-ecosystem/dev/">开发库和工具包</a></summary><ul><li><a href="../../../hypr-ecosystem/dev/aquamarine/">aquamarine</a></li><li><a href="../../../hypr-ecosystem/dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../../../hypr-ecosystem/dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../../../hypr-ecosystem/dev/hyprlang/">hyprlang</a></li><li><a href="../../../hypr-ecosystem/dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../../../hypr-ecosystem/dev/hyprutils/">hyprutils</a></li><li><a href="../../../hypr-ecosystem/dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../hyprland-plugins/">Hyprland 插件</a></summary><ul><li><a href="../../../hyprland-plugins/using-plugins/">使用插件</a></li><li><details><summary><a href="../../../hyprland-plugins/development/">开发</a></summary><ul><li><a href="../../../hyprland-plugins/development/getting-started/">插件开发入门</a></li><li><a href="../../../hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li><li><a href="../../../hyprland-plugins/development/advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../useful-utilities/">实用工具</a></summary><ul><li><a href="../../../useful-utilities/must-have/">必备软件</a></li><li><a href="../../../useful-utilities/status-bars/">状态栏</a></li><li><a href="../../../useful-utilities/wallpapers/">壁纸</a></li><li><a href="../../../useful-utilities/screen-sharing/">屏幕共享</a></li><li><a href="../../../useful-utilities/screenshots-and-recording/">截图与录屏</a></li><li><a href="../../../useful-utilities/app-launchers/">应用启动器</a></li><li><a href="../../../useful-utilities/app-clients/">应用客户端</a></li><li><a href="../../../useful-utilities/phone-connect/">连接手机</a></li><li><a href="../../../useful-utilities/color-pickers/">取色器</a></li><li><a href="../../../useful-utilities/clipboard-managers/">剪贴板管理器</a></li><li><a href="../../../useful-utilities/file-managers/">文件管理器</a></li><li><a href="../../../useful-utilities/other/">其他</a></li><li><a href="../../../useful-utilities/hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="../../../useful-utilities/uwsm/">UWSM</a></li></ul></details></li><li><details><summary><a href="../../../nix/">Nix</a></summary><ul><li><a href="../../../nix/hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../../../nix/installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../../../nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="../../../nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li><li><a href="../../../nix/cachix/">Cachix</a></li><li><a href="../../../nix/advanced/">高级用法</a></li><li><a href="../../../nix/contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../../../nvidia/">NVIDIA</a></li><li><a href="../../../ipc/">IPC</a></li><li><a href="../../../crashes-and-bugs/">崩溃与缺陷</a></li><li><a href="../../../faq/">常见问题</a></li><li><a href="../../../community/">社区</a></li><li><details><summary><a href="../../../contributing-and-debugging/">贡献与调试</a></summary><ul><li><a href="../../../contributing-and-debugging/wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../../../contributing-and-debugging/issue-guidelines/">议题指南</a></li><li><a href="../../../contributing-and-debugging/pr-guidelines/">PR 指南</a></li><li><a href="../../../contributing-and-debugging/tests/">测试</a></li><li><a href="../../../contributing-and-debugging/translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../../../">Hyprland 中文文档</a><span>›</span><a href="../../">配置</a><span>›</span><a href="../">基础配置</a></nav><article><h1>调度器</h1><h2 id="dispatchers">调度器 <a class="permalink" href="#dispatchers" aria-label="本节链接">#</a></h2>
+<p>调度器返回一个表，描述你想执行的操作。**调度器不会立即执行任何操作，其返回的表内容也没有任何稳定性保证。**这些表用于传给 <code>hl.bind()</code> 或 <code>hl.dispatch()</code>。</p>
+<p>请注意，某些布局专用的调度器会列在相应的布局页面中（见侧边栏）。</p>
+<p>要在函数中使用调度器（即任意 <code>hl.dsp.*</code>），必须将其传给 <code>hl.dispatch()</code>，相应操作才会执行。<strong>单独写 <code>hl.dsp.whatever()</code> 不会执行任何操作。</strong></p>
+<details><summary>示例</summary>
+
+<p>在第一段代码中，<code>function()</code> 通过调用 <code>hl.dispatch()</code> 实际触发了相应操作。</p>
+<pre class="lua"><code>hl.bind(&quot;ALT + Tab&quot;, function()
+    hl.dispatch(hl.dsp.window.cycle_next())
+    hl.dispatch(hl.dsp.window.alter_zorder({ mode = &quot;top&quot; }))
+end)</code></pre>
+<p>在第二段代码中，虽然创建了调度器，却没有将它们传给 <code>hl.dispatch</code>。由于没有执行这些调度器，因此不会产生任何效果。</p>
+<pre class="lua"><code>hl.bind(&quot;ALT + Tab&quot;, function()
+    hl.dsp.window.cycle_next()
+    hl.dsp.window.alter_zorder({ mode = &quot;top&quot; })
+end)</code></pre>
+</details>
+
+<h3 id="parameter-explanation">参数说明 <a class="permalink" href="#parameter-explanation" aria-label="本节链接">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>参数类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>window</code></td>
+<td>未设置时默认为 <code>"activewindow"</code>。可以使用任一<a href="../../selectors/#window-selector">窗口选择器</a></td>
+</tr>
+<tr>
+<td><code>action</code></td>
+<td>未设置时默认为 <code>"toggle"</code>。可选值为 <code>"toggle"</code>、<code>"enable"</code>/<code>"on"</code>、<code>"disable"</code>/<code>"off"</code></td>
+</tr>
+<tr>
+<td><code>relative</code></td>
+<td>未设置时默认为 <code>"false"</code>。可选值为 <code>"false"</code>、<code>"true"</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="dispatchers-1">调度器 <a class="permalink" href="#dispatchers-1" aria-label="本节链接">#</a></h2>
+<h3 id="general">概述 <a class="permalink" href="#general" aria-label="本节链接">#</a></h3>
+<p><code>hl.dsp.</code> 包含以下调度器：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dpms({ monitor?, action? })</code></td>
+<td>切换显示器的开关状态（类似空闲时启动屏保，并非切断显示器电源）。请勿直接通过按键绑定调用！</td>
+</tr>
+<tr>
+<td><code>event( string )</code></td>
+<td>向 socket2 发送事件</td>
+</tr>
+<tr>
+<td><code>exec_cmd( cmd, { rules }? )</code></td>
+<td>执行命令。规则可以是一个表，其中列出要应用的窗口规则效果（见<a href="#executing-with-rules">下文</a>）</td>
+</tr>
+<tr>
+<td><code>exec_raw( cmd )</code></td>
+<td>直接执行原始命令。<code>exec_cmd</code> 会通过 <code>sh -c</code> 执行命令，而此调度器不会</td>
+</tr>
+<tr>
+<td><code>exit()</code></td>
+<td>退出 Hyprland。建议使用 <code>hyprshutdown</code> 代替此调度器</td>
+</tr>
+<tr>
+<td><code>focus({ direction })</code></td>
+<td>向指定方向移动焦点</td>
+</tr>
+<tr>
+<td><code>focus({ monitor })</code></td>
+<td>将焦点移至指定显示器</td>
+</tr>
+<tr>
+<td><code>focus({ workspace, on_current_monitor? })</code></td>
+<td>将焦点移至指定工作区</td>
+</tr>
+<tr>
+<td><code>focus({ window })</code></td>
+<td>将焦点移至指定窗口</td>
+</tr>
+<tr>
+<td><code>focus({ urgent_or_last })</code></td>
+<td>将焦点移至请求紧急关注的窗口，或移至上一个获得焦点的窗口</td>
+</tr>
+<tr>
+<td><code>focus({ last })</code></td>
+<td>将焦点移至上一个获得焦点的窗口</td>
+</tr>
+<tr>
+<td><code>force_idle( int )</code></td>
+<td>设置所有空闲计时器已经过的时间（以秒为单位），忽略空闲抑制器。下次有活动时，计时器将恢复正常行为。请勿直接通过按键绑定调用！</td>
+</tr>
+<tr>
+<td><code>force_renderer_reload()</code></td>
+<td>强制重新加载所有显示器的渲染器</td>
+</tr>
+<tr>
+<td><code>global( string, activate? )</code></td>
+<td>触发 D-Bus 全局快捷键，也可指定发送激活事件或停用事件。参见<a href="../binds/globals/#d-bus-global-shortcuts">全局快捷键</a></td>
+</tr>
+<tr>
+<td><code>layout( message )</code></td>
+<td>以字符串形式发送布局消息</td>
+</tr>
+<tr>
+<td><code>no_op()</code></td>
+<td>不执行任何操作。适用于条件按键绑定</td>
+</tr>
+<tr>
+<td><code>pass({ window? })</code></td>
+<td>将快捷键传递给指定窗口</td>
+</tr>
+<tr>
+<td><code>release_input_capture()</code></td>
+<td>释放所有活动的输入捕获会话</td>
+</tr>
+<tr>
+<td><code>reload_config()</code></td>
+<td>重新加载配置，效果与 <code>hyprctl reload</code> 相同</td>
+</tr>
+<tr>
+<td><code>send_key_state({ window?, mods, key, state })</code></td>
+<td>与 send_shortcut 相同，但可以将 <code>state</code> 设为 <code>"down"</code>/<code>"up"</code> 来控制按下或释放状态</td>
+</tr>
+<tr>
+<td><code>send_shortcut({ window?, mods, key })</code></td>
+<td>向指定窗口发送特定快捷键</td>
+</tr>
+<tr>
+<td><code>submap( name )</code></td>
+<td>切换到指定的按键绑定子映射</td>
+</tr>
+</tbody>
+</table>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>不建议直接通过按键绑定设置 DPMS 或 force_idle，因为这样做可能导致未定义行为。可以考虑采用类似下面的做法：</p>
+<pre class="lua"><code>hl.bind(&quot;...&quot;, function()
+    hl.timer(function()
+        hl.dispatch(hl.dsp.dpms({ action = &quot;disable&quot; }))
+    end, {timeout = 500, type = &quot;oneshot&quot;})
+end)</code></pre>
+</div>
+<h3 id="window">Window <a class="permalink" href="#window" aria-label="本节链接">#</a></h3>
+<p><code>hl.dsp.window.</code> 包含以下调度器：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>alter_zorder({ window?, mode })</code></td>
+<td>模式可以是 "top" 或 "bottom"。</td>
+</tr>
+<tr>
+<td><code>center({ window? })</code></td>
+<td>将当前窗口置于屏幕中央。</td>
+</tr>
+<tr>
+<td><code>clear_tags({ window? })</code></td>
+<td>清除窗口的所有标签。</td>
+</tr>
+<tr>
+<td><code>close({ window? })</code></td>
+<td>请求窗口正常关闭。</td>
+</tr>
+<tr>
+<td><code>cycle_next({ window?, next?, tiled?, floating? })</code></td>
+<td>将焦点移至下一个窗口。</td>
+</tr>
+<tr>
+<td><code>deny_from_group({ action? })</code></td>
+<td>禁止窗口加入窗口组。</td>
+</tr>
+<tr>
+<td><code>drag()</code></td>
+<td>开始交互式拖动，与鼠标按键绑定配合使用。</td>
+</tr>
+<tr>
+<td><code>float({ window?, action? })</code></td>
+<td>设置窗口的浮动状态。</td>
+</tr>
+<tr>
+<td><code>fullscreen_state({ window?, action?, internal, client, layout_aware? })</code></td>
+<td>更精细地设置窗口的全屏状态。<code>action</code> 可取 <code>toggle</code>/<code>set</code>/<code>unset</code>。<code>layout_aware</code> 可取 <code>true</code>（默认）或 <code>false</code>，用于选择由布局处理全屏行为，还是使用默认处理方式。参见<a href="#fullscreen_state">全屏状态</a>和<a href="#fullscreen-handlers">全屏处理器</a>。</td>
+</tr>
+<tr>
+<td><code>fullscreen({ window?, action?, mode?, layout_aware? })</code></td>
+<td>设置窗口的全屏状态。<code>mode</code> 可取 "maximized" 或 "fullscreen"。<code>action</code> 可取 <code>toggle</code>/<code>set</code>/<code>unset</code>。<code>layout_aware</code> 可取 <code>true</code>（默认）或 <code>false</code>，用于选择由布局处理全屏行为，还是使用默认处理方式。</td>
+</tr>
+<tr>
+<td><code>kill({ window? })</code></td>
+<td>发送 <code>SIGKILL</code> 信号，强制终止窗口所属的进程。</td>
+</tr>
+<tr>
+<td><code>move({ window?, direction, group_aware? })</code></td>
+<td>沿指定方向移动窗口。设置 <code>group_aware = true</code> 后，窗口可沿该方向移入或移出窗口组。</td>
+</tr>
+<tr>
+<td><code>move({ window?, workspace, follow? })</code></td>
+<td>将窗口移至指定工作区。</td>
+</tr>
+<tr>
+<td><code>move({ window?, monitor, follow? })</code></td>
+<td>将窗口移至指定显示器。</td>
+</tr>
+<tr>
+<td><code>move({ window?, x, y, relative? })</code></td>
+<td>按给定坐标偏移量移动窗口（<code>relative = true</code>），或将窗口移至给定的绝对坐标（<code>relative = false</code>）。</td>
+</tr>
+<tr>
+<td><code>move({ window?, into_group = direction })</code></td>
+<td>将窗口移入指定方向上的窗口组。</td>
+</tr>
+<tr>
+<td><code>move({ window?, into_or_create_group = direction })</code></td>
+<td>将窗口移入指定方向上的窗口组。如果该方向上没有窗口组，则创建一个。</td>
+</tr>
+<tr>
+<td><code>move({ window?, out_of_group })</code></td>
+<td>将窗口移出窗口组。无需指定方向时传入 <code>true</code>，需要指定方向时传入相应的方向值。</td>
+</tr>
+<tr>
+<td><code>pin({ window?, action? })</code></td>
+<td>固定窗口。</td>
+</tr>
+<tr>
+<td><code>pseudo({ window?, action? })</code></td>
+<td>设置窗口的伪平铺状态。</td>
+</tr>
+<tr>
+<td><code>resize({ keep_aspect_ratio? })</code></td>
+<td>开始交互式调整窗口大小，与鼠标按键绑定配合使用。此操作会覆盖窗口的 <code>keep_aspect_ratio</code> 属性。</td>
+</tr>
+<tr>
+<td><code>resize({ window?, x, y, relative? })</code></td>
+<td>调整窗口大小。</td>
+</tr>
+<tr>
+<td><code>set_prop({ window?, prop, value })</code></td>
+<td>设置窗口属性。</td>
+</tr>
+<tr>
+<td><code>signal({ window?, signal })</code></td>
+<td>向窗口所属的进程发送 POSIX 信号。</td>
+</tr>
+<tr>
+<td><code>swap({ direction })</code></td>
+<td>将当前窗口与指定方向上的另一个窗口交换位置。</td>
+</tr>
+<tr>
+<td><code>swap({ target })</code></td>
+<td>将当前窗口与另一个窗口交换位置。</td>
+</tr>
+<tr>
+<td><code>swap({ next })</code></td>
+<td>将当前窗口与下一个窗口交换位置。</td>
+</tr>
+<tr>
+<td><code>swap({ prev })</code></td>
+<td>将当前窗口与上一个窗口交换位置。</td>
+</tr>
+<tr>
+<td><code>tag({ window?, tag })</code></td>
+<td>为窗口添加标签。</td>
+</tr>
+<tr>
+<td><code>toggle_swallow()</code></td>
+<td>切换所有被吞并窗口的显示与隐藏状态。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="workspace">Workspace <a class="permalink" href="#workspace" aria-label="本节链接">#</a></h3>
+<p><code>hl.dsp.workspace.</code> 包含以下调度器：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>change_id({ workspace, id })</code></td>
+<td>更改编号工作区的 ID。新 ID 必须大于 0，且尚未被使用。</td>
+</tr>
+<tr>
+<td><code>move({ workspace?, monitor })</code></td>
+<td>将工作区移至指定显示器。</td>
+</tr>
+<tr>
+<td><code>rename({ workspace, name? })</code></td>
+<td>重命名工作区。此操作仅更改显示名称，工作区的标识保持不变。配置中的操作仍使用工作区创建时的标识来引用它。</td>
+</tr>
+<tr>
+<td><code>swap_monitors({ monitor1, monitor2 })</code></td>
+<td>交换两台显示器各自当前显示的工作区。</td>
+</tr>
+<tr>
+<td><code>show({ workspace })</code></td>
+<td>在工作区关联的显示器上显示该工作区，同时保持当前焦点不变。</td>
+</tr>
+<tr>
+<td><code>toggle_special( special_name )</code></td>
+<td>按名称切换特殊工作区的显示与隐藏状态。</td>
+</tr>
+</tbody>
+</table>
+<div class="note">
+<div class="title">
+<p>说明</p>
+</div>
+<p>使用 <code>toggle_special()</code> 时，<strong>不要</strong>在工作区名称中包含 <code>special:</code> 前缀。详情请参阅<a href="../../naming-conventions/">命名约定</a>中的说明。</p>
+</div>
+<h3 id="group">窗口组 <a class="permalink" href="#group" aria-label="本节链接">#</a></h3>
+<p><code>hl.dsp.group.</code> 包含以下调度器：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>active({ window?, index })</code></td>
+<td>按索引切换到组内的指定窗口。</td>
+</tr>
+<tr>
+<td><code>lock({ all?, action? })</code></td>
+<td>锁定所有窗口组。</td>
+</tr>
+<tr>
+<td><code>lock({ window?, action? })</code></td>
+<td>锁定指定窗口所在的窗口组。</td>
+</tr>
+<tr>
+<td><code>move_window({ window?, forward? })</code></td>
+<td>调整窗口在组内的排列顺序。</td>
+</tr>
+<tr>
+<td><code>next({ window? })</code></td>
+<td>切换到组内的下一个窗口。</td>
+</tr>
+<tr>
+<td><code>prev({ window? })</code></td>
+<td>切换到组内的上一个窗口。</td>
+</tr>
+<tr>
+<td><code>toggle({ window? })</code></td>
+<td>切换窗口的分组状态。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cursor">光标 <a class="permalink" href="#cursor" aria-label="本节链接">#</a></h3>
+<p><code>hl.dsp.cursor.</code> 包含以下调度器：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>move({ x, y })</code></td>
+<td>将光标移至指定坐标。</td>
+</tr>
+<tr>
+<td><code>move_to_corner({ window?, corner })</code></td>
+<td>将光标移至窗口的指定角落。角落编号范围为 [0 - 3]。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="grouped-tabbed-windows">窗口分组（标签页） <a class="permalink" href="#grouped-tabbed-windows" aria-label="本节链接">#</a></h3>
+<p>在 Hyprland 中，你可以使用 <code>hl.dsp.group.toggle()</code> 按键绑定调度器，用当前活动窗口创建一个窗口组。</p>
+<p>窗口组类似于 i3wm 的 "tabbed"（标签页式）容器。它只占用一个窗口的空间，你可以在组内的窗口之间切换。</p>
+<p>你可以使用 <code>lock</code> 调度器锁定窗口组，阻止新窗口加入该组。</p>
+<p>你可以使用 <code>window.deny_from_group</code> 调度器，禁止某个窗口加入窗口组或自行成组。</p>
+<h2 id="special-workspaces">特殊工作区 <a class="permalink" href="#special-workspaces" aria-label="本节链接">#</a></h2>
+<div class="note">
+<div class="title">
+<p>说明</p>
+</div>
+<p>你可以定义多个具名特殊工作区，但同时最多只能存在 97 个。</p>
+</div>
+<p>特殊工作区在其他一些环境中称为 “scratchpad”（暂存区）。你可以在任意显示器上显示或隐藏它。</p>
+<p>例如，要将窗口移至具名特殊工作区，可以使用以下语法：</p>
+<pre class="lua"><code>hl.bind(&quot;SUPER + SHIFT + S&quot;, hl.dsp.window.move({ workspace = &quot;special:magic&quot; }))
+-- 显示或隐藏工作区及其所有窗口：
+hl.bind(&quot;SUPER + S&quot;, hl.dsp.workspace.toggle_special(&quot;magic&quot;))</code></pre>
+<div class="note">
+<div class="title">
+<p>说明</p>
+</div>
+<p>仅处理特殊工作区的调度器（如 <code>hl.dsp.workspace.toggle_special()</code>）接受工作区名称，并会自行添加 <code>special:</code> 前缀。对于接受<em>任意</em>工作区的调度器，必须显式添加 <code>special:</code> 前缀，才能指定正确的特殊工作区。上例演示了这一用法。</p>
+</div>
+<h2 id="executing-with-rules">执行命令时应用规则 <a class="permalink" href="#executing-with-rules" aria-label="本节链接">#</a></h2>
+<p><code>exec_cmd</code> 调度器支持添加<a href="../rules/">窗口规则</a>。实际效果因窗口而异。调度器会记录新启动进程的 PID，并据此应用规则。例如，如果该进程派生出子进程，然后由子进程打开窗口，这种方式就不会生效。</p>
+<details><summary>示例</summary>
+
+<pre class="lua"><code>hl.bind(&quot;SUPER + E&quot;, hl.dsp.exec_cmd(&quot;kitty&quot;, { float = true, move = {0, 0} }))</code></pre>
+</details>
+
+<h2 id="set_prop">set_prop <a class="permalink" href="#set_prop" aria-label="本节链接">#</a></h2>
+<p>可设置的属性包括<a href="../rules/window-rules/#dynamic-effects">窗口规则</a>中的所有_动态效果_。</p>
+<p>例如：</p>
+<pre class="lua"><code>hl.dsp.window.set_prop({ prop = &quot;no_anim&quot;, value = &quot;1&quot; })
+hl.dsp.window.set_prop({ prop = &quot;no_anim&quot;, value = &quot;1&quot;, window = &quot;class:abc&quot; })</code></pre>
+<p>有些属性是只读的，其值取自窗口规则。如果没有匹配的规则，则根据窗口状态，从其他相关的可写属性中取值：</p>
+<ul>
+<li><code>border_color</code>：取值由 <code>active_border_color</code>、<code>inactive_border_color</code> 决定。</li>
+<li><code>opacity</code>：取值由 <code>opacity</code>、<code>opacity_inactive</code>、<code>opacity_fullscreen</code>、<code>opacity_override</code>、<code>opacity_inactive_override</code>、<code>opacity_fullscreen_override</code> 决定。</li>
+</ul>
+<h2 id="fullscreen_state">fullscreen_state <a class="permalink" href="#fullscreen_state" aria-label="本节链接">#</a></h2>
+<p><code>fullscreen_state</code> 调度器将 Hyprland 为窗口维护的状态与告知客户端的全屏状态分开，使两者可以独立设置。</p>
+<p><code>internal</code> 指 Hyprland 维护的状态，<code>client</code> 指应用程序接收到的状态。</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>状态</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-1</td>
+<td>当前状态</td>
+<td>保持当前的全屏状态。</td>
+</tr>
+<tr>
+<td>0</td>
+<td>非全屏</td>
+<td>窗口占用当前布局为其分配的空间。</td>
+</tr>
+<tr>
+<td>1</td>
+<td>最大化</td>
+<td>窗口占满整个工作区域，同时保留边距。</td>
+</tr>
+<tr>
+<td>2</td>
+<td>全屏</td>
+<td>窗口占满整个屏幕。</td>
+</tr>
+</tbody>
+</table>
+<p>例如：</p>
+<ul>
+<li><code>{internal = 2, client = 0}</code> 将应用程序窗口设为全屏，同时告知客户端窗口仍处于非全屏模式。这有助于防止基于 Chromium 的浏览器因检测到窗口已全屏而进入演示模式。</li>
+<li><code>{internal = 0, client = 2}</code> 使窗口保持非全屏状态，同时告知客户端窗口已进入全屏模式。</li>
+</ul>
+<h3 id="restore-client-maximized-state">恢复客户端的最大化状态 <a class="permalink" href="#restore-client-maximized-state" aria-label="本节链接">#</a></h3>
+<p>用户无法直接选择此模式。当窗口的内部模式为最大化，而客户端又请求全屏时，窗口就会进入这一状态。</p>
+<p>此时，下一次请求退出全屏时，窗口将恢复为最大化状态。例如，在最大化的窗口中观看视频时，将视频切换为全屏就会出现这种情况。</p>
+<h3 id="fullscreen-handlers">全屏处理器 <a class="permalink" href="#fullscreen-handlers" aria-label="本节链接">#</a></h3>
+<p>某些布局（如 scrolling 滚动布局）提供自己的全屏处理方式，会覆盖默认行为。</p>
+<p>在这些布局中，你可以通过全屏调度器的 <code>layout_aware</code> 选项，选择由布局处理的全屏模式，或使用默认处理方式的全屏模式。</p>
+<p>可以通过 Lua 代码查看指定窗口正在使用哪个全屏处理器。例如：</p>
+<pre class="lua"><code>local win = hl.get_active_window()
+if win.fullscreen_handler == &quot;default&quot; then
+    -- 执行一些操作
+end</code></pre>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../../../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/configuring/core/dispatchers/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-2" href="#dispatchers">调度器</a><a class="level-3" href="#parameter-explanation">参数说明</a><a class="level-2" href="#dispatchers-1">调度器</a><a class="level-3" href="#general">概述</a><a class="level-3" href="#window">Window</a><a class="level-3" href="#workspace">Workspace</a><a class="level-3" href="#group">窗口组</a><a class="level-3" href="#cursor">光标</a><a class="level-3" href="#grouped-tabbed-windows">窗口分组（标签页）</a><a class="level-2" href="#special-workspaces">特殊工作区</a><a class="level-2" href="#executing-with-rules">执行命令时应用规则</a><a class="level-2" href="#set_prop">set_prop</a><a class="level-2" href="#fullscreen_state">fullscreen_state</a><a class="level-3" href="#restore-client-maximized-state">恢复客户端的最大化状态</a><a class="level-3" href="#fullscreen-handlers">全屏处理器</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>

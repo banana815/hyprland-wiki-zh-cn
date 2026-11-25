@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>崩溃与缺陷 · Hyprland Wiki 中文版</title><link rel="icon" href="../assets/hyprland.svg">
+<link rel="stylesheet" href="../assets/wiki.css"><script defer src="../assets/site.js"></script></head>
+<body data-root="../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../"><img src="../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/crashes-and-bugs/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../">Hyprland 中文文档</a><ul><li><a href="../version-selector/">版本选择器 ⚙️</a></li><li><details><summary><a href="../getting-started/">入门指南</a></summary><ul><li><a href="../getting-started/installation/">安装</a></li><li><a href="../getting-started/master-tutorial/">入门教程</a></li><li><a href="../getting-started/preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details><summary><a href="../configuring/">配置</a></summary><ul><li><a href="../configuring/naming-conventions/">命名约定</a></li><li><a href="../configuring/selectors/">选择器</a></li><li><details><summary><a href="../configuring/core/">基础配置</a></summary><ul><li><details><summary><a href="../configuring/core/monitors/">显示器</a></summary><ul><li><a href="../configuring/core/monitors/output-selection/">选择显示输出</a></li><li><a href="../configuring/core/monitors/positioning/">显示器排列</a></li><li><a href="../configuring/core/monitors/modes/">显示模式</a></li><li><a href="../configuring/core/monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="../configuring/core/config-options/">配置选项</a></li><li><a href="../configuring/core/devices/">设备</a></li><li><a href="../configuring/core/dispatchers/">调度器</a></li><li><details><summary><a href="../configuring/core/binds/">按键绑定</a></summary><ul><li><a href="../configuring/core/binds/flags/">标志位</a></li><li><a href="../configuring/core/binds/keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="../configuring/core/binds/devices/">设备绑定</a></summary><ul><li><a href="../configuring/core/binds/devices/mouse/">鼠标</a></li><li><a href="../configuring/core/binds/devices/touchpad/">触摸板</a></li><li><a href="../configuring/core/binds/devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="../configuring/core/binds/submaps/">按键子映射</a></li><li><a href="../configuring/core/binds/globals/">全局快捷键与绑定</a></li><li><a href="../configuring/core/binds/switches/">硬件开关</a></li><li><a href="../configuring/core/binds/gestures/">手势</a></li></ul></details></li><li><details><summary><a href="../configuring/core/rules/">规则</a></summary><ul><li><a href="../configuring/core/rules/window-rules/">窗口规则</a></li><li><a href="../configuring/core/rules/workspace-rules/">工作区规则</a></li><li><a href="../configuring/core/rules/layer-rules/">图层规则</a></li></ul></details></li><li><a href="../configuring/core/environment-variables/">环境变量</a></li><li><a href="../configuring/core/animations/">动画</a></li><li><a href="../configuring/core/autostart/">自动启动</a></li><li><details><summary><a href="../configuring/core/advanced-configuration/">高级配置</a></summary><ul><li><a href="../configuring/core/advanced-configuration/events/">Lua 事件</a></li><li><a href="../configuring/core/advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="../configuring/core/advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="../configuring/core/advanced-configuration/notifications/">通知</a></li><li><a href="../configuring/core/advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../configuring/layouts/">布局</a></summary><ul><li><a href="../configuring/layouts/dwindle-layout/">Dwindle 布局</a></li><li><a href="../configuring/layouts/scrolling-layout/">滚动布局</a></li><li><a href="../configuring/layouts/master-layout/">主从布局</a></li><li><a href="../configuring/layouts/monocle-layout/">单窗口布局</a></li><li><a href="../configuring/layouts/custom-layouts/">自定义布局</a></li></ul></details></li><li><details><summary><a href="../configuring/extra/">其他配置</a></summary><ul><li><a href="../configuring/extra/multi-gpu/">多显卡</a></li><li><a href="../configuring/extra/virtual-gpu/">虚拟 GPU</a></li><li><a href="../configuring/extra/performance/">性能</a></li><li><a href="../configuring/extra/tearing/">画面撕裂</a></li><li><a href="../configuring/extra/xwayland/">Xwayland</a></li><li><a href="../configuring/extra/systemd/">systemd</a></li></ul></details></li><li><a href="../configuring/code-snippets/">Lua 代码片段</a></li></ul></details></li><li><details><summary><a href="../hypr-ecosystem/">Hypr 生态系统</a></summary><ul><li><details><summary><a href="../hypr-ecosystem/user/">用户应用与实用工具</a></summary><ul><li><a href="../hypr-ecosystem/user/hyprpaper/">hyprpaper</a></li><li><a href="../hypr-ecosystem/user/hyprpicker/">hyprpicker</a></li><li><a href="../hypr-ecosystem/user/hyprlauncher/">hyprlauncher</a></li><li><a href="../hypr-ecosystem/user/hypridle/">hypridle</a></li><li><a href="../hypr-ecosystem/user/hyprlock/">hyprlock</a></li><li><a href="../hypr-ecosystem/user/xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li><li><a href="../hypr-ecosystem/user/hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../hypr-ecosystem/user/hyprsunset/">hyprsunset</a></li><li><a href="../hypr-ecosystem/user/hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../hypr-ecosystem/user/hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../hypr-ecosystem/user/hyprqt6engine/">hyprqt6engine</a></li><li><a href="../hypr-ecosystem/user/hyprpwcenter/">hyprpwcenter</a></li><li><a href="../hypr-ecosystem/user/hyprshutdown/">hyprshutdown</a></li><li><a href="../hypr-ecosystem/user/hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../hypr-ecosystem/user/hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../hypr-ecosystem/dev/">开发库和工具包</a></summary><ul><li><a href="../hypr-ecosystem/dev/aquamarine/">aquamarine</a></li><li><a href="../hypr-ecosystem/dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../hypr-ecosystem/dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../hypr-ecosystem/dev/hyprlang/">hyprlang</a></li><li><a href="../hypr-ecosystem/dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../hypr-ecosystem/dev/hyprutils/">hyprutils</a></li><li><a href="../hypr-ecosystem/dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../hyprland-plugins/">Hyprland 插件</a></summary><ul><li><a href="../hyprland-plugins/using-plugins/">使用插件</a></li><li><details><summary><a href="../hyprland-plugins/development/">开发</a></summary><ul><li><a href="../hyprland-plugins/development/getting-started/">插件开发入门</a></li><li><a href="../hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li><li><a href="../hyprland-plugins/development/advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../useful-utilities/">实用工具</a></summary><ul><li><a href="../useful-utilities/must-have/">必备软件</a></li><li><a href="../useful-utilities/status-bars/">状态栏</a></li><li><a href="../useful-utilities/wallpapers/">壁纸</a></li><li><a href="../useful-utilities/screen-sharing/">屏幕共享</a></li><li><a href="../useful-utilities/screenshots-and-recording/">截图与录屏</a></li><li><a href="../useful-utilities/app-launchers/">应用启动器</a></li><li><a href="../useful-utilities/app-clients/">应用客户端</a></li><li><a href="../useful-utilities/phone-connect/">连接手机</a></li><li><a href="../useful-utilities/color-pickers/">取色器</a></li><li><a href="../useful-utilities/clipboard-managers/">剪贴板管理器</a></li><li><a href="../useful-utilities/file-managers/">文件管理器</a></li><li><a href="../useful-utilities/other/">其他</a></li><li><a href="../useful-utilities/hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="../useful-utilities/uwsm/">UWSM</a></li></ul></details></li><li><details><summary><a href="../nix/">Nix</a></summary><ul><li><a href="../nix/hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../nix/installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="../nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li><li><a href="../nix/cachix/">Cachix</a></li><li><a href="../nix/advanced/">高级用法</a></li><li><a href="../nix/contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../nvidia/">NVIDIA</a></li><li><a href="../ipc/">IPC</a></li><li><a href="./" aria-current="page">崩溃与缺陷</a></li><li><a href="../faq/">常见问题</a></li><li><a href="../community/">社区</a></li><li><details><summary><a href="../contributing-and-debugging/">贡献与调试</a></summary><ul><li><a href="../contributing-and-debugging/wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../contributing-and-debugging/issue-guidelines/">议题指南</a></li><li><a href="../contributing-and-debugging/pr-guidelines/">PR 指南</a></li><li><a href="../contributing-and-debugging/tests/">测试</a></li><li><a href="../contributing-and-debugging/translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../">Hyprland 中文文档</a></nav><article><h1>崩溃与缺陷</h1><h2 id="getting-the-log">获取日志 <a class="permalink" href="#getting-the-log" aria-label="本节链接">#</a></h2>
+<p>首先，将 <code>debug.disable_logs</code> <a href="../configuring/core/config-options/#syntax">设为</a> <code>false</code>，确保已启用日志记录。 如果还需要 OpenGL 消息，请将 <code>debug.gl_debugging</code> 设为 <code>true</code>。</p>
+<p>日志记录完毕后，记得撤销这些设置，因为它们会降低性能。</p>
+<div class="tip">
+<div class="title">
+<p>提示</p>
+</div>
+<p>可以在运行时使用 <code>hyprctl eval</code> 更改选项，随时开关调试日志。 如果不需要查看启动日志，可以考虑用这种方式设置调试选项，无需写入配置文件。这样一来，调试结束后只需重新加载配置即可关闭日志记录。</p>
+</div>
+<p>如果你在 TTY 中，且崩溃的是最近一次启动的 Hyprland 会话，可以用以下命令输出日志：</p>
+<pre class="sh"><code>cat $XDG_RUNTIME_DIR/hypr/$(ls -t $XDG_RUNTIME_DIR/hypr/ | head -n 1)/hyprland.log</code></pre>
+<p>如果你正在使用 Hyprland，想查看上一次会话的日志，请使用：</p>
+<pre class="sh"><code>cat $XDG_RUNTIME_DIR/hypr/$(ls -t $XDG_RUNTIME_DIR/hypr/ | head -n 2 | tail -n 1)/hyprland.log</code></pre>
+<h2 id="obtaining-the-hyprland-crash-report">获取 Hyprland 崩溃报告 <a class="permalink" href="#obtaining-the-hyprland-crash-report" aria-label="本节链接">#</a></h2>
+<p>如果设置了 <code>$XDG_CACHE_HOME</code>，崩溃报告目录就是 <code>$XDG_CACHE_HOME/hyprland</code>。 否则，目录为 <code>$HOME/.cache/hyprland</code>。</p>
+<p>进入崩溃报告目录，应该能找到一个名为 <code>hyprlandCrashReport[XXXX].txt</code> 的文件，其中 <code>[XXXX]</code> 是崩溃进程的 PID。</p>
+<p>请将该文件作为附件添加到你的问题报告中。</p>
+<h2 id="crashes-at-launch">启动时崩溃 <a class="permalink" href="#crashes-at-launch" aria-label="本节链接">#</a></h2>
+<p>根据日志内容诊断问题：</p>
+<ul>
+<li><code>backend failed to start</code>：在 TTY 中启动 Hyprland，查看红色的日志消息。</li>
+<li><code>Monitor X has NO PREFERRED MODE, and an INVALID one was requested</code>：你的显示器出了故障。</li>
+<li>其他情况：查看核心转储。运行 <code>coredumpctl</code>，找到最近一次核心转储对应的 PID，再运行 <code>coredumpctl info PID</code>。</li>
+<li>如果在驱动程序（如 <code>radeon</code>）中出错，请提交问题报告。</li>
+<li>如果在 <code>Hyprland</code> 中出错，请提交问题报告。</li>
+</ul>
+<h2 id="crashes-not-at-launch">启动后崩溃 <a class="permalink" href="#crashes-not-at-launch" aria-label="本节链接">#</a></h2>
+<p>请在 GitHub 或 Discord 服务器上报告问题。</p>
+<h2 id="obtaining-a-debug-stacktrace">获取调试堆栈跟踪 <a class="permalink" href="#obtaining-a-debug-stacktrace" aria-label="本节链接">#</a></h2>
+<blockquote>
+<p>仅适用于 systemd。</p>
+</blockquote>
+<ol type="1">
+<li>以调试模式构建 Hyprland（<code>make debug</code>）。</li>
+<li>启动 Hyprland 并复现崩溃。</li>
+<li>在 TTY 或终端中运行 <code>coredumpctl debug Hyprland</code>。
+<ul>
+<li>如果 GDB 询问是否获取调试符号，输入 <code>y</code>。</li>
+<li>如果询问是否分页显示，输入 <code>c</code>。</li>
+</ul></li>
+<li>看到 <code>(gdb)</code> 提示符后，使用 <code>set logging enabled</code> 开始将日志写入文件。
+<ul>
+<li>如需指定文件，请使用 <code>set logging file output.log</code>。</li>
+</ul></li>
+<li>运行 <code>bt -full</code>，完成后运行 <code>exit</code>，并将输出作为附件提交。</li>
+</ol>
+<h2 id="obtaining-a-trace-log">获取跟踪日志 <a class="permalink" href="#obtaining-a-trace-log" aria-label="本节链接">#</a></h2>
+<p>设置环境变量 <code>HYPRLAND_TRACE=1 AQ_TRACE=1</code> 后启动 Hyprland。</p>
+<p>这些变量会启用_极为_详细的日志记录，可能导致运行变慢，并产生_非常大_的日志文件，因此建议仅在调试时启用。</p>
+<p>请尽快复现问题，这样我们就不用在上百万行日志中查找原因。</p>
+<h2 id="bugs">缺陷 <a class="permalink" href="#bugs" aria-label="本节链接">#</a></h2>
+<p>首先，<strong><em>请阅读<a href="../faq/">常见问题页面</a></em></strong>。</p>
+<p>如果其中没有列出你遇到的缺陷，可以在 Discord 服务器上提问，或在 <a href="https://github.com/hyprwm/Hyprland/discussions">GitHub 上发起讨论</a>。</p>
+<h2 id="bisecting-an-issue">使用二分法定位问题 <a class="permalink" href="#bisecting-an-issue" aria-label="本节链接">#</a></h2>
+<p>“二分查找”是指通过每次将搜索范围减半，找出最早引入某个缺陷或导致功能退化的那次 <em>git</em> 提交。 在 <code>git</code> 中，可以使用 <code>git bisect</code> 命令完成这项操作。</p>
+<p>如果还没有克隆 Hyprland 仓库，请先克隆：</p>
+<pre class="sh"><code>git clone --recursive https://github.com/hyprwm/Hyprland
+cd Hyprland</code></pre>
+<p>开始二分查找：</p>
+<pre class="sh"><code>git bisect start</code></pre>
+<p>输入第一个已知没有该问题的正常提交的哈希值：</p>
+<pre class="sh"><code>git bisect good [good commit]</code></pre>
+<p>然后输入已知存在该问题的提交的哈希值。这里可以直接使用 HEAD：</p>
+<pre class="sh"><code>git bisect bad HEAD</code></pre>
+<p>此时，<code>git</code> 会检出指定范围中间的一次提交。 接下来，重置并构建 Hyprland：</p>
+<pre class="sh"><code>git reset --hard --recurse-submodules
+make all</code></pre>
+<p>……然后在 TTY 中运行构建生成的可执行文件 <code>./build/Hyprland</code>。</p>
+<p>尝试复现问题。 如果无法复现（即该版本没有这个缺陷），请回到 Hyprland 仓库目录并运行 <code>git bisect good</code>。 如果可以复现，请运行 <code>git bisect bad</code>。 随后 <code>git</code> 会检出另一次提交，继续二分查找。 如果构建出错，请运行 <code>git bisect skip</code>。</p>
+<p>再次重置、构建并安装 Hyprland，重复上述步骤，直到 <code>git</code> 找出引入缺陷的那次提交：</p>
+<pre><code>[commit hash] is the first bad commit</code></pre>
+<h2 id="building-the-wayland-stack-with-asan">使用 ASan 构建 Wayland 软件栈 <a class="permalink" href="#building-the-wayland-stack-with-asan" aria-label="本节链接">#</a></h2>
+<p>如果有人请你这样做，这种方法可以对内存问题进行最深入的调试。</p>
+<p><em>请在 TTY 中执行以下操作，并确保没有 Hyprland 实例正在运行。</em></p>
+<p>克隆 Hyprland：<code>git clone --recursive https://github.com/hyprwm/Hyprland</code></p>
+<p><code>make asan</code></p>
+<p>复现崩溃。 Hyprland 会退出，你将回到 TTY。</p>
+<p>接下来，在 <code>cwd</code>、<code>~</code> 或 <code>./build</code> 中查找名为 <code>asan.log.XXXXX</code> 的文件，其中 XXXXX 是一个数字。</p>
+<p>将找到的所有文件打包成 ZIP 压缩包，作为附件添加到问题报告中。</p>
+<h2 id="debugging-drm-issues">调试 DRM 问题 <a class="permalink" href="#debugging-drm-issues" aria-label="本节链接">#</a></h2>
+<p>DRM（直接渲染管理器）是内核中的底层架构，负责通过 GPU 将 GPU 缓冲区（可用作渲染目标）中的内容直接显示在屏幕上，而非显示在窗口中。</p>
+<p>如果 Hyprland 与 DRM、驱动程序或内核之间的通信出现问题，可能会导致画面卡死、显示异常等现象。 遇到这些情况时，DRM 日志有助于排查问题。</p>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>请注意，这些日志极为详尽。 请尽快复现缺陷，以免生成达 1 GB 的日志文件。</p>
+</div>
+<pre class="sh"><code>echo 0x19F | sudo tee /sys/module/drm/parameters/debug  # 启用详细的 DRM 日志记录
+sudo dmesg -C                                           # 清空内核调试日志
+dmesg -w &gt; ~/dmesg.log &amp;                                # 在后台将内核日志写入 ~/dmesg.log
+Hyprland
+
+# ... repro the issue, then quit Hyprland
+
+fg # 完成后，按 CTRL+C 停止写入日志
+echo 0 | sudo tee /sys/module/drm/parameters/debug # 禁用 DRM 日志记录，记得执行此步，以免系统变慢</code></pre>
+<p>完成后，请将 <code>dmesg.log</code> 文件_作为附件提交_。</p>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/crashes-and-bugs/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-2" href="#getting-the-log">获取日志</a><a class="level-2" href="#obtaining-the-hyprland-crash-report">获取 Hyprland 崩溃报告</a><a class="level-2" href="#crashes-at-launch">启动时崩溃</a><a class="level-2" href="#crashes-not-at-launch">启动后崩溃</a><a class="level-2" href="#obtaining-a-debug-stacktrace">获取调试堆栈跟踪</a><a class="level-2" href="#obtaining-a-trace-log">获取跟踪日志</a><a class="level-2" href="#bugs">缺陷</a><a class="level-2" href="#bisecting-an-issue">使用二分法定位问题</a><a class="level-2" href="#building-the-wayland-stack-with-asan">使用 ASan 构建 Wayland 软件栈</a><a class="level-2" href="#debugging-drm-issues">调试 DRM 问题</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>

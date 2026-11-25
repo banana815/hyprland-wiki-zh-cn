@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>安装 · Hyprland Wiki 中文版</title><link rel="icon" href="../../assets/hyprland.svg">
+<link rel="stylesheet" href="../../assets/wiki.css"><script defer src="../../assets/site.js"></script></head>
+<body data-root="../../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../../"><img src="../../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/getting-started/installation/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../../">Hyprland 中文文档</a><ul><li><a href="../../version-selector/">版本选择器 ⚙️</a></li><li><details open><summary><a href="../">入门指南</a></summary><ul><li><a href="./" aria-current="page">安装</a></li><li><a href="../master-tutorial/">入门教程</a></li><li><a href="../preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details><summary><a href="../../configuring/">配置</a></summary><ul><li><a href="../../configuring/naming-conventions/">命名约定</a></li><li><a href="../../configuring/selectors/">选择器</a></li><li><details><summary><a href="../../configuring/core/">基础配置</a></summary><ul><li><details><summary><a href="../../configuring/core/monitors/">显示器</a></summary><ul><li><a href="../../configuring/core/monitors/output-selection/">选择显示输出</a></li><li><a href="../../configuring/core/monitors/positioning/">显示器排列</a></li><li><a href="../../configuring/core/monitors/modes/">显示模式</a></li><li><a href="../../configuring/core/monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="../../configuring/core/config-options/">配置选项</a></li><li><a href="../../configuring/core/devices/">设备</a></li><li><a href="../../configuring/core/dispatchers/">调度器</a></li><li><details><summary><a href="../../configuring/core/binds/">按键绑定</a></summary><ul><li><a href="../../configuring/core/binds/flags/">标志位</a></li><li><a href="../../configuring/core/binds/keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="../../configuring/core/binds/devices/">设备绑定</a></summary><ul><li><a href="../../configuring/core/binds/devices/mouse/">鼠标</a></li><li><a href="../../configuring/core/binds/devices/touchpad/">触摸板</a></li><li><a href="../../configuring/core/binds/devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="../../configuring/core/binds/submaps/">按键子映射</a></li><li><a href="../../configuring/core/binds/globals/">全局快捷键与绑定</a></li><li><a href="../../configuring/core/binds/switches/">硬件开关</a></li><li><a href="../../configuring/core/binds/gestures/">手势</a></li></ul></details></li><li><details><summary><a href="../../configuring/core/rules/">规则</a></summary><ul><li><a href="../../configuring/core/rules/window-rules/">窗口规则</a></li><li><a href="../../configuring/core/rules/workspace-rules/">工作区规则</a></li><li><a href="../../configuring/core/rules/layer-rules/">图层规则</a></li></ul></details></li><li><a href="../../configuring/core/environment-variables/">环境变量</a></li><li><a href="../../configuring/core/animations/">动画</a></li><li><a href="../../configuring/core/autostart/">自动启动</a></li><li><details><summary><a href="../../configuring/core/advanced-configuration/">高级配置</a></summary><ul><li><a href="../../configuring/core/advanced-configuration/events/">Lua 事件</a></li><li><a href="../../configuring/core/advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="../../configuring/core/advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="../../configuring/core/advanced-configuration/notifications/">通知</a></li><li><a href="../../configuring/core/advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../configuring/layouts/">布局</a></summary><ul><li><a href="../../configuring/layouts/dwindle-layout/">Dwindle 布局</a></li><li><a href="../../configuring/layouts/scrolling-layout/">滚动布局</a></li><li><a href="../../configuring/layouts/master-layout/">主从布局</a></li><li><a href="../../configuring/layouts/monocle-layout/">单窗口布局</a></li><li><a href="../../configuring/layouts/custom-layouts/">自定义布局</a></li></ul></details></li><li><details><summary><a href="../../configuring/extra/">其他配置</a></summary><ul><li><a href="../../configuring/extra/multi-gpu/">多显卡</a></li><li><a href="../../configuring/extra/virtual-gpu/">虚拟 GPU</a></li><li><a href="../../configuring/extra/performance/">性能</a></li><li><a href="../../configuring/extra/tearing/">画面撕裂</a></li><li><a href="../../configuring/extra/xwayland/">Xwayland</a></li><li><a href="../../configuring/extra/systemd/">systemd</a></li></ul></details></li><li><a href="../../configuring/code-snippets/">Lua 代码片段</a></li></ul></details></li><li><details><summary><a href="../../hypr-ecosystem/">Hypr 生态系统</a></summary><ul><li><details><summary><a href="../../hypr-ecosystem/user/">用户应用与实用工具</a></summary><ul><li><a href="../../hypr-ecosystem/user/hyprpaper/">hyprpaper</a></li><li><a href="../../hypr-ecosystem/user/hyprpicker/">hyprpicker</a></li><li><a href="../../hypr-ecosystem/user/hyprlauncher/">hyprlauncher</a></li><li><a href="../../hypr-ecosystem/user/hypridle/">hypridle</a></li><li><a href="../../hypr-ecosystem/user/hyprlock/">hyprlock</a></li><li><a href="../../hypr-ecosystem/user/xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li><li><a href="../../hypr-ecosystem/user/hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../../hypr-ecosystem/user/hyprsunset/">hyprsunset</a></li><li><a href="../../hypr-ecosystem/user/hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../../hypr-ecosystem/user/hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../../hypr-ecosystem/user/hyprqt6engine/">hyprqt6engine</a></li><li><a href="../../hypr-ecosystem/user/hyprpwcenter/">hyprpwcenter</a></li><li><a href="../../hypr-ecosystem/user/hyprshutdown/">hyprshutdown</a></li><li><a href="../../hypr-ecosystem/user/hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../../hypr-ecosystem/user/hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../../hypr-ecosystem/dev/">开发库和工具包</a></summary><ul><li><a href="../../hypr-ecosystem/dev/aquamarine/">aquamarine</a></li><li><a href="../../hypr-ecosystem/dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../../hypr-ecosystem/dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../../hypr-ecosystem/dev/hyprlang/">hyprlang</a></li><li><a href="../../hypr-ecosystem/dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../../hypr-ecosystem/dev/hyprutils/">hyprutils</a></li><li><a href="../../hypr-ecosystem/dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../hyprland-plugins/">Hyprland 插件</a></summary><ul><li><a href="../../hyprland-plugins/using-plugins/">使用插件</a></li><li><details><summary><a href="../../hyprland-plugins/development/">开发</a></summary><ul><li><a href="../../hyprland-plugins/development/getting-started/">插件开发入门</a></li><li><a href="../../hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li><li><a href="../../hyprland-plugins/development/advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../useful-utilities/">实用工具</a></summary><ul><li><a href="../../useful-utilities/must-have/">必备软件</a></li><li><a href="../../useful-utilities/status-bars/">状态栏</a></li><li><a href="../../useful-utilities/wallpapers/">壁纸</a></li><li><a href="../../useful-utilities/screen-sharing/">屏幕共享</a></li><li><a href="../../useful-utilities/screenshots-and-recording/">截图与录屏</a></li><li><a href="../../useful-utilities/app-launchers/">应用启动器</a></li><li><a href="../../useful-utilities/app-clients/">应用客户端</a></li><li><a href="../../useful-utilities/phone-connect/">连接手机</a></li><li><a href="../../useful-utilities/color-pickers/">取色器</a></li><li><a href="../../useful-utilities/clipboard-managers/">剪贴板管理器</a></li><li><a href="../../useful-utilities/file-managers/">文件管理器</a></li><li><a href="../../useful-utilities/other/">其他</a></li><li><a href="../../useful-utilities/hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="../../useful-utilities/uwsm/">UWSM</a></li></ul></details></li><li><details><summary><a href="../../nix/">Nix</a></summary><ul><li><a href="../../nix/hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../../nix/installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../../nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="../../nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li><li><a href="../../nix/cachix/">Cachix</a></li><li><a href="../../nix/advanced/">高级用法</a></li><li><a href="../../nix/contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../../nvidia/">NVIDIA</a></li><li><a href="../../ipc/">IPC</a></li><li><a href="../../crashes-and-bugs/">崩溃与缺陷</a></li><li><a href="../../faq/">常见问题</a></li><li><a href="../../community/">社区</a></li><li><details><summary><a href="../../contributing-and-debugging/">贡献与调试</a></summary><ul><li><a href="../../contributing-and-debugging/wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../../contributing-and-debugging/issue-guidelines/">议题指南</a></li><li><a href="../../contributing-and-debugging/pr-guidelines/">PR 指南</a></li><li><a href="../../contributing-and-debugging/tests/">测试</a></li><li><a href="../../contributing-and-debugging/translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../../">Hyprland 中文文档</a><span>›</span><a href="../">入门指南</a></nav><article><h1>安装</h1><div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>Hyprland 的设计目标并非提供一套完整易用的桌面环境。 简单来说，它是一组工具，供你搭建自己的桌面环境。</p>
+<p>应用、集成组件、shell 等都由<strong>你自己</strong>选择、安装和配置。</p>
+<p>本 wiki 的内容_非常_详尽。 在认定某项功能无法正常工作或不可用之前，强烈建议先仔细查阅本 wiki。</p>
+</div>
+<div class="note">
+<div class="title">
+<p>说明</p>
+</div>
+<p>NVIDIA GPU 往往无法开箱即用。 如果你打算使用 NVIDIA GPU，请在安装 Hyprland 后按照 <a href="../../nvidia/">NVIDIA 页面</a>上的说明操作。 这得怪 NVIDIA。</p>
+</div>
+<h2 id="distros">发行版 <a class="permalink" href="#distros" aria-label="本节链接">#</a></h2>
+<p>我们在 Arch 和 NixOS 上运行并测试 Hyprland，并保证 Hyprland 能在这两个发行版上正常工作。 在其他发行版（不基于 Arch 或 Nix 的发行版）上，运行效果可能各不相同。 不过，Hyprland 采用的技术非常前沿，因此在 Pop!_OS、Fedora、Ubuntu 等定期发布新版本的发行版上运行时，会遇到<strong>严重</strong>问题。 openSUSE、Solus 等滚动发行版通常可以正常运行 Hyprland。</p>
+<h2 id="installation">安装 <a class="permalink" href="#installation" aria-label="本节链接">#</a></h2>
+<p>安装 Hyprland 很简单。 用你的包管理器安装即可。</p>
+<p><strong>强烈</strong>建议使用<strong>发行版为你打包的版本</strong>，<strong>不要</strong>手动编译或使用 <code>-git</code> 包。 Hyprland 的生态庞大，依赖关系错综复杂，手动编译可能会让你遇到依赖版本过旧或不兼容的问题。</p>
+<p>如果你因此遇到 <code>.so</code> 文件不匹配或缺失的错误，<em>这完全是你自己造成的</em>！ 请参阅<a href="../../faq/#symbol-lookup-errors">这条常见问题解答</a>。</p>
+<p>当然，如果你经验丰富，想参与新功能的测试，我们非常欢迎你运行最新的 Git 提交版本。 不过，遇到“.so 文件缺失”错误就别来问我们了！</p>
+<p><a href="../../nix/hyprland-on-any-distro-using-nix/">Nix</a> 可以解决这个问题。 这种方法适合熟悉脚本运行的进阶用户。 如果你使用的发行版对 Hyprland 支持欠佳，可以考虑安装 Nix 包管理器。 它可以解决 <code>.so</code> 文件不匹配以及其他库冲突问题，并确保软件包保持最新。 所有使用 systemd 的发行版都支持 Nix，它不会干扰或取代你现用的包管理器。</p>
+<h3 id="packages">软件包 <a class="permalink" href="#packages" aria-label="本节链接">#</a></h3>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>Hypr* 团队不维护任何软件包。 如果软件包有问题，请先尝试从源码构建。</p>
+</div>
+<p>标有 <code>*</code> 的发行版不受官方支持。 这些发行版的安装说明由社区维护，无法保证其准确性。</p>
+<details><summary>Arch</summary>
+
+<p>从 Arch 软件仓库安装带版本标签的正式发行版：</p>
+<pre class="shell"><code>sudo pacman -S hyprland</code></pre>
+<h5 id="compile-from-source-automatically">自动从源码编译 <a class="permalink" href="#compile-from-source-automatically" aria-label="本节链接">#</a></h5>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>请先阅读<a href="#installation">安装</a>一节中关于使用 <code>-git</code> 包或从源码编译的警告！</p>
+</div>
+<p>从 AUR 安装时会编译最新源码：</p>
+<pre class="shell"><code>yay -S hyprland-git</code></pre>
+<p>你也可以安装 <code>hyprland-meta-git</code> 包，自动获取并编译 hypr* 生态中所有组件的最新 Git 版本。</p>
+<pre class="shell"><code>yay -S hyprland-meta-git</code></pre>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>使用 <code>-git</code> 版本时，每当 <code>hyprutils</code> 等直接依赖项的更新破坏 ABI 兼容性，你都需要重新编译 Hyprland 和所有其他依赖该组件的工具。 否则就会出现“.so not found”错误。</p>
+</div>
+<p>如果你决定使用 AUR 中的 <code>git</code> 版本，可以从 <a href="https://aur.chaotic.cx/">Chaotic AUR</a> 获取预编译的二进制包。 请注意，更新 <code>hyprutils</code> 等依赖项后，你可能仍需自行重新编译所有组件，因为 Chaotic AUR 不会自动完成这一步。</p>
+<div class="note">
+<div class="title">
+<p>说明</p>
+</div>
+<p>你可以使用 <a href="https://github.com/archlinux-downgrade/downgrade">downgrade</a> 轻松回退到先前的 -git 版本。</p>
+</div>
+</details>
+
+<details><summary>Nix</summary>
+
+<p>请参阅 <a href="../../nix/">Nix 页面</a>，了解如何安装 Hyprland。</p>
+</details>
+
+<details><summary>openSUSE*</summary>
+
+<p>从快照 20230411 起，Factory 已收录 Hyprland。 使用 zypper 即可安装：</p>
+<pre class="sh"><code>sudo zypper in hyprland</code></pre>
+<p>也可以通过 YaST2 Software 安装“hyprland”包。</p>
+<p>要让 <code>hyprpm</code> 识别其依赖项，还需要安装 <code>hyprland-devel</code>：</p>
+<pre class="sh"><code>sudo zypper in hyprland-devel</code></pre>
+<p>你也可以按照<a href="#manual-build">手动构建</a>一节的说明自行构建 Hyprland。</p>
+<div class="note">
+<div class="title">
+<p>说明</p>
+</div>
+<p>Leap 不提供 Hyprland，因为它所提供的编译器以及 Hyprland 需要的大多数库都太旧了。</p>
+</div>
+</details>
+
+<details><summary>Fedora*</summary>
+
+<p>使用 <a href="https://copr.fedorainfracloud.org/coprs/lionheartp/Hyprland">lionheartp/Hyprland</a> Copr 仓库。</p>
+<p>你也可以按照<a href="https://github.com/hyprwm/Hyprland/discussions/284">这里的说明</a>自行编译。</p>
+</details>
+
+<details><summary>Debian*</summary>
+
+<p>从 Debian 14（Forky）起，软件仓库已提供 Hyprland：</p>
+<pre class="bash"><code>sudo apt install hyprland</code></pre>
+<p>Debian 13（Trixie）的 backports 仓库也提供 Hyprland：</p>
+<pre class="bash"><code>sudo apt install -t trixie-backports hyprland</code></pre>
+</details>
+
+<details><summary>Gentoo*</summary>
+
+<p><a href="https://codeberg.org/hyproverlay/hyproverlay">hyproverlay</a> 提供 hypr 系列软件包。 使用以下命令启用这个 overlay：</p>
+<pre class="sh"><code>sudo eselect repository enable hyproverlay
+sudo emaint sync -r hyproverlay</code></pre>
+<p>然后即可安装 Hyprland：</p>
+<pre class="sh"><code>sudo emerge --ask gui-wm/hyprland</code></pre>
+<p>这个 overlay 还提供 hyprlock、hypridle、xdg-desktop-portal-hyprland、hyprland-plugins、hyprpaper 和 hyprpicker 等软件包。 <a href="https://github.com/hyprwm/contrib">hyprwm/contrib</a> 中的部分社区贡献脚本也有各自独立的软件包（如 app-misc/grimblast、app-misc/hdrop 等）。</p>
+<pre class="sh"><code>emerge --ask gui-apps/hyprlock
+emerge --ask gui-apps/hypridle
+emerge --ask gui-libs/xdg-desktop-portal-hyprland
+emerge --ask gui-apps/hyprpaper
+emerge --ask gui-apps/hyprpicker</code></pre>
+<p>有关 USE 标志和更多细节，请参阅 <a href="https://wiki.gentoo.org/wiki/Hyprland">Gentoo wiki 的 Hyprland 页面</a>。</p>
+</details>
+
+<details><summary>FreeBSD*</summary>
+
+<p>默认仓库提供 Hyprland 及相关软件包：</p>
+<ul>
+<li><a href="https://www.freshports.org/x11-wm/hyprland">hyprland</a></li>
+<li><a href="https://www.freshports.org/x11/hyprpaper">hyprpaper</a></li>
+<li><a href="https://www.freshports.org/x11/hyprpicker">hyprpicker</a></li>
+<li><a href="https://www.freshports.org/x11/xdg-desktop-portal-hyprland">xdg-desktop-portal-hyprland</a></li>
+<li><a href="https://www.freshports.org/wayland/">其他 Wayland 相关软件</a></li>
+</ul>
+</details>
+
+<details><summary>Ubuntu*</summary>
+
+<h4 id="ubuntu-2610-stonking-stingray-universe-repository">Ubuntu 26.10（Stonking Stingray）的 universe 仓库 <a class="permalink" href="#ubuntu-2610-stonking-stingray-universe-repository" aria-label="本节链接">#</a></h4>
+<p>Ubuntu 26.10 提供 <code>hyprland</code> <code>0.56.2</code>，建议使用 <code>apt</code> 安装。</p>
+<pre class="bash"><code>sudo add-apt-repository universe &amp;&amp; sudo apt update &amp;&amp; sudo apt install hyprland</code></pre>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>Ubuntu 26.04 及更早版本提供的 <code>hyprland</code> 包<strong>极其</strong>陈旧。 强烈建议避免使用这些版本的软件包。 请<a href="#manual-build">手动构建</a>整个软件栈。</p>
+</div>
+<h4 id="ubuntu-2604-lts-resolute-raccoon-universe-repository">Ubuntu 26.04 LTS（Resolute Raccoon）的 universe 仓库 <a class="permalink" href="#ubuntu-2604-lts-resolute-raccoon-universe-repository" aria-label="本节链接">#</a></h4>
+<pre class="bash"><code>sudo add-apt-repository universe &amp;&amp; sudo apt update &amp;&amp; sudo apt install hyprland</code></pre>
+<h4 id="ubuntu-2410-oracular-oriole-universe-repository">Ubuntu 24.10（Oracular Oriole）的 universe 仓库 <a class="permalink" href="#ubuntu-2410-oracular-oriole-universe-repository" aria-label="本节链接">#</a></h4>
+<pre class="bash"><code>sudo add-apt-repository universe &amp;&amp; sudo apt update &amp;&amp; sudo apt install hyprland</code></pre>
+</details>
+
+<details><summary>Alpine*</summary>
+
+<p>Alpine 的 <a href="https://wiki.alpinelinux.org/wiki/Repositories#Community">community 仓库</a>目前提供 Hyprland，由社区维护。</p>
+<p>以下命令会安装 Hyprland 及其依赖项。</p>
+<pre class="sh"><code>apk add hyprland</code></pre>
+</details>
+
+<details><summary>Void Linux*</summary>
+
+<p><a href="https://github.com/void-linux/void-packages/issues/37544">由于打包理念存在分歧</a>，Void Linux 的官方仓库不提供 Hyprland。 不过，有一个<a href="https://github.com/Event-Horizon-VL/blackhole-vl">第三方仓库</a>提供通过 GitHub Actions 在持续集成流程中构建的<a href="https://mirror.black-hole.dev/x86_64/">二进制包</a>。</p>
+<p>运行以下命令即可添加该仓库：</p>
+<pre class="sh"><code>sudo cp /usr/share/xbps.d/00-repository-main.conf /etc/xbps.d/
+sudo sed -i &quot;1i repository=https://mirror.black-hole.dev/$(xbps-uhelper arch)&quot; /etc/xbps.d/00-repository-main.conf</code></pre>
+<p>然后就可以像安装其他软件包一样安装这些包：</p>
+<pre class="sh"><code>sudo xbps-install -S hyprland
+sudo xbps-install -S hyprland-devel # 如果要使用插件
+sudo xbps-install -S xdg-desktop-portal-hyprland
+
+xbps-query -Rs hypr # 执行此步前，需要先使用 xbps-install -S 接受软件仓库的指纹</code></pre>
+<p>更多信息请参阅 <a href="https://github.com/Event-Horizon-VL/blackhole-vl/blob/master/README.md">hyprland-void README</a>，其中也说明了如何使用提供的模板为 Void Linux <a href="https://github.com/Event-Horizon-VL/blackhole-vl?tab=readme-ov-file#installation">手动构建</a> Hyprland。</p>
+</details>
+
+<details><summary>Ximper*</summary>
+
+<p>从 Sisyphus 安装：</p>
+<pre class="bash"><code>epmi hyprland
+epmi hyprland-devel # 如果要使用插件</code></pre>
+<p>安装生态系统中的相关组件：</p>
+<pre class="bash"><code>epmi xdg-desktop-portal-hyprland
+epmi hypridle
+epmi hyprpaper
+epmi hyprpicker</code></pre>
+</details>
+
+<details><summary>Solus*</summary>
+
+<p>在 Solus 上运行：</p>
+<pre class="bash"><code>sudo eopkg install hyprland</code></pre>
+</details>
+
+<hr />
+<div class="note">
+<div class="title">
+<p>说明</p>
+</div>
+<p>如果你打算使用插件，请注意，某些发行版可能会将 <code>hyprpm</code> 单独打包。</p>
+</div>
+<h3 id="manual-build">手动构建 <a class="permalink" href="#manual-build" aria-label="本节链接">#</a></h3>
+<h4 id="dependencies">依赖项 <a class="permalink" href="#dependencies" aria-label="本节链接">#</a></h4>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p><em><strong>在任何情况下都绝对不要</strong></em>用符号链接把不同版本的 .so 文件连在一起，这会导致内存错误和程序崩溃。 不管网上哪个陌生人怎么说，都一样。 _千万别_这么做。</p>
+</div>
+<div class="important">
+<div class="title">
+<p>重要</p>
+</div>
+<p>Hyprland 使用 C++26 标准，因此编译器和 C++ 标准库都必须支持该标准（<code>gcc &gt;= 16</code> 或 <code>clang &gt;= 19</code>）。</p>
+</div>
+<p>如果列表中遗漏了软件包，请到 wiki 仓库提交拉取请求或创建 issue。</p>
+<details><summary>Arch</summary>
+
+<pre class="plain"><code>yay -S ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite libxrender libxcursor pixman wayland-protocols cairo pango libxkbcommon xcb-util-wm xorg-xwayland libinput libliftoff libdisplay-info cpio tomlplusplus hyprlang-git hyprcursor-git hyprwayland-scanner-git hyprwire-git xcb-util-errors hyprutils-git glaze hyprgraphics-git aquamarine-git re2 hyprland-qtutils-git muparser</code></pre>
+</details>
+
+<details><summary>openSUSE</summary>
+
+<pre class="sh"><code>zypper in gcc-c++ git meson cmake &quot;pkgconfig(cairo)&quot; &quot;pkgconfig(egl)&quot; &quot;pkgconfig(gbm)&quot; &quot;pkgconfig(gl)&quot; &quot;pkgconfig(glesv2)&quot; &quot;pkgconfig(libdrm)&quot; &quot;pkgconfig(libinput)&quot; &quot;pkgconfig(libseat)&quot; &quot;pkgconfig(libudev)&quot; &quot;pkgconfig(pango)&quot; &quot;pkgconfig(pangocairo)&quot; &quot;pkgconfig(pixman-1)&quot; &quot;pkgconfig(vulkan)&quot; &quot;pkgconfig(wayland-client)&quot; &quot;pkgconfig(wayland-protocols)&quot; &quot;pkgconfig(wayland-scanner)&quot; &quot;pkgconfig(wayland-server)&quot; &quot;pkgconfig(xcb)&quot; &quot;pkgconfig(xcb-icccm)&quot; &quot;pkgconfig(xcb-renderutil)&quot; &quot;pkgconfig(xkbcommon)&quot; &quot;pkgconfig(xwayland)&quot; &quot;pkgconfig(xcb-errors)&quot; glslang-devel Mesa-libGLESv3-devel tomlplusplus-devel</code></pre>
+<p>（去掉 <code>Mesa-libGLESv3-devel</code> 和 <code>pkgconfig(xcb-errors)</code> 后，这个方法应该也适用于 RHEL/Fedora。）</p>
+</details>
+
+<details><summary>FreeBSD</summary>
+
+<pre class="sh"><code>pkg install git pkgconf gmake gcc evdev-proto cmake wayland-protocols wayland libglvnd libxkbcommon libinput cairo pango pixman libxcb meson jq hwdata libdisplay-info libliftoff
+export CC=gcc CXX=g++ LDFLAGS=&quot;-static-libstdc++ -static-libgcc&quot;</code></pre>
+</details>
+
+<details><summary>Ubuntu</summary>
+
+<h4 id="ubuntu-2604-lts-resolute-raccoon">Ubuntu 26.04 LTS（Resolute Raccoon） <a class="permalink" href="#ubuntu-2604-lts-resolute-raccoon" aria-label="本节链接">#</a></h4>
+<p>构建脚本见 <a href="https://gitlab.com/kralos/hyprbuntu">gitlab.com/kralos/hyprbuntu</a>。</p>
+<h4 id="ubuntu-2410-oracular-oriole">Ubuntu 24.10（Oracular Oriole） <a class="permalink" href="#ubuntu-2410-oracular-oriole" aria-label="本节链接">#</a></h4>
+<p>要从源码安装 Hyprland，需要先安装以下依赖：</p>
+<pre class="bash"><code>sudo apt install -y meson wget build-essential ninja-build cmake-extras cmake gettext gettext-base fontconfig libfontconfig-dev libffi-dev libxml2-dev libdrm-dev libxkbcommon-x11-dev libxkbregistry-dev libxkbcommon-dev libpixman-1-dev libudev-dev libseat-dev seatd libxcb-dri3-dev libegl-dev libgles2 libegl1-mesa-dev glslang-tools libinput-bin libinput-dev libxcb-composite0-dev libavutil-dev libavcodec-dev libavformat-dev libxcb-ewmh2 libxcb-ewmh-dev libxcb-present-dev libxcb-icccm4-dev libxcb-render-util0-dev libxcb-res0-dev libxcb-xinput-dev libtomlplusplus3 libre2-dev</code></pre>
+<p>还需要从源码构建 wayland、wayland-protocols 和 libdisplay-info，各自选用带有版本标签的最新发行版。</p>
+<p>如需共享屏幕，还可以安装 <code>xdg-desktop-portal-wlr</code> 或 <code>xdg-desktop-portal-hyprland</code>：</p>
+<pre class="bash"><code>sudo apt install -y xdg-desktop-portal-wlr</code></pre>
+<p>请参阅 <a href="https://github.com/hyprwm/xdg-desktop-portal-hyprland">XDPH GitHub 仓库的 README</a>。 更多信息见 <a href="../../hypr-ecosystem/user/xdg-desktop-portal-hyprland/">XDPH</a> 和 <a href="https://gist.github.com/Vertecedoc4545/3b077301299c20c5b9b4db00f4ca6000">Ubuntu 上安装和构建 Hyprland 的 Gist 指南</a>。</p>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>Ubuntu 提供的依赖版本通常较旧，因此无法保证构建成功。 即使现在能成功构建，以后也很可能会失败。</p>
+</div>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>请始终使用最新版本的 Ubuntu，以获取最新的依赖。</p>
+<p>注意：GDM 与 Hyprland 配合使用时存在一些问题，实际体验可能因环境而异。 更多信息见<a href="../master-tutorial/">入门教程</a>。</p>
+<p>如果遇到问题，请参阅上面的 Gist 指南。</p>
+</div>
+</details>
+
+<p><strong>必须</strong>按以下顺序构建：</p>
+<pre><code>lua
+hyprland-protocols
+hyprwayland-scanner
+hyprutils
+hyprgraphics
+hyprlang
+hyprcursor
+aquamarine
+xdg-desktop-portal-hyprland
+hyprwire
+hyprtoolkit
+hyprland</code></pre>
+<p>构建好 Hyprland 后，hypr* 系列的其他软件包（如 hyprlock、hyprsunset 等）可以按任意顺序构建。</p>
+<h4 id="building-with-cmake">使用 CMake 构建 <a class="permalink" href="#building-with-cmake" aria-label="本节链接">#</a></h4>
+<pre class="sh"><code>git clone --recursive https://github.com/hyprwm/Hyprland
+cd Hyprland
+make all &amp;&amp; sudo make install</code></pre>
+<h2 id="crash-on-launch">启动时崩溃 <a class="permalink" href="#crash-on-launch" aria-label="本节链接">#</a></h2>
+<p>请参阅<a href="../../crashes-and-bugs/">崩溃与缺陷</a>。</p>
+<h2 id="custom-installation-debug-build-etc">自定义安装（调试构建等） <a class="permalink" href="#custom-installation-debug-build-etc" aria-label="本节链接">#</a></h2>
+<ol type="1">
+<li>用 <code>cd</code> 进入 Hyprland 仓库目录。</li>
+<li>如需构建调试版本：
+<pre class="bash"><code>make debug
+sudo make install</code></pre></li>
+<li>如需使用其他构建配置，请将 <code>&lt;PRESET&gt;</code> 替换为所选预设（<code>release</code> 或 <code>debug</code>）：
+<pre class="bash"><code>make &lt;PRESET&gt; &amp;&amp; sudo cp ./build/Hyprland /usr/bin &amp;&amp; sudo cp ./example/hyprland.desktop /usr/share/wayland-sessions</code></pre></li>
+</ol>
+<h2 id="custom-build-flags">自定义构建标志 <a class="permalink" href="#custom-build-flags" aria-label="本节链接">#</a></h2>
+<p>要使用自定义构建标志，需要跳过 make，直接使用 CMake。</p>
+<p>CMake 支持以下自定义构建标志：</p>
+<pre class="bash"><code>NO_XWAYLAND - Removes Xwayland support
+NO_SYSTEMD - Removes systemd dependencies
+NO_UWSM - Does not install the hyprland-uwsm.desktop file
+NO_HYPRPM - Does not build and install hyprpm</code></pre>
+<p>可以这样向 CMake 传递标志：</p>
+<pre class="bash"><code>cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Release -D&lt;FLAG&gt;:STRING=true -B build</code></pre>
+<p>将 <code>&lt;FLAG&gt;</code> 替换为其中一个自定义构建标志。 要同时使用多个标志，可以继续添加 <code>-D&lt;FLAG_2&gt;:STRING=true</code>。</p>
+<p>也可以将 <code>BUILD_TYPE</code> 改为 <code>Debug</code>。</p>
+<p>运行以下命令进行构建：</p>
+<pre class="bash"><code>cmake --build ./build --config Release --target all -j`nproc 2&gt;/dev/null || getconf NPROCESSORS_CONF`</code></pre>
+<p>如果配置时选择了 <code>Debug</code>，也要将 <code>--config</code> 的值改为 <code>Debug</code>。</p>
+<p>运行以下命令进行安装：</p>
+<pre class="bash"><code>sudo cmake --install ./build</code></pre>
+<h2 id="running-in-a-vm">在虚拟机中运行 <a class="permalink" href="#running-in-a-vm" aria-label="本节链接">#</a></h2>
+<p><em>实际效果可能因环境而异，官方不支持这种运行方式。</em></p>
+<p>通读 <a href="https://wiki.archlinux.org/title/Libvirt">ArchWiki 的 libvirt 页面</a>，安装并配置好 <code>libvirt</code>、<code>virsh</code> 和 <code>virt-viewer</code>。</p>
+<pre class="bash"><code># 安装 libvirt 和 qemu 相关软件包。
+sudo pacman -S libvirt virt-viewer qemu-common
+# 将自己的用户账户加入 libvirt 组。
+sudo usermod -a -G libvirt USER # 将 &#39;USER&#39; 替换为你的用户名。
+# 启用并启动 libvirtd。
+systemctl enable --now libvirtd</code></pre>
+<p>前往 <a href="https://gitlab.archlinux.org/archlinux/arch-boxes/-/packages">GitLab 上的 arch-boxes 仓库</a>，下载最新的 Arch QEMU 基础镜像。 也可以从任意 Arch 镜像站下载。</p>
+<pre class="bash"><code>curl https://geo.mirror.pkgbuild.com/images/latest/Arch-Linux-x86_64-basic.qcow2 \
+  -o ~/Downloads/arch-qemu.qcow2 # 也可以将其下载到任意位置。</code></pre>
+<p>使用 virsh 创建虚拟机。</p>
+<pre class="bash"><code># 使用 virt-install（随 libvirt 提供）从镜像安装虚拟机。
+virt-install \
+  --graphics spice,listen=none,gl.enable=yes,rendernode=/dev/dri/renderD128 \
+  --name hypr-vm \
+  --os-variant archlinux \
+  --memory 2048 \
+  --disk ~/Downloads/arch-qemu.qcow2 \
+  --import</code></pre>
+<p>使用 <code>virt-viewer</code> 连接，它会在 TTY 上打开图形会话。 默认用户名和密码都是 <code>arch</code>。</p>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>务必使用 <code>--attach</code> 标志，因为启用 virgl 后必须禁用监听。 因此，无法通过 TCP 或 UNIX 套接字直接连接到远程显示。 <code>--attach</code> 会请求 libvirt 提供一个已连接到远程显示的套接字。*</p>
+</div>
+<pre class="sh"><code>virt-viewer --attach hypr-vm</code></pre>
+<p>最后，在虚拟机内按照上文的说明<a href="#installation">从 AUR 安装 hyprland-git</a> 或<a href="#manual-build">手动构建</a>。</p>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>务必安装 <code>mesa</code> 作为 OpenGL 驱动。 <code>mesa</code> 包含 virgl 驱动。</p>
+</div>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/getting-started/installation/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-2" href="#distros">发行版</a><a class="level-2" href="#installation">安装</a><a class="level-3" href="#packages">软件包</a><a class="level-5" href="#compile-from-source-automatically">自动从源码编译</a><a class="level-4" href="#ubuntu-2610-stonking-stingray-universe-repository">Ubuntu 26.10（Stonking Stingray）的 universe 仓库</a><a class="level-4" href="#ubuntu-2604-lts-resolute-raccoon-universe-repository">Ubuntu 26.04 LTS（Resolute Raccoon）的 universe 仓库</a><a class="level-4" href="#ubuntu-2410-oracular-oriole-universe-repository">Ubuntu 24.10（Oracular Oriole）的 universe 仓库</a><a class="level-3" href="#manual-build">手动构建</a><a class="level-4" href="#dependencies">依赖项</a><a class="level-4" href="#ubuntu-2604-lts-resolute-raccoon">Ubuntu 26.04 LTS（Resolute Raccoon）</a><a class="level-4" href="#ubuntu-2410-oracular-oriole">Ubuntu 24.10（Oracular Oriole）</a><a class="level-4" href="#building-with-cmake">使用 CMake 构建</a><a class="level-2" href="#crash-on-launch">启动时崩溃</a><a class="level-2" href="#custom-installation-debug-build-etc">自定义安装（调试构建等）</a><a class="level-2" href="#custom-build-flags">自定义构建标志</a><a class="level-2" href="#running-in-a-vm">在虚拟机中运行</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>基础配置 · Hyprland Wiki 中文版</title><link rel="icon" href="../../assets/hyprland.svg">
+<link rel="stylesheet" href="../../assets/wiki.css"><script defer src="../../assets/site.js"></script></head>
+<body data-root="../../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../../"><img src="../../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/configuring/core/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../../">Hyprland 中文文档</a><ul><li><a href="../../version-selector/">版本选择器 ⚙️</a></li><li><details><summary><a href="../../getting-started/">入门指南</a></summary><ul><li><a href="../../getting-started/installation/">安装</a></li><li><a href="../../getting-started/master-tutorial/">入门教程</a></li><li><a href="../../getting-started/preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details open><summary><a href="../">配置</a></summary><ul><li><a href="../naming-conventions/">命名约定</a></li><li><a href="../selectors/">选择器</a></li><li><details open><summary><a href="./" aria-current="page">基础配置</a></summary><ul><li><details><summary><a href="monitors/">显示器</a></summary><ul><li><a href="monitors/output-selection/">选择显示输出</a></li><li><a href="monitors/positioning/">显示器排列</a></li><li><a href="monitors/modes/">显示模式</a></li><li><a href="monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="config-options/">配置选项</a></li><li><a href="devices/">设备</a></li><li><a href="dispatchers/">调度器</a></li><li><details><summary><a href="binds/">按键绑定</a></summary><ul><li><a href="binds/flags/">标志位</a></li><li><a href="binds/keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="binds/devices/">设备绑定</a></summary><ul><li><a href="binds/devices/mouse/">鼠标</a></li><li><a href="binds/devices/touchpad/">触摸板</a></li><li><a href="binds/devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="binds/submaps/">按键子映射</a></li><li><a href="binds/globals/">全局快捷键与绑定</a></li><li><a href="binds/switches/">硬件开关</a></li><li><a href="binds/gestures/">手势</a></li></ul></details></li><li><details><summary><a href="rules/">规则</a></summary><ul><li><a href="rules/window-rules/">窗口规则</a></li><li><a href="rules/workspace-rules/">工作区规则</a></li><li><a href="rules/layer-rules/">图层规则</a></li></ul></details></li><li><a href="environment-variables/">环境变量</a></li><li><a href="animations/">动画</a></li><li><a href="autostart/">自动启动</a></li><li><details><summary><a href="advanced-configuration/">高级配置</a></summary><ul><li><a href="advanced-configuration/events/">Lua 事件</a></li><li><a href="advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="advanced-configuration/notifications/">通知</a></li><li><a href="advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../layouts/">布局</a></summary><ul><li><a href="../layouts/dwindle-layout/">Dwindle 布局</a></li><li><a href="../layouts/scrolling-layout/">滚动布局</a></li><li><a href="../layouts/master-layout/">主从布局</a></li><li><a href="../layouts/monocle-layout/">单窗口布局</a></li><li><a href="../layouts/custom-layouts/">自定义布局</a></li></ul></details></li><li><details><summary><a href="../extra/">其他配置</a></summary><ul><li><a href="../extra/multi-gpu/">多显卡</a></li><li><a href="../extra/virtual-gpu/">虚拟 GPU</a></li><li><a href="../extra/performance/">性能</a></li><li><a href="../extra/tearing/">画面撕裂</a></li><li><a href="../extra/xwayland/">Xwayland</a></li><li><a href="../extra/systemd/">systemd</a></li></ul></details></li><li><a href="../code-snippets/">Lua 代码片段</a></li></ul></details></li><li><details><summary><a href="../../hypr-ecosystem/">Hypr 生态系统</a></summary><ul><li><details><summary><a href="../../hypr-ecosystem/user/">用户应用与实用工具</a></summary><ul><li><a href="../../hypr-ecosystem/user/hyprpaper/">hyprpaper</a></li><li><a href="../../hypr-ecosystem/user/hyprpicker/">hyprpicker</a></li><li><a href="../../hypr-ecosystem/user/hyprlauncher/">hyprlauncher</a></li><li><a href="../../hypr-ecosystem/user/hypridle/">hypridle</a></li><li><a href="../../hypr-ecosystem/user/hyprlock/">hyprlock</a></li><li><a href="../../hypr-ecosystem/user/xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li><li><a href="../../hypr-ecosystem/user/hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../../hypr-ecosystem/user/hyprsunset/">hyprsunset</a></li><li><a href="../../hypr-ecosystem/user/hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../../hypr-ecosystem/user/hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../../hypr-ecosystem/user/hyprqt6engine/">hyprqt6engine</a></li><li><a href="../../hypr-ecosystem/user/hyprpwcenter/">hyprpwcenter</a></li><li><a href="../../hypr-ecosystem/user/hyprshutdown/">hyprshutdown</a></li><li><a href="../../hypr-ecosystem/user/hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../../hypr-ecosystem/user/hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../../hypr-ecosystem/dev/">开发库和工具包</a></summary><ul><li><a href="../../hypr-ecosystem/dev/aquamarine/">aquamarine</a></li><li><a href="../../hypr-ecosystem/dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../../hypr-ecosystem/dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../../hypr-ecosystem/dev/hyprlang/">hyprlang</a></li><li><a href="../../hypr-ecosystem/dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../../hypr-ecosystem/dev/hyprutils/">hyprutils</a></li><li><a href="../../hypr-ecosystem/dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../hyprland-plugins/">Hyprland 插件</a></summary><ul><li><a href="../../hyprland-plugins/using-plugins/">使用插件</a></li><li><details><summary><a href="../../hyprland-plugins/development/">开发</a></summary><ul><li><a href="../../hyprland-plugins/development/getting-started/">插件开发入门</a></li><li><a href="../../hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li><li><a href="../../hyprland-plugins/development/advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../useful-utilities/">实用工具</a></summary><ul><li><a href="../../useful-utilities/must-have/">必备软件</a></li><li><a href="../../useful-utilities/status-bars/">状态栏</a></li><li><a href="../../useful-utilities/wallpapers/">壁纸</a></li><li><a href="../../useful-utilities/screen-sharing/">屏幕共享</a></li><li><a href="../../useful-utilities/screenshots-and-recording/">截图与录屏</a></li><li><a href="../../useful-utilities/app-launchers/">应用启动器</a></li><li><a href="../../useful-utilities/app-clients/">应用客户端</a></li><li><a href="../../useful-utilities/phone-connect/">连接手机</a></li><li><a href="../../useful-utilities/color-pickers/">取色器</a></li><li><a href="../../useful-utilities/clipboard-managers/">剪贴板管理器</a></li><li><a href="../../useful-utilities/file-managers/">文件管理器</a></li><li><a href="../../useful-utilities/other/">其他</a></li><li><a href="../../useful-utilities/hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="../../useful-utilities/uwsm/">UWSM</a></li></ul></details></li><li><details><summary><a href="../../nix/">Nix</a></summary><ul><li><a href="../../nix/hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../../nix/installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../../nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="../../nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li><li><a href="../../nix/cachix/">Cachix</a></li><li><a href="../../nix/advanced/">高级用法</a></li><li><a href="../../nix/contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../../nvidia/">NVIDIA</a></li><li><a href="../../ipc/">IPC</a></li><li><a href="../../crashes-and-bugs/">崩溃与缺陷</a></li><li><a href="../../faq/">常见问题</a></li><li><a href="../../community/">社区</a></li><li><details><summary><a href="../../contributing-and-debugging/">贡献与调试</a></summary><ul><li><a href="../../contributing-and-debugging/wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../../contributing-and-debugging/issue-guidelines/">议题指南</a></li><li><a href="../../contributing-and-debugging/pr-guidelines/">PR 指南</a></li><li><a href="../../contributing-and-debugging/tests/">测试</a></li><li><a href="../../contributing-and-debugging/translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../../">Hyprland 中文文档</a><span>›</span><a href="../">配置</a></nav><article><h1>基础配置</h1><div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>默认配置仅涵盖 Hyprland 的部分选项和功能。要了解所有配置选项，请参阅本 Wiki 这一节链接到的各个页面。</p>
+</div>
+<p>配置文件位于 <code>$XDG_CONFIG_HOME/hypr/hyprland.lua</code>。在大多数情况下，该路径对应 <code>~/.config/hypr/hyprland.lua</code>。</p>
+<p>启动 Hyprland（<code>start-hyprland</code>）时可以传入参数，但必须将参数放在 <code>--</code> 之后。例如，要通过 <code>--config</code>（或 <code>-c</code>）让 Hyprland 加载非默认配置，可以运行 <code>start-hyprland -- --config ~/myRices/medium_rare/hyprland.lua</code>。</p>
+<p>如果尚无配置文件，Hyprland 会创建一份<a href="https://github.com/hyprwm/Hyprland/blob/main/example/hyprland.lua">示例配置</a>。删除 <code>hl.config({ autogenerated = true })</code> 即可移除提示配置由系统自动生成的警告横幅。</p>
+<p>检测到文件变更时，Hyprland 会重新加载配置。要手动重新加载，请使用 <code>hyprctl reload</code>。</p>
+<p>要查看窗口信息（类名、大小、标签等），可使用以下命令：</p>
+<ul>
+<li><code>hyprctl clients</code> 显示所有窗口的信息</li>
+<li><code>hyprctl activewindow</code> 仅显示活动窗口的信息</li>
+</ul>
+<h2 id="language-style-and-syntax">语言风格与语法 <a class="permalink" href="#language-style-and-syntax" aria-label="本节链接">#</a></h2>
+<p>Hyprland 使用 <a href="https://lua.org/">Lua</a> 编写配置文件。Lua 是一种易用且高效的脚本语言，广泛用于各类软件。</p>
+<h3 id="general-hyprland-lua-tips">Hyprland 的 Lua 配置通用技巧 <a class="permalink" href="#general-hyprland-lua-tips" aria-label="本节链接">#</a></h3>
+<h4 id="example-config">示例配置 <a class="permalink" href="#example-config" aria-label="本节链接">#</a></h4>
+<p>可在<a href="https://github.com/hyprwm/Hyprland/blob/main/example/hyprland.lua">这里</a>查看示例配置文件。</p>
+<h4 id="using-multiple-configuration-files">使用多个配置文件 <a class="permalink" href="#using-multiple-configuration-files" aria-label="本节链接">#</a></h4>
+<p>配置可以拆分到多个文件或模块中。要加载其他模块，请使用 Lua 的 <a href="#require"><code>require</code></a> 函数。你可以使用绝对路径、相对于 <code>hyprland.lua</code> 所在目录的路径，或系统级安装的模块名称来指定模块。</p>
+<p>在 <code>require</code> 中，<code>.</code> 和 <code>/</code> 都可用作目录分隔符，但通过相对路径导入时应优先使用 <code>.</code>。</p>
+<p>可以使用通配符 <code>*</code> 从某个目录加载多个文件，或在指定路径下的所有目录中搜索。使用通配符时，路径必须采用 UNIX 格式。</p>
+<details><summary>示例</summary>
+
+<pre class="lua"><code>-- 指向 $XDG_CONFIG_HOME/hypr/awesomeconf/animation.lua
+require(&quot;awesomeconf.animation&quot;)
+-- 指向 $XDG_CONFIG_HOME/hypr/awesomeconf/keybinds.lua
+require(&quot;awesomeconf/keybinds&quot;)
+
+-- 会尝试加载目录中的所有文件
+require(&quot;./lua/*&quot;)
+-- 会尝试加载各子目录中的 &quot;loadme.lua&quot; 文件
+require(&quot;./lua/*/loadme&quot;)
+
+-- 会从 /usr/share/among 加载 &quot;us.lua&quot;
+require(&quot;/usr/share/among/us&quot;)</code></pre>
+</details>
+
+<h4 id="require">使用 require 加载文件 <a class="permalink" href="#require" aria-label="本节链接">#</a></h4>
+<p>使用 <code>require</code> 可将其他文件加载到配置中。<strong>强烈</strong>推荐这种做法，因为 Hyprland 专门为每次 <code>require</code> 调用提供了独立的 Lua“作用域”，所以通过 <code>require</code> 加载的某个文件即使出错，也 <em>不会</em> 中断其他文件的执行。</p>
+<p>请注意，许多错误都会导致当前 Lua 文件停止执行。有关出错时的具体行为，详见<a href="#error-behavior">下文</a>。</p>
+<p><code>require</code> 的保护机制不适用于模块加载过程。如果尝试加载不存在的模块，<code>require</code> 会在调用它的文件中抛出错误。也就是说，在 Hyprland 主配置文件中调用 <code>require("nonexistent")</code>，<em>会导致主配置文件停止执行</em>。</p>
+<p>如果想避免这类错误影响配置运行，甚至希望在运行时检测并处理它们，可以使用 Lua 的 <code>pcall()</code> 函数，例如：</p>
+<pre class="lua"><code>local status, value = pcall(require, &quot;maybe-nonexistent&quot;)
+if status then
+  print(&quot;Successfully loaded module, it returned:&quot;, value)
+else
+  print(&quot;Failed to load module, its error message was:&quot;, value)
+end</code></pre>
+<h5 id="ignoring-requires-protection">绕过 <code>require</code> 的保护机制 <a class="permalink" href="#ignoring-requires-protection" aria-label="本节链接">#</a></h5>
+<p>要绕过作用域隔离，可以通过 <code>__require</code> 使用 Lua 原生的 <code>require</code>。你可以直接调用 <code>__require</code>，也可以设置 <code>require = __require</code>，将原生实现恢复为默认实现。如果你加载的第三方模块因 Hyprland 的错误保护机制而无法正常工作，后一种做法可能会有所帮助。</p>
+<h4 id="editor-autocompletion">编辑器自动补全 <a class="permalink" href="#editor-autocompletion" aria-label="本节链接">#</a></h4>
+<p>预先生成的 Lua 存根文件位于 <code>/usr/share/hypr/stubs/</code> 目录中（在 NixOS 系统上位于 <code>/run/current-system/sw/share/hypr/stubs/</code>）。在 LSP 配置中将该目录加入 Lua 工作区，即可启用自动补全。</p>
+<p>如果不想配置 LSP，也可以直接阅读这些存根文件。</p>
+<details><summary>通用</summary>
+
+<p>在仓库根目录中添加 <code>.luarc.json</code> 文件，然后执行以下步骤：</p>
+<pre class="json"><code>{
+  &quot;workspace&quot;: {
+    &quot;library&quot;: [
+      &quot;/usr/share/hypr/stubs&quot;
+    ]
+  }
+}</code></pre>
+</details>
+
+<details><summary>VS Code</summary>
+
+<p>在 <code>.vscode/</code> 目录中创建 <code>settings.json</code> 文件（如果目录不存在，请先创建目录），然后执行以下步骤：</p>
+<pre class="json"><code>{
+  &quot;Lua.workspace.library&quot;: [
+    &quot;/usr/share/hypr/stubs&quot;
+  ]
+}</code></pre>
+</details>
+
+<h4 id="error-behavior">出错时的行为 <a class="permalink" href="#error-behavior" aria-label="本节链接">#</a></h4>
+<p>Hyprland 会尽可能减小错误的影响。不过，有些错误无法妥善处理：</p>
+<ul>
+<li>如果出现基本的 Lua 语法错误，Hyprland 会拒绝重新加载配置，并弹出错误提示。</li>
+<li>如果在运行时出现 Lua 语法错误（例如将 <code>nil</code> 当作函数调用），Hyprland 会中止当前 Lua 文件的执行，并弹出错误提示。</li>
+<li>如果在运行时出现 Hyprland 类型错误（例如向 <code>hl.*</code> 传入字符串，而对应参数要求浮点数），Hyprland 会弹出错误提示，并继续执行。</li>
+<li>异步执行期间（例如执行按键绑定对应的函数时）若发生运行时错误，Hyprland 会弹出通知，说明错误详情。</li>
+</ul>
+<p>如果发生错误时还没有注册任何按键绑定，Hyprland 会注册几个应急按键绑定：<code>SUPER + Q</code> 打开终端，<code>SUPER + R</code> 打开 hyprlauncher，<code>SUPER + M</code> 退出 Hyprland。错误弹窗中会列出这些按键绑定。</p>
+<h4 id="infinite-loops-reentrant-events">无限循环与可重入事件 <a class="permalink" href="#infinite-loops-reentrant-events" aria-label="本节链接">#</a></h4>
+<p>Hyprland 设有保护机制，防止无限运行的脚本导致会话崩溃。一旦脚本运行超时或达到指定上限，Hyprland 就会终止脚本。</p>
+<h4 id="standard-library">标准库 <a class="permalink" href="#standard-library" aria-label="本节链接">#</a></h4>
+<p>默认会加载 Lua 标准库。Lua 脚本<strong>可以在你的计算机上执行任意代码</strong>，请确保配置来源可信。</p>
+<h4 id="testing-with-repl">使用 REPL 测试 <a class="permalink" href="#testing-with-repl" aria-label="本节链接">#</a></h4>
+<p>借助 <a href="advanced-configuration/using-hyprctl/#repl">hyprctl 内置的 Lua REPL</a>，你可以轻松探索 API 和 Lua 状态。</p>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/configuring/core/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-2" href="#language-style-and-syntax">语言风格与语法</a><a class="level-3" href="#general-hyprland-lua-tips">Hyprland 的 Lua 配置通用技巧</a><a class="level-4" href="#example-config">示例配置</a><a class="level-4" href="#using-multiple-configuration-files">使用多个配置文件</a><a class="level-4" href="#require">使用 require 加载文件</a><a class="level-5" href="#ignoring-requires-protection">绕过 require 的保护机制</a><a class="level-4" href="#editor-autocompletion">编辑器自动补全</a><a class="level-4" href="#error-behavior">出错时的行为</a><a class="level-4" href="#infinite-loops-reentrant-events">无限循环与可重入事件</a><a class="level-4" href="#standard-library">标准库</a><a class="level-4" href="#testing-with-repl">使用 REPL 测试</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>

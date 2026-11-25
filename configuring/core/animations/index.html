@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>动画 · Hyprland Wiki 中文版</title><link rel="icon" href="../../../assets/hyprland.svg">
+<link rel="stylesheet" href="../../../assets/wiki.css"><script defer src="../../../assets/site.js"></script></head>
+<body data-root="../../../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../../../"><img src="../../../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/configuring/core/animations/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../../../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../../../">Hyprland 中文文档</a><ul><li><a href="../../../version-selector/">版本选择器 ⚙️</a></li><li><details><summary><a href="../../../getting-started/">入门指南</a></summary><ul><li><a href="../../../getting-started/installation/">安装</a></li><li><a href="../../../getting-started/master-tutorial/">入门教程</a></li><li><a href="../../../getting-started/preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details open><summary><a href="../../">配置</a></summary><ul><li><a href="../../naming-conventions/">命名约定</a></li><li><a href="../../selectors/">选择器</a></li><li><details open><summary><a href="../">基础配置</a></summary><ul><li><details><summary><a href="../monitors/">显示器</a></summary><ul><li><a href="../monitors/output-selection/">选择显示输出</a></li><li><a href="../monitors/positioning/">显示器排列</a></li><li><a href="../monitors/modes/">显示模式</a></li><li><a href="../monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="../config-options/">配置选项</a></li><li><a href="../devices/">设备</a></li><li><a href="../dispatchers/">调度器</a></li><li><details><summary><a href="../binds/">按键绑定</a></summary><ul><li><a href="../binds/flags/">标志位</a></li><li><a href="../binds/keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="../binds/devices/">设备绑定</a></summary><ul><li><a href="../binds/devices/mouse/">鼠标</a></li><li><a href="../binds/devices/touchpad/">触摸板</a></li><li><a href="../binds/devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="../binds/submaps/">按键子映射</a></li><li><a href="../binds/globals/">全局快捷键与绑定</a></li><li><a href="../binds/switches/">硬件开关</a></li><li><a href="../binds/gestures/">手势</a></li></ul></details></li><li><details><summary><a href="../rules/">规则</a></summary><ul><li><a href="../rules/window-rules/">窗口规则</a></li><li><a href="../rules/workspace-rules/">工作区规则</a></li><li><a href="../rules/layer-rules/">图层规则</a></li></ul></details></li><li><a href="../environment-variables/">环境变量</a></li><li><a href="./" aria-current="page">动画</a></li><li><a href="../autostart/">自动启动</a></li><li><details><summary><a href="../advanced-configuration/">高级配置</a></summary><ul><li><a href="../advanced-configuration/events/">Lua 事件</a></li><li><a href="../advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="../advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="../advanced-configuration/notifications/">通知</a></li><li><a href="../advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../layouts/">布局</a></summary><ul><li><a href="../../layouts/dwindle-layout/">Dwindle 布局</a></li><li><a href="../../layouts/scrolling-layout/">滚动布局</a></li><li><a href="../../layouts/master-layout/">主从布局</a></li><li><a href="../../layouts/monocle-layout/">单窗口布局</a></li><li><a href="../../layouts/custom-layouts/">自定义布局</a></li></ul></details></li><li><details><summary><a href="../../extra/">其他配置</a></summary><ul><li><a href="../../extra/multi-gpu/">多显卡</a></li><li><a href="../../extra/virtual-gpu/">虚拟 GPU</a></li><li><a href="../../extra/performance/">性能</a></li><li><a href="../../extra/tearing/">画面撕裂</a></li><li><a href="../../extra/xwayland/">Xwayland</a></li><li><a href="../../extra/systemd/">systemd</a></li></ul></details></li><li><a href="../../code-snippets/">Lua 代码片段</a></li></ul></details></li><li><details><summary><a href="../../../hypr-ecosystem/">Hypr 生态系统</a></summary><ul><li><details><summary><a href="../../../hypr-ecosystem/user/">用户应用与实用工具</a></summary><ul><li><a href="../../../hypr-ecosystem/user/hyprpaper/">hyprpaper</a></li><li><a href="../../../hypr-ecosystem/user/hyprpicker/">hyprpicker</a></li><li><a href="../../../hypr-ecosystem/user/hyprlauncher/">hyprlauncher</a></li><li><a href="../../../hypr-ecosystem/user/hypridle/">hypridle</a></li><li><a href="../../../hypr-ecosystem/user/hyprlock/">hyprlock</a></li><li><a href="../../../hypr-ecosystem/user/xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li><li><a href="../../../hypr-ecosystem/user/hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../../../hypr-ecosystem/user/hyprsunset/">hyprsunset</a></li><li><a href="../../../hypr-ecosystem/user/hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../../../hypr-ecosystem/user/hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../../../hypr-ecosystem/user/hyprqt6engine/">hyprqt6engine</a></li><li><a href="../../../hypr-ecosystem/user/hyprpwcenter/">hyprpwcenter</a></li><li><a href="../../../hypr-ecosystem/user/hyprshutdown/">hyprshutdown</a></li><li><a href="../../../hypr-ecosystem/user/hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../../../hypr-ecosystem/user/hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../../../hypr-ecosystem/dev/">开发库和工具包</a></summary><ul><li><a href="../../../hypr-ecosystem/dev/aquamarine/">aquamarine</a></li><li><a href="../../../hypr-ecosystem/dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../../../hypr-ecosystem/dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../../../hypr-ecosystem/dev/hyprlang/">hyprlang</a></li><li><a href="../../../hypr-ecosystem/dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../../../hypr-ecosystem/dev/hyprutils/">hyprutils</a></li><li><a href="../../../hypr-ecosystem/dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../hyprland-plugins/">Hyprland 插件</a></summary><ul><li><a href="../../../hyprland-plugins/using-plugins/">使用插件</a></li><li><details><summary><a href="../../../hyprland-plugins/development/">开发</a></summary><ul><li><a href="../../../hyprland-plugins/development/getting-started/">插件开发入门</a></li><li><a href="../../../hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li><li><a href="../../../hyprland-plugins/development/advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../useful-utilities/">实用工具</a></summary><ul><li><a href="../../../useful-utilities/must-have/">必备软件</a></li><li><a href="../../../useful-utilities/status-bars/">状态栏</a></li><li><a href="../../../useful-utilities/wallpapers/">壁纸</a></li><li><a href="../../../useful-utilities/screen-sharing/">屏幕共享</a></li><li><a href="../../../useful-utilities/screenshots-and-recording/">截图与录屏</a></li><li><a href="../../../useful-utilities/app-launchers/">应用启动器</a></li><li><a href="../../../useful-utilities/app-clients/">应用客户端</a></li><li><a href="../../../useful-utilities/phone-connect/">连接手机</a></li><li><a href="../../../useful-utilities/color-pickers/">取色器</a></li><li><a href="../../../useful-utilities/clipboard-managers/">剪贴板管理器</a></li><li><a href="../../../useful-utilities/file-managers/">文件管理器</a></li><li><a href="../../../useful-utilities/other/">其他</a></li><li><a href="../../../useful-utilities/hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="../../../useful-utilities/uwsm/">UWSM</a></li></ul></details></li><li><details><summary><a href="../../../nix/">Nix</a></summary><ul><li><a href="../../../nix/hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../../../nix/installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../../../nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="../../../nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li><li><a href="../../../nix/cachix/">Cachix</a></li><li><a href="../../../nix/advanced/">高级用法</a></li><li><a href="../../../nix/contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../../../nvidia/">NVIDIA</a></li><li><a href="../../../ipc/">IPC</a></li><li><a href="../../../crashes-and-bugs/">崩溃与缺陷</a></li><li><a href="../../../faq/">常见问题</a></li><li><a href="../../../community/">社区</a></li><li><details><summary><a href="../../../contributing-and-debugging/">贡献与调试</a></summary><ul><li><a href="../../../contributing-and-debugging/wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../../../contributing-and-debugging/issue-guidelines/">议题指南</a></li><li><a href="../../../contributing-and-debugging/pr-guidelines/">PR 指南</a></li><li><a href="../../../contributing-and-debugging/tests/">测试</a></li><li><a href="../../../contributing-and-debugging/translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../../../">Hyprland 中文文档</a><span>›</span><a href="../../">配置</a><span>›</span><a href="../">基础配置</a></nav><article><h1>动画</h1><h2 id="general">概述 <a class="permalink" href="#general" aria-label="本节链接">#</a></h2>
+<p>使用 <code>hl.animation()</code> 方法声明动画。</p>
+<p>语法：</p>
+<pre><code>hl.animation({ leaf = string, enabled = bool, speed = float, curve = string, style? = string })</code></pre>
+<ul>
+<li><code>leaf</code> 指定动画的作用范围。请参阅<a href="#animation-tree">动画树</a>。</li>
+<li><code>enabled</code> 可设为 <code>true</code> 以启用动画，或设为 <code>false</code> 以禁用动画。<em>注意：</em> 如果设为 <code>false</code>，可省略后续参数。</li>
+<li><code>speed</code> 表示动画持续多少个<em>十分之一秒</em>（每个单位为 100 毫秒）。例如，<code>speed = 1</code> 表示动画持续 100 毫秒。</li>
+<li><code>bezier</code>/<code>spring</code> 指定曲线名称，详见<a href="#curves">曲线</a>。</li>
+<li><code>style</code> 指定动画样式。请参阅<a href="#animation-tree">动画树</a>。</li>
+</ul>
+<h3 id="examples">示例 <a class="permalink" href="#examples" aria-label="本节链接">#</a></h3>
+<pre class="lua"><code>hl.animation({ leaf = &quot;workspaces&quot;, enabled = true, speed = 8, bezier = &quot;my_epic_bezier&quot; })
+hl.animation({ leaf = &quot;windows&quot;, enabled = true, speed = 10, spring = &quot;my_epic_spring&quot;, style = &quot;slide&quot;})
+hl.animation({ leaf = &quot;fade&quot;, enabled = 0 })</code></pre>
+<h3 id="animation-tree">动画树 <a class="permalink" href="#animation-tree" aria-label="本节链接">#</a></h3>
+<p>动画按树状结构组织。未设置的动画会继承父节点的值。</p>
+<pre class="plain"><code>global
+  ↳ windows - styles: slide, popin, gnomed
+    ↳ windowsIn - window open - styles: same as windows
+    ↳ windowsOut - window close - styles: same as windows
+    ↳ windowsMove - everything in between, moving, dragging, resizing.
+  ↳ layers - styles: slide, popin, fade
+    ↳ layersIn - layer open
+    ↳ layersOut - layer close
+  ↳ fade
+    ↳ fadeIn - fade in for window open
+    ↳ fadeOut - fade out for window close
+    ↳ fadeSwitch - fade on changing activewindow and its opacity
+    ↳ fadeShadow - fade on changing activewindow for shadows
+    ↳ fadeGlow - fade on changing activewindow for glow
+    ↳ fadeDim - the easing of the dimming of inactive windows
+    ↳ fadeLayers - for controlling fade on layers
+      ↳ fadeLayersIn - fade in for layer open
+      ↳ fadeLayersOut - fade out for layer close
+    ↳ fadePopups - for controlling fade on Wayland popups
+      ↳ fadePopupsIn - fade in for Wayland popup open
+      ↳ fadePopupsOut - fade out for Wayland popup close
+    ↳ fadeDpms - for controlling fade when dpms is toggled
+  ↳ border - for animating the border&#39;s color switch speed
+  ↳ borderangle - for animating the border&#39;s gradient angle - styles: once (default), loop
+  ↳ shadowangle - for animating the shadow&#39;s gradient angle - styles: once (default), loop
+  ↳ glowangle - for animating the glow&#39;s gradient angle - styles: once (default), loop
+  ↳ workspaces - styles: slide, slidevert, fade, slidefade, slidefadevert
+    ↳ workspacesIn - styles: same as workspaces
+    ↳ workspacesOut - styles: same as workspaces
+    ↳ specialWorkspace - styles: same as workspaces
+      ↳ specialWorkspaceIn - styles: same as workspaces
+      ↳ specialWorkspaceOut - styles: same as workspaces
+  ↳ zoomFactor - animates the screen zoom
+  ↳ monitorAdded - monitor added zoom animation</code></pre>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>为 <code>*angle</code> 动画使用 <code>loop</code> 样式时，Hyprland 必须按屏幕刷新率 <em>持续</em> 渲染新帧（例如，60 Hz 显示器每秒渲染 60 帧）。这可能会加重 CPU/GPU 的负载，并会影响电池续航。即使动画已禁用或相应的装饰效果不可见，Hyprland 仍会持续渲染。</p>
+</div>
+<h2 id="curves">曲线 <a class="permalink" href="#curves" aria-label="本节链接">#</a></h2>
+<h3 id="bezier">贝塞尔曲线 <a class="permalink" href="#bezier" aria-label="本节链接">#</a></h3>
+<p>三次<a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve">贝塞尔曲线</a>是由 4 个点定义的简单样条曲线，其中中间的两个点可以配置。</p>
+<pre class="lua"><code>hl.curve( NAME, { type = &quot;bezier&quot;, points = { {X0, Y0}, {X1, Y1} } })</code></pre>
+<p>你可以使用 <a href="https://www.cssportal.com/css-cubic-bezier-generator/">cssportal.com</a> 设计自己的贝塞尔曲线。如果想选用现成的贝塞尔曲线，可以浏览 <a href="https://easings.net">easings.net</a>。</p>
+<h3 id="spring">弹簧曲线 <a class="permalink" href="#spring" aria-label="本节链接">#</a></h3>
+<p>弹簧曲线常见于苹果的操作系统中，由质量、刚度和阻尼三个参数定义。通常建议将质量保持为 1，只调整刚度和阻尼。</p>
+<pre class="lua"><code>hl.curve(NAME, { type = &quot;spring&quot;, mass = float, stiffness = float, damping = float })</code></pre>
+<p>“刚度”越大，运动越快；“阻尼”越大，回弹越弱。</p>
+<h4 id="damping">阻尼 <a class="permalink" href="#damping" aria-label="本节链接">#</a></h4>
+<h5 id="critical-damping">临界阻尼 <a class="permalink" href="#critical-damping" aria-label="本节链接">#</a></h5>
+<p>当弹簧处于临界阻尼状态时，它会迅速稳定在平衡位置，不会越过该位置（即不会回弹）。</p>
+<p>当 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ζ</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\zeta = 1</annotation></semantics></math> 时，弹簧处于临界阻尼状态，其中：</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ζ</mi><mo>=</mo><mfrac><mi>c</mi><msub><mi>c</mi><mi>c</mi></msub></mfrac><mo>=</mo><mfrac><mi>c</mi><mrow><mn>2</mn><msqrt><mrow><mi>k</mi><mspace width="0.167em"></mspace><mi>m</mi></mrow></msqrt></mrow></mfrac><mo>,</mo><mspace width="1.0em"></mspace><mrow><mo stretchy="true" form="prefix">{</mo><mtable><mtr><mtd columnalign="left" style="text-align: left"><mi>c</mi></mtd><mtd columnalign="left" style="text-align: left"><mtext mathvariant="normal">阻尼系数*</mtext></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><msub><mi>c</mi><mi>c</mi></msub></mtd><mtd columnalign="left" style="text-align: left"><mtext mathvariant="normal">临界阻尼系数</mtext></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><mi>k</mi></mtd><mtd columnalign="left" style="text-align: left"><mtext mathvariant="normal">刚度</mtext></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><mi>m</mi></mtd><mtd columnalign="left" style="text-align: left"><mtext mathvariant="normal">质量</mtext></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex">
+\zeta = \frac{c}{c_c} = \frac{c}{2\sqrt{k\,m}}, \quad
+\begin{cases}
+c   &amp; \text{阻尼系数*} \\
+c_c &amp; \text{临界阻尼系数} \\
+k   &amp; \text{刚度} \\
+m   &amp; \text{质量}
+\end{cases}
+</annotation></semantics></math></p>
+<blockquote>
+<p>* 这就是你为曲线指定的阻尼值。</p>
+</blockquote>
+<p>若想让动画响应灵敏、过渡平滑，阻尼值可取 <code>0.6</code> 到 <code>0.8</code> 左右。</p>
+<h5 id="overdamped">过阻尼 <a class="permalink" href="#overdamped" aria-label="本节链接">#</a></h5>
+<p>当 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ζ</mi><mo>&gt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\zeta &gt; 1</annotation></semantics></math> 时，弹簧处于过阻尼状态。</p>
+<p>弹簧缓慢回到平衡位置，不会振荡（即不会回弹）。</p>
+<h5 id="underdamped">欠阻尼 <a class="permalink" href="#underdamped" aria-label="本节链接">#</a></h5>
+<p>当 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ζ</mi><mo>&lt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\zeta &lt; 1</annotation></semantics></math> 时，弹簧处于欠阻尼状态。</p>
+<p>弹簧会振荡（回弹），振幅按指数规律衰减*。</p>
+<blockquote>
+<p>* 回弹的幅度随时间呈指数减小。</p>
+</blockquote>
+<h3 id="examples-1">示例 <a class="permalink" href="#examples-1" aria-label="本节链接">#</a></h3>
+<pre class="lua"><code>hl.curve( &quot;overshoot&quot;, { type = &quot;bezier&quot;, points = { {0.5, 0.9}, {0.1, 1.1} } } )
+hl.curve( &quot;rubber&quot;, { type = &quot;spring&quot;, mass = 1, stiffness = 70, damping = 10 } )</code></pre>
+<h3 id="extras">补充说明 <a class="permalink" href="#extras" aria-label="本节链接">#</a></h3>
+<p>为 <code>windows</code> 使用 <code>popin</code> 动画样式时，可以指定起始大小的最小百分比。例如，以下设置会让窗口从其大小的 80% 逐渐放大到 100%：</p>
+<pre class="lua"><code>hl.animation({ leaf = &quot;windows&quot;, enabled = true, speed = 8, curve = &quot;default&quot;, style = &quot;popin 80%&quot; })</code></pre>
+<p>为 <code>workspaces</code> 使用 <code>slide</code>、<code>slidevert</code>、<code>slidefade</code> 或 <code>slidefadevert</code> 动画样式时，可以用百分比指定移动距离。例如，以下设置会让窗口移动屏幕宽度的 20%：</p>
+<pre class="lua"><code>hl.animation({ leaf = &quot;workspaces&quot;, enabled = true, speed = 8, curve = &quot;default&quot;, style = &quot;slidefade 20%&quot; })</code></pre>
+<p>为 <code>windows</code> 和 <code>layers</code> 使用 <code>slide</code> 动画样式时，可以强制指定滑动所用的屏幕边缘，可选值为 <code>top</code>、<code>bottom</code>、<code>left</code> 或 <code>right</code>。</p>
+<pre class="lua"><code>hl.animation({ leaf = &quot;windows&quot;, enabled = true, speed = 8, curve = &quot;default&quot;, style = &quot;slide left&quot; })</code></pre>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../../../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/configuring/core/animations/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-2" href="#general">概述</a><a class="level-3" href="#examples">示例</a><a class="level-3" href="#animation-tree">动画树</a><a class="level-2" href="#curves">曲线</a><a class="level-3" href="#bezier">贝塞尔曲线</a><a class="level-3" href="#spring">弹簧曲线</a><a class="level-4" href="#damping">阻尼</a><a class="level-5" href="#critical-damping">临界阻尼</a><a class="level-5" href="#overdamped">过阻尼</a><a class="level-5" href="#underdamped">欠阻尼</a><a class="level-3" href="#examples-1">示例</a><a class="level-3" href="#extras">补充说明</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>

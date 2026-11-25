@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>环境变量 · Hyprland Wiki 中文版</title><link rel="icon" href="../../../assets/hyprland.svg">
+<link rel="stylesheet" href="../../../assets/wiki.css"><script defer src="../../../assets/site.js"></script></head>
+<body data-root="../../../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../../../"><img src="../../../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/configuring/core/environment-variables/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../../../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../../../">Hyprland 中文文档</a><ul><li><a href="../../../version-selector/">版本选择器 ⚙️</a></li><li><details><summary><a href="../../../getting-started/">入门指南</a></summary><ul><li><a href="../../../getting-started/installation/">安装</a></li><li><a href="../../../getting-started/master-tutorial/">入门教程</a></li><li><a href="../../../getting-started/preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details open><summary><a href="../../">配置</a></summary><ul><li><a href="../../naming-conventions/">命名约定</a></li><li><a href="../../selectors/">选择器</a></li><li><details open><summary><a href="../">基础配置</a></summary><ul><li><details><summary><a href="../monitors/">显示器</a></summary><ul><li><a href="../monitors/output-selection/">选择显示输出</a></li><li><a href="../monitors/positioning/">显示器排列</a></li><li><a href="../monitors/modes/">显示模式</a></li><li><a href="../monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="../config-options/">配置选项</a></li><li><a href="../devices/">设备</a></li><li><a href="../dispatchers/">调度器</a></li><li><details><summary><a href="../binds/">按键绑定</a></summary><ul><li><a href="../binds/flags/">标志位</a></li><li><a href="../binds/keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="../binds/devices/">设备绑定</a></summary><ul><li><a href="../binds/devices/mouse/">鼠标</a></li><li><a href="../binds/devices/touchpad/">触摸板</a></li><li><a href="../binds/devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="../binds/submaps/">按键子映射</a></li><li><a href="../binds/globals/">全局快捷键与绑定</a></li><li><a href="../binds/switches/">硬件开关</a></li><li><a href="../binds/gestures/">手势</a></li></ul></details></li><li><details><summary><a href="../rules/">规则</a></summary><ul><li><a href="../rules/window-rules/">窗口规则</a></li><li><a href="../rules/workspace-rules/">工作区规则</a></li><li><a href="../rules/layer-rules/">图层规则</a></li></ul></details></li><li><a href="./" aria-current="page">环境变量</a></li><li><a href="../animations/">动画</a></li><li><a href="../autostart/">自动启动</a></li><li><details><summary><a href="../advanced-configuration/">高级配置</a></summary><ul><li><a href="../advanced-configuration/events/">Lua 事件</a></li><li><a href="../advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="../advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="../advanced-configuration/notifications/">通知</a></li><li><a href="../advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../layouts/">布局</a></summary><ul><li><a href="../../layouts/dwindle-layout/">Dwindle 布局</a></li><li><a href="../../layouts/scrolling-layout/">滚动布局</a></li><li><a href="../../layouts/master-layout/">主从布局</a></li><li><a href="../../layouts/monocle-layout/">单窗口布局</a></li><li><a href="../../layouts/custom-layouts/">自定义布局</a></li></ul></details></li><li><details><summary><a href="../../extra/">其他配置</a></summary><ul><li><a href="../../extra/multi-gpu/">多显卡</a></li><li><a href="../../extra/virtual-gpu/">虚拟 GPU</a></li><li><a href="../../extra/performance/">性能</a></li><li><a href="../../extra/tearing/">画面撕裂</a></li><li><a href="../../extra/xwayland/">Xwayland</a></li><li><a href="../../extra/systemd/">systemd</a></li></ul></details></li><li><a href="../../code-snippets/">Lua 代码片段</a></li></ul></details></li><li><details><summary><a href="../../../hypr-ecosystem/">Hypr 生态系统</a></summary><ul><li><details><summary><a href="../../../hypr-ecosystem/user/">用户应用与实用工具</a></summary><ul><li><a href="../../../hypr-ecosystem/user/hyprpaper/">hyprpaper</a></li><li><a href="../../../hypr-ecosystem/user/hyprpicker/">hyprpicker</a></li><li><a href="../../../hypr-ecosystem/user/hyprlauncher/">hyprlauncher</a></li><li><a href="../../../hypr-ecosystem/user/hypridle/">hypridle</a></li><li><a href="../../../hypr-ecosystem/user/hyprlock/">hyprlock</a></li><li><a href="../../../hypr-ecosystem/user/xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li><li><a href="../../../hypr-ecosystem/user/hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../../../hypr-ecosystem/user/hyprsunset/">hyprsunset</a></li><li><a href="../../../hypr-ecosystem/user/hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../../../hypr-ecosystem/user/hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../../../hypr-ecosystem/user/hyprqt6engine/">hyprqt6engine</a></li><li><a href="../../../hypr-ecosystem/user/hyprpwcenter/">hyprpwcenter</a></li><li><a href="../../../hypr-ecosystem/user/hyprshutdown/">hyprshutdown</a></li><li><a href="../../../hypr-ecosystem/user/hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../../../hypr-ecosystem/user/hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../../../hypr-ecosystem/dev/">开发库和工具包</a></summary><ul><li><a href="../../../hypr-ecosystem/dev/aquamarine/">aquamarine</a></li><li><a href="../../../hypr-ecosystem/dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../../../hypr-ecosystem/dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../../../hypr-ecosystem/dev/hyprlang/">hyprlang</a></li><li><a href="../../../hypr-ecosystem/dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../../../hypr-ecosystem/dev/hyprutils/">hyprutils</a></li><li><a href="../../../hypr-ecosystem/dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../hyprland-plugins/">Hyprland 插件</a></summary><ul><li><a href="../../../hyprland-plugins/using-plugins/">使用插件</a></li><li><details><summary><a href="../../../hyprland-plugins/development/">开发</a></summary><ul><li><a href="../../../hyprland-plugins/development/getting-started/">插件开发入门</a></li><li><a href="../../../hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li><li><a href="../../../hyprland-plugins/development/advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../useful-utilities/">实用工具</a></summary><ul><li><a href="../../../useful-utilities/must-have/">必备软件</a></li><li><a href="../../../useful-utilities/status-bars/">状态栏</a></li><li><a href="../../../useful-utilities/wallpapers/">壁纸</a></li><li><a href="../../../useful-utilities/screen-sharing/">屏幕共享</a></li><li><a href="../../../useful-utilities/screenshots-and-recording/">截图与录屏</a></li><li><a href="../../../useful-utilities/app-launchers/">应用启动器</a></li><li><a href="../../../useful-utilities/app-clients/">应用客户端</a></li><li><a href="../../../useful-utilities/phone-connect/">连接手机</a></li><li><a href="../../../useful-utilities/color-pickers/">取色器</a></li><li><a href="../../../useful-utilities/clipboard-managers/">剪贴板管理器</a></li><li><a href="../../../useful-utilities/file-managers/">文件管理器</a></li><li><a href="../../../useful-utilities/other/">其他</a></li><li><a href="../../../useful-utilities/hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="../../../useful-utilities/uwsm/">UWSM</a></li></ul></details></li><li><details><summary><a href="../../../nix/">Nix</a></summary><ul><li><a href="../../../nix/hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../../../nix/installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../../../nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="../../../nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li><li><a href="../../../nix/cachix/">Cachix</a></li><li><a href="../../../nix/advanced/">高级用法</a></li><li><a href="../../../nix/contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../../../nvidia/">NVIDIA</a></li><li><a href="../../../ipc/">IPC</a></li><li><a href="../../../crashes-and-bugs/">崩溃与缺陷</a></li><li><a href="../../../faq/">常见问题</a></li><li><a href="../../../community/">社区</a></li><li><details><summary><a href="../../../contributing-and-debugging/">贡献与调试</a></summary><ul><li><a href="../../../contributing-and-debugging/wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../../../contributing-and-debugging/issue-guidelines/">议题指南</a></li><li><a href="../../../contributing-and-debugging/pr-guidelines/">PR 指南</a></li><li><a href="../../../contributing-and-debugging/tests/">测试</a></li><li><a href="../../../contributing-and-debugging/translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../../../">Hyprland 中文文档</a><span>›</span><a href="../../">配置</a><span>›</span><a href="../">基础配置</a></nav><article><h1>环境变量</h1><p>你可以使用 <code>hl.env()</code> 方法在显示服务器初始化之前设置环境变量。例如：</p>
+<pre class="lua"><code>hl.env(&quot;GTK_THEME&quot;, &quot;Nord&quot;)</code></pre>
+<div class="note">
+<div class="title">
+<p>说明</p>
+</div>
+<p>引用 <code>$XDG_RUNTIME_DIR</code> 等已有的环境变量时，请使用 <code>os.getenv()</code>。例如：<code>hl.env("SSH_AUTH_SOCK", os.getenv("XDG_RUNTIME_DIR") .. "/ssh-agent.socket")</code></p>
+</div>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>请避免将 Wayland 专用的环境变量写入 <code>/etc/environment</code>。在传统发行版上，这会使所有会话（包括 Xorg 会话）都加载这些变量，很可能导致会话无法正常工作。</p>
+</div>
+<p>复制粘贴此处列出的环境变量之前，请先确认你了解它们的作用。其中一些用于调试，另一些如果使用不当，可能导致系统不稳定。</p>
+<h2 id="hyprland-environment-variables">Hyprland 环境变量 <a class="permalink" href="#hyprland-environment-variables" aria-label="本节链接">#</a></h2>
+<ul>
+<li><code>hl.env("HYPRLAND_TRACE", "1")</code> - 启用更详细的日志记录。</li>
+<li><code>hl.env("HYPRLAND_NO_RT", "1")</code> - 禁止 Hyprland 设置实时优先级。</li>
+<li><code>hl.env("HYPRLAND_NO_SD_NOTIFY", "1")</code> - 使用 systemd 时，禁用 <code>sd_notify</code> 调用。</li>
+<li><code>hl.env("HYPRLAND_NO_SD_VARS", "1")</code> - 禁止 Hyprland 管理 systemd 和 D-Bus 激活环境中的变量。</li>
+<li><code>hl.env("HYPRLAND_CONFIG", "/path/to/hyprland.lua")</code> - 指定 Hyprland 配置文件的位置。</li>
+</ul>
+<h2 id="aquamarine"><a href="../../../hypr-ecosystem/dev/aquamarine/">Aquamarine</a> <a class="permalink" href="#aquamarine" aria-label="本节链接">#</a></h2>
+<ul>
+<li><code>hl.env("AQ_TRACE", "1")</code> - 启用跟踪日志（输出非常详细）。</li>
+<li><code>hl.env("AQ_DRM_DEVICES", "...")</code> - 显式指定要使用的 DRM 设备（GPU）列表。设备路径以冒号分隔，第一个设备将用作主 GPU。例如：<code>/dev/dri/card1:/dev/dri/card0</code>。</li>
+<li><code>hl.env("AQ_FORCE_LINEAR_BLIT", "0")</code> - 不再强制多 GPU 缓冲区使用显式线性修饰符，这可能有助于规避 NVIDIA 相关问题。</li>
+<li><code>hl.env("AQ_MGPU_NO_EXPLICIT", "1")</code> - 在多 GPU 显示扫描输出时禁用显式同步栅栏的传递。</li>
+<li><code>hl.env("AQ_NO_MODIFIERS", "1")</code> - 禁用 DRM 缓冲区的修饰符。</li>
+<li><code>hl.env("AQ_NO_KMS_REQUIREMENT", "1")</code> - 允许在无显示输出的 GPU 上启动时无需满足 KMS 要求。</li>
+<li><code>hl.env("AQ_NO_ATOMIC", "1")</code> - **（强烈不建议）**禁用原子模式设置。</li>
+</ul>
+<h2 id="mouse-cursor">鼠标光标 <a class="permalink" href="#mouse-cursor" aria-label="本节链接">#</a></h2>
+<ul>
+<li><code>hl.env("XCURSOR_THEME", "MyCursorTheme")</code> - 设置光标主题。该主题必须已安装，且当前用户必须有权读取。</li>
+<li><code>hl.env("XCURSOR_SIZE", "24")</code> - 设置光标大小。有关设置此变量的原因，请参阅<a href="../../../faq/">常见问题</a>。</li>
+<li><code>hl.env("HYPRCURSOR_THEME", "MyHyprcursorTheme")</code> - 有关 hyprcursor 的信息，请参阅 <a href="../../../hypr-ecosystem/user/hyprcursor/">hyprcursor 页面</a>。</li>
+<li><code>hl.env("HYPRCURSOR_SIZE", "24")</code></li>
+</ul>
+<h2 id="qt">Qt <a class="permalink" href="#qt" aria-label="本节链接">#</a></h2>
+<ul>
+<li><code>hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")</code> - 让基于 Qt 的应用程序使用你在 qt6ct 中选择的主题。</li>
+<li><code>hl.env("QT_AUTO_SCREEN_SCALE_FACTOR", "1")</code> - <a href="https://doc.qt.io/qt-5/highdpi.html">（摘自 Qt 文档）</a>启用自动缩放，缩放比例取决于显示器的像素密度。</li>
+<li><code>hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1")</code> - 禁用 Qt 应用程序的窗口装饰。</li>
+</ul>
+<h2 id="gtk">GTK <a class="permalink" href="#gtk" aria-label="本节链接">#</a></h2>
+<ul>
+<li><code>hl.env("GTK_THEME", "yourVeryPrettyTheme")</code> - 手动设置 GTK 主题，适合不想使用 lxappearance 或 nwg-look 等外观配置工具的用户。</li>
+</ul>
+<h2 id="gui-toolkits-backend">GUI 工具包的后端 <a class="permalink" href="#gui-toolkits-backend" aria-label="本节链接">#</a></h2>
+<ul>
+<li><code>hl.env("GDK_BACKEND", "wayland,x11,*")</code> - GTK：优先使用 Wayland；如果不可用，则尝试 X11，再尝试其他可用的 GDK 后端。</li>
+<li><code>hl.env("QT_QPA_PLATFORM", "wayland;xcb")</code> - Qt：优先使用 Wayland，如果不可用则回退到 X11。</li>
+<li><code>hl.env("SDL_VIDEODRIVER", "wayland")</code> - 让 SDL2 应用程序在 Wayland 上运行。如果自带旧版 SDL 的游戏出现兼容性问题，请移除此变量或将其设为 <code>x11</code>。</li>
+<li><code>hl.env("CLUTTER_BACKEND", "wayland")</code> - Clutter 软件包已启用 Wayland 支持。设置此变量会强制 Clutter 应用程序尝试使用 Wayland 后端。</li>
+</ul>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../../../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/configuring/core/environment-variables/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-2" href="#hyprland-environment-variables">Hyprland 环境变量</a><a class="level-2" href="#aquamarine">Aquamarine</a><a class="level-2" href="#mouse-cursor">鼠标光标</a><a class="level-2" href="#qt">Qt</a><a class="level-2" href="#gtk">GTK</a><a class="level-2" href="#gui-toolkits-backend">GUI 工具包的后端</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>

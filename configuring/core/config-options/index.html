@@ -1,0 +1,3424 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>配置选项 · Hyprland Wiki 中文版</title><link rel="icon" href="../../../assets/hyprland.svg">
+<link rel="stylesheet" href="../../../assets/wiki.css"><script defer src="../../../assets/site.js"></script></head>
+<body data-root="../../../"><a class="skip" href="#main">跳至正文</a>
+<header><div class="bar"><a class="brand" href="../../../"><img src="../../../assets/hyprland.svg" width="28" height="28" alt="">Hyprland Wiki</a>
+<nav class="top-links" aria-label="项目链接"><a href="https://hypr.land/">Hyprland 官网</a><a href="https://hypr.land/hall_of_fame">作品展示</a><a href="https://hypr.land/news">新闻</a><a href="https://github.com/banana815/hyprland-wiki-zh-cn">GitHub</a></nav>
+<a class="original" href="https://wiki.hypr.land/configuring/core/config-options/">英文原文</a><button id="menu" type="button" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><a class="version" href="../../../version-selector/">文档版本 · 最新 Git</a>
+<label class="search">搜索文档<input id="query" type="search" placeholder="标题、参数或关键词"></label>
+<nav id="results" aria-label="搜索结果" hidden><p id="result-status" role="status"></p><ul></ul></nav>
+<nav id="tree" aria-label="文档导航"><a href="../../../">Hyprland 中文文档</a><ul><li><a href="../../../version-selector/">版本选择器 ⚙️</a></li><li><details><summary><a href="../../../getting-started/">入门指南</a></summary><ul><li><a href="../../../getting-started/installation/">安装</a></li><li><a href="../../../getting-started/master-tutorial/">入门教程</a></li><li><a href="../../../getting-started/preconfigured-setups/">预配置方案</a></li></ul></details></li><li><details open><summary><a href="../../">配置</a></summary><ul><li><a href="../../naming-conventions/">命名约定</a></li><li><a href="../../selectors/">选择器</a></li><li><details open><summary><a href="../">基础配置</a></summary><ul><li><details><summary><a href="../monitors/">显示器</a></summary><ul><li><a href="../monitors/output-selection/">选择显示输出</a></li><li><a href="../monitors/positioning/">显示器排列</a></li><li><a href="../monitors/modes/">显示模式</a></li><li><a href="../monitors/colors/">颜色与色彩空间</a></li></ul></details></li><li><a href="./" aria-current="page">配置选项</a></li><li><a href="../devices/">设备</a></li><li><a href="../dispatchers/">调度器</a></li><li><details><summary><a href="../binds/">按键绑定</a></summary><ul><li><a href="../binds/flags/">标志位</a></li><li><a href="../binds/keyboard-layouts/">键盘布局</a></li><li><details><summary><a href="../binds/devices/">设备绑定</a></summary><ul><li><a href="../binds/devices/mouse/">鼠标</a></li><li><a href="../binds/devices/touchpad/">触摸板</a></li><li><a href="../binds/devices/per-device/">按设备设置按键绑定</a></li></ul></details></li><li><a href="../binds/submaps/">按键子映射</a></li><li><a href="../binds/globals/">全局快捷键与绑定</a></li><li><a href="../binds/switches/">硬件开关</a></li><li><a href="../binds/gestures/">手势</a></li></ul></details></li><li><details><summary><a href="../rules/">规则</a></summary><ul><li><a href="../rules/window-rules/">窗口规则</a></li><li><a href="../rules/workspace-rules/">工作区规则</a></li><li><a href="../rules/layer-rules/">图层规则</a></li></ul></details></li><li><a href="../environment-variables/">环境变量</a></li><li><a href="../animations/">动画</a></li><li><a href="../autostart/">自动启动</a></li><li><details><summary><a href="../advanced-configuration/">高级配置</a></summary><ul><li><a href="../advanced-configuration/events/">Lua 事件</a></li><li><a href="../advanced-configuration/lua-utilities/">Lua 实用函数</a></li><li><a href="../advanced-configuration/using-hyprctl/">使用 hyprctl</a></li><li><a href="../advanced-configuration/notifications/">通知</a></li><li><a href="../advanced-configuration/permissions/">权限</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../layouts/">布局</a></summary><ul><li><a href="../../layouts/dwindle-layout/">Dwindle 布局</a></li><li><a href="../../layouts/scrolling-layout/">滚动布局</a></li><li><a href="../../layouts/master-layout/">主从布局</a></li><li><a href="../../layouts/monocle-layout/">单窗口布局</a></li><li><a href="../../layouts/custom-layouts/">自定义布局</a></li></ul></details></li><li><details><summary><a href="../../extra/">其他配置</a></summary><ul><li><a href="../../extra/multi-gpu/">多显卡</a></li><li><a href="../../extra/virtual-gpu/">虚拟 GPU</a></li><li><a href="../../extra/performance/">性能</a></li><li><a href="../../extra/tearing/">画面撕裂</a></li><li><a href="../../extra/xwayland/">Xwayland</a></li><li><a href="../../extra/systemd/">systemd</a></li></ul></details></li><li><a href="../../code-snippets/">Lua 代码片段</a></li></ul></details></li><li><details><summary><a href="../../../hypr-ecosystem/">Hypr 生态系统</a></summary><ul><li><details><summary><a href="../../../hypr-ecosystem/user/">用户应用与实用工具</a></summary><ul><li><a href="../../../hypr-ecosystem/user/hyprpaper/">hyprpaper</a></li><li><a href="../../../hypr-ecosystem/user/hyprpicker/">hyprpicker</a></li><li><a href="../../../hypr-ecosystem/user/hyprlauncher/">hyprlauncher</a></li><li><a href="../../../hypr-ecosystem/user/hypridle/">hypridle</a></li><li><a href="../../../hypr-ecosystem/user/hyprlock/">hyprlock</a></li><li><a href="../../../hypr-ecosystem/user/xdg-desktop-portal-hyprland/">xdg-desktop-portal-hyprland</a></li><li><a href="../../../hypr-ecosystem/user/hyprsysteminfo/">hyprsysteminfo</a></li><li><a href="../../../hypr-ecosystem/user/hyprsunset/">hyprsunset</a></li><li><a href="../../../hypr-ecosystem/user/hyprpolkitagent/">hyprpolkitagent</a></li><li><a href="../../../hypr-ecosystem/user/hyprland-qt-support/">hyprland-qt-support</a></li><li><a href="../../../hypr-ecosystem/user/hyprqt6engine/">hyprqt6engine</a></li><li><a href="../../../hypr-ecosystem/user/hyprpwcenter/">hyprpwcenter</a></li><li><a href="../../../hypr-ecosystem/user/hyprshutdown/">hyprshutdown</a></li><li><a href="../../../hypr-ecosystem/user/hyprtoolkit/">hyprtoolkit（用户文档）</a></li><li><a href="../../../hypr-ecosystem/user/hyprcursor/">hyprcursor</a></li></ul></details></li><li><details><summary><a href="../../../hypr-ecosystem/dev/">开发库和工具包</a></summary><ul><li><a href="../../../hypr-ecosystem/dev/aquamarine/">aquamarine</a></li><li><a href="../../../hypr-ecosystem/dev/hyprgraphics/">hyprgraphics</a></li><li><a href="../../../hypr-ecosystem/dev/hyprland-guiutils/">hyprland-guiutils</a></li><li><a href="../../../hypr-ecosystem/dev/hyprlang/">hyprlang</a></li><li><a href="../../../hypr-ecosystem/dev/hyprtoolkit/">hyprtoolkit（开发者文档）</a></li><li><a href="../../../hypr-ecosystem/dev/hyprutils/">hyprutils</a></li><li><a href="../../../hypr-ecosystem/dev/hyprwayland-scanner/">hyprwayland-scanner</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../hyprland-plugins/">Hyprland 插件</a></summary><ul><li><a href="../../../hyprland-plugins/using-plugins/">使用插件</a></li><li><details><summary><a href="../../../hyprland-plugins/development/">开发</a></summary><ul><li><a href="../../../hyprland-plugins/development/getting-started/">插件开发入门</a></li><li><a href="../../../hyprland-plugins/development/plugin-guidelines/">插件开发指南</a></li><li><a href="../../../hyprland-plugins/development/advanced/">进阶</a></li></ul></details></li></ul></details></li><li><details><summary><a href="../../../useful-utilities/">实用工具</a></summary><ul><li><a href="../../../useful-utilities/must-have/">必备软件</a></li><li><a href="../../../useful-utilities/status-bars/">状态栏</a></li><li><a href="../../../useful-utilities/wallpapers/">壁纸</a></li><li><a href="../../../useful-utilities/screen-sharing/">屏幕共享</a></li><li><a href="../../../useful-utilities/screenshots-and-recording/">截图与录屏</a></li><li><a href="../../../useful-utilities/app-launchers/">应用启动器</a></li><li><a href="../../../useful-utilities/app-clients/">应用客户端</a></li><li><a href="../../../useful-utilities/phone-connect/">连接手机</a></li><li><a href="../../../useful-utilities/color-pickers/">取色器</a></li><li><a href="../../../useful-utilities/clipboard-managers/">剪贴板管理器</a></li><li><a href="../../../useful-utilities/file-managers/">文件管理器</a></li><li><a href="../../../useful-utilities/other/">其他</a></li><li><a href="../../../useful-utilities/hypr-ecosystem/">Hypr 生态系统</a></li><li><a href="../../../useful-utilities/uwsm/">UWSM</a></li></ul></details></li><li><details><summary><a href="../../../nix/">Nix</a></summary><ul><li><a href="../../../nix/hyprland-on-any-distro-using-nix/">使用 Nix 在任意发行版上运行 Hyprland</a></li><li><a href="../../../nix/installing-hyprland-on-nixos/">NixOS 上的 Hyprland</a></li><li><a href="../../../nix/configuring-hyprland-with-hjem/">使用 Hjem 配置 Hyprland</a></li><li><a href="../../../nix/configuring-hyprland-with-home-manager/">使用 Home Manager 配置 Hyprland</a></li><li><a href="../../../nix/cachix/">Cachix</a></li><li><a href="../../../nix/advanced/">高级用法</a></li><li><a href="../../../nix/contributing-and-debugging/">参与贡献与调试</a></li></ul></details></li><li><a href="../../../nvidia/">NVIDIA</a></li><li><a href="../../../ipc/">IPC</a></li><li><a href="../../../crashes-and-bugs/">崩溃与缺陷</a></li><li><a href="../../../faq/">常见问题</a></li><li><a href="../../../community/">社区</a></li><li><details><summary><a href="../../../contributing-and-debugging/">贡献与调试</a></summary><ul><li><a href="../../../contributing-and-debugging/wiki-guidelines/">Wiki 写作指南</a></li><li><a href="../../../contributing-and-debugging/issue-guidelines/">议题指南</a></li><li><a href="../../../contributing-and-debugging/pr-guidelines/">PR 指南</a></li><li><a href="../../../contributing-and-debugging/tests/">测试</a></li><li><a href="../../../contributing-and-debugging/translations/">翻译</a></li></ul></details></li></ul></nav></aside>
+<main id="main"><nav class="crumb" aria-label="当前位置"><a href="../../../">Hyprland 中文文档</a><span>›</span><a href="../../">配置</a><span>›</span><a href="../">基础配置</a></nav><article><h1>配置选项</h1><p>本页介绍 Hyprland 的所有配置选项，特定布局专用的选项除外。这些选项在各自的<a href="../../layouts/">布局页面</a>中介绍。</p>
+<p>有关<a href="../binds/">按键绑定</a>、<a href="../monitors/">显示器</a>、<a href="../animations/">动画</a>等内容，请参阅<a href="../">核心配置</a>中的其他页面。</p>
+<h2 id="syntax">语法 <a class="permalink" href="#syntax" aria-label="本节链接">#</a></h2>
+<p>要一次更新多个选项，可以这样写：</p>
+<pre class="lua"><code>hl.config({
+  category1 = {
+    option = value,
+  },
+  category2 = {
+    option1 = value1,
+    option2 = value2,
+  },
+})</code></pre>
+<p>如果只需更新少数几个选项，也可以这样写：</p>
+<pre class="lua"><code>hl.config({ [&quot;category.option&quot;] = value })</code></pre>
+<p>你可以多次调用 <code>hl.config()</code> 来设置选项，因为每次调用只会更新该次传入的选项。</p>
+<p>请注意，<strong>如果多次设置同一个配置选项，最后一行的设置始终会覆盖此前对该选项的所有设置！</strong></p>
+<p>因此，你也可以使用 <a href="../advanced-configuration/using-hyprctl/#eval"><code>hyprctl eval 'hl.config(...)'</code></a> 在运行时更新选项，无需将这些设置写入配置文件。这样设置的选项会在下次重新加载（或重新启动）Hyprland 时恢复为默认值。</p>
+<div class="tip">
+<div class="title">
+<p>提示</p>
+</div>
+<p>继续之前，请确保你已阅读并理解<a href="../../naming-conventions/">本 wiki 使用的命名约定</a>。</p>
+</div>
+<p>各选项以表格形式说明：</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>字符串</td>
+<td><a href="../../naming-conventions/#data-types">数据类型</a></td>
+<td><code>Default</code></td>
+<td><code>Limit</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>Default</code> 可以是以下之一：</p>
+<ul>
+<li>与类型相符的值</li>
+<li><code>[[Empty]]</code></li>
+<li><code>[[Auto]]</code></li>
+</ul>
+<p><code>Limit</code> 可以是以下之一：</p>
+<ul>
+<li>取值范围</li>
+<li><code>None</code></li>
+</ul>
+<p>如果限制字段填写的是字面值 <code>None</code>，表示该选项没有限制。如果某个选项的值超出允许范围，Hyprland 会报配置错误。</p>
+<h2 id="sections">配置分节 <a class="permalink" href="#sections" aria-label="本节链接">#</a></h2>
+<h3 id="general">常规 <a class="permalink" href="#general" aria-label="本节链接">#</a></h3>
+<p>类别：<code>general</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>allow_tearing</td>
+<td>控制是否允许画面撕裂的总开关。参见<a href="../../extra/tearing/">画面撕裂</a>。</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>border_size</td>
+<td>窗口四周的边框宽度</td>
+<td>int</td>
+<td><code>1</code></td>
+<td>[0 - 20]</td>
+</tr>
+<tr>
+<td>extend_border_grab_area</td>
+<td>扩大边框周围可点击并拖动的区域，仅在启用 <code>general.resize_on_border</code> 时生效</td>
+<td>int</td>
+<td><code>15</code></td>
+<td>[0 - 100]</td>
+</tr>
+<tr>
+<td>float_gaps</td>
+<td>浮动窗口与显示器边缘之间的间距。<code>-1</code> 表示使用默认值。</td>
+<td>css_gaps</td>
+<td><code>0</code></td>
+<td></td>
+</tr>
+<tr>
+<td>gaps_in</td>
+<td>窗口之间的间距</td>
+<td>css_gaps</td>
+<td><code>5</code></td>
+<td></td>
+</tr>
+<tr>
+<td>gaps_out</td>
+<td>窗口与显示器边缘之间的间距</td>
+<td>css_gaps</td>
+<td><code>20</code></td>
+<td></td>
+</tr>
+<tr>
+<td>gaps_workspaces</td>
+<td>工作区之间的间距。与 gaps_out 叠加</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 100]</td>
+</tr>
+<tr>
+<td>hover_icon_on_border</td>
+<td>光标悬停在边框上时显示调整大小的光标图标，仅在启用 <code>general.resize_on_border</code> 时生效</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>layout</td>
+<td>要使用的布局。可选值：<code>"dwindle"</code>/<code>"master"</code>/<code>"scrolling"</code>/<code>"monocle"</code></td>
+<td>string</td>
+<td><code>"dwindle"</code></td>
+<td></td>
+</tr>
+<tr>
+<td>locale</td>
+<td>覆盖系统的区域设置，例如 <code>"en_US"</code>、<code>"es"</code></td>
+<td>string</td>
+<td>[[Empty]]</td>
+<td></td>
+</tr>
+<tr>
+<td>modal_parent_blocking</td>
+<td>是否允许与模态窗口的父窗口交互</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>no_focus_fallback</td>
+<td>如果设为 true，沿某个方向移动焦点时，若该方向没有窗口，就不会将焦点移到下一个可用窗口</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>resize_corner</td>
+<td>调整浮动窗口大小时，强制使用指定的角（从左上角起按顺时针方向编号为 1-4，设为 0 可禁用）</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 4]</td>
+</tr>
+<tr>
+<td>resize_on_border</td>
+<td>允许通过点击并拖动边框或窗口间的空隙来调整窗口大小</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="general-colors">常规配色 <a class="permalink" href="#general-colors" aria-label="本节链接">#</a></h4>
+<p>类别：<code>general.col</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>active_border</td>
+<td>活动窗口的边框颜色</td>
+<td>gradient</td>
+<td><code>0xffffffff</code></td>
+<td></td>
+</tr>
+<tr>
+<td>inactive_border</td>
+<td>非活动窗口的边框颜色</td>
+<td>gradient</td>
+<td><code>0xff444444</code></td>
+<td></td>
+</tr>
+<tr>
+<td>nogroup_border</td>
+<td>无法加入窗口组的非活动窗口的边框颜色</td>
+<td>gradient</td>
+<td><code>0xffffaaff</code></td>
+<td></td>
+</tr>
+<tr>
+<td>nogroup_border_active</td>
+<td>无法加入窗口组的活动窗口的边框颜色</td>
+<td>gradient</td>
+<td><code>0xffff00ff</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="snap">吸附 <a class="permalink" href="#snap" aria-label="本节链接">#</a></h4>
+<p>类别：<code>general.snap</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enabled</td>
+<td>启用浮动窗口吸附</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>border_overlap</td>
+<td>启用后，相互吸附的窗口之间只留出一个边框宽度的间距</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>respect_gaps</td>
+<td>启用后，吸附时会保留 general:gaps_in 设置的窗口间距</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>monitor_gap</td>
+<td>触发吸附前，窗口边缘与显示器边缘之间的最小间距（像素）</td>
+<td>int</td>
+<td><code>10</code></td>
+<td>[0 - 100]</td>
+</tr>
+<tr>
+<td>window_gap</td>
+<td>触发吸附前，窗口之间的最小间距（像素）</td>
+<td>int</td>
+<td><code>10</code></td>
+<td>[0 - 100]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="decoration">窗口装饰 <a class="permalink" href="#decoration" aria-label="本节链接">#</a></h3>
+<p>类别：<code>decoration</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>active_opacity</td>
+<td>活动窗口的不透明度</td>
+<td>float</td>
+<td><code>1.0</code></td>
+<td>[0.0 - 1.0]</td>
+</tr>
+<tr>
+<td>border_part_of_window</td>
+<td>是否将窗口边框视为窗口的一部分</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>dim_around</td>
+<td><code>dim_around</code> 窗口规则使窗口周围区域变暗的程度</td>
+<td>float</td>
+<td><code>0.4</code></td>
+<td>[0.0 - 1.0]</td>
+</tr>
+<tr>
+<td>dim_inactive</td>
+<td>启用非活动窗口变暗效果</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>dim_modal</td>
+<td>启用模态窗口的父窗口变暗效果</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>dim_special</td>
+<td>打开特殊工作区时，屏幕其余部分变暗的程度。[0.0 - 1.0]</td>
+<td>float</td>
+<td><code>0.2 </code></td>
+<td></td>
+</tr>
+<tr>
+<td>dim_strength</td>
+<td>非活动窗口变暗的程度</td>
+<td>float</td>
+<td><code>0.5</code></td>
+<td>[0.0 - 1.0]</td>
+</tr>
+<tr>
+<td>fullscreen_opacity</td>
+<td>全屏窗口的不透明度</td>
+<td>float</td>
+<td><code>1.0</code></td>
+<td>[0.0 - 1.0]</td>
+</tr>
+<tr>
+<td>inactive_opacity</td>
+<td>非活动窗口的不透明度</td>
+<td>float</td>
+<td><code>1.0</code></td>
+<td>[0.0 - 1.0]</td>
+</tr>
+<tr>
+<td>rounding</td>
+<td>圆角半径（以布局像素为单位）</td>
+<td>int / <code>{ top_left?, top_right?, bottom_left?, bottom_right?}</code></td>
+<td><code>0</code></td>
+<td>[0 - 100]</td>
+</tr>
+<tr>
+<td>rounding_power</td>
+<td>调整圆角的曲线形状。值越大，曲线越平滑。1.0 对应三角形切角，2.0 对应圆弧，4.0 对应方圆形曲线</td>
+<td>float</td>
+<td><code>2.0</code></td>
+<td>[1.0 - 10.0]</td>
+</tr>
+<tr>
+<td>screen_shader</td>
+<td>自定义着色器的路径。该着色器在渲染结束时应用。示例见 <code>examples/screenShader.frag</code></td>
+<td>string</td>
+<td>[[Empty]]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="opacity">不透明度 <a class="permalink" href="#opacity" aria-label="本节链接">#</a></h4>
+<p>最终不透明度是所有不透明度值的<strong>乘积</strong>。在不透明度值后添加 <code>"override"</code>，即可将其用作固定值，而非乘数。</p>
+<p>例如，将 <code>active_opacity</code> 设为 <code>0.5</code>，并将窗口规则 <code>opacity</code> 设为 <code>0.5</code>，最终不透明度为 <code>0.25</code>。</p>
+<div class="important">
+<div class="title">
+<p>重要</p>
+</div>
+<p>单个不透明度值可以超过 <code>1.0</code>，但只要乘积超过 <code>1.0</code>，就会导致画面显示异常。</p>
+</div>
+<details><summary>示例</summary>
+
+<pre class="lua"><code>-- 无论其他规则如何设置，不透明度在活动时为 0.8，非活动时为 0.8，全屏时为 1.0：
+hl.window_rule({
+  match   = { class = &quot;kitty&quot; },
+  opacity = &quot;0.8 override 0.8 override 1.0 override&quot;,
+})</code></pre>
+</details>
+
+<h4 id="blur">模糊 <a class="permalink" href="#blur" aria-label="本节链接">#</a></h4>
+<p>类别：<code>decoration.blur</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enabled</td>
+<td>启用 kawase 窗口背景模糊效果</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>brightness</td>
+<td>调节模糊效果的亮度</td>
+<td>float</td>
+<td><code>1</code></td>
+<td>[0.0 - 2.0]</td>
+</tr>
+<tr>
+<td>contrast</td>
+<td>调节模糊效果的对比度</td>
+<td>float</td>
+<td><code>0.8916</code></td>
+<td>[0.0 - 2.0]</td>
+</tr>
+<tr>
+<td>ignore_opacity</td>
+<td>让模糊层忽略窗口的不透明度</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>input_methods</td>
+<td>是否对输入法窗口应用模糊效果，例如 <code>fcitx5</code> 的窗口</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>input_methods_ignorealpha</td>
+<td>作用与图层规则中的 ignore_alpha 相同。如果像素的不透明度低于设定值，就不对该像素应用模糊效果</td>
+<td>float</td>
+<td><code>0.2</code></td>
+<td>[0.0 - 1.0]</td>
+</tr>
+<tr>
+<td>new_optimizations</td>
+<td>是否进一步优化模糊处理。建议保持启用，可大幅提升性能</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>noise</td>
+<td>添加的噪声量</td>
+<td>float</td>
+<td><code>0.0117</code></td>
+<td>[0.0 - 1.0]</td>
+</tr>
+<tr>
+<td>passes</td>
+<td>执行模糊处理的遍数</td>
+<td>int</td>
+<td><code>1</code></td>
+<td>[0 - 10]</td>
+</tr>
+<tr>
+<td>popups</td>
+<td>是否对弹出窗口应用模糊效果，例如 <code>right-click menus</code>（右键菜单）</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>popups_ignorealpha</td>
+<td>作用与图层规则中的 ignore_alpha 相同。如果像素的不透明度低于设定值，就不对该像素应用模糊效果</td>
+<td>float</td>
+<td><code>0.2</code></td>
+<td>[0.0 - 1.0]</td>
+</tr>
+<tr>
+<td>proportional</td>
+<td>启用后，模糊强度与像素的不透明度成正比。需要启用 <code>render:use_shader_blur_blend</code></td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>size</td>
+<td>模糊范围（距离）</td>
+<td>int</td>
+<td><code>8</code></td>
+<td></td>
+</tr>
+<tr>
+<td>special</td>
+<td>是否模糊特殊工作区后方的内容（注意：性能开销较大）</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>variant</td>
+<td>模糊效果的样式。可能会显著提高 GPU 和 CPU 的使用率</td>
+<td>string</td>
+<td><code>kawase</code></td>
+<td><a href="#blur-variants">见下文</a></td>
+</tr>
+<tr>
+<td>vibrancy</td>
+<td>提高模糊区域的色彩饱和度</td>
+<td>float</td>
+<td><code>0.1696</code></td>
+<td>[0.0 - 1.0]</td>
+</tr>
+<tr>
+<td>vibrancy_darkness</td>
+<td><code>vibrancy</code> 对暗部的影响强度</td>
+<td>float</td>
+<td><code>0.0</code></td>
+<td>[0.0 - 1.0]</td>
+</tr>
+<tr>
+<td>xray</td>
+<td>启用后，浮动窗口的背景模糊处理会忽略平铺窗口，从而显著降低浮动窗口的模糊处理开销。设置 <code>new_optimizations = false</code> 时，此项禁用</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="note">
+<div class="title">
+<p>说明</p>
+</div>
+<p><code>blur.size</code> 和 <code>blur.passes</code> 都必须至少为 1，模糊效果才会生效。</p>
+<p>当 <code>blur.size</code> 的值较大时，需要增大 <code>blur.passes</code> 才能避免模糊效果出现异常，但请记住，<code>blur.passes</code> 越大，GPU 的负担就越重。</p>
+<p>如果启用模糊后，某些窗口仍没有模糊效果，可能是因为该效果由客户端设置控制。请参阅<a href="../../../faq/#blur">常见问题</a>。</p>
+</div>
+<h5 id="blur-variants">模糊样式 <a class="permalink" href="#blur-variants" aria-label="本节链接">#</a></h5>
+<p>不同的模糊方法可能共用某些选项。</p>
+<p>可用样式：</p>
+<ul>
+<li><code>kawase</code> - 默认样式</li>
+<li><code>acrylic</code> - 类似液态玻璃的效果</li>
+<li><code>aurora</code> - 类似极光的光带</li>
+<li><code>drops</code> - 雨滴落在窗玻璃上的效果</li>
+<li><code>fluid_jar</code> - 二维流体模拟</li>
+<li><code>frost</code> - 冰面开裂效果</li>
+<li><code>haze</code> - 另一种光线漫射效果</li>
+<li><code>heat_shimmer</code> - 带有像差的轻微热浪抖动效果</li>
+<li><code>prism</code> - 三角形折射遮罩</li>
+<li><code>ripple</code> - 点击时产生涟漪</li>
+<li><code>water</code> - 使用高度图生成的涟漪</li>
+</ul>
+<h6 id="acrylic">亚克力 <a class="permalink" href="#acrylic" aria-label="本节链接">#</a></h6>
+<p>适用样式：<code>acrylic</code> 类别：<code>decoration.blur.acrylic</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aberration</td>
+<td>亚克力透镜中各色光的相对分离程度</td>
+<td>float</td>
+<td><code>0.025</code></td>
+<td>[0.0 - 0.25]</td>
+</tr>
+<tr>
+<td>bulb</td>
+<td>亚克力弯曲边缘的宽度（像素）</td>
+<td>float</td>
+<td><code>48.0</code></td>
+<td>[4.0 - 256.0]</td>
+</tr>
+<tr>
+<td>clarity</td>
+<td>透过亚克力表面仍清晰可见的背景比例</td>
+<td>float</td>
+<td><code>0.82</code></td>
+<td>[0.0 - 1.0]</td>
+</tr>
+<tr>
+<td>refraction</td>
+<td>亚克力透镜的最大位移（像素）</td>
+<td>float</td>
+<td><code>24.0</code></td>
+<td>[0.0 - 48.0]</td>
+</tr>
+<tr>
+<td>tint</td>
+<td>亚克力的着色颜色。Alpha 通道控制光的吸收程度</td>
+<td>color</td>
+<td><code>0x14EEF5FF</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h6 id="aurora">极光 <a class="permalink" href="#aurora" aria-label="本节链接">#</a></h6>
+<p>适用样式：<code>aurora</code> 类别：<code>decoration.blur.aurora</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color1</td>
+<td>第一层极光光幕的颜色。Alpha 值控制该颜色在最终效果中的权重</td>
+<td>color</td>
+<td><code>0x29F0A0FF</code></td>
+<td></td>
+</tr>
+<tr>
+<td>color2</td>
+<td>第二层极光光幕的颜色。Alpha 值控制该颜色在最终效果中的权重</td>
+<td>color</td>
+<td><code>0x7A4DFFFF</code></td>
+<td></td>
+</tr>
+<tr>
+<td>intensity</td>
+<td>极光颜色对最终效果的影响强度</td>
+<td>float</td>
+<td><code>0.35</code></td>
+<td>[0.0 - 1.0]</td>
+</tr>
+<tr>
+<td>speed</td>
+<td>动画速度。设为 0 可冻结动画</td>
+<td>float</td>
+<td><code>1.0</code></td>
+<td>[0.0 - 10.0]</td>
+</tr>
+</tbody>
+</table>
+<h6 id="drops">水滴 <a class="permalink" href="#drops" aria-label="本节链接">#</a></h6>
+<p>适用于：<code>drops</code> 类别：<code>decoration.blur.drops</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>speed</td>
+<td>动画速度。设为 0 可禁用动画</td>
+<td>float</td>
+<td><code>3.0</code></td>
+<td>[0.0 - 10.0]</td>
+</tr>
+</tbody>
+</table>
+<h6 id="fluid-jar">液体罐 <a class="permalink" href="#fluid-jar" aria-label="本节链接">#</a></h6>
+<p>适用于：<code>fluid_jar</code> 类别：<code>decoration.blur.fluid_jar</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color</td>
+<td>液体颜色</td>
+<td>color</td>
+<td><code>0xCC3399FF</code></td>
+<td></td>
+</tr>
+<tr>
+<td>distortion</td>
+<td>液体折射畸变的倍率</td>
+<td>float</td>
+<td><code>8.0</code></td>
+<td>[0.0 - 10.0]</td>
+</tr>
+<tr>
+<td>fill_amount</td>
+<td>罐内液体的填充高度</td>
+<td>float</td>
+<td><code>0.5</code></td>
+<td>[0.0 - 1.0]</td>
+</tr>
+<tr>
+<td>mass</td>
+<td>液体的惯性质量</td>
+<td>float</td>
+<td><code>1.4</code></td>
+<td>[0.1 - 10.0]</td>
+</tr>
+<tr>
+<td>precision</td>
+<td>液体模拟精度的倍率。2x 能较好地兼顾精度与性能，4x 的计算开销较大，8x 则过高且没有必要</td>
+<td>float</td>
+<td><code>2.0</code></td>
+<td>[0.5 - 8.0]</td>
+</tr>
+<tr>
+<td>speed</td>
+<td>动画速度</td>
+<td>float</td>
+<td><code>3.7</code></td>
+<td>[0.0 - 10.0]</td>
+</tr>
+<tr>
+<td>turbulence</td>
+<td>液体内部湍流强度的倍率</td>
+<td>float</td>
+<td><code>1.2</code></td>
+<td>[0.0 - 5.0]</td>
+</tr>
+</tbody>
+</table>
+<h6 id="glass">玻璃 <a class="permalink" href="#glass" aria-label="本节链接">#</a></h6>
+<p>适用于：<code>aurora</code>、<code>drops</code>、<code>heat_shimmer</code>、<code>prism</code> 类别：<code>decoration.blur.glass</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>refraction</td>
+<td>玻璃类模糊效果的最大折射位移，单位为像素</td>
+<td>float</td>
+<td><code>20.0</code></td>
+<td>[0.0 - 20.0]</td>
+</tr>
+<tr>
+<td>roughness</td>
+<td>玻璃浮雕效果的明暗强度</td>
+<td>float</td>
+<td><code>1.0</code></td>
+<td>[0.0 - 1.0]</td>
+</tr>
+<tr>
+<td>size</td>
+<td>玻璃类模糊效果的图案大小，单位为像素</td>
+<td>float</td>
+<td><code>40.0</code></td>
+<td>[4.0 - 512.0]</td>
+</tr>
+</tbody>
+</table>
+<h6 id="haze">薄雾 <a class="permalink" href="#haze" aria-label="本节链接">#</a></h6>
+<p>适用于：<code>haze</code> 类别：<code>decoration.blur.haze</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>intensity</td>
+<td>薄雾的珠光光泽强度</td>
+<td>float</td>
+<td><code>0.35</code></td>
+<td>[0.0 - 1.0]</td>
+</tr>
+<tr>
+<td>iridescence</td>
+<td>薄雾珠光效果的色彩偏移强度</td>
+<td>float</td>
+<td><code>0.7</code></td>
+<td>[0.0 - 1.0]</td>
+</tr>
+</tbody>
+</table>
+<h6 id="heat-shimmer">热浪扭曲 <a class="permalink" href="#heat-shimmer" aria-label="本节链接">#</a></h6>
+<p>适用于：<code>heat_shimmer</code> 类别：<code>decoration.blur.heat_shimmer</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>speed</td>
+<td>动画速度。设为 0 可禁用动画</td>
+<td>float</td>
+<td><code>1.0</code></td>
+<td>[0.0 - 10.0]</td>
+</tr>
+</tbody>
+</table>
+<h6 id="ripple">涟漪 <a class="permalink" href="#ripple" aria-label="本节链接">#</a></h6>
+<p>适用于：<code>ripple</code> 类别：<code>decoration.blur.ripple</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>duration</td>
+<td>持续时间，单位为秒</td>
+<td>float</td>
+<td><code>0.45</code></td>
+<td>[0.05 - 5.0]</td>
+</tr>
+<tr>
+<td>radius</td>
+<td>最大半径，单位为像素</td>
+<td>float</td>
+<td><code>400.0</code></td>
+<td>[1.0 - 1000.0]</td>
+</tr>
+<tr>
+<td>strength</td>
+<td>最大折射位移，单位为像素</td>
+<td>float</td>
+<td><code>30.0</code></td>
+<td>[0.0 - 32.0]</td>
+</tr>
+<tr>
+<td>width</td>
+<td>波纹宽度，单位为像素</td>
+<td>float</td>
+<td><code>32.0</code></td>
+<td>[1.0 - 200.0]</td>
+</tr>
+</tbody>
+</table>
+<h6 id="water">水面 <a class="permalink" href="#water" aria-label="本节链接">#</a></h6>
+<p>适用于：<code>water</code> 类别：<code>decoration.blur.water</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>damping</td>
+<td>波动衰减的阻尼</td>
+<td>float</td>
+<td><code>0.95</code></td>
+<td>[0.0 - 1.0]</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>最长持续时间，单位为秒</td>
+<td>float</td>
+<td><code>12.0</code></td>
+<td>[0.5 - 60.0]</td>
+</tr>
+<tr>
+<td>radius</td>
+<td>指针作用半径，单位为像素</td>
+<td>float</td>
+<td><code>20.0</code></td>
+<td>[1.0 - 1000.0]</td>
+</tr>
+<tr>
+<td>speed</td>
+<td>传播速度</td>
+<td>float</td>
+<td><code>0.76</code></td>
+<td>[0.0 - 10.0]</td>
+</tr>
+<tr>
+<td>strength</td>
+<td>最大折射位移和扰动注入强度，单位均为像素</td>
+<td>float</td>
+<td><code>32.0</code></td>
+<td>[0.0 - 32.0]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="shadow">阴影 <a class="permalink" href="#shadow" aria-label="本节链接">#</a></h4>
+<p>类别：<code>decoration.shadow</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enabled</td>
+<td>启用窗口投影</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>color</td>
+<td>活动窗口的阴影颜色。Alpha 值决定不透明度</td>
+<td>color/gradient</td>
+<td><code>0xee1a1a1a</code></td>
+<td></td>
+</tr>
+<tr>
+<td>color_inactive</td>
+<td>非活动窗口的阴影颜色。未设置时使用 <code>color</code> 的值</td>
+<td>color/gradient</td>
+<td>[[Empty]]</td>
+<td></td>
+</tr>
+<tr>
+<td>offset</td>
+<td>阴影的渲染偏移量</td>
+<td>vec2</td>
+<td><code>{0, 0}</code></td>
+<td></td>
+</tr>
+<tr>
+<td>range</td>
+<td>阴影范围（大小），单位为像素</td>
+<td>int</td>
+<td><code>4</code></td>
+<td>[0 - 100]</td>
+</tr>
+<tr>
+<td>render_power</td>
+<td>渲染阴影衰减时使用的指数。指数越大，衰减越快</td>
+<td>int</td>
+<td><code>3</code></td>
+<td>[1 - 4]</td>
+</tr>
+<tr>
+<td>scale</td>
+<td>阴影的缩放比例</td>
+<td>float</td>
+<td><code>1.0</code></td>
+<td>[0.05 - 2.0]</td>
+</tr>
+<tr>
+<td>sharp</td>
+<td>启用后，阴影边缘会变得锐利，效果类似于将渲染指数设为无穷大</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="glow">辉光 <a class="permalink" href="#glow" aria-label="本节链接">#</a></h4>
+<p>类别：<code>decoration.glow</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enabled</td>
+<td>启用窗口内辉光</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>color</td>
+<td>活动窗口的辉光颜色。Alpha 值决定不透明度</td>
+<td>gradient</td>
+<td><code>0xee1a1a1a</code></td>
+<td></td>
+</tr>
+<tr>
+<td>color_inactive</td>
+<td>非活动窗口的辉光颜色。未设置时使用 <code>color</code> 的值</td>
+<td>gradient</td>
+<td>[[Empty]]</td>
+<td></td>
+</tr>
+<tr>
+<td>range</td>
+<td>辉光范围（大小），单位为像素</td>
+<td>int</td>
+<td><code>10</code></td>
+<td>[0 - 100]</td>
+</tr>
+<tr>
+<td>render_power</td>
+<td>渲染阴影衰减时使用的指数。指数越大，衰减越快</td>
+<td>int</td>
+<td><code>3</code></td>
+<td>[1 - 4]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="motion-blur">运动模糊 <a class="permalink" href="#motion-blur" aria-label="本节链接">#</a></h4>
+<p>类别：<code>decoration.motion_blur</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enabled</td>
+<td>在移动窗口或调整窗口大小时启用运动模糊</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>samples</td>
+<td>渲染时的采样数。采样越多，模糊效果越清晰，计算开销也越大</td>
+<td>int</td>
+<td><code>7</code></td>
+<td>[1 - 64]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="wobble">晃动 <a class="permalink" href="#wobble" aria-label="本节链接">#</a></h4>
+<p>类别：<code>decoration.wobble</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enabled</td>
+<td>在移动窗口或调整窗口大小时启用晃动效果</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>mesh</td>
+<td>晃动网格每条边上的顶点数</td>
+<td>int</td>
+<td><code>12</code></td>
+<td>[2 - 32]</td>
+</tr>
+<tr>
+<td>stiffness</td>
+<td>晃动形变的弹簧刚度</td>
+<td>float</td>
+<td><code>200</code></td>
+<td>[0.0001 - 1000]</td>
+</tr>
+<tr>
+<td>damping</td>
+<td>晃动形变的弹簧阻尼</td>
+<td>float</td>
+<td><code>12</code></td>
+<td>[0 - 1000]</td>
+</tr>
+<tr>
+<td>mass</td>
+<td>晃动形变的弹簧质量</td>
+<td>float</td>
+<td><code>1</code></td>
+<td>[0.0001 - 1000]</td>
+</tr>
+<tr>
+<td>intensity</td>
+<td>晃动形变的冲量倍率</td>
+<td>float</td>
+<td><code>0.2</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>value_epsilon</td>
+<td>位置偏差阈值，低于该值时视为晃动已稳定</td>
+<td>float</td>
+<td><code>0.25</code></td>
+<td>[0 - 100]</td>
+</tr>
+<tr>
+<td>velocity_epsilon</td>
+<td>速度阈值，低于该值时视为晃动已稳定</td>
+<td>float</td>
+<td><code>2</code></td>
+<td>[0 - 1000]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="animations">动画 <a class="permalink" href="#animations" aria-label="本节链接">#</a></h3>
+<p>类别：<code>animations</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enabled</td>
+<td>启用动画</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>workspace_wraparound</td>
+<td>启用工作区首尾循环，使有方向的工作区切换动画将第一个和最后一个工作区视为相邻</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>有关动画的更多信息，请参阅<a href="../animations/">此处</a>。</p>
+<h3 id="input">输入 <a class="permalink" href="#input" aria-label="本节链接">#</a></h3>
+<p>类别：<code>input</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>accel_profile</td>
+<td>设置光标加速模式。请参阅<a href="#accel-profile">下方</a>的说明。留空时使用 <code>libinput</code> 为当前输入设备提供的默认模式。另请参阅 <a href="https://wayland.freedesktop.org/libinput/doc/latest/pointer-acceleration.html#pointer-acceleration">libinput 的指针加速说明</a>。可选值：<code>"adaptive"</code>/<code>"flat"</code>/<code>"custom"</code></td>
+<td>string</td>
+<td>[[Empty]]</td>
+<td></td>
+</tr>
+<tr>
+<td>emulate_discrete_scroll</td>
+<td>根据高分辨率滚动事件模拟离散滚动。<code>0</code> 表示禁用，<code>1</code> 表示仅处理非标准事件，<code>2</code> 表示强制处理所有滚轮事件</td>
+<td>int</td>
+<td><code>1</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>float_switch_override_focus</td>
+<td>设为 <code>1</code> 或 <code>2</code> 时，在平铺窗口与浮动窗口之间双向切换时，焦点会转移到光标下的窗口。设为 <code>2</code> 时，在浮动窗口之间切换时，焦点也会跟随鼠标。<code>0</code> 表示禁用</td>
+<td>int</td>
+<td><code>1</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>focus_on_close</td>
+<td>控制关闭窗口后的焦点行为。设为 <code>0</code> 时，焦点转移到下一个候选窗口。设为 <code>1</code> 时，焦点转移到光标下的窗口。设为 <code>2</code> 时，焦点转移到最近使用或激活的窗口</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>follow_mouse</td>
+<td>指定光标移动是否影响窗口焦点，以及如何影响。请参阅<a href="#follow-mouse">下方</a>的说明</td>
+<td>int</td>
+<td><code>1</code></td>
+<td>[0 - 3]</td>
+</tr>
+<tr>
+<td>follow_mouse_shrink</td>
+<td>将非活动窗口用于焦点检测的判定区域向内缩小指定的像素数。这样会在窗口间隙中形成死区，光标在死区内移动时不会改变焦点。仅在 <code>follow_mouse</code> 设为 <code>1</code> 时生效</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 300]</td>
+</tr>
+<tr>
+<td>follow_mouse_threshold</td>
+<td>要使光标下的窗口获得焦点，鼠标至少需要移动的距离，单位为逻辑像素。仅在 <code>follow_mouse</code> 设为 <code>1</code> 时生效</td>
+<td>float</td>
+<td><code>0.0</code></td>
+<td></td>
+</tr>
+<tr>
+<td>force_no_accel</td>
+<td>强制禁用光标加速。此设置会绕过大部分指针设置，以获取尽可能接近原始输入的信号。<strong>不建议启用此项，因为它可能导致光标不同步。</strong></td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>kb_file</td>
+<td>也可以按需指定自定义 .xkb 文件的路径</td>
+<td>string</td>
+<td>[[Empty]]</td>
+<td></td>
+</tr>
+<tr>
+<td>kb_layout</td>
+<td>相应的 XKB 键盘映射参数</td>
+<td>string</td>
+<td><code>"us"</code></td>
+<td></td>
+</tr>
+<tr>
+<td>kb_model</td>
+<td>对应的 XKB 键位映射参数。参见<a href="#xkb-keymap-params">下方说明</a></td>
+<td>string</td>
+<td>[[Empty]]</td>
+<td></td>
+</tr>
+<tr>
+<td>kb_options</td>
+<td>相应的 XKB 键盘映射参数</td>
+<td>string</td>
+<td>[[Empty]]</td>
+<td></td>
+</tr>
+<tr>
+<td>kb_rules</td>
+<td>相应的 XKB 键盘映射参数</td>
+<td>string</td>
+<td>[[Empty]]</td>
+<td></td>
+</tr>
+<tr>
+<td>kb_variant</td>
+<td>相应的 XKB 键盘映射参数</td>
+<td>string</td>
+<td>[[Empty]]</td>
+<td></td>
+</tr>
+<tr>
+<td>left_handed</td>
+<td>互换鼠标左右键</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>mouse_refocus</td>
+<td>启用后，当指针越过窗口边界时，鼠标焦点会切换到指针悬停的窗口。仅当 <code>follow_mouse</code> 设为 <code>1</code> 时生效</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>natural_scroll</td>
+<td>反转滚动方向。启用后，滚动操作会直接移动内容，而不是操纵滚动条</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>numlock_by_default</td>
+<td>默认启用数字锁定键（Num Lock）</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>off_window_axis_events</td>
+<td>指定如何处理焦点窗口周围的滚动轴事件（平铺窗口的间隙或边框，浮动窗口的拖动区域或边框）。<code>0</code> 忽略事件；<code>1</code> 发送窗口边界外的坐标；<code>2</code> 将发送的指针坐标模拟为窗口内距离指针最近的点；<code>3</code> 将光标移至窗口内距离光标最近的点</td>
+<td>int</td>
+<td><code>1</code></td>
+<td>[0 - 3]</td>
+</tr>
+<tr>
+<td>repeat_delay</td>
+<td>按住按键后开始连发前的延迟，单位为毫秒</td>
+<td>int</td>
+<td><code>600</code></td>
+<td>[0 - 2000]</td>
+</tr>
+<tr>
+<td>repeat_rate</td>
+<td>按住按键时的连发速率，单位为次/秒</td>
+<td>int</td>
+<td><code>25</code></td>
+<td>[0 - 200]</td>
+</tr>
+<tr>
+<td>resolve_binds_by_sym</td>
+<td>决定使用多种键盘布局时按键绑定的行为。设为 false 时，按键绑定始终按指定的第一个布局生效。设为 true 时，使用当前布局输入相应符号即可触发以该符号指定的按键绑定</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>rotation</td>
+<td>设置设备相对于逻辑中立位置顺时针旋转的角度，单位为度</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 359]</td>
+</tr>
+<tr>
+<td>scroll_button</td>
+<td>设置用于滚动的按键。可用 <code>wev</code> 查看按键 ID。<code>0</code> 表示使用默认值</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 300]</td>
+</tr>
+<tr>
+<td>scroll_button_lock</td>
+<td>启用滚动按键锁定后，无需一直按住该键。每按下并松开一次，就会切换锁定状态，使该键在逻辑上保持按下或松开。该键在逻辑上保持按下时，移动事件会转换为滚动事件</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>scroll_points</td>
+<td>当 <code>accel_profile</code> 设为 <code>"custom"</code> 时，设置滚动加速曲线。格式必须为 <code>"&lt;step&gt; &lt;points&gt;"</code>。留空则使用平坦的滚动曲线</td>
+<td>string</td>
+<td>[[Empty]]</td>
+<td></td>
+</tr>
+<tr>
+<td>scroll_method</td>
+<td>设置滚动方式。更多信息见 <a href="https://wayland.freedesktop.org/libinput/doc/latest/scrolling.html">libinput 滚动文档</a>。可选值为 <code>"2fg"</code>/<code>"edge"</code>/<code>"on_button_down"</code>/<code>"no_scroll"</code>（2fg 表示双指滚动）</td>
+<td>string</td>
+<td>[[Empty]]</td>
+<td></td>
+</tr>
+<tr>
+<td>scroll_factor</td>
+<td>外接鼠标滚动距离的倍率。<a href="#touchpad">触控板的 scroll_factor</a> 需单独设置</td>
+<td>float</td>
+<td><code>1.0</code></td>
+<td>[0 - 100]</td>
+</tr>
+<tr>
+<td>sensitivity</td>
+<td>设置鼠标输入灵敏度。更多信息见 <a href="https://wayland.freedesktop.org/libinput/doc/latest/pointer-acceleration.html#pointer-acceleration">libinput 指针加速文档</a></td>
+<td>float</td>
+<td><code>0.0</code></td>
+<td>[-1.0 - 1.0]</td>
+</tr>
+<tr>
+<td>special_fallthrough</td>
+<td>启用后，如果特殊工作区中只有浮动窗口，常规工作区中的窗口仍可获得焦点</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>swallow_focus_click</td>
+<td>启用后，首次点击未获得焦点的窗口时，只会将焦点移至该窗口，不会将此次点击传递给它。仅在鼠标焦点与键盘焦点分离时生效，例如 <code>input.follow_mouse</code> 设为 <code>0</code> 或 <code>2</code> 时</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="xkb-keymap-params">XKB 键位映射参数 <a class="permalink" href="#xkb-keymap-params" aria-label="本节链接">#</a></h5>
+<p>可在 <a href="file:///usr/share/X11/xkb/rules/evdev.lst"><code>/usr/share/X11/xkb/rules/evdev.lst</code></a> 中查看键盘型号、布局、变体和选项列表。也可使用 <code>localectl</code> 命令查看系统上有哪些可用配置。</p>
+<p>有关可切换的键盘配置，请参阅<a href="../binds/keyboard-layouts/">按键绑定页面的键盘布局条目</a>。</p>
+<h5 id="follow-mouse">焦点跟随鼠标 <a class="permalink" href="#follow-mouse" aria-label="本节链接">#</a></h5>
+<ul>
+<li><code>0</code> - 移动光标不会改变焦点。</li>
+<li><code>1</code> - 移动光标时，焦点始终跟随光标，切换到光标所在的窗口。</li>
+<li><code>2</code> - 光标焦点与键盘焦点分离。点击窗口会将键盘焦点移至该窗口。</li>
+<li><code>3</code> - 光标焦点与键盘焦点完全独立。点击窗口不会改变键盘焦点。</li>
+</ul>
+<h5 id="accel-profile">加速曲线 <a class="permalink" href="#accel-profile" aria-label="本节链接">#</a></h5>
+<p><code>custom &lt;step&gt; &lt;points...&gt;</code></p>
+<p>示例：<code>custom 200 0.0 0.5</code></p>
+<h5 id="scroll-points">滚动曲线控制点 <a class="permalink" href="#scroll-points" aria-label="本节链接">#</a></h5>
+<p><code>&lt;step&gt; &lt;points...&gt;</code></p>
+<p>示例：<code>0.2 0.0 0.5 1 1.2 1.5</code></p>
+<p>有关其工作原理的详细说明，请参阅 <a href="https://wayland.freedesktop.org/libinput/doc/latest/pointer-acceleration.html">libinput 文档</a>。</p>
+<p>要模拟 Windows 的加速曲线，请参阅<a href="https://gist.github.com/fufexan/de2099bc3086f3a6c83d61fc1fcc06c9">此脚本</a>。</p>
+<h4 id="touchpad">触摸板 <a class="permalink" href="#touchpad" aria-label="本节链接">#</a></h4>
+<p>类别：<code>input.touchpad</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clickfinger_behavior</td>
+<td>用一指、双指或三指按下触控板时，分别映射为鼠标左键、右键或中键。启用后，点击位置不再决定触发哪个按键。更多信息见 <a href="https://wayland.freedesktop.org/libinput/doc/latest/clickpad-softbuttons.html#clickfinger-behavior">libinput 按手指数判定按键的说明</a></td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>disable_while_typing</td>
+<td>打字时禁用触控板</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>drag_3fg</td>
+<td>启用三指拖动。更多信息见 <a href="https://wayland.freedesktop.org/libinput/doc/latest/drag-3fg.html">libinput 三指拖动文档</a></td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>drag_lock</td>
+<td>启用后，拖动过程中抬起手指不会立即放下所拖动的项目。0 表示禁用，1 表示启用并在超时后解除拖动锁定，2 表示启用粘滞拖动锁定。更多信息见 <a href="https://wayland.freedesktop.org/libinput/doc/latest/tapping.html#tap-and-drag">libinput 轻点拖动文档</a></td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>flip_x</td>
+<td>反转触控板的水平移动方向</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>flip_y</td>
+<td>反转触控板的垂直移动方向</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>middle_button_emulation</td>
+<td>同时触发鼠标左键和右键将被视为一次中键点击。启用后，触控板上原本按点击位置触发中键的区域将不再具有该功能。更多信息见 <a href="https://wayland.freedesktop.org/libinput/doc/latest/middle-button-emulation.html">libinput 中键模拟文档</a></td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>natural_scroll</td>
+<td>反转滚动方向。启用后，滚动操作会直接移动内容，而不是操纵滚动条</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>scroll_factor</td>
+<td>滚动距离的倍率</td>
+<td>float</td>
+<td><code>1.0</code></td>
+<td>[0.0 - 100]</td>
+</tr>
+<tr>
+<td>tap_and_drag</td>
+<td>设置触控板的轻点拖动模式</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>tap_button_map</td>
+<td>设置触控板通过轻点模拟鼠标按键时的映射。留空时默认为 <code>"lrm"</code>。L 表示左键，M 表示中键，R 表示右键</td>
+<td>string</td>
+<td>[[Empty]]</td>
+<td>"lrm"/"lmr"</td>
+</tr>
+<tr>
+<td>tap_to_click</td>
+<td>用一指、双指或三指轻点触控板，分别触发鼠标左键、右键或中键</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="touchdevice">触摸设备 <a class="permalink" href="#touchdevice" aria-label="本节链接">#</a></h4>
+<p>类别：<code>input.touchdevice</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enabled</td>
+<td>是否启用触摸设备输入</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>output</td>
+<td>触摸设备绑定的显示器。默认自动检测。设为空字符串可关闭自动检测</td>
+<td>string</td>
+<td>[[Auto]]</td>
+<td></td>
+</tr>
+<tr>
+<td>transform</td>
+<td>对触摸设备的输入应用变换。可用的变换与<a href="../monitors/positioning/#rotation">显示器支持的变换</a>相同</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 6]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="virtualkeyboard">虚拟键盘 <a class="permalink" href="#virtualkeyboard" aria-label="本节链接">#</a></h4>
+<p>类别：<code>input.virtualkeyboard</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>release_pressed_on_close</td>
+<td>关闭虚拟键盘时，释放该键盘按下的所有按键</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>share_states</td>
+<td>是否与其他键盘共用按键按下状态和修饰键状态。0 表示否，1 表示是，2 表示除输入法客户端外均共用</td>
+<td>int</td>
+<td><code>2</code></td>
+<td>[0 - 2]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tablet">数位板 <a class="permalink" href="#tablet" aria-label="本节链接">#</a></h4>
+<p>类别：<code>input.tablet</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enabled</td>
+<td>是否启用数位板输入</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>output</td>
+<td>数位板绑定的显示器。可设为 <code>"current"</code> 或显示器名称。留空则映射到所有显示器组成的区域</td>
+<td>string</td>
+<td>[[Empty]]</td>
+<td></td>
+</tr>
+<tr>
+<td>transform</td>
+<td>对数位板的输入应用变换。可用的变换与<a href="../monitors/positioning/#rotation">显示器支持的变换</a>相同</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 6]</td>
+</tr>
+<tr>
+<td>absolute_region_position</td>
+<td>是否将 <code>region_position</code> 视为显示器布局中的绝对位置。仅在 <code>output</code> 为空时生效</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>active_area_position</td>
+<td>有效区域的位置，单位为毫米</td>
+<td>vec2</td>
+<td><code>{0, 0}</code></td>
+<td>[0 - 5000]</td>
+</tr>
+<tr>
+<td>active_area_size</td>
+<td>数位板有效区域的尺寸，单位为毫米</td>
+<td>vec2</td>
+<td><code>{0, 0}</code></td>
+<td>[0 - 5000]</td>
+</tr>
+<tr>
+<td>left_handed</td>
+<td>启用后，数位板的输入方向将旋转 180 度</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>region_position</td>
+<td>映射区域在显示器布局中的位置，以所绑定显示器的左上角或所有显示器组成的区域的左上角为基准</td>
+<td>vec2</td>
+<td><code>{0, 0}</code></td>
+<td>[-100000 - 100000]</td>
+</tr>
+<tr>
+<td>region_size</td>
+<td>映射区域的尺寸。设置此变量后，数位板输入将映射到该区域。<code>{0, 0}</code> 或无效尺寸表示未设置</td>
+<td>vec2</td>
+<td><code>{0, 0}</code></td>
+<td>[1 - 100000]</td>
+</tr>
+<tr>
+<td>relative_input</td>
+<td>是否使用相对坐标输入</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tablettool">数位板工具 <a class="permalink" href="#tablettool" aria-label="本节链接">#</a></h4>
+<p>类别：<code>input.tablettool</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eraser_button_mode</td>
+<td>更改数位板工具上橡皮擦按键的行为。设为 <code>0</code> 时，使用工具默认的硬件行为。设为 <code>1</code> 时，橡皮擦按键改为发送按键事件</td>
+<td>int</td>
+<td>0</td>
+<td>[0 - 6]</td>
+</tr>
+<tr>
+<td>eraser_button_override</td>
+<td>指定 eraser_button_mode 设为 <code>1</code> 时按键事件对应的按钮。必须使用有效的按钮代码（如 BTN_STYLUS），不能使用伪按钮代码（如 BTN_TOOL_*）或键盘按键代码（KEY_*）。可用 <code>wev</code> 查看 ID。<code>0</code> 表示使用默认值</td>
+<td>int</td>
+<td>0</td>
+<td>[0 - ...]</td>
+</tr>
+<tr>
+<td>pressure_range_min</td>
+<td>设置工具压力范围的下限。负值表示使用设备默认值。该值通常为 <code>0.0</code></td>
+<td>float</td>
+<td>-1.0</td>
+<td>[-1.0 - 1.0]</td>
+</tr>
+<tr>
+<td>pressure_range_max</td>
+<td>设置工具压力范围的上限。负值表示使用设备默认值。该值通常为 <code>1.0</code></td>
+<td>float</td>
+<td>-1.0</td>
+<td>[-1.0 - 1.0]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="per-device-input-config">按设备配置输入 <a class="permalink" href="#per-device-input-config" aria-label="本节链接">#</a></h3>
+<p>详见<a href="../devices/">各设备的输入配置说明</a>。</p>
+<h3 id="gestures">手势 <a class="permalink" href="#gestures" aria-label="本节链接">#</a></h3>
+<p>类别：<code>gestures</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>close_max_timeout</td>
+<td>使用 1:1 手势关闭窗口时的超时时间，单位为毫秒</td>
+<td>int</td>
+<td><code>1000</code></td>
+<td>[10 - 2000]</td>
+</tr>
+<tr>
+<td>workspace_swipe_cancel_ratio</td>
+<td>滑动距离达到总距离的多大比例才会触发切换。例如，设为 <code>0.7</code> 时，如果滑动距离超过总距离的 70%，则切换工作区，否则取消手势</td>
+<td>float</td>
+<td><code>0.5</code></td>
+<td>[0.0 - 1.0]</td>
+</tr>
+<tr>
+<td>workspace_swipe_create_new</td>
+<td>在最后一个工作区向右滑动时，是否创建新的工作区</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>workspace_swipe_direction_lock</td>
+<td>启用后，滑动距离超过 <code>direction_lock_threshold</code> 时，工作区切换方向将被锁定（仅适用于触控板）</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>workspace_swipe_direction_lock_threshold</td>
+<td>触发方向锁定所需的滑动距离，单位为像素（仅适用于触控板）</td>
+<td>int</td>
+<td><code>10</code></td>
+<td>[0 - 200]</td>
+</tr>
+<tr>
+<td>workspace_swipe_distance</td>
+<td>触控板手势的滑动距离，单位为像素</td>
+<td>int</td>
+<td><code>300</code></td>
+<td>[0 - 2000]</td>
+</tr>
+<tr>
+<td>workspace_swipe_forever</td>
+<td>启用后，可继续滑动到更远的工作区，不受相邻工作区的限制</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>workspace_swipe_invert</td>
+<td>反转滑动方向（仅适用于触控板）</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>workspace_swipe_min_speed_to_force</td>
+<td>忽略 <code>cancel_ratio</code> 并强制切换工作区所需的最低滑动速度，以每个采样时间点的像素数计。<code>0</code> 表示禁用</td>
+<td>int</td>
+<td><code>30</code></td>
+<td>[0 - 200]</td>
+</tr>
+<tr>
+<td>workspace_swipe_touch</td>
+<td>启用从触摸屏边缘滑动切换工作区的功能</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>workspace_swipe_touch_invert</td>
+<td>反转滑动方向（仅适用于触摸屏）</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>workspace_swipe_use_r</td>
+<td>启用后，滑动时将使用 <code>r</code> 前缀代替 <code>m</code> 前缀来查找工作区</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="scrolling">滚动 <a class="permalink" href="#scrolling" aria-label="本节链接">#</a></h4>
+<p>类别：<code>gestures.scrolling</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>move_snap_to_grid</td>
+<td>结束滚动移动手势时，是否尝试对齐到网格</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>move_snap_cursor</td>
+<td>结束滚动移动手势时，是否将光标移至刚获得焦点的窗口</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="group">窗口组 <a class="permalink" href="#group" aria-label="本节链接">#</a></h3>
+<p>类别：<code>group</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>auto_group</td>
+<td>是否将新窗口自动加入当前获得焦点且未锁定的窗口组。<em>注意：如果只想对特定窗口禁用 auto_group，请改用<a href="../rules/window-rules/#group-window-rule-options">“group barred”窗口规则</a>。</em></td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>drag_into_group</td>
+<td>将窗口拖入未锁定的窗口组时，是否将其并入该组。<code>0</code> - 禁用，<code>1</code> - 启用，<code>2</code> - 仅在拖入组栏时合并</td>
+<td>int</td>
+<td><code>1</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>focus_removed_window</td>
+<td>是否让刚移出窗口组的窗口获得焦点</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>group_on_movetoworkspace</td>
+<td>使用 hl.dsp.window.move({ workspace }) 时，是否将窗口并入目标工作区中唯一的未锁定窗口组</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>insert_after_current</td>
+<td>组内新窗口是插在当前窗口之后，还是追加到组末尾</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>merge_floated_into_tiled_on_groupbar</td>
+<td>将浮动窗口拖入平铺窗口的组栏时，是否将其并入该组</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>merge_groups_on_drag</td>
+<td>是否允许将窗口组拖入其他组</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>merge_groups_on_groupbar</td>
+<td>将一个窗口组拖入另一个组的组栏时，是否合并这两个组。<em>注意：只有同时设置了 <code>drag_into_group = 2</code> 和 <code>merge_groups_on_drag = true</code>，启用此选项才会生效。</em></td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="group-colors">窗口组颜色 <a class="permalink" href="#group-colors" aria-label="本节链接">#</a></h4>
+<p>类别：<code>group.col</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>border_active</td>
+<td>活动窗口组的边框颜色。渐变支持额外参数 <code>whole_monitor? = bool</code></td>
+<td>gradient</td>
+<td><code>0x66ffff00</code></td>
+<td></td>
+</tr>
+<tr>
+<td>border_inactive</td>
+<td>非活动窗口组的边框颜色。渐变支持额外参数 <code>whole_monitor? = bool</code></td>
+<td>gradient</td>
+<td><code>0x66777700</code></td>
+<td></td>
+</tr>
+<tr>
+<td>border_locked_active</td>
+<td>已锁定的活动窗口组的边框颜色。渐变支持额外参数 <code>whole_monitor? = bool</code></td>
+<td>gradient</td>
+<td><code>0x66ff5500</code></td>
+<td></td>
+</tr>
+<tr>
+<td>border_locked_inactive</td>
+<td>已锁定的非活动窗口组的边框颜色。渐变支持额外参数 <code>whole_monitor? = bool</code></td>
+<td>gradient</td>
+<td><code>0x66775500</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="groupbar">组栏 <a class="permalink" href="#groupbar" aria-label="本节链接">#</a></h4>
+<p>类别：<code>group.groupbar</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enabled</td>
+<td>启用组栏</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>blur</td>
+<td>对组栏中的指示条和渐变区域应用模糊效果</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>disable_when_only</td>
+<td>组内只有一个窗口时禁用组栏</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>font_family</td>
+<td>显示组栏标题所用的字体。未指定时使用 <code>misc.font_family</code></td>
+<td>string</td>
+<td>[[Empty]]</td>
+<td></td>
+</tr>
+<tr>
+<td>font_size</td>
+<td>组栏标题的字号</td>
+<td>int</td>
+<td><code>8</code></td>
+<td>[2 - 64]</td>
+</tr>
+<tr>
+<td>font_weight_active</td>
+<td>组栏中活动窗口标题的字重</td>
+<td>font_weight</td>
+<td><code>"normal"</code></td>
+<td></td>
+</tr>
+<tr>
+<td>font_weight_inactive</td>
+<td>组栏中非活动窗口标题的字重</td>
+<td>font_weight</td>
+<td><code>"normal"</code></td>
+<td></td>
+</tr>
+<tr>
+<td>gaps_in</td>
+<td>各渐变区域之间的间距</td>
+<td>int</td>
+<td><code>2</code></td>
+<td>[0 - 20]</td>
+</tr>
+<tr>
+<td>gaps_out</td>
+<td>渐变区域与窗口之间的间距</td>
+<td>int</td>
+<td><code>2</code></td>
+<td>[0 - 20]</td>
+</tr>
+<tr>
+<td>gradients</td>
+<td>启用渐变</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>gradient_round_only_edges</td>
+<td>仅对整个组栏最外侧的渐变边缘应用圆角</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>gradient_rounding</td>
+<td>渐变区域的圆角大小</td>
+<td>int</td>
+<td><code>2</code></td>
+<td>[0 - 100]</td>
+</tr>
+<tr>
+<td>gradient_rounding_power</td>
+<td>调整渐变区域的圆角曲线。值越大，曲线越平滑。1.0 对应三角形切角，2.0 对应圆弧，4.0 对应方圆形曲线</td>
+<td>float</td>
+<td><code>2.0</code></td>
+<td>[1.0 - 10.0]</td>
+</tr>
+<tr>
+<td>height</td>
+<td>组栏高度</td>
+<td>int</td>
+<td><code>14</code></td>
+<td>[0 - 64]</td>
+</tr>
+<tr>
+<td>indicator_gap</td>
+<td>组栏指示条与标题之间的垂直间距</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 64]</td>
+</tr>
+<tr>
+<td>indicator_height</td>
+<td>组栏指示条的高度</td>
+<td>int</td>
+<td><code>3</code></td>
+<td>[0 - 64]</td>
+</tr>
+<tr>
+<td>keep_upper_gap</td>
+<td>添加或移除上方间距</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>middle_click_close</td>
+<td>用鼠标中键点击组栏时，是否关闭所点击的窗口</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>priority</td>
+<td>设置组栏的窗口装饰优先级</td>
+<td>int</td>
+<td><code>3</code></td>
+<td>[0 - 6]</td>
+</tr>
+<tr>
+<td>render_titles</td>
+<td>是否在组栏装饰中显示窗口标题</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>round_only_edges</td>
+<td>仅对整个组栏最外侧的指示条边缘应用圆角</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>rounding</td>
+<td>指示条的圆角大小</td>
+<td>int</td>
+<td><code>1</code></td>
+<td>[0 - 40]</td>
+</tr>
+<tr>
+<td>rounding_power</td>
+<td>调整组栏的圆角曲线。值越大，曲线越平滑。1.0 对应三角形切角，2.0 对应圆弧，4.0 对应方圆形曲线</td>
+<td>float</td>
+<td><code>2.0</code></td>
+<td>[1.0 - 10.0]</td>
+</tr>
+<tr>
+<td>scrolling</td>
+<td>在组栏上滚动时，是否切换组内的活动窗口</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>stacked</td>
+<td>将组栏中的条目纵向堆叠显示</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>text_color</td>
+<td>组栏中窗口标题的颜色</td>
+<td>color</td>
+<td><code>0xffffffff</code></td>
+<td></td>
+</tr>
+<tr>
+<td>text_color_inactive</td>
+<td>组栏中非活动窗口标题的颜色。未设置时使用 text_color</td>
+<td>color</td>
+<td>[[Empty]]</td>
+<td></td>
+</tr>
+<tr>
+<td>text_color_locked_active</td>
+<td>已锁定窗口组中活动窗口标题的颜色。未设置时使用 text_color</td>
+<td>color</td>
+<td>[[Empty]]</td>
+<td></td>
+</tr>
+<tr>
+<td>text_color_locked_inactive</td>
+<td>已锁定窗口组中非活动窗口标题的颜色。未设置时使用 text_color_inactive</td>
+<td>color</td>
+<td>[[Empty]]</td>
+<td></td>
+</tr>
+<tr>
+<td>text_offset</td>
+<td>调整标题的垂直位置</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[-20 - 20]</td>
+</tr>
+<tr>
+<td>text_padding</td>
+<td>设置标题的水平内边距</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 22]</td>
+</tr>
+</tbody>
+</table>
+<h5 id="groupbar-colors">组栏颜色 <a class="permalink" href="#groupbar-colors" aria-label="本节链接">#</a></h5>
+<p>类别：<code>group.groupbar.col</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>active</td>
+<td>活动窗口组的组栏背景色</td>
+<td>gradient</td>
+<td><code>0x66ffff00</code></td>
+<td></td>
+</tr>
+<tr>
+<td>inactive</td>
+<td>非活动（失去焦点）窗口组的组栏背景色</td>
+<td>gradient</td>
+<td><code>0x66777700</code></td>
+<td></td>
+</tr>
+<tr>
+<td>locked_active</td>
+<td>已锁定的活动窗口组的组栏背景色</td>
+<td>gradient</td>
+<td><code>0x66ff5500</code></td>
+<td></td>
+</tr>
+<tr>
+<td>locked_inactive</td>
+<td>已锁定的非活动窗口组的组栏背景色</td>
+<td>gradient</td>
+<td><code>0x66775500</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="misc">其他 <a class="permalink" href="#misc" aria-label="本节链接">#</a></h3>
+<p>类别：<code>misc</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>allow_session_lock_restore</td>
+<td>设为 true 时，允许在锁屏应用崩溃后重新启动它</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>always_follow_on_dnd</td>
+<td>让鼠标焦点在拖放过程中跟随鼠标指针。建议保持启用，尤其是当“焦点跟随鼠标”设为 0 时</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>animate_manual_resizes</td>
+<td>设为 true 时，手动调整窗口大小或移动窗口时会显示动画</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>animate_mouse_windowdragging</td>
+<td>设为 true 时，用鼠标拖动窗口会显示动画。请注意，使用某些动画曲线时，窗口可能会出现异常行为</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>anr_missed_pings</td>
+<td>显示 ANR（应用无响应）对话框前，允许应用未响应的探测次数</td>
+<td>int</td>
+<td><code>5</code></td>
+<td>[1 - 20]</td>
+</tr>
+<tr>
+<td>background_color</td>
+<td>更改背景颜色（需要启用 <code>disable_hyprland_logo</code>）</td>
+<td>color</td>
+<td><code>0x111111</code></td>
+<td></td>
+</tr>
+<tr>
+<td>bell_sound</td>
+<td>自定义系统提示音的 wav/ogg 文件路径。设为 "none" 或空字符串可静音，设为 "default" 则使用系统当前的提示音</td>
+<td>string</td>
+<td><code>"default"</code></td>
+<td></td>
+</tr>
+<tr>
+<td>close_special_on_empty</td>
+<td>移除特殊工作区中的最后一个窗口时，关闭该工作区</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>disable_autoreload</td>
+<td>设为 true 时，保存配置后不会自动重新加载，需要执行 <code>hyprctl reload</code> 才能重新加载。这可能有助于节省电量</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>disable_hyprland_guiutils_check</td>
+<td>未安装 hyprland-guiutils 时不显示警告</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>disable_hyprland_logo</td>
+<td>禁用随机显示的 Hyprland 徽标或动漫少女背景。:(</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>disable_scale_notification</td>
+<td>显示器无法设置合适的缩放比例时，不弹出通知</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>disable_splash_rendering</td>
+<td>禁用 Hyprland 背景上的随机短句。需要重新加载显示器配置才能生效。请注意，hyprpaper 有单独的设置可禁用这段文字</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>disable_watchdog_warning</td>
+<td>禁用关于未使用 start-hyprland 的警告</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>disable_xdg_env_checks</td>
+<td>XDG 环境由外部管理时不显示警告</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>enable_anr_dialog</td>
+<td>是否在应用卡住时显示 ANR（应用无响应）对话框</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>enable_swallow</td>
+<td>启用窗口吞并</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>exit_window_retains_fullscreen</td>
+<td>关闭全屏窗口时，是否让下一个获得焦点的窗口进入全屏。0 - 禁用，1 - 启用，2 - 仅在关闭组内窗口时启用，3 - 仅在关闭未分组窗口时启用</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 3]</td>
+</tr>
+<tr>
+<td>float_force_onscreen</td>
+<td>是否以及如何限制已有浮动窗口的位置，使其保持在屏幕范围内。0 - 不限制，1 - 至少一部分必须在屏幕内，2 - 必须完全在屏幕内</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>new_float_force_onscreen</td>
+<td>与 <code>float_force_onscreen</code> 相同，但仅适用于新建的浮动窗口</td>
+<td>int</td>
+<td><code>2</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>focus_on_activate</td>
+<td>应用请求获得焦点（即发出 <code>activate</code> 请求）时，Hyprland 是否将焦点交给该应用</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>font_family</td>
+<td>设置渲染文本所用的全局默认字体</td>
+<td>string</td>
+<td><code>"Sans"</code></td>
+<td></td>
+</tr>
+<tr>
+<td>force_default_wallpaper</td>
+<td>强制使用三张默认壁纸中的一张。0 - 禁用动漫背景，1 - 禁用动漫背景，2 - 启用动漫背景，-1 - 随机选择</td>
+<td>int</td>
+<td><code>-1</code></td>
+<td>[-1 - 2]</td>
+</tr>
+<tr>
+<td>initial_workspace_token_timeout</td>
+<td>窗口跟踪令牌的有效时间，以秒为单位。窗口须在令牌过期前于发起启动请求的工作区中打开。</td>
+<td>int</td>
+<td><code>10</code></td>
+<td>[1 - 3600]</td>
+</tr>
+<tr>
+<td>initial_workspace_tracking</td>
+<td>启用后，窗口会在发起启动请求的工作区中打开。0 - 禁用，1 - 仅生效一次，2 - 持续生效（也适用于所有子进程）</td>
+<td>int</td>
+<td><code>1</code></td>
+<td></td>
+</tr>
+<tr>
+<td>key_press_enables_dpms</td>
+<td>如果 DPMS 处于 off 状态，按下任意键即可唤醒显示器</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>lockdead_screen_delay</td>
+<td>锁屏应用未能覆盖所有显示输出时，显示“lockdead”画面前的延迟时间，单位为毫秒</td>
+<td>int</td>
+<td><code>1000</code></td>
+<td>[0 - 5000]</td>
+</tr>
+<tr>
+<td>middle_click_paste</td>
+<td>是否启用鼠标中键粘贴（也称为主选区粘贴）</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>mouse_move_enables_dpms</td>
+<td>如果 DPMS 处于 off 状态，移动鼠标即可唤醒显示器</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>mouse_move_focuses_monitor</td>
+<td>鼠标指针移入另一台显示器时，是否将焦点切换到该显示器</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>name_vk_after_proc</td>
+<td>根据创建虚拟键盘的进程为其命名。例如，<code>/usr/bin/fcitx5</code> 创建的虚拟键盘名为 hl-virtual-keyboard-fcitx5</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>on_focus_under_fullscreen</td>
+<td>已有全屏或最大化窗口时，决定请求获得焦点的平铺窗口是取代该窗口、留在其后方，还是让该窗口退出全屏或最大化状态。0 - 忽略焦点请求（焦点保留在全屏窗口上），1 - 由平铺窗口取代原窗口，2 - 退出全屏或取消最大化</td>
+<td>int</td>
+<td><code>2</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>render_unfocused_fps</td>
+<td>启用 render_unfocused 的窗口在后台运行时的帧率上限（FPS）（另见<a href="../rules/window-rules/#dynamic-effects">窗口规则</a>，例如 <code>render_unfocused</code>）</td>
+<td>int</td>
+<td><code>15</code></td>
+<td>[1 - 120]</td>
+</tr>
+<tr>
+<td>screencopy_force_8b</td>
+<td>强制使用 8 位屏幕复制</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>session_lock_blur</td>
+<td>启用锁屏模糊效果。必须启用 <code>session_lock_xray</code></td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>session_lock_xray</td>
+<td>设为 true 时，在锁屏界面下方继续渲染工作区</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>size_limits_tiled</td>
+<td>是否将 min_size 和 max_size 规则应用于平铺窗口</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>splash_font_family</td>
+<td>从系统字体中选择用于渲染背景短句的字体（需要重新加载显示器配置才能生效）</td>
+<td>string</td>
+<td>[[Empty]]</td>
+<td></td>
+</tr>
+<tr>
+<td>swallow_exception_regex</td>
+<td>用于匹配窗口 <em>标题</em> 的正则表达式，例如 <code>wev</code>。匹配的窗口 <em>不应</em> 被 swallow_regex 指定的窗口吞并。此正则表达式匹配父窗口（例如 Kitty 窗口）的标题，前提是该标题会随其中运行的进程而变化</td>
+<td>string</td>
+<td>[[Empty]]</td>
+<td></td>
+</tr>
+<tr>
+<td>swallow_regex</td>
+<td>用于匹配应被吞并的窗口（通常是终端）的 <em>类名</em> 的正则表达式</td>
+<td>string</td>
+<td>[[Empty]]</td>
+<td></td>
+</tr>
+<tr>
+<td>vrr</td>
+<td>控制显示器的 VRR（可变刷新率，即自适应同步）。0 - 关闭，1 - 开启，2 - 仅在全屏时开启，3 - 仅在全屏且内容类型为 <code>video</code> 或 <code>game</code> 时开启</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 3]</td>
+</tr>
+</tbody>
+</table>
+<p>类别：<code>misc.col</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>splash</td>
+<td>更改背景随机短句的颜色（需重新加载显示器配置才会生效）</td>
+<td>color</td>
+<td><code>0x55ffffff</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="layers">图层 <a class="permalink" href="#layers" aria-label="本节链接">#</a></h3>
+<p>类别：<code>layers</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>allow_new_top_layers_over_existing_fullscreen</td>
+<td>设为 false 时，新映射的图层不能绘制在已覆盖该区域的全屏窗口之上。无论此项如何设置，进入全屏都会隐藏此前已存在的所有顶层图层</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>layers_hog_keyboard_focus</td>
+<td>设为 true 时，支持键盘交互的图层（如 <code>wofi</code>、<code>bemenu</code>）会在鼠标移动时保持焦点</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="layout">布局 <a class="permalink" href="#layout" aria-label="本节链接">#</a></h3>
+<p>类别：<code>layout</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>single_window_aspect_ratio</td>
+<td>当屏幕上只显示一个窗口时，通过留白使窗口符合指定的宽高比。例如，在 16:9 的屏幕上设为 <code>4 3</code>，会使窗口以 4:3 的比例居中显示，两侧留白</td>
+<td>vec2</td>
+<td><code>{0, 0}</code></td>
+<td></td>
+</tr>
+<tr>
+<td>single_window_aspect_ratio_tolerance</td>
+<td>设置 <code>single_window_aspect_ratio</code> 的容差。如果所需留白小于屏幕高度或宽度的指定比例，就不会尝试调整窗口大小</td>
+<td>float</td>
+<td><code>0.1</code></td>
+<td>[0.0 - 1.0]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="binds">按键绑定 <a class="permalink" href="#binds" aria-label="本节链接">#</a></h3>
+<p>类别：<code>binds</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>allow_pin_fullscreen</td>
+<td>启用后，允许已固定到所有工作区的窗口进入全屏，并在退出全屏后恢复固定状态</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>client_requested_fs_uses_layout_handler</td>
+<td>设为 false 时，客户端发起的全屏请求由默认全屏处理程序处理</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>allow_workspace_cycles</td>
+<td>启用后，每个工作区都会记住上一个工作区。这样，切换到一组工作区中的第一个工作区后，就可以反复切换到上一个工作区，在这组工作区之间循环</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>disable_keybind_grabbing</td>
+<td>启用后，应用（如 <code>VMs</code>）将无法通过请求禁用按键绑定</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>drag_threshold</td>
+<td>拖动窗口以及使用 <code>click</code>/<code>drag</code> 按键绑定标志时的移动距离阈值，单位为像素。<code>0</code> 表示禁用阈值</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - ...]</td>
+</tr>
+<tr>
+<td>drag_center_window</td>
+<td>拖动时，是将窗口中心对准指针，还是保持最初抓取的位置</td>
+<td>bool</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>focus_preferred_method</td>
+<td>设置使用 <code>hl.dsp.focus({ direction })</code>、<code>hl.dsp.window.move({ direction })</code> 等时查找焦点目标的首选方式。<code>0</code> 表示优先选择最近活动的窗口，<code>1</code> 表示优先选择与当前窗口共边更长的窗口</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 1]</td>
+</tr>
+<tr>
+<td>hide_special_on_workspace_change</td>
+<td>启用后，切换活动工作区（包括切换到其自身）会隐藏新活动工作区所在显示器上的特殊工作区</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>ignore_group_lock</td>
+<td>启用后，<code>hl.dsp.window.move({ into_group })</code> 和 <code>hl.dsp.window.move({ out_of_group })</code> 等调度器会忽略各窗口组单独设置的锁定状态</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>movefocus_cycles_fullscreen</td>
+<td>启用后，当焦点位于全屏窗口时，<code>hl.dsp.focus({ direction })</code> 可以查找窗口。禁用时，它只会查找显示器。</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>movefocus_cycles_groupfirst</td>
+<td>启用后，当焦点位于组内窗口时，<code>hl.dsp.focus({ direction })</code> 会先在组内依次切换窗口，到达标签栏任一端后，再移至其他窗口或窗口组</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>pass_mouse_when_bound</td>
+<td>启用后，即使已触发按键绑定，鼠标事件仍可传给应用或用于拖动窗口</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>scroll_event_delay</td>
+<td>设置两次传给按键绑定的滚动事件之间的最短等待时间，单位为毫秒</td>
+<td>int</td>
+<td><code>300</code></td>
+<td>[0 - 2000]</td>
+</tr>
+<tr>
+<td>window_direction_monitor_fallback</td>
+<td>启用后，沿指定方向移动窗口或焦点并越过显示器边缘时，会将其移至该方向上的下一台显示器</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>workspace_back_and_forth</td>
+<td>尝试切换到当前具有焦点的工作区时，会转而切换到上一个工作区，类似于 i3 的 <code>_auto_back_and_forth_</code>。<code>0</code> 表示禁用，<code>1</code> 表示启用，<code>2</code> 表示按显示器分别处理</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>workspace_center_on</td>
+<td>切换工作区时，将光标移至工作区中心（0），或移至该工作区上次活动窗口的中心（1）</td>
+<td>int</td>
+<td><code>1</code></td>
+<td>[0 - 1]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="xwayland">Xwayland <a class="permalink" href="#xwayland" aria-label="本节链接">#</a></h3>
+<p>类别：<code>xwayland</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enabled</td>
+<td>允许运行使用 X11 的应用</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>create_abstract_socket</td>
+<td>为 Xwayland 连接创建<a href="../../extra/xwayland/#abstract-unix-domain-socket">抽象 Unix 域套接字</a>。更改后需重启 Xwayland 才会生效。仅适用于 Linux</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>force_zero_scaling</td>
+<td>在启用了缩放的显示器上，强制将 Xwayland 窗口的缩放比例设为 1</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>use_nearest_neighbor</td>
+<td>对 Xwayland 应用使用最近邻过滤，使画面呈现清晰的像素块，避免模糊</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="opengl">OpenGL <a class="permalink" href="#opengl" aria-label="本节链接">#</a></h3>
+<p>类别：<code>opengl</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nvidia_anti_flicker</td>
+<td>减少 NVIDIA GPU 上的画面闪烁，但在低端 GPU 上可能会掉帧。非 NVIDIA GPU 会忽略此项设置</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="render">渲染 <a class="permalink" href="#render" aria-label="本节链接">#</a></h3>
+<p>类别：<code>render</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>async_commit</td>
+<td>在可能的情况下异步发送 DRM 提交，以降低硬件光标的延迟</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>cm_auto_hdr</td>
+<td>全屏时根据需要自动切换到 HDR。<code>0</code> 表示禁用，<code>1</code> 表示切换到 <code>hdr</code>，<code>2</code> 表示切换到 <code>hdredid</code></td>
+<td>int</td>
+<td><code>1</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>cm_enabled</td>
+<td>是否启用色彩管理管线。更改后需重启</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>cm_sdr_eotf</td>
+<td>显示 SDR 应用时使用的默认传递函数。<code>default</code> 表示使用默认值（sRGB），<code>gamma22</code> 表示将未指定的传递函数视为 Gamma 2.2，<code>gamma22force</code> 表示将未指定的传递函数和 sRGB 均视为 Gamma 2.2，<code>srgb</code> 表示将未指定的传递函数视为 sRGB。可选值：<code>"default"</code>/<code>"gamma22"</code>/<code>"gamma22force"</code>/<code>"srgb"</code></td>
+<td>string</td>
+<td><code>"default"</code></td>
+<td></td>
+</tr>
+<tr>
+<td>ctm_animation</td>
+<td>是否在色彩变换矩阵（CTM）发生变化时启用渐变动画（用于 hyprsunset）。2 表示 "auto"，在 NVIDIA GPU 上会禁用此动画</td>
+<td>int</td>
+<td><code>2</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>commit_timing_enabled</td>
+<td>启用提交时序协议。更改后需重启</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>direct_scanout</td>
+<td>启用直接扫描输出。当屏幕上只有一个全屏应用（如游戏）时，直接扫描输出会尝试降低延迟。如果全屏应用出现画面异常，也建议将此项设为 false。<code>0</code> 表示禁用，<code>1</code> 表示启用，<code>2</code> 表示自动（内容类型为 'game' 时启用）</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>expand_undersized_textures</td>
+<td>当纹理尺寸不足时，是延展纹理边缘，还是拉伸整个纹理</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>fp16_sdr_tf</td>
+<td>SDR 模式下 fp16 内部工作缓冲区的传递函数。0 表示使用显示器的传递函数，1 表示使用线性传递函数</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 1]</td>
+</tr>
+<tr>
+<td>icc_vcgt_enabled</td>
+<td>使用 ICC 配置文件时，启用向 KMS 发送 VCGT 校正曲线的功能</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>keep_unmodified_copy</td>
+<td>保留未经修改的 SDR 帧副本，供屏幕共享使用。<code>0</code> 表示禁用，<code>1</code> 表示启用，<code>2</code> 表示自动（在 HDR 模式下使用 SDR 修饰符时启用）。如果截图呈透明状，请设为 1</td>
+<td>int</td>
+<td><code>2</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>new_render_scheduling</td>
+<td>需要时自动使用三重缓冲，以提高性能较弱设备上的帧率</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>not_shown_fifo_lock</td>
+<td>控制未显示表面的 fifo 锁定行为。always 表示对所有表面使用 fifo 锁，ignore_unfocused 表示忽略 render_unfocused 窗口，never 表示跳过对不可见表面的锁定</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>non_shader_cm</td>
+<td>启用无需着色器的色彩管理（CM）。<code>0</code> 表示禁用，<code>1</code> 表示尽可能启用，<code>2</code> 表示仅在直接扫描输出（DS）和直通模式下启用，<code>3</code> 表示禁用并忽略色彩管理问题。可选值：[0 - 3]</td>
+<td>int</td>
+<td><code>2</code></td>
+<td>[0 - 3]</td>
+</tr>
+<tr>
+<td>non_shader_cm_interop</td>
+<td><code>0</code> 表示全屏时禁用外部色彩变换矩阵（CTM，如 hyprsunset 等工具使用的矩阵），<code>1</code> 表示全屏时启用外部 CTM，<code>2</code> 表示全屏显示照片、视频或游戏类型的内容时禁用外部 CTM</td>
+<td>int</td>
+<td><code>2</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>send_content_type</td>
+<td>报告内容类型，以便自动切换显示器配置文件（切换期间可能会出现黑屏）</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>use_fp16</td>
+<td>在内部使用 FP16 缓冲区。<code>0</code> 表示禁用，<code>1</code> 表示启用，<code>2</code> 表示在 HDR 模式下启用</td>
+<td>int</td>
+<td><code>2</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>use_shader_blur_blend</td>
+<td>使用实验性的模糊背景混合方式（在旋转后的屏幕上会出现画面异常）。如果使用 fp16 或 <code>keep_unmodified_copy</code> 时缺少模糊效果，请设为 <code>true</code></td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>xp_mode</td>
+<td>禁用后缓冲区和底层图层的渲染</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>在高于 v0.40.0 的 mpv 版本中，必须设置 mpv 选项 <code>--target-colorspace-hint-mode=source</code>，<code>cm_auto_hdr</code> 才能生效。</p>
+<h3 id="cursor">光标 <a class="permalink" href="#cursor" aria-label="本节链接">#</a></h3>
+<p>类别：<code>cursor</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>default_monitor</td>
+<td>启动时放置光标的默认显示器名称（可通过 <code>hyprctl monitors</code> 查看显示器名称）</td>
+<td>string</td>
+<td><code>[[Empty]]</code></td>
+<td></td>
+</tr>
+<tr>
+<td>enable_hyprcursor</td>
+<td>是否启用 hyprcursor 支持</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>hide_on_key_press</td>
+<td>按下任意键时隐藏光标，直到鼠标移动</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>hide_on_tablet</td>
+<td>如果最近一次输入来自数位板，则隐藏光标，直到收到鼠标输入</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>hide_on_touch</td>
+<td>如果最近一次输入为触摸输入，则隐藏光标，直到收到鼠标输入</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>hotspot_padding</td>
+<td>屏幕边缘与光标之间的间距，单位为逻辑像素</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 20]</td>
+</tr>
+<tr>
+<td>inactive_timeout</td>
+<td>光标停止活动多少秒后将其隐藏。设为 <code>0</code> 表示永不因闲置而隐藏</td>
+<td>float</td>
+<td><code>0</code></td>
+<td>[0 - 20]</td>
+</tr>
+<tr>
+<td>invisible</td>
+<td>不渲染光标</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>min_refresh_rate</td>
+<td><code>no_break_fs_vrr</code> 生效时，光标移动所用的最低刷新率。请设为显示器支持的最低刷新率或更高的值</td>
+<td>int</td>
+<td><code>24</code></td>
+<td>[10 - 500]</td>
+</tr>
+<tr>
+<td>no_break_fs_vrr</td>
+<td>对于启用了可变刷新率（VRR）的全屏应用，禁止因光标移动而调度新帧，以避免帧率突增（可能需要将 <code>no_hardware_cursors</code> 设为 <code>1</code>）。<code>0</code> 表示禁用，<code>1</code> 表示启用，<code>2</code> 表示自动（内容类型为 'game' 时启用）</td>
+<td>int</td>
+<td><code>2</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>no_hardware_cursors</td>
+<td>禁用硬件光标。<code>0</code> 表示尽可能使用硬件光标，<code>1</code> 表示不使用硬件光标，<code>2</code> 表示自动（使用画面撕裂时禁用硬件光标）</td>
+<td>int</td>
+<td><code>2</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>no_warps</td>
+<td>设为 true 时，在许多情况下（如切换焦点、触发按键绑定等）都不会自动移动光标</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>persistent_warps</td>
+<td>当窗口重新获得焦点时，光标会回到上次在该窗口中的相对位置，而非窗口中心</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>sync_gsettings_theme</td>
+<td>将 XCursor 主题与 GSettings 同步。加载主题时，会将 cursor-theme 和 cursor-size 写入 GSettings，使大多数采用客户端装饰（CSD）的 GTK 客户端使用相同的 XCursor 主题和光标大小</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>use_cpu_buffer</td>
+<td>使硬件光标使用 CPU 缓冲区。在 NVIDIA GPU 上使用硬件光标需要此设置。<code>0</code> 表示禁用，<code>1</code> 表示启用，<code>2</code> 表示自动（使用 NVIDIA GPU 时启用）</td>
+<td>int</td>
+<td><code>2</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>warp_back_after_non_mouse_input</td>
+<td>使用非鼠标输入移动光标后，重新使用鼠标时，将光标移回原先的位置</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>warp_on_change_workspace</td>
+<td>切换工作区后，将光标移至该工作区上次获得焦点的窗口。<code>0</code> 表示禁用，<code>1</code> 表示启用，<code>2</code> 表示强制执行（忽略 cursor:no_warps 选项）</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>warp_on_monitor_change</td>
+<td>将焦点切换到另一台显示器时，将光标移至该显示器上次获得焦点的窗口。<code>-1</code> 表示沿用 <code>cursor:warp_on_change_workspace</code> 的值，<code>0</code> 表示禁用，<code>1</code> 表示启用，<code>2</code> 表示强制执行，即使启用了 <code>cursor:no_warps</code> 也会移动光标</td>
+<td>int</td>
+<td><code>-1</code></td>
+<td>[-1 - 2]</td>
+</tr>
+<tr>
+<td>warp_on_toggle_special</td>
+<td>切换特殊工作区的显示状态时，将光标移至上次获得焦点的窗口。<code>0</code> 表示禁用，<code>1</code> 表示启用，<code>2</code> 表示强制执行（忽略 cursor:no_warps 选项）</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>zoom_detached_camera</td>
+<td>放大时，视野不再跟随鼠标移动。只有当鼠标越过屏幕边缘时，才移动视野以保持鼠标可见</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>zoom_disable_aa</td>
+<td>缩放时禁用抗锯齿，使画面呈现清晰的像素块，避免模糊</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>zoom_factor</td>
+<td>以光标为中心的放大倍数，效果类似放大镜。最小值为 1.0（表示不缩放）</td>
+<td>float</td>
+<td><code>1.0</code></td>
+<td>[1 - 10]</td>
+</tr>
+<tr>
+<td>zoom_rigid</td>
+<td>缩放视图是严格跟随光标（只要条件允许，光标就始终居中），还是宽松地跟随光标</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="ecosystem">生态系统 <a class="permalink" href="#ecosystem" aria-label="本节链接">#</a></h3>
+<p>类别：<code>ecosystem</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enforce_permissions</td>
+<td>是否启用<a href="../advanced-configuration/permissions/">权限控制</a></td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>no_donation_nag</td>
+<td>禁用每年出现两次的捐赠提示弹窗</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>no_update_news</td>
+<td>禁用将 Hyprland 更新到新版本时出现的弹窗</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="quirks">兼容性调整 <a class="permalink" href="#quirks" aria-label="本节链接">#</a></h3>
+<p>类别：<code>quirks</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>prefer_hdr</td>
+<td>将 HDR 模式报告为首选模式。<code>0</code> - 禁用，<code>1</code> - 始终报告，<code>2</code> - 仅对 gamescope 报告</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 1]</td>
+</tr>
+<tr>
+<td>skip_non_kms_dmabuf_formats</td>
+<td>不报告无法导入 KMS 的 dmabuf 格式</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>某些客户端要求显示器在客户端启动前就已进入 HDR 模式。这会导致 HDR 无法自动启用，并可能引起白屏和闪烁。使用 <code>prefer_hdr</code> 可解决此问题。</p>
+<h3 id="input-capture">输入捕获 <a class="permalink" href="#input-capture" aria-label="本节链接">#</a></h3>
+<p>类别：<code>input-capture</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>capture_modifiers</td>
+<td>启用后，修饰键也会被捕获并发送给程序</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>enforce_barriers</td>
+<td>启用后，收到无效的输入屏障时会抛出 Wayland 错误</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="debug">调试 <a class="permalink" href="#debug" aria-label="本节链接">#</a></h3>
+<div class="warning">
+<div class="title">
+<p>警告</p>
+</div>
+<p>这些设置仅供开发和测试使用。请勿在日常配置中更改它们。</p>
+</div>
+<p>类别：<code>debug</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>colored_stdout_logs</td>
+<td>在输出到 stdout 的日志中启用彩色显示</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>damage_blink</td>
+<td>（警告：闪烁可能诱发癫痫！）让损伤跟踪检测到的更新区域闪烁</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>damage_tracking</td>
+<td>仅重绘画面中需要更新的部分。请<strong>勿</strong>更改。None - 0，monitor - 1，full - 2</td>
+<td>int</td>
+<td><code>2</code></td>
+<td>[0 - 2]</td>
+</tr>
+<tr>
+<td>disable_logs</td>
+<td>禁用日志文件写入</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>disable_scale_checks</td>
+<td>禁用对缩放因子的校验。这会导致像素对齐错误和舍入误差</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>disable_time</td>
+<td>禁用日志中的时间记录</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>ds_handle_same_buffer</td>
+<td>对缓冲区未修改时的直接扫描输出进行特殊处理</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>ds_handle_same_buffer_fifo</td>
+<td>对缓冲区未修改时的直接扫描输出进行特殊处理，解除 fifo 锁定</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td>enable_stdout_logs</td>
+<td>启用向 stdout 输出日志</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>error_limit</td>
+<td>限制显示的配置文件解析错误数量</td>
+<td>int</td>
+<td><code>5</code></td>
+<td>[0 - 20]</td>
+</tr>
+<tr>
+<td>error_position</td>
+<td>设置错误提示栏的位置。<code>0</code> - 顶部，<code>1</code> - 底部</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 1]</td>
+</tr>
+<tr>
+<td>fifo_pending_workaround</td>
+<td>待处理列表为空时使用的 fifo 变通方案</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>full_cm_proto</td>
+<td>声明支持颜色管理协议的所有功能（需要重启）</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>gl_debugging</td>
+<td>使用 glGetError 和 EGL_KHR_debug 启用 OpenGL 调试，更改后需要重启</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>invalidate_buffers</td>
+<td>允许将缓冲区标记为无效（此举可提高性能，但在某些系统上会导致画面异常）。0 - 不允许，1 - 允许</td>
+<td>int</td>
+<td><code>1</code></td>
+<td>[0 - 1]</td>
+</tr>
+<tr>
+<td>log_damage</td>
+<td>启用损伤区域日志记录</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>manual_crash</td>
+<td>先设为 1，再改回 0，即可使 Hyprland 崩溃</td>
+<td>int</td>
+<td><code>0</code></td>
+<td>[0 - 1]</td>
+</tr>
+<tr>
+<td>overlay</td>
+<td>显示调试用的性能叠加层。请禁用 VFR 以获得准确结果</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>pass</td>
+<td>启用渲染通道调试</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>render_solitary_wo_damage</td>
+<td>即使损伤区域为空，也渲染唯一的窗口</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>suppress_errors</td>
+<td>启用后，Hyprland 将不再显示配置文件解析错误</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td>vfr</td>
+<td>控制 Hyprland 是否启用 VFR。强烈建议保持启用以节省资源</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="experimental">实验性功能 <a class="permalink" href="#experimental" aria-label="本节链接">#</a></h3>
+<p>类别：<code>experimental</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>wp_cm_1_2</td>
+<td>允许使用 wp-cm-v1 的第 2 版</td>
+<td>bool</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="more">更多选项 <a class="permalink" href="#more" aria-label="本节链接">#</a></h3>
+<p>其他页面还介绍了适用于特定布局或场景的配置选项。可通过侧边栏查看更多页面，尤其是各布局的页面。</p>
+</article>
+<footer><span>Hyprland Wiki · 非官方中文译本</span><span><a href="../../../LICENSE">BSD-3-Clause 许可证</a> · <a href="https://wiki.hypr.land/configuring/core/config-options/">英文原文</a></span></footer></main>
+<aside class="rail"><h2>本页目录</h2><a class="level-2" href="#syntax">语法</a><a class="level-2" href="#sections">配置分节</a><a class="level-3" href="#general">常规</a><a class="level-4" href="#general-colors">常规配色</a><a class="level-4" href="#snap">吸附</a><a class="level-3" href="#decoration">窗口装饰</a><a class="level-4" href="#opacity">不透明度</a><a class="level-4" href="#blur">模糊</a><a class="level-5" href="#blur-variants">模糊样式</a><a class="level-6" href="#acrylic">亚克力</a><a class="level-6" href="#aurora">极光</a><a class="level-6" href="#drops">水滴</a><a class="level-6" href="#fluid-jar">液体罐</a><a class="level-6" href="#glass">玻璃</a><a class="level-6" href="#haze">薄雾</a><a class="level-6" href="#heat-shimmer">热浪扭曲</a><a class="level-6" href="#ripple">涟漪</a><a class="level-6" href="#water">水面</a><a class="level-4" href="#shadow">阴影</a><a class="level-4" href="#glow">辉光</a><a class="level-4" href="#motion-blur">运动模糊</a><a class="level-4" href="#wobble">晃动</a><a class="level-3" href="#animations">动画</a><a class="level-3" href="#input">输入</a><a class="level-5" href="#xkb-keymap-params">XKB 键位映射参数</a><a class="level-5" href="#follow-mouse">焦点跟随鼠标</a><a class="level-5" href="#accel-profile">加速曲线</a><a class="level-5" href="#scroll-points">滚动曲线控制点</a><a class="level-4" href="#touchpad">触摸板</a><a class="level-4" href="#touchdevice">触摸设备</a><a class="level-4" href="#virtualkeyboard">虚拟键盘</a><a class="level-4" href="#tablet">数位板</a><a class="level-4" href="#tablettool">数位板工具</a><a class="level-3" href="#per-device-input-config">按设备配置输入</a><a class="level-3" href="#gestures">手势</a><a class="level-4" href="#scrolling">滚动</a><a class="level-3" href="#group">窗口组</a><a class="level-4" href="#group-colors">窗口组颜色</a><a class="level-4" href="#groupbar">组栏</a><a class="level-5" href="#groupbar-colors">组栏颜色</a><a class="level-3" href="#misc">其他</a><a class="level-3" href="#layers">图层</a><a class="level-3" href="#layout">布局</a><a class="level-3" href="#binds">按键绑定</a><a class="level-3" href="#xwayland">Xwayland</a><a class="level-3" href="#opengl">OpenGL</a><a class="level-3" href="#render">渲染</a><a class="level-3" href="#cursor">光标</a><a class="level-3" href="#ecosystem">生态系统</a><a class="level-3" href="#quirks">兼容性调整</a><a class="level-3" href="#input-capture">输入捕获</a><a class="level-3" href="#debug">调试</a><a class="level-3" href="#experimental">实验性功能</a><a class="level-3" href="#more">更多选项</a><hr><label class="theme">外观 <select id="theme"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></aside></div></body></html>
